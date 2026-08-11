@@ -1,5 +1,18 @@
 {
   "env": {
     "CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION": "2000"
+  },
+  "permissions": {
+    "allow": [
+      "mcp__a4f2b7e0-a63c-4dde-9bc1-5116ae1b599a__analyze_website",
+      "mcp__a4f2b7e0-a63c-4dde-9bc1-5116ae1b599a__get_workspace_info",
+      "mcp__a4f2b7e0-a63c-4dde-9bc1-5116ae1b599a__discover_sitemap",
+      "mcp__a4f2b7e0-a63c-4dde-9bc1-5116ae1b599a__select_sitemap_urls",
+      "mcp__a4f2b7e0-a63c-4dde-9bc1-5116ae1b599a__create_extraction",
+      "mcp__a4f2b7e0-a63c-4dde-9bc1-5116ae1b599a__get_run",
+      "mcp__a4f2b7e0-a63c-4dde-9bc1-5116ae1b599a__get_table",
+      "mcp__a4f2b7e0-a63c-4dde-9bc1-5116ae1b599a__query_table",
+      "mcp__a4f2b7e0-a63c-4dde-9bc1-5116ae1b599a__list_tables"
+    ]
   }
 }
