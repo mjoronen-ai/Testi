@@ -1,0 +1,20 @@
+[
+  { "name": "SL Benfica", "city": "Lisboa", "coords": { "lat": 38.753, "lng": -9.185 } },
+  { "name": "Sporting CP", "city": "Lisboa", "coords": { "lat": 38.761, "lng": -9.161 } },
+  { "name": "FC Porto", "city": "Porto", "coords": { "lat": 41.162, "lng": -8.584 } },
+  { "name": "SC Braga", "city": "Braga", "coords": { "lat": 41.563, "lng": -8.43 } },
+  { "name": "Vitória SC", "city": "Guimarães", "coords": { "lat": 41.446, "lng": -8.301 } },
+  { "name": "FC Famalicão", "city": "Vila Nova de Famalicão", "coords": { "lat": 41.408, "lng": -8.522 } },
+  { "name": "Moreirense FC", "city": "Moreira de Cónegos (Guimarães)", "coords": { "lat": 41.38, "lng": -8.348 } },
+  { "name": "FC Arouca", "city": "Arouca", "coords": { "lat": 40.928, "lng": -8.245 } },
+  { "name": "Casa Pia AC", "city": "Lisboa", "coords": { "lat": 38.72, "lng": -9.2 }, "note": "Kotiottelut viime kausina mm. Estádio Nacionalissa (Oeiras) — Lissabonin metropolialue joka tapauksessa" },
+  { "name": "GD Estoril Praia", "city": "Estoril (Cascais)", "coords": { "lat": 38.705, "lng": -9.398 } },
+  { "name": "CF Estrela da Amadora", "city": "Amadora", "coords": { "lat": 38.753, "lng": -9.231 } },
+  { "name": "Gil Vicente FC", "city": "Barcelos", "coords": { "lat": 41.532, "lng": -8.618 } },
+  { "name": "Rio Ave FC", "city": "Vila do Conde", "coords": { "lat": 41.352, "lng": -8.743 } },
+  { "name": "CD Nacional", "city": "Funchal (Madeira)", "coords": { "lat": 32.66, "lng": -16.926 } },
+  { "name": "CS Marítimo", "city": "Funchal (Madeira)", "coords": { "lat": 32.645, "lng": -16.923 } },
+  { "name": "CD Santa Clara", "city": "Ponta Delgada (Azorit)", "coords": { "lat": 37.741, "lng": -25.668 } },
+  { "name": "FC Alverca", "city": "Alverca do Ribatejo", "coords": { "lat": 38.898, "lng": -9.033 } },
+  { "name": "Académico de Viseu FC", "city": "Viseu", "coords": { "lat": 40.661, "lng": -7.912 } }
+]
