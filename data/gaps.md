@@ -216,3 +216,29 @@ Täydentyy tutkimusvaiheissa 3a–3c (ks. myös kunkin seuran `sources`- ja
   WebSearch-kiintiö oli täynnä eikä uutissivustoihin päässyt egress-proxyn takia. Seurakohtaiset
   toteutuneet kaupat/hintaindikaatiot on kirjattu seurojen sale-/estimated_price_eur-kenttiin silloin
   kun seuratutkimus ne löysi (esim. AD Fafe 75 % / 500 t€ 2023). estimated_price_eur jää muilta null.
+
+### Campeonato de Portugal -aalto (2026-08-11) — RAJOITETTU AJO
+
+Session WebSearch-kiintiö (200 hakua) oli täyttynyt Liga 2/3 -aaltojen aikana
+ja egress-proxy estää kaikki lähdesivustot (wikipedia, zerozero, fpf.pt,
+transfermarkt, pt-uutissivustot; vain github.com on auki). CdP-seuroille
+kerättiin siksi vain:
+
+- **kaupunki** (50/55): lohkoarvontauutisoinnin lähteistä (ks. `sources` per
+  seura ja data/cdp-groups.json) tai seuran yksiselitteisestä nimestä
+- **piiri, koordinaatit, rannikkostatus, etäisyydet** (50/55):
+  karttapäättelyä (tehtävänannon sallima menetelmä)
+
+Kaikilta 55 CdP-seuralta PUUTTUU (null + confidence: low): perustamisvuosi,
+väkiluku, stadionin nimi/kapasiteetti/omistus, yleisökeskiarvo, akatemiatiedot,
+omistusrakenne (SAD/clube), myyntisignaalit. Nämä vaativat täydennysajon
+(ks. README "Datan täydennys"). Omistusrakenne on merkitty `unknown`
+perustellusti: lähteitä ei ollut saatavilla tässä ajossa.
+
+Kaupunki jäi vahvistamatta (null) viidellä seuralla:
+
+- **celoricense**: Celorico de Basto vai Celorico da Beira — ei vahvistavaa lähdettä.
+- **ad-nogueirense**: useita Nogueirense-seuroja Portugalissa; identiteetti varmistamatta.
+- **ud-serra**: lähteet käyttivät kahta nimimuotoa (União da Serra / UD Serra); kotipaikka varmistamatta.
+- **gd-lagoa**: lähteet ristiriidassa — toinen tutkimusagentti sijoitti seuran Azoreille (dnoticias-konteksti), toinen Algarven Lagoaan. Ei ratkaistu ilman lähdettä.
+- **jd-lajense**: Azorit, mutta saari (Pico/Flores/Terceira) varmistamatta.
