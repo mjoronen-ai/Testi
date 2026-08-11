@@ -59,8 +59,20 @@ matalan kattavuuden pisteisiin tulee suhtautua varauksella.
 - `data/cdp-groups.json` — CdP:n 2026/27-lohkojaot lähteineen.
 - `data/primeira.json` — Primeira Ligan 18 seuraa koordinaatteineen
   (käytetään vain 30 km kilpailutilanneanalyysiin).
-- `data/gaps.md` — kaikki puuttuvat/epävarmat tiedot perusteluineen.
+- `data/gaps.md` — kaikki puuttuvat/epävarmat tiedot perusteluineen
+  (generoitu `scripts/generate-gaps.mjs`-skriptillä).
 - `data/audit.md` — lähdeauditoinnin pistokoeraportti.
+- `data/price-basis.md` — 23 julkista SAD-vertailukauppaa 2019–2026 lähteineen
+  ja niistä johdettu sarjatasokohtainen hintahaarukka.
+
+### Datan kattavuus (11.8.2026)
+
+Kaikilta 93 seuralta on kaupunki, perustamisvuosi, koordinaatit, rannikkostatus,
+stadionin nimi ja tieto akatemian olemassaolosta. Väkiluku, stadionkapasiteetti
+ja omistusrakenne 90/93, stadionin omistus 82/93, FPF-sertifiointi 43/93,
+julkinen myyntisignaali 30/93. Lähdeviitteitä 1 134; luotettavuus korkea 52 /
+keskitaso 41 / matala 0. Yleisökeskiarvot puuttuvat lähes kokonaan (1/93),
+koska Transfermarkt on estetty ajoympäristössä.
 
 Periaatteet:
 
@@ -73,9 +85,11 @@ Periaatteet:
   (Tejo/Sado) rantakaupunki Lissabonin/Setúbalin alueella;
   `coast_distance_km` on etäisyys avomerelle.
 - `estimated_price_eur` on aina arvio ja merkitty UI:ssa arvioksi;
-  `basis`-kenttä kertoo perusteen. Hinta-arvio on annettu vain seuroille,
-  joilta löytyi seurakohtaista evidenssiä (toteutunut kauppa tai uutisoitu
-  hintapyyntö).
+  `basis`-kenttä kertoo perusteen. Arvio on joko **seurakohtainen** (toteutunut
+  kauppa tai uutisoitu hintapyyntö, 9 seuraa) tai **sarjatason tyyppihaarukka**
+  (76 seuraa) — UI erottaa nämä toisistaan. Haarukat: taso 2 noin 5–10 M€,
+  taso 3 noin 1,5–3 M€, taso 4 noin 0,15–0,6 M€ SAD-enemmistöstä. Perusteet ja
+  vertailukaupat: `data/price-basis.md`.
 - `confidence`: high = keskeiset kentät useasta luotettavasta lähteestä,
   medium = osittain, low = merkittäviä aukkoja.
 
@@ -89,29 +103,32 @@ node scripts/merge-research.mjs <patch.json>  # yhdistä tutkimustulos dataan
 npm run competition                            # kilpailutilanne uusiksi
 npm run validate                               # rakenne- ja lähdetarkistus
 npm run seed                                   # lisää puuttuvat seurat (ei ylikirjoita)
+node scripts/apply-price-bands.mjs             # sarjatason hintahaarukat
+node scripts/generate-gaps.mjs [gaps.json...]  # gaps.md uusiksi datasta
 ```
 
-### Tunnettu täydennystarve (11.8.2026 ajon jäljiltä)
+Web-hakujen sessiokiintiö on nostettu projektiasetuksissa
+(`.claude/settings.json`: `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`), koska
+oletusarvo 200 ei riitä koko sarjatason tutkimiseen.
 
-Ensimmäisen tutkimusajon aikana session web-hakukiintiö (200 hakua) täyttyi
-ja ajoympäristön egress-proxy esti suorat haut lähdesivustoille (Wikipedia,
-zerozero.pt, fpf.pt, Transfermarkt, pt-uutissivustot). Siksi puuttuu erityisesti:
+### Tunnettu täydennystarve
 
-- **CdP-seurojen (taso 4)** stadion-, omistus-, akatemia- ja väkilukutiedot
-  (maantiede ja kaupungit on kerätty),
-- **yleisökeskiarvot** kaikilta seuroilta (Transfermarkt),
-- **FPF Entidades Formadoras -sertifioinnit** (fpf.pt),
-- **sarjatasokohtainen hintahaarukka** (vertailukauppa-analyysi),
-- 8 tason 2–3 seuran täydellinen tutkimus (mm. SC Farense, SCU Torreense,
-  Sporting CP B, União de Leiria, Caldas SC, GD Vitória de Sernache,
-  Louletano DC, Lusitano GC).
+Jäljellä olevat aukot on lueteltu seuratasolla `data/gaps.md`-tiedostossa.
+Merkittävimmät:
 
-Täydennys: aja uudessa sessiossa (tai nostetulla
-`CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`-arvolla) komento tyyliin:
+- **Yleisökeskiarvot** puuttuvat lähes kaikilta (Transfermarkt ja varalähteet
+  estetty ajoympäristön egress-proxyssä). Vaatii ympäristön, jossa
+  transfermarkt.com on saavutettavissa.
+- **FPF-sertifioinnit** 50 seuralta (fpf.pt estetty; löydetyt tulivat
+  seurakohtaisista lähteistä).
+- **Stadionin omistus** 11 seuralta ja väkiluku, kapasiteetti tai
+  omistusrakenne kolmelta seuralta — nämä on lueteltu nimeltä gaps-raportissa.
 
-> Lue scripts/research-club.md ja data/gaps.md. Täydennä puuttuvat tiedot
-> Campeonato de Portugal -seurille sekä gaps-listan tason 2–3 seuroille,
-> yhdistä merge-research.mjs:llä ja aja competition + validate.
+Täydennys: aja komento tyyliin
+
+> Lue scripts/research-club.md ja data/gaps.md. Täydennä gaps-raportissa
+> nimetyt puuttuvat kentät, yhdistä merge-research.mjs:llä ja aja
+> competition + validate + generate-gaps.
 
 ## Rakenne
 
