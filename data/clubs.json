@@ -1909,159 +1909,25 @@
     "series": null,
     "city": "Faro",
     "district": "Faro",
-    "founded": null,
+    "founded": 1910,
     "acquirable": true,
     "coastal": true,
     "coast_distance_km": 0,
-    "city_population": null,
-    "city_population_kind": null,
+    "city_population": 67859,
+    "city_population_kind": "municipio",
     "nearest_major_city": {
       "name": "Faro",
       "distance_km": 0
     },
     "coords": {
-      "lat": 37.02,
-      "lng": -7.93
+      "lat": 37.021,
+      "lng": -7.928
     },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": "Stadiontietoja ei voitu varmistaa: kaikki lähdesivustot estetty ympäristön egress-proxyssa eikä WebSearch-kiintiötä ollut jäljellä."
-    },
-    "attendance": {
-      "season": "2025-26",
-      "average": null,
-      "source": ""
-    },
-    "academy": {
-      "exists": null,
-      "fpf_certification": null,
-      "notes": "",
-      "notable_products": []
-    },
-    "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": "",
-      "computed": true
-    },
-    "ownership": {
-      "structure": "unknown",
-      "owners": "",
-      "foreign_investor": null,
-      "debt_or_insolvency_notes": ""
-    },
-    "sale": {
-      "status": "unknown",
-      "price_indication_eur": null,
-      "notes": "Portugalinkielisiä uutishakuja (SAD/venda/investidor/insolvência) ei voitu suorittaa verkkorajoitusten vuoksi; status jää oletusarvoon unknown.",
-      "sources": []
-    },
-    "estimated_price_eur": {
-      "low": null,
-      "high": null,
-      "basis": ""
-    },
-    "investor_score": null,
-    "sources": [],
-    "last_updated": "2026-08-11",
-    "confidence": "low"
-  },
-  {
-    "id": "scu-torreense",
-    "name": "SCU Torreense",
-    "tier": 2,
-    "league": "Liga Portugal 2",
-    "series": null,
-    "city": "Torres Vedras",
-    "district": "Lisboa",
-    "founded": null,
-    "acquirable": true,
-    "coastal": false,
-    "coast_distance_km": 10,
-    "city_population": null,
-    "city_population_kind": null,
-    "nearest_major_city": {
-      "name": "Lisboa",
-      "distance_km": 40
-    },
-    "coords": {
-      "lat": 39.09,
-      "lng": -9.26
-    },
-    "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": "Stadiontietoja ei voitu varmistaa: kaikki lähdesivustot estetty ympäristön egress-proxyssa eikä WebSearch-kiintiötä ollut jäljellä."
-    },
-    "attendance": {
-      "season": "2025-26",
-      "average": null,
-      "source": ""
-    },
-    "academy": {
-      "exists": null,
-      "fpf_certification": null,
-      "notes": "",
-      "notable_products": []
-    },
-    "competition": {
-      "same_or_higher_tier_within_30km": [
-        "FC Alverca (Liga Portugal) [taso 1]"
-      ],
-      "notes": "",
-      "computed": true
-    },
-    "ownership": {
-      "structure": "unknown",
-      "owners": "",
-      "foreign_investor": null,
-      "debt_or_insolvency_notes": ""
-    },
-    "sale": {
-      "status": "unknown",
-      "price_indication_eur": null,
-      "notes": "Portugalinkielisiä uutishakuja (SAD/venda/investidor/insolvência) ei voitu suorittaa verkkorajoitusten vuoksi; status jää oletusarvoon unknown.",
-      "sources": []
-    },
-    "estimated_price_eur": {
-      "low": null,
-      "high": null,
-      "basis": ""
-    },
-    "investor_score": null,
-    "sources": [],
-    "last_updated": "2026-08-11",
-    "confidence": "low"
-  },
-  {
-    "id": "sporting-cp-b",
-    "name": "Sporting CP B",
-    "tier": 2,
-    "league": "Liga Portugal 2",
-    "series": null,
-    "city": "Lisboa",
-    "district": "Lisboa",
-    "founded": null,
-    "acquirable": false,
-    "coastal": true,
-    "coast_distance_km": 0,
-    "city_population": null,
-    "city_population_kind": null,
-    "nearest_major_city": {
-      "name": "Lisboa",
-      "distance_km": 0
-    },
-    "coords": {
-      "lat": 38.761,
-      "lng": -9.161
-    },
-    "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": "B-joukkueen 2026/27-kotikenttää ei voitu verifioida (verkkopääsy estetty). Huom: kotiotteluvenue voi olla Lissabonin ulkopuolella (Alcochete/akatemia-alue) — vaatii lähteen."
+      "name": "Estádio de São Luís",
+      "capacity": 6410,
+      "owner": "club",
+      "notes": "Avattu 1923; kunta luovutti stadionin seuralle, ja en-Wikipedian mukaan seura on ollut ainoa omistaja vuodesta 1986. Vuonna 2008 uutisoitiin stadionin myynnistä 14 M€:lla konkurssin välttämiseksi (Público), mutta nykylähteet listaavat omistajaksi/operaattoriksi edelleen SC Farensen. Kapasiteetti vaihtelee lähteittäin: 6 410 (Wikipedia, Liga Portugal 2 2025/26) vs. 7 000 (stadiumdb, vanhempi luku)."
     },
     "attendance": {
       "season": "2025-26",
@@ -2071,8 +1937,317 @@
     "academy": {
       "exists": true,
       "fpf_certification": null,
-      "notes": "B-joukkue on määritelmällisesti osa Sporting CP:n akatemiarakennetta (emoseuran akatemia Alcochetessa on yleisesti tunnettu). Kasvattilista ja sertifiointi jätetty tyhjäksi, koska lähteitä ei voitu verifioida tänään.",
-      "notable_products": []
+      "notes": "Junioritoimintaa ja oma formação-putki: Hugo Luz aloitti Farensen junioreissa ja siirtyi FC Porton akatemiaan 1998 (pelasi myöhemmin Porton edustusjoukkueessa). André Candeias seurassa vuodesta 2011, Liga Revelação -sarjan paras pelaaja ja maalintekijä (17 maalia). Farense pelasi myös sub-23 Liga Revelaçãossa.",
+      "notable_products": [
+        "Hugo Luz",
+        "André Candeias"
+      ]
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": "",
+      "computed": true
+    },
+    "ownership": {
+      "structure": "SAD",
+      "owners": "João Rodrigues (SAD:n ja seuran puheenjohtaja): omisti 46,66 % SAD:sta ja merkitsi osakepääoman korotuksen kokonaan, jolloin hänestä tuli enemmistöomistaja (Record). SAD:n puheenjohtajaksi 2016, seuran puheenjohtajaksi 2018, uudelleenvalittu 2024 nelivuotiskaudelle.",
+      "foreign_investor": false,
+      "debt_or_insolvency_notes": "Historiallinen läheltä piti -konkurssi 2008 ratkaistiin stadionjärjestelyllä (Público 2008). Elokuun 2026 hauissa ei löytynyt ajankohtaisia insolvência/PER/velkauutisia. FPF:n mukaan SAD:n omistajakoostumus 2025/26 sama kuin 2024/25 — ei ulkomaista sijoittajaa (ECO 7.8.2025: Farense ei ulkomaisomisteisten listalla)."
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "Ei julkisia myynti- tai sijoittajahakusignaaleja. FPF vahvisti, että SAD:n omistuspohja 2025/26 on sama kuin 2024/25; Farense ei ollut vuosien 2025-26 SAD-kauppojen joukossa (vrt. Moreirense, Tondela, Alverca, Penafiel). Elokuun 2026 Brands Capital -tyyppiset listaukset anonyymejä → status jää unknown.",
+      "sources": [
+        "https://www.rtp.pt/noticias/futebol-nacional/fpf-confirma-mudancas-nas-sad-de-moreirense-tondela-e-alverca-para-202526_d1695972",
+        "https://eco.sapo.pt/2025/08/07/58-das-equipas-do-futebol-portugues-tem-acionistas-estrangeiros-talento-e-formacao-atraem-investidores/"
+      ]
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [
+      {
+        "field": "founded",
+        "url": "https://en.wikipedia.org/wiki/S.C._Farense",
+        "date": "2026-08-11",
+        "note": "Perustettu 1.4.1910, Faro (WebSearch-tiivistelmä; suora Wikipedia-haku estetty egress-proxyssä)"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Liga_Portugal_2",
+        "date": "2026-08-11",
+        "note": "Estádio de São Luís, kapasiteetti 6 410 (2025/26-kausisivu); stadiumdb ilmoittaa 7 000"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "https://en.wikipedia.org/wiki/Est%C3%A1dio_de_S%C3%A3o_Lu%C3%ADs",
+        "date": "2026-08-11",
+        "note": "Kunta luovutti stadionin seuralle; seura ainoa omistaja vuodesta 1986, nykyinen omistaja/operaattori SC Farense"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "https://www.publico.pt/2008/09/12/jornal/farense-salvase-da-falencia-com-a-venda--do-estadio-de-sao-luis-por-14-milhoes-de-euros-275607",
+        "date": "2026-08-11",
+        "note": "2008: uutisoitu stadionin 14 M€ myynti konkurssin välttämiseksi — historiallinen konteksti"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.record.pt/futebol/futebol-nacional/liga-betclic/farense/detalhe/sad-promove-aumento-de-capital",
+        "date": "2026-08-11",
+        "note": "João Rodrigues 46,66 % → merkitsi koko osakeannin → enemmistö SAD:sta"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.avozdoalgarve.pt/d/empresrio-joo-rodrigues-o-novo-presidente-da-sad-do-farense/17727",
+        "date": "2026-08-11",
+        "note": "João Rodrigues SAD:n puheenjohtajaksi 2016; osti enemmistön CdP-pudotuksen jälkeen"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.flashscore.pt/noticias/futebol-liga-portugal-joao-rodrigues-reeleito-presidente-do-farense-para-mandato-de-quatro-anos/GQCIeeQ8/",
+        "date": "2026-08-11",
+        "note": "Uudelleenvalinta 2024, nelivuotiskausi"
+      },
+      {
+        "field": "sale",
+        "url": "https://www.rtp.pt/noticias/futebol-nacional/fpf-confirma-mudancas-nas-sad-de-moreirense-tondela-e-alverca-para-202526_d1695972",
+        "date": "2026-08-11",
+        "note": "FPF: Farensen SAD-omistuspohja 2025/26 ennallaan; ei kauppoja"
+      },
+      {
+        "field": "city_population",
+        "url": "https://pt.wikipedia.org/wiki/Faro",
+        "date": "2026-08-11",
+        "note": "Faron município 67 859 as. (Censos 2021), 5 freguesiaa (WebSearch-tiivistelmä)"
+      },
+      {
+        "field": "academy",
+        "url": "https://davidjosepereira.blogspot.com/2020/04/farense-ii-liga-irobiso-gualter-bilro-diogo-silva-hugo-luz-haramiz-vitor-sao-bento-neca-carlitos-carlos-ponck-ventosa-hernani.html",
+        "date": "2026-08-11",
+        "note": "Hugo Luz: Farensen juniorit → FC Porto 1998"
+      },
+      {
+        "field": "academy",
+        "url": "https://pt.soccerway.com/noticias/futebol-liga-portugal-2-andre-candeias-melhor-jogador-da-liga-revelacao-renova-pelo-farense-por-uma-epoca/QymC0rcc",
+        "date": "2026-08-11",
+        "note": "André Candeias seurassa 2011 alkaen; Liga Revelaçãon paras pelaaja ja maalintekijä"
+      }
+    ],
+    "last_updated": "2026-08-11",
+    "confidence": "high"
+  },
+  {
+    "id": "scu-torreense",
+    "name": "SCU Torreense",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": "Torres Vedras",
+    "district": "Lisboa",
+    "founded": 1917,
+    "acquirable": true,
+    "coastal": false,
+    "coast_distance_km": 10,
+    "city_population": 83130,
+    "city_population_kind": "municipio",
+    "nearest_major_city": {
+      "name": "Lisboa",
+      "distance_km": 42
+    },
+    "coords": {
+      "lat": 39.089,
+      "lng": -9.26
+    },
+    "stadium": {
+      "name": "Estádio Manuel Marques",
+      "capacity": 2431,
+      "owner": "municipality",
+      "notes": "Câmara Municipal de Torres Vedras osti stadionin SCU Torreenselta 933 000 eurolla (19 496 m²; kaupungin oma tiedote) ja vahvisti 6/2025: 'O Estádio Manuel Marques é propriedade do Município'. Avattu 1926, aiemmin 12 000 katsojan tilat; kapasiteetti supistettu 2 431 istumapaikkaan. Kunta laajensi Complexo Desportivo Municipal Manuel Marquesia (Academia Torreense, avattu 10/2022) kahdella tekonurmella formaçãon käyttöön."
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": true,
+      "fpf_certification": null,
+      "notes": "Academia Torreense ja 'Formação 360º' -ohjelma (jalkapallo + futsal); kunnan laajentama harjoituskompleksi avattu 10/2022. Historiallisia kasvatteja mm. Filipe Ramos (siirtyi Sporting CP:hen), Hélder Batista ja Sérgio Santos (lähde: seurahistoriablogi — kohtalainen luotettavuus). Record 2026: Liga 2:n suurimmat pelaajamyyntitulot vuodesta 2024.",
+      "notable_products": [
+        "Filipe Ramos",
+        "Hélder Batista",
+        "Sérgio Santos"
+      ]
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
+    },
+    "ownership": {
+      "structure": "SAD",
+      "owners": "Sport Clube União Torreense Futebol SAD (osakepääoma 1 M€). Omistus jakautuu emoseuralle, yksityishenkilöille ja holding-yhtiölle; SAD:n puheenjohtaja Nuno Carvalho omisti suoraan 17,62 % (FPF:n läpinäkyvyysraportti 30.4.2025). Historia: kiinalainen Qi Chen (Oriental Dragon FC) enemmistöomistajaksi 2015; seura osti 70 % takaisin 350 000 eurolla ja nousi n. 86 %:n enemmistöön.",
+      "foreign_investor": false,
+      "debt_or_insolvency_notes": "Elokuun 2026 hauissa ei löytynyt insolvência/PER/velkauutisia. Record: Torreense on Liga 2:n eniten pelaajamyyntituloja vuodesta 2024 tehnyt seura ('fábrica de talentos do Oeste') — viittaa terveeseen kassavirtaan."
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "Ei julkisia myyntisignaaleja: FPF:n mukaan SAD:n omistuspohja 2025/26 sama kuin 2024/25, eikä Torreense ollut 2025-26 ulkomaiskauppojen joukossa. Sijoittajaprofiilia nostaa merkittävästi: Torreense voitti Taça de Portugalin 2026 (2-1 finaalissa Sporting CP:tä vastaan, ensimmäinen kakkostason seura ikinä) ja pelaa Europa Leaguessa 2026/27.",
+      "sources": [
+        "https://www.rtp.pt/noticias/futebol-nacional/fpf-confirma-mudancas-nas-sad-de-moreirense-tondela-e-alverca-para-202526_d1695972",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Ta%C3%A7a_de_Portugal"
+      ]
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [
+      {
+        "field": "founded",
+        "url": "https://en.wikipedia.org/wiki/S.C.U._Torreense",
+        "date": "2026-08-11",
+        "note": "Perustettu 1.5.1917, Torres Vedras (WebSearch-tiivistelmä; suora Wikipedia-haku estetty egress-proxyssä)"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Manuel_Marques",
+        "date": "2026-08-11",
+        "note": "Avattu 1926; kapasiteetti 2 431 (aiemmin 12 000, seisomakatsomot poistettu)"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "https://www.cm-tvedras.pt/artigos/detalhes/camara-municipal-adquiriu-o-estadio-manuel-marques/",
+        "date": "2026-08-11",
+        "note": "Kunta osti stadionin seuralta 933 000 €:lla — virallinen kuntatiedote"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "https://onfm.pt/2025/06/27/nossa-obrigacao-esclarecer-com-transparencia-tudo-o-que-ja-foi-feito-pela-camara-municipal-em-beneficio-do-scut",
+        "date": "2026-08-11",
+        "note": "6/2025: 'O Estádio Manuel Marques é propriedade do Município'"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.record.pt/futebol/futebol-nacional/campeonato-de-portugal/detalhe/torrense-chineses-tornam-se-socios-maioritarios-da-sad-953136",
+        "date": "2026-08-11",
+        "note": "2015: kiinalainen Qi Chen SAD:n enemmistöomistajaksi"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.rtp.pt/noticias/futebol-nacional/torreense-compra-maioria-da-sad-e-afasta-empresario-chines_d1158590",
+        "date": "2026-08-11",
+        "note": "Seura osti 70 % takaisin 350 000 €:lla → n. 86 % enemmistö SAD:sta"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.fpf.pt/pt/DownloadDocument.ashx?id=28244",
+        "date": "2026-08-11",
+        "note": "FPF:n läpinäkyvyysraportti 2024/25: Nuno Carvalho 17,62 % suora omistus (30.4.2025); SAD:n pääoma 1 M€"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.torreense.com/sad",
+        "date": "2026-08-11",
+        "note": "Seuran virallinen SAD-sivu: omistus jakautuu seuralle, yksityisille ja holding-yhtiölle"
+      },
+      {
+        "field": "sale",
+        "url": "https://www.rtp.pt/noticias/futebol-nacional/fpf-confirma-mudancas-nas-sad-de-moreirense-tondela-e-alverca-para-202526_d1695972",
+        "date": "2026-08-11",
+        "note": "FPF: Torreensen SAD-omistuspohja 2025/26 ennallaan"
+      },
+      {
+        "field": "sale",
+        "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Ta%C3%A7a_de_Portugal",
+        "date": "2026-08-11",
+        "note": "Taça de Portugal -voitto 2026 (2-1 vs Sporting CP) → Europa League 2026/27"
+      },
+      {
+        "field": "city_population",
+        "url": "https://www.cm-tvedras.pt/artigos/detalhes/censos-2021-populacao-do-concelho-de-torres-vedras-aumentou-46",
+        "date": "2026-08-11",
+        "note": "Concelho 83 130 as. (Censos 2021, +4,6 %); cidade 19 528 as. (pt.wikipedia)"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.torreense.com/academia-torreense",
+        "date": "2026-08-11",
+        "note": "Academia Torreense ja Formação 360º -ohjelma olemassa (virallinen sivusto)"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.record.pt/futebol/futebol-nacional/2--liga/torreense/detalhe/fabrica-de-talentos-do-oeste-torreense-e-o-clube-da-2-liga-que-gera-mais-receitas-com-vendas-desde-2024",
+        "date": "2026-08-11",
+        "note": "Liga 2:n suurimmat pelaajamyyntitulot vuodesta 2024"
+      },
+      {
+        "field": "academy",
+        "url": "https://curiosidadessobreotorreense.blogs.sapo.pt/2020/07/",
+        "date": "2026-08-11",
+        "note": "Kasvatit Filipe Ramos (→ Sporting CP), Hélder Batista, Sérgio Santos — blogilähde, kohtalainen luotettavuus"
+      }
+    ],
+    "last_updated": "2026-08-11",
+    "confidence": "high"
+  },
+  {
+    "id": "sporting-cp-b",
+    "name": "Sporting Clube de Portugal B",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": "Alcochete",
+    "district": "Setúbal",
+    "founded": 2000,
+    "acquirable": false,
+    "coastal": false,
+    "coast_distance_km": 30,
+    "city_population": 19143,
+    "city_population_kind": "municipio",
+    "nearest_major_city": {
+      "name": "Lisboa",
+      "distance_km": 15
+    },
+    "coords": {
+      "lat": 38.75,
+      "lng": -8.96
+    },
+    "stadium": {
+      "name": "Estádio Aurélio Pereira (CGD Stadium Aurélio Pereira)",
+      "capacity": 1180,
+      "owner": "club",
+      "notes": "Stadion sijaitsee Sportingin omassa akatemiassa (Academia Sporting / Academia Cristiano Ronaldo, avattu 2002) Alcochetessa (distrito de Setúbal) — seuran/SAD:n oma kohde, ei kunnan. Kapasiteetti 1 180 (en.wikipedia, academiadasapostas; joissain lähteissä 1 184). Emoseura Sporting CP:n kotipaikka on Lissabon; B-joukkue pelaa ja harjoittelee Alcochetessa. Sporting on ilmoittanut suunnitelmista rakentaa akatemialle uusi ministadion virallisiin otteluihin."
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": true,
+      "fpf_certification": null,
+      "notes": "B-joukkue on Sportingin akatemiapolun ylin porras ennen edustusjoukkuetta. Academia Sporting (nyk. Academia Cristiano Ronaldo), Alcochete, avattu 21.6.2002 — Portugalin tunnetuin kasvattamo (mm. kaksi Ballon d'Or -voittajaa: Figo, Ronaldo).",
+      "notable_products": [
+        "Cristiano Ronaldo",
+        "Luís Figo",
+        "Paulo Futre",
+        "Nani",
+        "Ricardo Quaresma",
+        "Simão Sabrosa",
+        "João Moutinho",
+        "Rui Patrício",
+        "William Carvalho"
+      ]
     },
     "competition": {
       "same_or_higher_tier_within_30km": [
@@ -2089,15 +2264,17 @@
     },
     "ownership": {
       "structure": "SAD",
-      "owners": "B-joukkue kuuluu emoseura Sporting CP:n futebol-SAD:n alle; ei itsenäinen ostokohde (seed-datassa acquirable=false). Omistajaosuuksia ei verifioitu.",
-      "foreign_investor": null,
+      "owners": "B-joukkue ei ole erillinen yhtiö vaan osa Sporting Clube de Portugal – Futebol, SAD:ta (pörssilistattu, Euronext Lisbon). Määräysvalta klubilla: IR-tiedotteen mukaan Sporting CP suoraan ~75,6 % äänivallasta (aiemmissa tiedoissa Sporting SGPS 37,3 % + klubi 26,7 %); Holdimo (Álvaro Sobrinho, Angola) ollut merkittävä vähemmistöosakas (~29,9 % aiempien tietojen mukaan), Olivedesportos ~3,2 %.",
+      "foreign_investor": false,
       "debt_or_insolvency_notes": ""
     },
     "sale": {
       "status": "not_for_sale",
       "price_indication_eur": null,
-      "notes": "B-joukkue ei ole erillinen myytävä yhtiö vaan osa Sporting CP:n SAD-rakennetta (rakenteellinen päätelmä, ei uutislähdettä).",
-      "sources": []
+      "notes": "B-joukkue ei ole itsenäinen ostokohde — se on Sporting SAD:n sisäinen reservijoukkue, jota ei voi myydä erikseen. Ei nousukelpoinen Primeira Ligaan eikä pelaa Taça de Portugalissa / liigacupissa. Historia: equipa B 2000–2004, uudelleen 2012/13–2018 (Segunda Liga), Varandas perusti uudelleen 2020 (Campeonato de Portugal) → Liga 3 2021/22–2024/25 → nousu Liga Portugal 2:een 2025.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sporting_CP_B"
+      ]
     },
     "estimated_price_eur": {
       "low": null,
@@ -2105,47 +2282,120 @@
       "basis": ""
     },
     "investor_score": null,
-    "sources": [],
+    "sources": [
+      {
+        "field": "founded",
+        "url": "https://en.wikipedia.org/wiki/Sporting_CP_B",
+        "date": "2026-08-11",
+        "note": "Perustettu 2000; reservijoukkue, kotipaikka Lissabon; lakkautus 2003/04 jälkeen"
+      },
+      {
+        "field": "founded",
+        "url": "https://www.zerozero.pt/noticias/sporting-b-a-um-passo-da-ii-liga-a-historia-da-queda-e-de-um-regresso-com-potencial/814668",
+        "date": "2026-08-11",
+        "note": "Aikajana: equipa B 2012/13–2018 (Segunda Liga), uudelleenperustus 2020 Varandasin aikana, Campeonato de Portugal 2020/21 → Liga 3"
+      },
+      {
+        "field": "founded",
+        "url": "https://www.record.pt/futebol/futebol-nacional/liga-bwin/sporting/detalhe/liga-confirma-regresso-da-equipa-b-do-sporting",
+        "date": "2026-08-11",
+        "note": "Liga vahvisti equipa B:n paluun (2020/21)"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://en.wikipedia.org/wiki/Sporting_CP_B",
+        "date": "2026-08-11",
+        "note": "Estádio Aurélio Pereira, Academia Cristiano Ronaldo, Alcochete; 1 180 paikkaa (hakutulosten kautta, suora sivunlataus estetty proxyssa)"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://www.academiadasapostas.com/stats/venue/portugal/cgd-stadium-aurelio-pereira/17358",
+        "date": "2026-08-11",
+        "note": "CGD Stadium Aurélio Pereira, max 1 180 katsojaa"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "https://www.wikisporting.com/index.php?title=Academia_Sporting",
+        "date": "2026-08-11",
+        "note": "Stadion osa Sportingin akatemiaa Alcochetessa (seuran oma)"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.ojogo.pt/futebol/1a-liga/sporting/noticias/sporting-informa-sobre-percentagem-dos-acionistas-5554653.html/",
+        "date": "2026-08-11",
+        "note": "Sporting SAD:n osakasrakenne: SGPS 37,257 %, klubi 26,66 %, Holdimo 29,851 %, Olivedesportos 3,186 % (aiempi tilanne)"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.sporting.pt/incscp/pdf/investor_relations/ir_comunicado_260702.pdf",
+        "date": "2026-08-11",
+        "note": "IR-tiedote: SCP suoraan 152 776 330 A-osaketta = ~75,635 % äänivallasta"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.dn.pt/sporting-esclarece-alvaro-sobrinho-controla-299-do-clube-12852833.html",
+        "date": "2026-08-11",
+        "note": "Holdimo/Álvaro Sobrinho ~29,9 % (historiallinen vähemmistöosuus)"
+      },
+      {
+        "field": "city_population",
+        "url": "https://www.dn.pt/sociedade/censos2021-setubal-tem-mais-23-mil-habitantes-mas-barreiro-e-litoral-alentejano-perdem-populacao-15384147.html",
+        "date": "2026-08-11",
+        "note": "Alcochete concelho: 19 143 asukasta (Censos 2021, kasvu +8,96 % 2011–2021)"
+      },
+      {
+        "field": "academy",
+        "url": "https://observador.pt/2017/06/21/academia-sporting-e-o-milagre-da-multiplicacao-15-anos-36-titulos-43-jogadores-150-milhoes/",
+        "date": "2026-08-11",
+        "note": "Akatemian kasvatit: Ronaldo, Figo, Futre, Nani, Quaresma, Simão, Moutinho, Rui Patrício, William Carvalho"
+      },
+      {
+        "field": "academy",
+        "url": "https://en.wikipedia.org/wiki/Academia_Cristiano_Ronaldo",
+        "date": "2026-08-11",
+        "note": "Akatemia avattu 21.6.2002, nimetty uudelleen Academia Cristiano Ronaldoksi 2020"
+      }
+    ],
     "last_updated": "2026-08-11",
-    "confidence": "low"
+    "confidence": "high"
   },
   {
     "id": "uniao-de-leiria",
-    "name": "União de Leiria",
+    "name": "União Desportiva de Leiria",
     "tier": 2,
     "league": "Liga Portugal 2",
     "series": null,
     "city": "Leiria",
     "district": "Leiria",
-    "founded": null,
+    "founded": 1966,
     "acquirable": true,
     "coastal": false,
     "coast_distance_km": 20,
-    "city_population": null,
-    "city_population_kind": null,
+    "city_population": 128640,
+    "city_population_kind": "municipio",
     "nearest_major_city": {
       "name": "Coimbra",
       "distance_km": 60
     },
     "coords": {
-      "lat": 39.744,
+      "lat": 39.746,
       "lng": -8.807
     },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": "Stadionia, kapasiteettia ja omistajaa ei voitu verifioida — kaikki lähdedomainit (Wikipedia, zerozero.pt, seuran sivut) estetty egress-proxyssa 2026-08-11."
+      "name": "Estádio Municipal de Leiria Dr. Magalhães Pessoa",
+      "capacity": 23888,
+      "owner": "municipality",
+      "notes": "Kunnan stadion: rakennutti ja omistaa Câmara Municipal de Leiria (hallinnointi kaupungilla, aiemmin Leirisport E.M.). EURO 2004 -stadion, Tomás Taveiran laajennus avattu 19.11.2003, 23 888 istumapaikkaa (joissain lähteissä 22 668). Seuran SAD:lla oli 9/2024 >140 t€ velka kaupungille stadionin käytöstä."
     },
     "attendance": {
-      "season": "2025-26",
-      "average": null,
-      "source": ""
+      "season": "2023-24",
+      "average": 5771,
+      "source": "https://www.transfermarkt.pt/uniao-leiria/besucherzahlenentwicklung/verein/2639"
     },
     "academy": {
-      "exists": null,
-      "fpf_certification": null,
-      "notes": "Juniorirakennetta ei voitu verifioida ilman verkkopääsyä.",
+      "exists": true,
+      "fpf_certification": "4 tähteä (seuran oma ilmoitus, entidade formadora certificada)",
+      "notes": "Academia de Futebol UD Leiria, Santa Eufémia (Leirian kunta): yli 200 pelaajaa ikäluokissa ~U6–U19 (petizes–juniores). FPF:n entidade formadora -sertifiointi 4 tähteä sekä PNED:n eettisyyslippu seuran oman sivun mukaan; vahvista keskitetysti FPF:n listalta. Lähteet eivät nimeä yksittäisiä tunnettuja kasvatteja.",
       "notable_products": []
     },
     "competition": {
@@ -2154,16 +2404,19 @@
       "computed": true
     },
     "ownership": {
-      "structure": "unknown",
-      "owners": "",
-      "foreign_investor": null,
-      "debt_or_insolvency_notes": ""
+      "structure": "SAD",
+      "owners": "UDL – União de Leiria, Futebol, SAD: klubi ~10 %, sijoittajat ~90 % (Jubilantadvice Lda -rakenne). Enemmistöomistaja vuodesta 2022 Navdeep Singh (brittiläinen, intialaistaustainen sijoittaja, 90 %); maaliskuussa 2025 yhdysvaltalainen rahasto osti osan Singhin osakkeista. SAD:n hallituksen pj 2/2025 alkaen Nélio Lucas (ex-Doyen Sports), sijoittajien 'kasvot'. Aiemmat omistajat: Alexander Tolstikov / DS Investment LLP 2015–2020 (60 %), Jubilantadvice/Armando Marques 2020–.",
+      "foreign_investor": true,
+      "debt_or_insolvency_notes": "Alkuperäinen SAD ajautui maksukyvyttömyyteen 2012: velat ~13,5 M€, 107 velkojaa, valtio suurin (~3 M€ vero- ja alv-rästejä); pelaajat purkivat sopimuksiaan palkkarästien takia; tuomioistuin määräsi SAD:n puretuksi 7/2013. Klubi erosi SAD:sta, putosi alasarjoihin ja perusti uuden SAD:n 2015. Tuoreempaa: SAD:n velka Leirian kaupungille ylitti 140 t€ (9/2024)."
     },
     "sale": {
-      "status": "unknown",
+      "status": "recently_sold",
       "price_indication_eur": null,
-      "notes": "Ei verifioitavia uutislähteitä käytettävissä (haku- ja egress-esto); oletusstatus unknown sääntöjen mukaisesti.",
-      "sources": []
+      "notes": "Osittainen omistajanvaihdos 3/2025: yhdysvaltalainen rahasto osti osan enemmistöomistaja Navdeep Singhin osakkeista; kauppahintaa ei julkistettu. Nélio Lucas nimettiin SAD:n hallituksen puheenjohtajaksi 2/2025 sijoittajien esityksestä. Ei julkisia merkkejä koko SAD:n aktiivisesta myynnistä 8/2026.",
+      "sources": [
+        "https://www.abola.pt/futebol/noticias/ud-leiria-fundo-americano-entra-na-sad-2025030113322034092",
+        "https://www.rtp.pt/noticias/futebol-nacional/nelio-lucas-preside-a-sad-da-uniao-de-leiria_d1633667"
+      ]
     },
     "estimated_price_eur": {
       "low": null,
@@ -2171,9 +2424,94 @@
       "basis": ""
     },
     "investor_score": null,
-    "sources": [],
+    "sources": [
+      {
+        "field": "founded",
+        "url": "https://pt.wikipedia.org/wiki/Uni%C3%A3o_Desportiva_de_Leiria",
+        "date": "2026-08-11",
+        "note": "Perustettu 6.6.1966 kolmen seuran fuusiona (Sporting Clube Leiriense, GF Coliponense, Ateneu Desportivo de Leiria); hakutulosten kautta, suora sivunlataus estetty proxyssa"
+      },
+      {
+        "field": "founded",
+        "url": "https://www.infopedia.pt/artigos/$uniao-de-leiria",
+        "date": "2026-08-11",
+        "note": "Perustamistiedot ja historia"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://www.cm-leiria.pt/areas-de-atividade/desporto/estadio-municipal-dr-magalhaes-pessoa",
+        "date": "2026-08-11",
+        "note": "EURO 2004 -laajennus avattu 19.11.2003, 23 888 istumapaikkaa; kunnan sivusto"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "https://www.cm-leiria.pt/areas-de-atividade/desporto/estadio-municipal-dr-magalhaes-pessoa",
+        "date": "2026-08-11",
+        "note": "Stadionin rakennutti ja sitä hallinnoi Câmara Municipal de Leiria (Leirisport E.M. hankkeen toteuttajana) → owner: municipality"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.uniaodeleiria.pt/sad/",
+        "date": "2026-08-11",
+        "note": "SAD:n omistus: klubi 10 %, Jubilantadvice Lda 90 %"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.rtp.pt/noticias/futebol-nacional/nelio-lucas-preside-a-sad-da-uniao-de-leiria_d1633667",
+        "date": "2026-08-11",
+        "note": "Nélio Lucas SAD:n pj:ksi; Navdeep Singh (brittiläinen) 90 % omistaja vuodesta 2022"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.regiaodeleiria.pt/2020/10/socios-da-uniao-de-leiria-aprovam-entrada-de-novo-investidor-na-sad/",
+        "date": "2026-08-11",
+        "note": "Jäsenet hyväksyivät uuden sijoittajan 10/2020 (Jubilantadvice/Armando Marques; aiemmin Tolstikov/DS Investment LLP 60/40 vuodesta 2015)"
+      },
+      {
+        "field": "sale",
+        "url": "https://www.abola.pt/futebol/noticias/ud-leiria-fundo-americano-entra-na-sad-2025030113322034092",
+        "date": "2026-08-11",
+        "note": "3/2025: yhdysvaltalainen rahasto osti osan Navdeep Singhin osakkeista"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.jornaldenegocios.pt/empresas/desporto/detalhe/sad_da_uniao_de_leiria_termina_depois_de_14_anos_de_sucessos_e_polemicas",
+        "date": "2026-08-11",
+        "note": "Alkuperäisen SAD:n purku 2013; 13,5 M€ velat, 107 velkojaa, valtio suurin velkoja"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.regiaodeleiria.pt/2024/09/divida-da-sad-da-uniao-de-leiria-ao-municipio-leiriense-supera-os-140-mil-euros/",
+        "date": "2026-08-11",
+        "note": "SAD:n velka kaupungille >140 t€ (9/2024)"
+      },
+      {
+        "field": "city_population",
+        "url": "https://www.cm-leiria.pt/municipio/comunicacao/noticias/noticia/populacao-do-concelho-de-leiria-cresce-1-4-nos-censos-de-2021",
+        "date": "2026-08-11",
+        "note": "Leirian concelho 128 640 asukasta (Censos 2021, INE; +1,4 % vs 2011)"
+      },
+      {
+        "field": "attendance",
+        "url": "https://www.transfermarkt.pt/uniao-leiria/besucherzahlenentwicklung/verein/2639",
+        "date": "2026-08-11",
+        "note": "Kausi 2023-24 koko kauden keskiarvo 5 771 (Liga 2:n 2. paras; Marítimo 7 320) — hakutuloksen kautta; 2025-26-keskiarvoa ei saatu (sivunlataus estetty)"
+      },
+      {
+        "field": "attendance",
+        "url": "https://leiriadesporto.pt/estadio-municipal-de-leiria-lidera-assistencias-da-2-a-liga-de-futebol/",
+        "date": "2026-08-11",
+        "note": "Kauden 2023/24 alussa (6 kotiottelua) keskiarvo 8 162, Liga 2:n korkein — EI 2025-26-luku, vaikka hakukooste sen aluksi niin esitti"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.uniaodeleiria.pt/academia-de-futebol-ud-leiria-2/",
+        "date": "2026-08-11",
+        "note": "Akatemia Santa Eufémiassa, 200+ pelaajaa U6–U19; FPF 4 tähden entidade formadora -sertifiointi ja PNED-eettisyyslippu (seuran ilmoitus)"
+      }
+    ],
     "last_updated": "2026-08-11",
-    "confidence": "low"
+    "confidence": "high"
   },
   {
     "id": "ad-fafe",
@@ -4552,31 +4890,31 @@
   },
   {
     "id": "ad-ponte-da-barca",
-    "name": "AD Ponte da Barca",
+    "name": "Associação Desportiva de Ponte da Barca",
     "tier": 4,
     "league": "Campeonato de Portugal",
     "series": "A",
     "city": "Ponte da Barca",
     "district": "Viana do Castelo",
-    "founded": null,
+    "founded": 1966,
     "acquirable": true,
     "coastal": false,
-    "coast_distance_km": 30,
-    "city_population": null,
-    "city_population_kind": null,
+    "coast_distance_km": 35,
+    "city_population": 11044,
+    "city_population_kind": "municipio",
     "nearest_major_city": {
       "name": "Braga",
-      "distance_km": 32
+      "distance_km": 30
     },
     "coords": {
-      "lat": 41.808,
-      "lng": -8.419
+      "lat": 41.804,
+      "lng": -8.421
     },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": ""
+      "name": "Estádio Municipal de Ponte da Barca",
+      "capacity": 1227,
+      "owner": "municipality",
+      "notes": "Nimi 'Estádio Municipal' → kunnan kenttä (avattu 2013). Kapasiteetti: zerozero 1 227; pt-Wikipedia ilmoittaa ~1 500 — käytetty zerozeron tarkkaa lukua."
     },
     "attendance": {
       "season": "2025-26",
@@ -4584,9 +4922,9 @@
       "source": ""
     },
     "academy": {
-      "exists": null,
+      "exists": true,
       "fpf_certification": null,
-      "notes": "",
+      "notes": "Zerozerossa useita junioriryhmiä (mm. Jun.C S15, Fut.7 Jun.E S10).",
       "notable_products": []
     },
     "competition": {
@@ -4600,15 +4938,15 @@
       "computed": true
     },
     "ownership": {
-      "structure": "unknown",
-      "owners": "",
+      "structure": "clube",
+      "owners": "Jäsenyhdistys (Associação Desportiva); puheenjohtaja João David Araújo (pt-Wikipedia)",
       "foreign_investor": null,
       "debt_or_insolvency_notes": ""
     },
     "sale": {
       "status": "unknown",
       "price_indication_eur": null,
-      "notes": "",
+      "notes": "Portugalinkieliset haut (SAD / venda / investidor / insolvência) eivät tuottaneet seurakohtaisia myynti- tai sijoittajasignaaleja.",
       "sources": []
     },
     "estimated_price_eur": {
@@ -4619,29 +4957,53 @@
     "investor_score": null,
     "sources": [
       {
-        "field": "city",
-        "url": "https://www.zerozero.pt/noticias/definidas-as-quatro-series-do-campeonato-de-portugal-2026-27-consulte-aqui/1161660",
+        "field": "founded",
+        "url": "https://pt.wikipedia.org/wiki/Associa%C3%A7%C3%A3o_Desportiva_de_Ponte_da_Barca",
         "date": "2026-08-11",
-        "note": "Kotipaikka seuran nimestä; koordinaatit karttapäättelyä"
+        "note": "Perustettu 1.3.1966; kotipaikka Ponte da Barca, Viana do Castelon piiri (haku-snippet)"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://www.zerozero.pt/estadio.php?id=1410",
+        "date": "2026-08-11",
+        "note": "Estádio Municipal de Ponte da Barca: 1 227 paikkaa, 103x66, avattu 2013 (zerozero, haku-snippet)"
+      },
+      {
+        "field": "city_population",
+        "url": "https://en.wikipedia.org/wiki/Ponte_da_Barca",
+        "date": "2026-08-11",
+        "note": "Ponte da Barcan kunta 11 044 as. (censos 2021); myös citypopulation.de vahvistaa"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.zerozero.pt/equipa/ponte-da-barca/3628",
+        "date": "2026-08-11",
+        "note": "Associação Desportiva -muoto; SAD-hauissa ei viitteitä osakeyhtiöittämisestä"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.zerozero.pt/equipa/ponte-da-barca/15844",
+        "date": "2026-08-11",
+        "note": "Junioriryhmien sivut zerozerossa (Jun.C S15 ym.)"
       }
     ],
     "last_updated": "2026-08-11",
-    "confidence": "low"
+    "confidence": "high"
   },
   {
     "id": "brito-sc",
-    "name": "Brito SC",
+    "name": "Brito Sport Clube",
     "tier": 4,
     "league": "Campeonato de Portugal",
     "series": "A",
     "city": "Brito (Guimarães)",
     "district": "Braga",
-    "founded": null,
+    "founded": 1956,
     "acquirable": true,
     "coastal": false,
-    "coast_distance_km": 40,
-    "city_population": null,
-    "city_population_kind": null,
+    "coast_distance_km": 35,
+    "city_population": 156852,
+    "city_population_kind": "municipio",
     "nearest_major_city": {
       "name": "Braga",
       "distance_km": 12
@@ -4651,10 +5013,10 @@
       "lng": -8.36
     },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": ""
+      "name": "Parque de Jogos do Brito SC",
+      "capacity": 700,
+      "owner": "club",
+      "notes": "Kentän nimi 'Parque de Jogos do Brito SC' viittaa seuran omaan kenttään (ei 'Municipal'); seura vihki kunnostetun ~700-paikkaisen katsomon 2015 (en-Wikipedia). Omistus päätelty nimestä ja kunnostushistoriasta — ei eksplisiittistä omistusasiakirjaa."
     },
     "attendance": {
       "season": "2025-26",
@@ -4662,9 +5024,9 @@
       "source": ""
     },
     "academy": {
-      "exists": null,
+      "exists": true,
       "fpf_certification": null,
-      "notes": "",
+      "notes": "Laaja juniorirakenne zerozerossa (Jun.A S19, Jun.B S17 A+B, Jun.C S15, Jun.D S13, Fut.9) sekä B-joukkue.",
       "notable_products": []
     },
     "competition": {
@@ -4692,15 +5054,15 @@
       "computed": true
     },
     "ownership": {
-      "structure": "unknown",
-      "owners": "",
+      "structure": "clube",
+      "owners": "Jäsenyhdistys; rekisteröity Guimarãesin kunnan yhdistysportaaliin",
       "foreign_investor": null,
       "debt_or_insolvency_notes": ""
     },
     "sale": {
       "status": "unknown",
       "price_indication_eur": null,
-      "notes": "",
+      "notes": "Haut (SAD / investidor / insolvência) eivät tuottaneet seurakohtaisia signaaleja.",
       "sources": []
     },
     "estimated_price_eur": {
@@ -4711,42 +5073,66 @@
     "investor_score": null,
     "sources": [
       {
-        "field": "city",
-        "url": "https://www.guimaraesdigital.pt/index.php/informacao/desporto/100902-fpf-define-series-do-campeonato-de-portugal",
+        "field": "founded",
+        "url": "https://www.zerozero.pt/equipa/brito-sc/6296",
         "date": "2026-08-11",
-        "note": "Koordinaatit karttapäättelyä"
+        "note": "Perustettu 7.7.1956; Brito, Guimarães; AF Braga (haku-snippet)"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://en.wikipedia.org/wiki/Brito_S.C.",
+        "date": "2026-08-11",
+        "note": "Parque de Jogos do Brito SC, kapasiteetti ~700; katsomo kunnostettu 2015"
+      },
+      {
+        "field": "city_population",
+        "url": "https://www.pordata.pt/censos/quadro-resumo-municipios-e-regioes/guimaraes-1099",
+        "date": "2026-08-11",
+        "note": "Guimarãesin kunta 156 852 as. (censos 2021) — Brito on Guimarãesin freguesia"
+      },
+      {
+        "field": "ownership",
+        "url": "https://associativismo.guimaraes.pt/associacao/1400/brito-sport-clube/contactos",
+        "date": "2026-08-11",
+        "note": "Yhdistysrekisteri (Portal do Associativismo, Guimarães); SAD-hauissa ei osumia"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.zerozero.pt/equipa/brito-sc/16725",
+        "date": "2026-08-11",
+        "note": "Junioriryhmien sivut zerozerossa"
       }
     ],
     "last_updated": "2026-08-11",
-    "confidence": "low"
+    "confidence": "high"
   },
   {
     "id": "cdc-montalegre",
-    "name": "CDC Montalegre",
+    "name": "Centro Desportivo e Cultural de Montalegre",
     "tier": 4,
     "league": "Campeonato de Portugal",
     "series": "A",
     "city": "Montalegre",
     "district": "Vila Real",
-    "founded": null,
+    "founded": 1964,
     "acquirable": true,
     "coastal": false,
-    "coast_distance_km": 90,
-    "city_population": null,
-    "city_population_kind": null,
+    "coast_distance_km": 85,
+    "city_population": 9261,
+    "city_population_kind": "municipio",
     "nearest_major_city": {
       "name": "Braga",
       "distance_km": 60
     },
     "coords": {
-      "lat": 41.823,
+      "lat": 41.822,
       "lng": -7.79
     },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": ""
+      "name": "Estádio Municipal Dr. Diogo Alves Vaz Pereira",
+      "capacity": 2000,
+      "owner": "municipality",
+      "notes": "Público/DN kutsuvat kenttää 'Estádio Municipal' ja se on kunnan liikuntapaikkalistalla (cm-montalegre.pt) → kunnan omistama. Normaalikapasiteetti ~2 000; laajennettiin väliaikaisesti ~6 000:een Benfica-cupottelua varten 12/2018. Soccerwayn 5 000 lienee virheellinen. Avattu 1989, nurmi."
     },
     "attendance": {
       "season": "2025-26",
@@ -4754,9 +5140,9 @@
       "source": ""
     },
     "academy": {
-      "exists": null,
+      "exists": true,
       "fpf_certification": null,
-      "notes": "",
+      "notes": "Junioriryhmiä jalkapallossa (Jun.A S19, Jun.B S17, Fut.7 Jun.D) ja laaja futsal-juniorirakenne zerozerossa.",
       "notable_products": []
     },
     "competition": {
@@ -4768,15 +5154,15 @@
       "computed": true
     },
     "ownership": {
-      "structure": "unknown",
-      "owners": "",
+      "structure": "clube",
+      "owners": "Jäsenyhdistys (Centro Desportivo e Cultural); monilajiseura (jalkapallo + futsal)",
       "foreign_investor": null,
       "debt_or_insolvency_notes": ""
     },
     "sale": {
       "status": "unknown",
       "price_indication_eur": null,
-      "notes": "",
+      "notes": "Haut (SAD / investidor / dívidas) eivät tuottaneet seurakohtaisia signaaleja.",
       "sources": []
     },
     "estimated_price_eur": {
@@ -4787,36 +5173,72 @@
     "investor_score": null,
     "sources": [
       {
-        "field": "city",
-        "url": "https://desportivotransmontano.sapo.pt/noticias/definidas-as-series-do-campeonato-de-portugal-2026-27-equipas-transmontanas-na-serie-1/",
+        "field": "founded",
+        "url": "https://www.zerozero.pt/equipa/cdc-montalegre/3612",
         "date": "2026-08-11",
-        "note": "Lohkoarvonnan uutisointi; koordinaatit ja etäisyydet karttapäättelyä"
+        "note": "Perustettu 23.11.1964; Montalegre, Vila Realin piiri (haku-snippet + pt-Wikipedia)"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://www.publico.pt/2018/12/06/desporto/noticia/estadio-montalegre-vai-triplicar-lotacao-receber-benfica-1853796",
+        "date": "2026-08-11",
+        "note": "'Estádio Municipal Dr. Diogo Vaz Pereira', normaalisti ~2 000 paikkaa; triplattiin ~6 000:een Benficaa vastaan 2018"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "https://www.cm-montalegre.pt/pages/750",
+        "date": "2026-08-11",
+        "note": "Kenttä kunnan (Câmara Municipal de Montalegre) liikuntapaikkasivuilla"
+      },
+      {
+        "field": "city_population",
+        "url": "https://pt.wikipedia.org/wiki/Montalegre",
+        "date": "2026-08-11",
+        "note": "Montalegren kunta 9 261 as. (censos 2021; 2011: 10 537)"
+      },
+      {
+        "field": "ownership",
+        "url": "https://pt.wikipedia.org/wiki/Centro_Desportivo_e_Cultural_de_Montalegre",
+        "date": "2026-08-11",
+        "note": "Yhdistysmuotoinen monilajiseura; SAD-hauissa ei osumia"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.zerozero.pt/equipa/cdc-montalegre/49677",
+        "date": "2026-08-11",
+        "note": "Junioriryhmien sivut zerozerossa"
       }
     ],
     "last_updated": "2026-08-11",
-    "confidence": "low"
+    "confidence": "high"
   },
   {
     "id": "celoricense",
-    "name": "Celoricense",
+    "name": "Clube Desportivo Celoricense",
     "tier": 4,
     "league": "Campeonato de Portugal",
     "series": "A",
-    "city": null,
-    "district": null,
-    "founded": null,
+    "city": "Celorico de Basto",
+    "district": "Braga",
+    "founded": 1931,
     "acquirable": true,
-    "coastal": null,
-    "coast_distance_km": null,
-    "city_population": null,
-    "city_population_kind": null,
-    "nearest_major_city": null,
-    "coords": null,
+    "coastal": false,
+    "coast_distance_km": 65,
+    "city_population": 17666,
+    "city_population_kind": "municipio",
+    "nearest_major_city": {
+      "name": "Braga",
+      "distance_km": 40
+    },
+    "coords": {
+      "lat": 41.388,
+      "lng": -8.001
+    },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": ""
+      "name": "Estádio Municipal de Celorico de Basto",
+      "capacity": 301,
+      "owner": "municipality",
+      "notes": "Kunnan stadion (nimi 'Municipal'; kunta investoi ~500 000 € Portugal 2030 -rahoituksella uuteen katsomoon ja pukuhuoneisiin 2026). Kapasiteettilähteet ristiriitaiset: futebol365 301 katsojaa, O Minho ~400 paikkaa; uusi katsomo nostanee lukua kaudelle 2026/27. Avattu 2007, tekonurmi 105x68."
     },
     "attendance": {
       "season": "2025-26",
@@ -4824,9 +5246,9 @@
       "source": ""
     },
     "academy": {
-      "exists": null,
+      "exists": true,
       "fpf_certification": null,
-      "notes": "",
+      "notes": "Junioriryhmiä zerozerossa (Jun.A S19, Jun.B S17, S15, Fut.7 Jun.D S13) sekä naisten joukkue.",
       "notable_products": []
     },
     "competition": {
@@ -4834,15 +5256,15 @@
       "notes": ""
     },
     "ownership": {
-      "structure": "unknown",
-      "owners": "",
+      "structure": "clube",
+      "owners": "Jäsenyhdistys; puheenjohtaja Leandro Gonçalves; vapaaehtoisvetoinen (Maisfutebol-reportaasi)",
       "foreign_investor": null,
-      "debt_or_insolvency_notes": ""
+      "debt_or_insolvency_notes": "Historiallinen episodi: aiemmat sijoittajat 'veivät kaiken' ja jättivät seuralle merkittävät velat, minkä jälkeen seura rakennettiin lähes nollasta uudelleen (Maisfutebol). Ei viitteitä nykyisestä maksukyvyttömyydestä; kaksi perättäistä nousua ja paluu kansalliselle tasolle 2025."
     },
     "sale": {
       "status": "unknown",
       "price_indication_eur": null,
-      "notes": "",
+      "notes": "Ei nykyisiä myynti-/sijoittajasignaaleja hauissa; aiempi sijoittajaepisodi kirjattu ownership-kenttään.",
       "sources": []
     },
     "estimated_price_eur": {
@@ -4851,9 +5273,52 @@
       "basis": ""
     },
     "investor_score": null,
-    "sources": [],
-    "last_updated": null,
-    "confidence": "low"
+    "sources": [
+      {
+        "field": "founded",
+        "url": "https://www.zerozero.pt/equipa/cd-celoricense/6717",
+        "date": "2026-08-11",
+        "note": "IDENTITEETTI VARMISTETTU: CdP Série A -seura on Clube Desportivo Celoricense, Celorico de Basto (Bragan piiri), per. 1.9.1931 — EI Sporting Clube Celoricense (Celorico da Beira, Guarda, per. 1948), joka on eri seura"
+      },
+      {
+        "field": "founded",
+        "url": "https://www.transfermarkt.co.uk/spielbericht/index/spielbericht/4719203",
+        "date": "2026-08-11",
+        "note": "CD Celoricense - AD Camacha 21.12.2025, Campeonato de Portugal Série A → vahvistaa sarjapaikan ja identiteetin"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://futebol365.pt/estadio/2942/",
+        "date": "2026-08-11",
+        "note": "Estádio Municipal de Celorico de Basto: max 301 katsojaa, avattu 2007 (haku-snippet); O Minho: ~400 paikkaa"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "https://primeirominuto.sapo.pt/celorico-de-basto-investe-500-mil-euros-em-melhorias-no-estadio-municipal/",
+        "date": "2026-08-11",
+        "note": "Kunta investoi 500 000 € stadionin parannuksiin (uusi katsomo, pukuhuoneet), Portugal 2030 -rahoitus, 7/2026"
+      },
+      {
+        "field": "city_population",
+        "url": "https://www.pordata.pt/censos/quadro-resumo-municipios-e-regioes/celorico+de+basto-1134",
+        "date": "2026-08-11",
+        "note": "Celorico de Baston kunta 17 666 as. (censos 2021), Bragan piiri"
+      },
+      {
+        "field": "ownership",
+        "url": "https://maisfutebol.iol.pt/reportagem/celoricense/o-massagista-do-celoricense-que-ja-fez-partos-e-trata-de-tudo-ate-contratar-jogadores",
+        "date": "2026-08-11",
+        "note": "Reportaasi: vapaaehtoisvetoinen yhdistys; aiemmat sijoittajat jättivät velat, seura rakennettu uudelleen; ei SAD:ia"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.zerozero.pt/equipa/cd-celoricense/35469",
+        "date": "2026-08-11",
+        "note": "Junioriryhmien sivut zerozerossa"
+      }
+    ],
+    "last_updated": "2026-08-11",
+    "confidence": "medium"
   },
   {
     "id": "fc-maia-lidador",
@@ -4863,25 +5328,25 @@
     "series": "A",
     "city": "Maia",
     "district": "Porto",
-    "founded": null,
+    "founded": 2009,
     "acquirable": true,
     "coastal": false,
     "coast_distance_km": 8,
-    "city_population": null,
-    "city_population_kind": null,
+    "city_population": 134959,
+    "city_population_kind": "municipio",
     "nearest_major_city": {
       "name": "Porto",
       "distance_km": 10
     },
     "coords": {
-      "lat": 41.233,
-      "lng": -8.621
+      "lat": 41.2357,
+      "lng": -8.6199
     },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": ""
+      "name": "Estádio Municipal Dr. José Vieira de Carvalho",
+      "capacity": 12000,
+      "owner": "municipality",
+      "notes": "Nimi 'Estádio Municipal' — Maian kunnan omistama stadion (per. FC Maian aikainen kotikenttä, avattu 1975). Zerozero listaa osalle joukkueista harjoituskentän (Campo de Treinos, 300 paikkaa) samassa kompleksissa; pääjoukkueen ilmoitettu kapasiteetti 12 000."
     },
     "attendance": {
       "season": "2025-26",
@@ -4889,9 +5354,9 @@
       "source": ""
     },
     "academy": {
-      "exists": null,
+      "exists": true,
       "fpf_certification": null,
-      "notes": "",
+      "notes": "Laaja juniorirakenne (zerozerossa useita ikäluokkajoukkueita Jun.A–Jun.E, myös naiset). Nuori seura (2009) — dokumentoituja ammattilaiskasvatteja ei löytynyt.",
       "notable_products": []
     },
     "competition": {
@@ -4920,15 +5385,15 @@
       "computed": true
     },
     "ownership": {
-      "structure": "unknown",
-      "owners": "",
-      "foreign_investor": null,
-      "debt_or_insolvency_notes": ""
+      "structure": "clube",
+      "owners": "Jäsenomisteinen yhdistys; puheenjohtaja António Fernando Oliveira e Silva (Maisfutebol). SAD-hauissa ei löytynyt merkkejä osakeyhtiöittämisestä.",
+      "foreign_investor": false,
+      "debt_or_insolvency_notes": "Seura itse velaton-profiililla (per. 2009); HUOM: edeltäjäseura FC Maia (per. 1954, pelasi hetken Ligassa) kaatui talousvaikeuksiin ja purettiin lopullisesti 2011 — Maia Lidador perustettiin sen 'tuhkista' uutena yhdistyksenä."
     },
     "sale": {
       "status": "unknown",
       "price_indication_eur": null,
-      "notes": "",
+      "notes": "Ei julkisia myynti- tai sijoittajasignaaleja. Nousi 2026/27 ensimmäistä kertaa valtakunnalliselle tasolle (AF Porton 1. divisioonan 2. sija); A Bola 5.8.2026: seura tähtää ylemmäs ('kolme divisioonaa Ligaan').",
       "sources": []
     },
     "estimated_price_eur": {
@@ -4939,14 +5404,50 @@
     "investor_score": null,
     "sources": [
       {
-        "field": "city",
-        "url": "https://www.jornaldamaia.pt/maia-lidador-faz-historia-e-garante-subida-ao-campeonato-de-portugal/",
+        "field": "founded",
+        "url": "https://pt.wikipedia.org/wiki/Futebol_Clube_Maia_Lidador",
         "date": "2026-08-11",
-        "note": "Koordinaatit karttapäättelyä"
+        "note": "Perustettu 2009, FC Maian (purettu 2011) seuraaja; kaupunki Maia, Porton metropolialue"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://www.zerozero.pt/stadium.php?id=29",
+        "date": "2026-08-11",
+        "note": "Estádio Municipal Dr. José Vieira de Carvalho, 12 000; junioreilla harjoituskenttä 300"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://en.wikipedia.org/wiki/Maia_Lidador",
+        "date": "2026-08-11",
+        "note": "Vahvistaa stadionin ja 12 000 kapasiteetin"
+      },
+      {
+        "field": "city_population",
+        "url": "https://www.noticiasmaia.com/censos-2021-maia-tem-agora-134-959-habitantes/",
+        "date": "2026-08-11",
+        "note": "Censos 2021: Maian concelho 134 959 as."
+      },
+      {
+        "field": "ownership",
+        "url": "https://maisfutebol.iol.pt/caminhos-de-portugal/af-porto/maia-lidador-esteve-dois-minutos-na-liga-faliu-e-agora-quer-renascer",
+        "date": "2026-08-11",
+        "note": "Yhdistys, puheenjohtaja António Fernando Oliveira e Silva; edeltäjän konkurssitausta"
+      },
+      {
+        "field": "sale",
+        "url": "https://www.abola.pt/noticias/nasceu-das-cinzas-de-um-historico-do-distrito-do-porto-e-agora-vai-estrear-se-nos-nacionais-2026080513022085179",
+        "date": "2026-08-11",
+        "note": "A Bola 5.8.2026: nousu Campeonato de Portugaliin 2026/27, debyytti valtakunnallisella tasolla"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.zerozero.pt/equipa/fc-maia-lidador/31779",
+        "date": "2026-08-11",
+        "note": "Zerozero: useita juniorijoukkueita (Jun.A S19 ym.)"
       }
     ],
     "last_updated": "2026-08-11",
-    "confidence": "low"
+    "confidence": "medium"
   },
   {
     "id": "fc-tirsense",
@@ -4956,25 +5457,25 @@
     "series": "A",
     "city": "Santo Tirso",
     "district": "Porto",
-    "founded": null,
+    "founded": 1938,
     "acquirable": true,
     "coastal": false,
     "coast_distance_km": 25,
-    "city_population": null,
-    "city_population_kind": null,
+    "city_population": 67709,
+    "city_population_kind": "municipio",
     "nearest_major_city": {
       "name": "Porto",
-      "distance_km": 22
+      "distance_km": 24
     },
     "coords": {
-      "lat": 41.342,
-      "lng": -8.478
+      "lat": 41.3428,
+      "lng": -8.4775
     },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": ""
+      "name": "Estádio Abel Alves de Figueiredo",
+      "capacity": 8000,
+      "owner": "club",
+      "notes": "Kapasiteetti 8 000 (Wikipedia; kolme katsomoa), osa lähteistä ilmoittaa 12 000–15 000 — käytetty varovaisempaa 8 000. Omistus: kenttäalueen lahjoitti Figueiredon suku seuralle (Glórias do Passado -historiablogi) → seuran oma stadion, ei 'Municipal'-nimeä; varmuusaste kohtalainen."
     },
     "attendance": {
       "season": "2025-26",
@@ -4982,9 +5483,9 @@
       "source": ""
     },
     "academy": {
-      "exists": null,
+      "exists": true,
       "fpf_certification": null,
-      "notes": "",
+      "notes": "Zerozerossa useita juniorijoukkueita (Jun.D, Jun.F, S23 ym.). Dokumentoitua kasvattilistaa ei löytynyt kohtuullisella haulla.",
       "notable_products": []
     },
     "competition": {
@@ -5021,15 +5522,15 @@
       "computed": true
     },
     "ownership": {
-      "structure": "unknown",
-      "owners": "",
-      "foreign_investor": null,
+      "structure": "clube",
+      "owners": "Perinteinen jäsenomisteinen yhdistys (per. 5.1.1938). SAD-hauissa (venda/investidor/acionistas) ei yhtään Tirsense-osumaa.",
+      "foreign_investor": false,
       "debt_or_insolvency_notes": ""
     },
     "sale": {
       "status": "unknown",
       "price_indication_eur": null,
-      "notes": "",
+      "notes": "Ei julkisia myynti- tai sijoittajasignaaleja. Uusi valmentaja Marco Louçano nimitetty 5/2026; jatkaa Campeonato de Portugalissa 2026/27 (vapautettu Taça de Portugalin 1. kierrokselta).",
       "sources": []
     },
     "estimated_price_eur": {
@@ -5040,14 +5541,50 @@
     "investor_score": null,
     "sources": [
       {
-        "field": "city",
-        "url": "https://www.zerozero.pt/noticias/definidas-as-quatro-series-do-campeonato-de-portugal-2026-27-consulte-aqui/1161660",
+        "field": "founded",
+        "url": "https://en.wikipedia.org/wiki/F.C._Tirsense",
         "date": "2026-08-11",
-        "note": "Tirsense = Santo Tirson seura; koordinaatit karttapäättelyä"
+        "note": "Futebol Clube Tirsense, per. 5.1.1938, Santo Tirso"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://pt.wikipedia.org/wiki/Futebol_Clube_Tirsense",
+        "date": "2026-08-11",
+        "note": "Estádio Abel Alves de Figueiredo, 8 000 (muissa lähteissä 12 000–15 000)"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "http://gloriasdopassado.blogspot.com/2010/02/estadio-abel-alves-de-figueiredo.html",
+        "date": "2026-08-11",
+        "note": "Figueiredon suku lahjoitti maa-alueen seuralle → seuran oma kenttä"
+      },
+      {
+        "field": "city_population",
+        "url": "https://jornaldoave.sapo.pt/censos-santo-tirso-perdeu-5-da-populacao-e-famalicao-quase-sem-variacao/",
+        "date": "2026-08-11",
+        "note": "Censos 2021: Santo Tirson concelho 67 709 as. (-5 % vs 2011)"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.zerozero.pt/equipa/tirsense/2174",
+        "date": "2026-08-11",
+        "note": "Seurasivu; ei SAD-mainintaa, SAD-uutishauissa ei osumia"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.zerozero.pt/equipa/tirsense/299638",
+        "date": "2026-08-11",
+        "note": "Zerozero: juniorijoukkueet useissa ikäluokissa"
+      },
+      {
+        "field": "sale",
+        "url": "https://www.diariodesantotirso.pt/tirsense-fica-isento-e-segue-diretamente-para-a-segunda-eliminatoria-da-taca-de-portugal/",
+        "date": "2026-08-11",
+        "note": "Paikallisuutiset 2026/27-kaudesta; ei omistusmuutosuutisia"
       }
     ],
     "last_updated": "2026-08-11",
-    "confidence": "low"
+    "confidence": "medium"
   },
   {
     "id": "gd-braganca",
@@ -5057,25 +5594,25 @@
     "series": "A",
     "city": "Bragança",
     "district": "Bragança",
-    "founded": null,
+    "founded": 1943,
     "acquirable": true,
     "coastal": false,
-    "coast_distance_km": 150,
-    "city_population": null,
-    "city_population_kind": null,
+    "coast_distance_km": 170,
+    "city_population": 34582,
+    "city_population_kind": "municipio",
     "nearest_major_city": {
       "name": "Braga",
-      "distance_km": 120
+      "distance_km": 140
     },
     "coords": {
       "lat": 41.806,
       "lng": -6.757
     },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": ""
+      "name": "Estádio Municipal de Bragança (Eng.º José Luís Pinheiro)",
+      "capacity": 7000,
+      "owner": "municipality",
+      "notes": "Kunnallinen stadion: Câmara Municipal de Bragançan 1970-luvulla rakentama ja omistama (nimi 'Municipal')."
     },
     "attendance": {
       "season": "2025-26",
@@ -5083,10 +5620,13 @@
       "source": ""
     },
     "academy": {
-      "exists": null,
+      "exists": true,
       "fpf_certification": null,
-      "notes": "",
-      "notable_products": []
+      "notes": "pt-Wikipedia: seuran kasvateista tunnetuimmat Pizzi (Benfica, Portugalin maajoukkue) ja Pardalinho.",
+      "notable_products": [
+        "Pizzi",
+        "Pardalinho"
+      ]
     },
     "competition": {
       "same_or_higher_tier_within_30km": [
@@ -5096,15 +5636,15 @@
       "computed": true
     },
     "ownership": {
-      "structure": "unknown",
-      "owners": "",
-      "foreign_investor": null,
+      "structure": "clube",
+      "owners": "Jäsenomisteinen yhdistys (per. 11.6.1943). Presidenttitieto ristiriitainen: pt-Wikipedia mainitsee Paulo Afonson, Jornal Nordeste uutisoi Milton Roquen valinnasta uudeksi puheenjohtajaksi (uutisen ajankohta ei varmistunut). Ei SAD-viitteitä.",
+      "foreign_investor": false,
       "debt_or_insolvency_notes": ""
     },
     "sale": {
       "status": "unknown",
       "price_indication_eur": null,
-      "notes": "",
+      "notes": "Ei julkisia myynti- tai sijoittajasignaaleja. (Huom. alueuutisissa investoriuutinen koski eri seuraa, GD Cachãoa Mirandelassa — ei GD Bragançaa.)",
       "sources": []
     },
     "estimated_price_eur": {
@@ -5115,14 +5655,44 @@
     "investor_score": null,
     "sources": [
       {
-        "field": "city",
-        "url": "https://desportivotransmontano.sapo.pt/noticias/definidas-as-series-do-campeonato-de-portugal-2026-27-equipas-transmontanas-na-serie-1/",
+        "field": "founded",
+        "url": "https://pt.wikipedia.org/wiki/Grupo_Desportivo_de_Bragan%C3%A7a",
         "date": "2026-08-11",
-        "note": "Lohkoarvonnan uutisointi; koordinaatit karttapäättelyä"
+        "note": "Per. 11.6.1943, Bragança; pelaa Campeonato de Portugalin Série A:ssa"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://en.wikipedia.org/wiki/GD_Bragan%C3%A7a",
+        "date": "2026-08-11",
+        "note": "Estádio Municipal de Bragança, 7 000"
+      },
+      {
+        "field": "stadium.owner",
+        "url": "https://www.allaboutportugal.pt/en/braganca/sports/estadio-municipal-de-braganca",
+        "date": "2026-08-11",
+        "note": "Câmara Municipal rakensi 1970-luvulla — kunnan stadion"
+      },
+      {
+        "field": "city_population",
+        "url": "https://pt.wikipedia.org/wiki/Bragan%C3%A7a_(Portugal)",
+        "date": "2026-08-11",
+        "note": "Censos 2021: Bragançan concelho 34 582 as. (-2,15 % vs 2011)"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.jornalnordeste.com/noticia/milton-roque-e-o-novo-presidente-do-grupo-desportivo-de-braganca",
+        "date": "2026-08-11",
+        "note": "Yhdistyksen puheenjohtajavaihdos; ei SAD-rakennetta"
+      },
+      {
+        "field": "academy",
+        "url": "https://pt.wikipedia.org/wiki/Grupo_Desportivo_de_Bragan%C3%A7a",
+        "date": "2026-08-11",
+        "note": "Kasvatit: Pizzi ja Pardalinho"
       }
     ],
     "last_updated": "2026-08-11",
-    "confidence": "low"
+    "confidence": "medium"
   },
   {
     "id": "gd-chaves-b",
@@ -5132,25 +5702,25 @@
     "series": "A",
     "city": "Chaves",
     "district": "Vila Real",
-    "founded": null,
+    "founded": 1949,
     "acquirable": false,
     "coastal": false,
     "coast_distance_km": 110,
-    "city_population": null,
-    "city_population_kind": null,
+    "city_population": 37590,
+    "city_population_kind": "municipio",
     "nearest_major_city": {
       "name": "Braga",
       "distance_km": 80
     },
     "coords": {
-      "lat": 41.74,
-      "lng": -7.47
+      "lat": 41.7404,
+      "lng": -7.4691
     },
     "stadium": {
-      "name": null,
-      "capacity": null,
-      "owner": "unknown",
-      "notes": ""
+      "name": "Estádio Municipal Eng.º Manuel Branco Teixeira",
+      "capacity": 8400,
+      "owner": "municipality",
+      "notes": "Chavesin kaupungin omistama kunnallinen stadion (SAD-kaupan yhteydessä 9/2025 uutisoitiin neuvoteltavan 50 vuoden konsessiosta seuralle ja jopa 4 M€ stadion-investoinnista nousun jälkeen). B-joukkueen omaa kotikenttää 2026/27 ei erikseen vahvistettu — merkitty emoseuran stadion."
     },
     "attendance": {
       "season": "2025-26",
@@ -5158,9 +5728,9 @@
       "source": ""
     },
     "academy": {
-      "exists": null,
+      "exists": true,
       "fpf_certification": null,
-      "notes": "",
+      "notes": "GD Chavesilla laaja juniorirakenne (zerozerossa lukuisia ikäluokkajoukkueita); B-joukkue on itsessään osa kehityspolkua ammattilaisjoukkueeseen.",
       "notable_products": []
     },
     "competition": {
@@ -5172,16 +5742,21 @@
       "computed": true
     },
     "ownership": {
-      "structure": "unknown",
-      "owners": "",
-      "foreign_investor": null,
+      "structure": "SAD",
+      "owners": "Emoseura GD Chavesilla on futebol-SAD, jonka osake-enemmistön (80 %, ml. Carvalhon suvun osuus ja seuran 10 %) osti 9/2025 meksikolainen sijoittajaryhmä (Clase Azul -tequilabrändin Arturo Lomelí, CA La Pazin omistaja; zerozero viittasi kauppaan myös Grupo Orlegi Sports -nimellä). SAD:n presidentti Dante Elizalde (ex-Santos Laguna); pitkäaikainen presidentti Francisco José Carvalho väistyi 12 vuoden jälkeen ja clube irtautui SAD:sta kokonaan.",
+      "foreign_investor": true,
       "debt_or_insolvency_notes": ""
     },
     "sale": {
-      "status": "unknown",
+      "status": "recently_sold",
       "price_indication_eur": null,
-      "notes": "",
-      "sources": []
+      "notes": "Emoseuran SAD myyty 9/2025 meksikolaisryhmälle (80 % osakkeista); kauppahintaa ei julkistettu löydetyissä lähteissä. B-joukkue nousi Campeonato de Portugaliin 2026/27 voitettuaan AF Vila Realin Divisão de Honran mestaruuden.",
+      "sources": [
+        "https://www.record.pt/futebol/futebol-nacional/2--liga/chaves/detalhe/venda-da-sad-do-chaves-ao-grupo-mexicano-clase-azul-esta-consumada",
+        "https://www.abola.pt/noticias/chaves-vende-maioria-do-capital-da-sad-a-empresarios-mexicanos-2025091515414072845",
+        "https://www.avozdetrasosmontes.pt/sad-do-chaves-vendida-a-mexicanos-e-clube-sai-da-sociedade/",
+        "https://desportivotransmontano.sapo.pt/noticias/gd-chaves-anuncia-venda-da-sad-a-grupo-mexicano/"
+      ]
     },
     "estimated_price_eur": {
       "low": null,
@@ -5191,14 +5766,56 @@
     "investor_score": null,
     "sources": [
       {
-        "field": "city",
-        "url": "https://desportivotransmontano.sapo.pt/noticias/definidas-as-series-do-campeonato-de-portugal-2026-27-equipas-transmontanas-na-serie-1/",
+        "field": "founded",
+        "url": "https://en.wikipedia.org/wiki/G.D._Chaves",
         "date": "2026-08-11",
-        "note": "B-joukkue; emoseuran kotikaupunki. Koordinaatit karttapäättelyä"
+        "note": "Emoseura Grupo Desportivo de Chaves per. 1949; founded-kenttä = emoseuran vuosi, B-joukkue perustettu vasta hiljattain"
+      },
+      {
+        "field": "stadium.capacity",
+        "url": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_Eng._Manuel_Branco_Teixeira",
+        "date": "2026-08-11",
+        "note": "Kapasiteetti 8 400; avattu 1949; kunnallinen"
+      },
+      {
+        "field": "ownership",
+        "url": "https://www.record.pt/futebol/futebol-nacional/2--liga/chaves/detalhe/venda-da-sad-do-chaves-ao-grupo-mexicano-clase-azul-esta-consumada",
+        "date": "2026-08-11",
+        "note": "SAD:n myynti meksikolaisryhmälle vahvistettu; Dante Elizalde presidentiksi"
+      },
+      {
+        "field": "sale",
+        "url": "https://www.abola.pt/noticias/chaves-vende-maioria-do-capital-da-sad-a-empresarios-mexicanos-2025091515414072845",
+        "date": "2026-08-11",
+        "note": "A Bola 15.9.2025: SAD-enemmistö meksikolaisyrittäjille"
+      },
+      {
+        "field": "sale",
+        "url": "https://www.avozdetrasosmontes.pt/sad-do-chaves-vendida-a-mexicanos-e-clube-sai-da-sociedade/",
+        "date": "2026-08-11",
+        "note": "Clube myi 10 %:nsa ja irtautui SAD:sta kokonaan"
+      },
+      {
+        "field": "city_population",
+        "url": "https://www.avozdetrasosmontes.pt/distrito-de-vila-real-perdeu-quase-21-mil-habitantes-na-ultima-decada/",
+        "date": "2026-08-11",
+        "note": "Censos 2021: Chavesin concelho 37 590 as., distrito Vila Real"
+      },
+      {
+        "field": "academy",
+        "url": "https://www.zerozero.pt/equipa/gd-chaves/296753/jogos",
+        "date": "2026-08-11",
+        "note": "GD Chaves (B) zerozerossa; lisäksi lukuisia juniorijoukkueita"
+      },
+      {
+        "field": "attendance",
+        "url": "https://desportivotransmontano.sapo.pt/noticias/chaves-b-sagra-se-campeao-distrital-da-divisao-de-honra-da-afvr/",
+        "date": "2026-08-11",
+        "note": "B-joukkueen AFVR Divisão de Honran mestaruus ja nousu CP:hen"
       }
     ],
     "last_updated": "2026-08-11",
-    "confidence": "low"
+    "confidence": "high"
   },
   {
     "id": "maria-da-fonte",
