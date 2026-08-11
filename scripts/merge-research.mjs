@@ -4,6 +4,9 @@
 // Syväyhdistys: objektit yhdistetään kenttä kerrallaan, taulukot korvataan,
 // null EI ylikirjoita olemassa olevaa ei-null-arvoa (tutkittua tietoa ei hävitetä),
 // paitsi jos kentälle annetaan eksplisiittisesti uusi ei-null-arvo.
+// Poikkeus: lähdelistat (sources, sale.sources, academy.notable_products)
+// yhdistetään ja deduplikoidaan, koska useampi tutkimusagentti täydentää samaa
+// seuraa eri kentistä — korvaaminen hävittäisi aiemmat lähdeviitteet.
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -15,12 +18,30 @@ function isObj(x) {
   return x && typeof x === 'object' && !Array.isArray(x)
 }
 
-function deepMerge(base, patch) {
+// Listat, jotka yhdistetään korvaamisen sijaan (avainpolku juuresta)
+const APPEND_LISTS = new Set(['sources', 'sale.sources', 'academy.notable_products'])
+
+function mergeList(a = [], b = []) {
+  const seen = new Set()
+  const out = []
+  for (const item of [...a, ...b]) {
+    const key = isObj(item) ? `${item.field ?? ''}|${item.url ?? ''}` : String(item)
+    if (seen.has(key)) continue
+    seen.add(key)
+    out.push(item)
+  }
+  return out
+}
+
+function deepMerge(base, patch, path = '') {
   if (!isObj(base) || !isObj(patch)) return patch === null || patch === undefined ? base : patch
   const out = { ...base }
   for (const [k, v] of Object.entries(patch)) {
     if (v === null || v === undefined) continue // null ei ylikirjoita
-    out[k] = isObj(v) && isObj(base[k]) ? deepMerge(base[k], v) : v
+    const keyPath = path ? `${path}.${k}` : k
+    if (Array.isArray(v) && APPEND_LISTS.has(keyPath)) out[k] = mergeList(base[k], v)
+    else if (isObj(v) && isObj(base[k])) out[k] = deepMerge(base[k], v, keyPath)
+    else out[k] = v
   }
   return out
 }
@@ -45,7 +66,7 @@ for (const file of files) {
       unknown++
       continue
     }
-    byId.set(patch.id, deepMerge(target, patch))
+    byId.set(patch.id, deepMerge(target, patch, ""))
     merged++
   }
 }

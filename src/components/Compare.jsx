@@ -9,6 +9,7 @@ import {
   STRUCTURE_LABELS,
   CONFIDENCE_LABELS,
   leagueLabel,
+  isTierBand,
   EI_TIETOA,
 } from '../lib/format.js'
 import { investorScore, WEIGHT_LABELS } from '../lib/scoring.js'
@@ -28,7 +29,7 @@ const ROWS = [
   ['Kilpailijat 30 km', (c) => (c.competition?.computed ? String((c.competition.same_or_higher_tier_within_30km ?? []).length) : EI_TIETOA)],
   ['Rakenne', (c) => STRUCTURE_LABELS[c.ownership?.structure ?? 'unknown']],
   ['Myyntistatus', (c) => SALE_LABELS[c.sale?.status ?? 'unknown']],
-  ['Hinta-arvio (ARVIO)', (c) => (c.estimated_price_eur?.low != null || c.estimated_price_eur?.high != null ? `${fmtEur(c.estimated_price_eur?.low)} – ${fmtEur(c.estimated_price_eur?.high)}` : EI_TIETOA)],
+  ['Hinta-arvio (ARVIO)', (c) => (c.estimated_price_eur?.low != null || c.estimated_price_eur?.high != null ? `${fmtEur(c.estimated_price_eur?.low)} – ${fmtEur(c.estimated_price_eur?.high)}${isTierBand(c) ? ' (sarjataso)' : ' (seurakohtainen)'}` : EI_TIETOA)],
   ['Luotettavuus', (c) => CONFIDENCE_LABELS[c.confidence] ?? c.confidence],
 ]
 

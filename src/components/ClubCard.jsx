@@ -9,6 +9,7 @@ import {
   STRUCTURE_LABELS,
   CONFIDENCE_LABELS,
   leagueLabel,
+  isTierBand,
 } from '../lib/format.js'
 import { investorScore, WEIGHT_LABELS } from '../lib/scoring.js'
 
@@ -168,6 +169,9 @@ export default function ClubCard({ club, weights, onClose }) {
             <>
               <p className="text-sm font-medium bg-amber-50 border border-amber-200 rounded p-2">
                 {fmtEur(c.estimated_price_eur?.low)} – {fmtEur(c.estimated_price_eur?.high)}
+                <span className="ml-2 text-xs font-normal text-amber-800">
+                  {isTierBand(c) ? 'sarjatason haarukka' : 'seurakohtainen evidenssi'}
+                </span>
               </p>
               {c.estimated_price_eur?.basis && (
                 <p className="text-xs text-slate-600 mt-1">Peruste: {c.estimated_price_eur.basis}</p>

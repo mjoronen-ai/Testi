@@ -61,3 +61,10 @@ export const TIER_COLORS = {
 export function leagueLabel(club) {
   return club.series ? `${club.league} — ${club.series}` : club.league
 }
+
+// Hinta-arvio on joko seurakohtaiseen evidenssiin perustuva tai koko sarjatasolle
+// yhteinen tyyppihaarukka. scripts/apply-price-bands.mjs kirjoittaa jälkimmäisen
+// basis-kentän tällä alkuliitteellä.
+export function isTierBand(club) {
+  return (club.estimated_price_eur?.basis ?? '').startsWith('Sarjatason tyyppihaarukka')
+}
