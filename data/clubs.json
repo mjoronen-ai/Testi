@@ -1,0 +1,2244 @@
+[
+  {
+    "id": "academica",
+    "name": "Académica",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "afs",
+    "name": "AFS",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "amarante-fc",
+    "name": "Amarante FC",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "benfica-b",
+    "name": "Benfica B",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": false,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "cd-feirense",
+    "name": "CD Feirense",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "cd-tondela",
+    "name": "CD Tondela",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "fc-felgueiras-1932",
+    "name": "FC Felgueiras 1932",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "fc-penafiel",
+    "name": "FC Penafiel",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "fc-porto-b",
+    "name": "FC Porto B",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": false,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "fc-vizela",
+    "name": "FC Vizela",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "gd-chaves",
+    "name": "GD Chaves",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "leixoes-sc",
+    "name": "Leixões SC",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "lusitania-de-lourosa-fc",
+    "name": "Lusitânia de Lourosa FC",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "portimonense-sc",
+    "name": "Portimonense SC",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "sc-farense",
+    "name": "SC Farense",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "scu-torreense",
+    "name": "SCU Torreense",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "sporting-cp-b",
+    "name": "Sporting CP B",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": false,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "uniao-de-leiria",
+    "name": "União de Leiria",
+    "tier": 2,
+    "league": "Liga Portugal 2",
+    "series": null,
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "ad-fafe",
+    "name": "AD Fafe",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "ad-marco-09",
+    "name": "AD Marco 09",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "cd-trofense",
+    "name": "CD Trofense",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "fc-pacos-de-ferreira",
+    "name": "FC Paços de Ferreira",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "leca-fc",
+    "name": "Leça FC",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "sc-sao-joao-de-ver",
+    "name": "SC São João de Ver",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "sc-vianense",
+    "name": "SC Vianense",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "usc-paredes",
+    "name": "USC Paredes",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "varzim-sc",
+    "name": "Varzim SC",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "vitoria-de-guimaraes-b",
+    "name": "Vitória de Guimarães B",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "A",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": false,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "atletico-cp",
+    "name": "Atlético CP",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "caldas-sc",
+    "name": "Caldas SC",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "cd-mafra",
+    "name": "CD Mafra",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "cf-os-belenenses",
+    "name": "CF Os Belenenses",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "gd-vitoria-de-sernache",
+    "name": "GD Vitória de Sernache",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "louletano-dc",
+    "name": "Louletano DC",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "lusitano-gc",
+    "name": "Lusitano GC",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "sporting-da-covilha",
+    "name": "Sporting da Covilhã",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "ud-oliveirense",
+    "name": "UD Oliveirense",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  },
+  {
+    "id": "ud-santarem",
+    "name": "UD Santarém",
+    "tier": 3,
+    "league": "Liga 3",
+    "series": "B",
+    "city": null,
+    "district": null,
+    "founded": null,
+    "acquirable": true,
+    "coastal": null,
+    "coast_distance_km": null,
+    "city_population": null,
+    "city_population_kind": null,
+    "nearest_major_city": null,
+    "coords": null,
+    "stadium": {
+      "name": null,
+      "capacity": null,
+      "owner": "unknown",
+      "notes": ""
+    },
+    "attendance": {
+      "season": "2025-26",
+      "average": null,
+      "source": ""
+    },
+    "academy": {
+      "exists": null,
+      "fpf_certification": null,
+      "notes": "",
+      "notable_products": []
+    },
+    "competition": {
+      "same_or_higher_tier_within_30km": [],
+      "notes": ""
+    },
+    "ownership": {
+      "structure": "unknown",
+      "owners": "",
+      "foreign_investor": null,
+      "debt_or_insolvency_notes": ""
+    },
+    "sale": {
+      "status": "unknown",
+      "price_indication_eur": null,
+      "notes": "",
+      "sources": []
+    },
+    "estimated_price_eur": {
+      "low": null,
+      "high": null,
+      "basis": ""
+    },
+    "investor_score": null,
+    "sources": [],
+    "last_updated": null,
+    "confidence": "low"
+  }
+]

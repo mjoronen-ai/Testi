@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Seura (club) — Portugalin sarjatasojen 2–4 sijoittajaportaali",
+  "description": "Yksi alkio data/clubs.json-taulukossa. Kenttänimet englanniksi, UI suomeksi. Jokainen ei-triviaali kenttä tarvitsee lähteen sources-listaan. Puuttuva tieto on aina null, ei koskaan keksitty arvo.",
+  "type": "object",
+  "required": ["id", "name", "tier", "league", "acquirable"],
+  "properties": {
+    "id": { "type": "string", "description": "slug, esim. varzim-sc" },
+    "name": { "type": "string" },
+    "tier": { "type": "integer", "enum": [2, 3, 4] },
+    "league": { "type": "string", "enum": ["Liga Portugal 2", "Liga 3", "Campeonato de Portugal"] },
+    "series": { "type": ["string", "null"], "description": "Lohko (A/B/C/D), null jos yksi sarja" },
+    "city": { "type": ["string", "null"] },
+    "district": { "type": ["string", "null"] },
+    "founded": { "type": ["integer", "null"] },
+    "acquirable": { "type": "boolean", "description": "false B-joukkueille" },
+    "coastal": { "type": ["boolean", "null"], "description": "Rannikkokaupunki (Atlantti)" },
+    "coast_distance_km": { "type": ["number", "null"] },
+    "city_population": { "type": ["integer", "null"] },
+    "city_population_kind": { "type": ["string", "null"], "enum": ["municipio", "cidade", null], "description": "Kumpaa väkiluku tarkoittaa" },
+    "nearest_major_city": {
+      "type": ["object", "null"],
+      "properties": { "name": { "type": "string" }, "distance_km": { "type": "number" } }
+    },
+    "coords": {
+      "type": ["object", "null"],
+      "description": "Kaupungin/stadionin likimääräiset koordinaatit karttaa varten",
+      "properties": { "lat": { "type": "number" }, "lng": { "type": "number" } }
+    },
+    "stadium": {
+      "type": "object",
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "capacity": { "type": ["integer", "null"] },
+        "owner": { "type": "string", "enum": ["club", "municipality", "association", "other", "unknown"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "attendance": {
+      "type": "object",
+      "properties": {
+        "season": { "type": "string" },
+        "average": { "type": ["number", "null"] },
+        "source": { "type": "string" }
+      }
+    },
+    "academy": {
+      "type": "object",
+      "properties": {
+        "exists": { "type": ["boolean", "null"] },
+        "fpf_certification": { "type": ["integer", "string", "null"], "description": "FPF Entidades Formadoras -tähtiluokitus (1–5) tai luokan nimi" },
+        "notes": { "type": "string" },
+        "notable_products": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "competition": {
+      "type": "object",
+      "properties": {
+        "same_or_higher_tier_within_30km": { "type": "array", "items": { "type": "string" }, "description": "Lasketaan scripts/compute-competition.mjs:llä koordinaateista" },
+        "notes": { "type": "string" }
+      }
+    },
+    "ownership": {
+      "type": "object",
+      "properties": {
+        "structure": { "type": "string", "enum": ["SAD", "clube", "unknown"] },
+        "owners": { "type": "string" },
+        "foreign_investor": { "type": ["boolean", "null"] },
+        "debt_or_insolvency_notes": { "type": "string" }
+      }
+    },
+    "sale": {
+      "type": "object",
+      "properties": {
+        "status": { "type": "string", "enum": ["for_sale", "seeking_investors", "recently_sold", "not_for_sale", "unknown"] },
+        "price_indication_eur": { "type": ["number", "null"] },
+        "notes": { "type": "string" },
+        "sources": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "estimated_price_eur": {
+      "type": "object",
+      "description": "Aina arvio — basis kertoo perusteen. UI merkitsee arvioksi.",
+      "properties": {
+        "low": { "type": ["number", "null"] },
+        "high": { "type": ["number", "null"] },
+        "basis": { "type": "string" }
+      }
+    },
+    "investor_score": { "type": ["number", "null"], "description": "Lasketaan UI:ssa, ei tallenneta dataan" },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": { "type": "string" },
+          "url": { "type": "string" },
+          "date": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "last_updated": { "type": ["string", "null"] },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low"] }
+  }
+}
