@@ -40,7 +40,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "clube",
@@ -187,8 +188,23 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Amarante FC",
+        "FC Felgueiras 1932",
+        "FC Penafiel",
+        "FC Porto B",
+        "FC Vizela",
+        "Leixões SC",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]",
+        "Gil Vicente FC (Liga Portugal) [taso 1]",
+        "Rio Ave FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -326,8 +342,16 @@
       ]
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS",
+        "FC Felgueiras 1932",
+        "FC Penafiel",
+        "FC Vizela",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "clube",
@@ -469,8 +493,16 @@
       ]
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Sporting CP B",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "GD Estoril Praia (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -593,8 +625,14 @@
       ]
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "FC Porto B",
+        "Lusitânia de Lourosa FC",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -725,8 +763,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Académico de Viseu FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -855,8 +896,18 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS",
+        "Amarante FC",
+        "FC Penafiel",
+        "FC Vizela",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -996,8 +1047,19 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS",
+        "Amarante FC",
+        "FC Felgueiras 1932",
+        "FC Porto B",
+        "FC Vizela",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -1121,8 +1183,18 @@
       ]
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS",
+        "CD Feirense",
+        "FC Penafiel",
+        "Leixões SC",
+        "Lusitânia de Lourosa FC",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Rio Ave FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -1244,8 +1316,18 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS",
+        "Amarante FC",
+        "FC Felgueiras 1932",
+        "FC Penafiel",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -1373,7 +1455,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -1490,8 +1573,16 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS",
+        "FC Porto B",
+        "Lusitânia de Lourosa FC",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Rio Ave FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -1614,8 +1705,15 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Feirense",
+        "FC Porto B",
+        "Leixões SC",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -1729,7 +1827,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -1825,7 +1924,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -1889,8 +1989,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -1954,8 +2057,17 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Benfica B",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "GD Estoril Praia (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]",
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -2020,7 +2132,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -2084,8 +2197,21 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "Amarante FC [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Vizela [taso 2]",
+        "FC Paços de Ferreira",
+        "Vitória de Guimarães B",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -2227,8 +2353,19 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "Amarante FC [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Vizela [taso 2]",
+        "FC Paços de Ferreira",
+        "USC Paredes",
+        "Moreirense FC (Liga Portugal) [taso 1]",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -2356,8 +2493,27 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Porto B [taso 2]",
+        "FC Vizela [taso 2]",
+        "Leixões SC [taso 2]",
+        "FC Paços de Ferreira",
+        "Leça FC",
+        "USC Paredes",
+        "Varzim SC",
+        "Vitória de Guimarães B",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]",
+        "Gil Vicente FC (Liga Portugal) [taso 1]",
+        "Rio Ave FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -2482,8 +2638,27 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "Amarante FC [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Porto B [taso 2]",
+        "FC Vizela [taso 2]",
+        "Leixões SC [taso 2]",
+        "AD Fafe",
+        "AD Marco 09",
+        "CD Trofense",
+        "Leça FC",
+        "USC Paredes",
+        "Vitória de Guimarães B",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -2619,8 +2794,19 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "FC Porto B [taso 2]",
+        "Leixões SC [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "CD Trofense",
+        "FC Paços de Ferreira",
+        "Varzim SC",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Rio Ave FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -2745,8 +2931,17 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Feirense [taso 2]",
+        "FC Porto B [taso 2]",
+        "Leixões SC [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "UD Oliveirense",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -2873,8 +3068,11 @@
       ]
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Gil Vicente FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -3028,8 +3226,25 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "Amarante FC [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Porto B [taso 2]",
+        "FC Vizela [taso 2]",
+        "Leixões SC [taso 2]",
+        "AD Marco 09",
+        "CD Trofense",
+        "FC Paços de Ferreira",
+        "Vitória de Guimarães B",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -3169,8 +3384,19 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "FC Porto B [taso 2]",
+        "Leixões SC [taso 2]",
+        "CD Trofense",
+        "Leça FC",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Gil Vicente FC (Liga Portugal) [taso 1]",
+        "Rio Ave FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "clube",
@@ -3295,8 +3521,24 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "Amarante FC [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Vizela [taso 2]",
+        "AD Fafe",
+        "CD Trofense",
+        "FC Paços de Ferreira",
+        "USC Paredes",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]",
+        "Gil Vicente FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -3373,8 +3615,20 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Benfica B [taso 2]",
+        "Sporting CP B [taso 2]",
+        "CD Mafra",
+        "CF Os Belenenses",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "GD Estoril Praia (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]",
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -3464,7 +3718,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -3528,8 +3783,20 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "SCU Torreense [taso 2]",
+        "Sporting CP B [taso 2]",
+        "Atlético CP",
+        "CF Os Belenenses",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "GD Estoril Praia (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]",
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -3648,8 +3915,20 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Benfica B [taso 2]",
+        "Sporting CP B [taso 2]",
+        "Atlético CP",
+        "CD Mafra",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "GD Estoril Praia (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]",
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "clube",
@@ -3769,7 +4048,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -3833,8 +4113,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "SC Farense [taso 2]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -3899,7 +4182,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -3964,7 +4248,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4028,8 +4313,14 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Feirense [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "SC São João de Ver",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "SAD",
@@ -4149,7 +4440,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4256,8 +4548,14 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Maria da Fonte",
+        "Os Limianos",
+        "SC Braga B",
+        "SC Braga (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4328,8 +4626,28 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Vizela [taso 2]",
+        "AD Fafe [taso 3]",
+        "CD Trofense [taso 3]",
+        "FC Paços de Ferreira [taso 3]",
+        "USC Paredes [taso 3]",
+        "Vitória de Guimarães B [taso 3]",
+        "FC Tirsense",
+        "Maria da Fonte",
+        "Rebordosa AC",
+        "SC Braga B",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]",
+        "Gil Vicente FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4400,8 +4718,12 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "GD Chaves [taso 2]",
+        "GD Chaves B"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4531,8 +4853,29 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Porto B [taso 2]",
+        "Leixões SC [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "CD Trofense [taso 3]",
+        "FC Paços de Ferreira [taso 3]",
+        "Leça FC [taso 3]",
+        "USC Paredes [taso 3]",
+        "Varzim SC [taso 3]",
+        "FC Tirsense",
+        "Rebordosa AC",
+        "SC Salgueiros",
+        "UD Sousense",
+        "União de Lamas",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]",
+        "Rio Ave FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4603,8 +4946,37 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Porto B [taso 2]",
+        "FC Vizela [taso 2]",
+        "Leixões SC [taso 2]",
+        "AD Fafe [taso 3]",
+        "CD Trofense [taso 3]",
+        "FC Paços de Ferreira [taso 3]",
+        "Leça FC [taso 3]",
+        "USC Paredes [taso 3]",
+        "Varzim SC [taso 3]",
+        "Vitória de Guimarães B [taso 3]",
+        "Brito SC",
+        "FC Maia Lidador",
+        "Rebordosa AC",
+        "SC Braga B",
+        "Vila Meã",
+        "SC Salgueiros",
+        "UD Sousense",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]",
+        "Gil Vicente FC (Liga Portugal) [taso 1]",
+        "Rio Ave FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4675,8 +5047,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Vinhais"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4747,8 +5122,12 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "GD Chaves [taso 2]",
+        "CDC Montalegre"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4819,8 +5198,23 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Vizela [taso 2]",
+        "AD Fafe [taso 3]",
+        "Vitória de Guimarães B [taso 3]",
+        "AD Ponte da Barca",
+        "Brito SC",
+        "SC Braga B",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]",
+        "Gil Vicente FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4891,8 +5285,15 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "SC Vianense [taso 3]",
+        "AD Ponte da Barca",
+        "SC Braga B",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Gil Vicente FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -4963,8 +5364,34 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "Amarante FC [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Porto B [taso 2]",
+        "FC Vizela [taso 2]",
+        "Leixões SC [taso 2]",
+        "AD Marco 09 [taso 3]",
+        "CD Trofense [taso 3]",
+        "FC Paços de Ferreira [taso 3]",
+        "Leça FC [taso 3]",
+        "USC Paredes [taso 3]",
+        "Vitória de Guimarães B [taso 3]",
+        "Brito SC",
+        "FC Maia Lidador",
+        "FC Tirsense",
+        "Vila Meã",
+        "FC Alpendorada",
+        "SC Salgueiros",
+        "UD Sousense",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5035,8 +5462,26 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Vizela [taso 2]",
+        "AD Fafe [taso 3]",
+        "CD Trofense [taso 3]",
+        "Vitória de Guimarães B [taso 3]",
+        "AD Ponte da Barca",
+        "Brito SC",
+        "FC Tirsense",
+        "Maria da Fonte",
+        "Os Limianos",
+        "SC Braga (Liga Portugal) [taso 1]",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]",
+        "Gil Vicente FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5107,8 +5552,26 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "Amarante FC [taso 2]",
+        "FC Felgueiras 1932 [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Vizela [taso 2]",
+        "AD Fafe [taso 3]",
+        "AD Marco 09 [taso 3]",
+        "FC Paços de Ferreira [taso 3]",
+        "USC Paredes [taso 3]",
+        "Vitória de Guimarães B [taso 3]",
+        "FC Tirsense",
+        "Rebordosa AC",
+        "Cinfães",
+        "FC Alpendorada",
+        "Vitória SC (Liga Portugal) [taso 1]",
+        "Moreirense FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5179,8 +5642,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "GD Bragança"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5251,8 +5717,13 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AD Machico",
+        "CD Nacional (Liga Portugal) [taso 1]",
+        "CS Marítimo (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5323,8 +5794,13 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Cinfães",
+        "FC Arouca (Liga Portugal) [taso 1]",
+        "Académico de Viseu FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5395,8 +5871,13 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AD Camacha",
+        "CD Nacional (Liga Portugal) [taso 1]",
+        "CS Marítimo (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5467,8 +5948,19 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Feirense [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "SC São João de Ver [taso 3]",
+        "UD Oliveirense [taso 3]",
+        "AD Sanjoanense",
+        "Florgrade FC",
+        "SC Beira-Mar",
+        "UD Sousense",
+        "União de Lamas"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5539,8 +6031,21 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Feirense [taso 2]",
+        "FC Porto B [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "SC São João de Ver [taso 3]",
+        "UD Oliveirense [taso 3]",
+        "AD Ovarense",
+        "FC Alpendorada",
+        "Florgrade FC",
+        "UD Sousense",
+        "União de Lamas",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5611,8 +6116,18 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Amarante FC [taso 2]",
+        "FC Penafiel [taso 2]",
+        "AD Marco 09 [taso 3]",
+        "USC Paredes [taso 3]",
+        "Vila Meã",
+        "AD Castro Daire",
+        "FC Alpendorada",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5683,8 +6198,12 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Nacional (Liga Portugal) [taso 1]",
+        "CS Marítimo (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5755,8 +6274,25 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Amarante FC [taso 2]",
+        "FC Penafiel [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "AD Marco 09 [taso 3]",
+        "FC Paços de Ferreira [taso 3]",
+        "USC Paredes [taso 3]",
+        "Rebordosa AC",
+        "Vila Meã",
+        "AD Sanjoanense",
+        "Cinfães",
+        "SC Salgueiros",
+        "UD Sousense",
+        "União de Lamas",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5827,8 +6363,23 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Feirense [taso 2]",
+        "FC Porto B [taso 2]",
+        "Leixões SC [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "Leça FC [taso 3]",
+        "SC São João de Ver [taso 3]",
+        "UD Oliveirense [taso 3]",
+        "AD Ovarense",
+        "AD Sanjoanense",
+        "SC Salgueiros",
+        "UD Sousense",
+        "União de Lamas",
+        "FC Porto (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5900,7 +6451,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -5971,8 +6523,12 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "UD Oliveirense [taso 3]",
+        "AD Ovarense"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6043,8 +6599,32 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "AFS [taso 2]",
+        "CD Feirense [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Porto B [taso 2]",
+        "Leixões SC [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "CD Trofense [taso 3]",
+        "FC Paços de Ferreira [taso 3]",
+        "Leça FC [taso 3]",
+        "SC São João de Ver [taso 3]",
+        "USC Paredes [taso 3]",
+        "Varzim SC [taso 3]",
+        "FC Maia Lidador",
+        "FC Tirsense",
+        "Rebordosa AC",
+        "FC Alpendorada",
+        "Florgrade FC",
+        "UD Sousense",
+        "União de Lamas",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Famalicão (Liga Portugal) [taso 1]",
+        "Rio Ave FC (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6115,8 +6695,32 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Feirense [taso 2]",
+        "FC Penafiel [taso 2]",
+        "FC Porto B [taso 2]",
+        "Leixões SC [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "CD Trofense [taso 3]",
+        "FC Paços de Ferreira [taso 3]",
+        "Leça FC [taso 3]",
+        "SC São João de Ver [taso 3]",
+        "USC Paredes [taso 3]",
+        "UD Oliveirense [taso 3]",
+        "FC Maia Lidador",
+        "FC Tirsense",
+        "Rebordosa AC",
+        "AD Ovarense",
+        "AD Sanjoanense",
+        "FC Alpendorada",
+        "Florgrade FC",
+        "SC Salgueiros",
+        "União de Lamas",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6187,8 +6791,26 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Feirense [taso 2]",
+        "FC Porto B [taso 2]",
+        "Leixões SC [taso 2]",
+        "Lusitânia de Lourosa FC [taso 2]",
+        "Leça FC [taso 3]",
+        "SC São João de Ver [taso 3]",
+        "UD Oliveirense [taso 3]",
+        "FC Maia Lidador",
+        "AD Ovarense",
+        "AD Sanjoanense",
+        "FC Alpendorada",
+        "Florgrade FC",
+        "SC Salgueiros",
+        "UD Sousense",
+        "FC Porto (Liga Portugal) [taso 1]",
+        "FC Arouca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6259,8 +6881,24 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "SCU Torreense [taso 2]",
+        "Sporting CP B [taso 2]",
+        "Atlético CP [taso 3]",
+        "CD Mafra [taso 3]",
+        "CF Os Belenenses [taso 3]",
+        "FC Alverca B",
+        "Real SC",
+        "SU Sintrense",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "GD Estoril Praia (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]",
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6331,8 +6969,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "UD Santarém [taso 3]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6462,8 +7103,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "União de Leiria [taso 2]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6534,8 +7178,23 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "SCU Torreense [taso 2]",
+        "Sporting CP B [taso 2]",
+        "Atlético CP [taso 3]",
+        "CD Mafra [taso 3]",
+        "CF Os Belenenses [taso 3]",
+        "AC Malveira",
+        "GD Alcochetense",
+        "Real SC",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]",
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6606,8 +7265,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Tondela [taso 2]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6678,8 +7340,12 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "União de Leiria [taso 2]",
+        "Caldas SC [taso 3]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6750,8 +7416,12 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Académica [taso 2]",
+        "CD Tondela [taso 2]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6823,7 +7493,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6895,7 +7566,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -6966,8 +7638,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Académica [taso 2]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7038,8 +7713,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "GD Vitória de Sernache [taso 3]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7111,7 +7789,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7241,8 +7920,22 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Benfica B [taso 2]",
+        "Sporting CP B [taso 2]",
+        "Atlético CP [taso 3]",
+        "CF Os Belenenses [taso 3]",
+        "GD Alcochetense",
+        "Real SC",
+        "Vitória de Setúbal",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "GD Estoril Praia (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7314,7 +8007,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7385,8 +8079,23 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Benfica B [taso 2]",
+        "Sporting CP B [taso 2]",
+        "Atlético CP [taso 3]",
+        "CF Os Belenenses [taso 3]",
+        "FC Alverca B",
+        "Amora FC",
+        "Real SC",
+        "Vitória de Setúbal",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]",
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7517,7 +8226,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7588,8 +8298,13 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Portimonense SC [taso 2]",
+        "SC Farense [taso 2]",
+        "Louletano DC [taso 3]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7719,8 +8434,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Lusitano GC [taso 3]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7791,8 +8509,26 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Benfica B [taso 2]",
+        "Sporting CP B [taso 2]",
+        "Atlético CP [taso 3]",
+        "CD Mafra [taso 3]",
+        "CF Os Belenenses [taso 3]",
+        "AC Malveira",
+        "FC Alverca B",
+        "Amora FC",
+        "GD Alcochetense",
+        "SU Sintrense",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "GD Estoril Praia (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]",
+        "FC Alverca (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7863,8 +8599,11 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "CD Santa Clara (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -7936,7 +8675,8 @@
     },
     "competition": {
       "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -8007,8 +8747,21 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Sporting CP B [taso 2]",
+        "Atlético CP [taso 3]",
+        "CD Mafra [taso 3]",
+        "CF Os Belenenses [taso 3]",
+        "AC Malveira",
+        "Real SC",
+        "SL Benfica (Liga Portugal) [taso 1]",
+        "Sporting CP (Liga Portugal) [taso 1]",
+        "Casa Pia AC (Liga Portugal) [taso 1]",
+        "GD Estoril Praia (Liga Portugal) [taso 1]",
+        "CF Estrela da Amadora (Liga Portugal) [taso 1]"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
@@ -8079,8 +8832,13 @@
       "notable_products": []
     },
     "competition": {
-      "same_or_higher_tier_within_30km": [],
-      "notes": ""
+      "same_or_higher_tier_within_30km": [
+        "Benfica B [taso 2]",
+        "Amora FC",
+        "GD Alcochetense"
+      ],
+      "notes": "",
+      "computed": true
     },
     "ownership": {
       "structure": "unknown",
