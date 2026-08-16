@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "test": "node scripts/test-salaries.mjs",
+    "samples": "node scripts/generate-sample-salaries.mjs",
     "seed": "node scripts/seed.mjs",
     "competition": "node scripts/compute-competition.mjs",
     "validate": "node scripts/validate-data.mjs"

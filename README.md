@@ -19,6 +19,13 @@ Avaa selaimessa osoite, jonka Vite tulostaa (oletus http://localhost:5173).
 Karttanäkymä lataa OpenStreetMap-laattoja verkosta; muut näkymät toimivat
 ilman verkkoyhteyttä.
 
+Projektissa on kaksi erillistä sovellusta samalla dev-palvelimella:
+
+| Sivu | Osoite | Mitä tekee |
+|------|--------|------------|
+| Seuraportaali | `/index.html` | Portugalin sarjatasojen 2–4 seuradata (tämä dokumentti) |
+| Palkkadatan purkusovellus | `/palkat.html` | Omien CSV-palkkatiedostojen purku ja sarja-/joukkuevertailut ([ohje alempana](#palkkadatan-purkusovellus-palkathtml)) |
+
 ## Sisältö
 
 - **93 seuraa**: Liga Portugal 2 (18), Liga 3 (20, lohkot A/B),
@@ -130,13 +137,99 @@ Täydennys: aja komento tyyliin
 > nimetyt puuttuvat kentät, yhdistä merge-research.mjs:llä ja aja
 > competition + validate + generate-gaps.
 
+## Palkkadatan purkusovellus (`/palkat.html`)
+
+Erillinen sovellus, johon voi ladata omia CSV-tiedostoja eri sarjojen
+pelaajapalkoista ja verrata sarjoja ja joukkueita keskenään. **Tiedostot
+luetaan selaimessa — mitään ei lähetetä verkkoon** eikä palvelinta tarvita.
+Ladatut tiedostot säilyvät selaimen localStoragessa sivun päivityksen yli.
+
+### Mitä tiedostolta vaaditaan
+
+Vain kaksi asiaa: **joukkue** ja **palkka**. Muut sarakkeet (pelaaja, sarja,
+pelipaikka, ikä, kansallisuus, kausi, valuutta, sopimuksen päättyminen) ovat
+vapaaehtoisia ja rikastavat vertailuja.
+
+Automaattisesti tunnistetaan:
+
+- **Erotin**: pilkku, puolipiste, sarkain tai pystyviiva.
+- **Otsikot** suomeksi, englanniksi ja ruotsiksi (`Vuosipalkka`, `Weekly Wage`,
+  `Månadslön`, `Joukkue`, `Club`, `Lag`, …). Tunnistus on ehdotus, jonka voi
+  korjata käsin Tiedostot-välilehdellä.
+- **Lukumuodot**: `145 000`, `145.000,50`, `1,234.56`, `£45k`, `1,2 M€`, `(500)`.
+- **Valuutta** solusta (`£`, `€`, `SEK`) tai omasta sarakkeestaan.
+- **Palkkajakso** otsikosta (viikko/kuukausi/vuosi) — kaikki muunnetaan
+  vuositasolle ja perusvaluuttaan, jotta sarjat ovat vertailukelpoisia.
+- **Merkistö**: UTF-8, ja jos siitä tulee korvausmerkkejä, Windows-1252.
+
+Jos tiedostossa ei ole sarjasaraketta, tiedoston nimestä tulee sarjan nimi.
+Rivit, joilta palkka puuttuu, näkyvät pelaajamäärässä mutta eivät palkka-
+tilastoissa — puuttuvien määrä raportoidaan Tiedostot-välilehdellä.
+
+### Näkymät
+
+1. **Yleiskuva** — palkkasumma, mediaani, sarjojen ja joukkueiden määrä,
+   sarjojen palkkasummat ja mediaanit, top 10 -pelaajat, palkkojen jakauma.
+2. **Sarjat** — valittava mittari pylväinä (palkkasumma, keskiarvo, mediaani,
+   joukkuebudjetin mediaani, rikkaimman ja köyhimmän joukkueen ero, Gini) sekä
+   kaikki tunnusluvut taulukkona.
+3. **Joukkueet** — joukkueiden vertailu sarjojen sisällä ja välillä, osuus
+   sarjan palkkasummasta, palkkaerot joukkueen sisällä.
+4. **Pelaajat** — koko rivistö haettavana ja lajiteltavana, mediaanipalkka
+   pelipaikoittain.
+5. **Tiedostot** — sarakekartan korjaus, oletusarvot, esikatselu, valuutta-
+   kurssit ja tiedostojen poisto.
+
+Jokaisesta taulukosta saa CSV-viennin (puolipiste-erotin ja desimaalipilkku,
+aukeaa suomalaisessa Excelissä sellaisenaan).
+
+### Valuuttakurssit
+
+Kurssit ovat **käsin syötettäviä oletusarvoja**, eivät päivän kursseja — sovellus
+ei hae mitään verkosta. Ne on tarkoitettu muokattaviksi Tiedostot-välilehdellä,
+ja perusvaluutan voi vaihtaa. Muunnos: alkuperäinen palkka → vuositaso →
+perusvaluutta.
+
+### Esimerkkidata ja testit
+
+```bash
+npm test        # ytimen testit: CSV-jäsennys, lukumuodot, tunnistus, tilastot
+npm run samples # luo esimerkkitiedostot uudelleen public/esimerkkidata/-kansioon
+```
+
+Sovelluksen "Lataa esimerkkidata" -painike lataa kolme **kuvitteellista**
+tiedostoa (`public/esimerkkidata/`), joissa on tarkoituksella eri muodot:
+suomalainen pilkkuerotettu vuosipalkka euroina, ruotsalainen puolipiste-
+erotettu kuukausipalkka kruunuina ja englantilainen viikkopalkka punnissa.
+Seurat, pelaajat ja palkat ovat keksittyjä eivätkä vastaa mitään todellista
+sarjaa; ne on luotu `scripts/generate-sample-salaries.mjs`-skriptillä.
+
+### Kuvaajien värit
+
+Kuvaajat noudattavat yhtä kategorista väriskaalaa: väri seuraa sarjaa, ei sen
+sijoitusta, joten suodatus ei maalaa jäljelle jääviä sarjoja uudelleen. Skaala
+on validoitu värinäkörajoitteiden erottuvuudelle, ja jokainen pylväs on myös
+suoraan arvomerkitty — väri ei ole ainoa tiedon kantaja. Yli kahdeksan sarjan
+jälkeen loput saavat neutraalin "Muut"-värin; uusia sävyjä ei generoida.
+
 ## Rakenne
 
 ```
-data/            seuradata, schema, gapit, auditointi
-scripts/         seed, merge, kilpailutilanne, validointi, tutkimusohje
+data/                    seuradata, schema, gapit, auditointi
+public/esimerkkidata/    palkkasovelluksen kuvitteelliset esimerkkitiedostot
+scripts/                 seed, merge, kilpailutilanne, validointi, tutkimusohje
+                         + generate-sample-salaries.mjs, test-salaries.mjs
+index.html               seuraportaali
+palkat.html              palkkadatan purkusovellus
 src/
-  App.jsx        näkymät ja suodatintila
-  components/    Filters, ClubTable, ClubCard, Compare, MapView, Ranking
-  lib/           scoring.js (pisteytys), format.js (fi-muotoilut)
+  App.jsx                seuraportaalin näkymät ja suodatintila
+  components/            Filters, ClubTable, ClubCard, Compare, MapView, Ranking
+  lib/                   scoring.js (pisteytys), format.js (fi-muotoilut)
+  salaries/
+    App.jsx              palkkasovelluksen tila: tiedostot, suodattimet, välilehdet
+    components/          Uploader, DataFiles, Filters, Overview, Leagues,
+                         Teams, Players, ui.jsx, charts/
+    lib/                 csv.js (jäsennin), numbers.js (lukumuodot),
+                         schema.js (sarakkeiden tunnistus), dataset.js
+                         (normalisointi), stats.js, export.js, storage.js
 ```
