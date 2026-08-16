@@ -1,12 +1,14 @@
 // Palkkajakauma: montako pelaajaa osuu kuhunkin palkkahaarukkaan.
 // Yksi sarja → yksi sävy, ei selitettä; otsikko kertoo mitä piirretään.
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { AXIS_TEXT, GRID, SEQUENTIAL, SEQUENTIAL_SOFT } from '../../lib/palette.js'
 import { histogram } from '../../lib/stats.js'
 
 export default function Histogram({ values, format, height = 160, buckets = 12 }) {
   const [hover, setHover] = useState(null)
+  // Ks. BarChart: napautuksen jälkeen tuleva mouseleave sulkisi juuri avatun lukeman.
+  const touch = useRef(false)
   const { buckets: bins } = histogram(values, buckets)
 
   if (bins.length === 0) {
@@ -27,10 +29,21 @@ export default function Histogram({ values, format, height = 160, buckets = 12 }
           return (
             <div
               key={i}
-              className="flex-1 h-full flex items-end"
+              className="flex-1 h-full flex items-end cursor-pointer"
               style={{ paddingLeft: i === 0 ? 0 : `${gapPercent}%` }}
-              onMouseEnter={() => setHover(i)}
-              onMouseLeave={() => setHover((v) => (v === i ? null : v))}
+              onMouseEnter={() => {
+                if (!touch.current) setHover(i)
+              }}
+              onMouseLeave={() => {
+                if (!touch.current) setHover((v) => (v === i ? null : v))
+              }}
+              onPointerDown={(e) => {
+                touch.current = e.pointerType !== 'mouse'
+              }}
+              // Kosketusnäytöllä napautus näyttää haarukan ja pelaajamäärän.
+              onPointerUp={(e) => {
+                if (e.pointerType !== 'mouse') setHover((v) => (v === i ? null : i))
+              }}
             >
               <div
                 className="w-full rounded-t-[4px]"

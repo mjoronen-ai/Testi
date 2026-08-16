@@ -1,7 +1,7 @@
 // Vaakapylväät suuruusvertailuun. Yksi mittari kerrallaan, yksi akseli.
 // Arvo luetaan pylvään kärjestä; hover näyttää tarkemmat luvut.
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { MUTED, OTHER_COLOR, SEQUENTIAL, inkOn } from '../../lib/palette.js'
 
 export default function BarChart({
@@ -12,6 +12,10 @@ export default function BarChart({
   legend = null,
 }) {
   const [hover, setHover] = useState(null)
+  // Kosketusnäytöllä selain lähettää napautuksen jälkeen myös hiiritapahtumat —
+  // viimeisenä mouseleave, joka sulkisi juuri avatun kortin. Napautuksen jälkeen
+  // hiiritapahtumat siis ohitetaan.
+  const touch = useRef(false)
 
   const values = data.map((d) => d.value).filter((v) => Number.isFinite(v))
   if (values.length === 0) return <p className="text-sm text-slate-500 py-4">{emptyText}</p>
@@ -39,9 +43,20 @@ export default function BarChart({
           return (
             <li
               key={d.key}
-              className="flex items-center gap-3 rounded px-1 -mx-1 py-0.5 hover:bg-slate-50"
-              onMouseEnter={() => setHover(d.key)}
-              onMouseLeave={() => setHover((h) => (h === d.key ? null : h))}
+              className="flex items-center gap-3 rounded px-1 -mx-1 py-0.5 hover:bg-slate-50 cursor-pointer"
+              onMouseEnter={() => {
+                if (!touch.current) setHover(d.key)
+              }}
+              onMouseLeave={() => {
+                if (!touch.current) setHover((h) => (h === d.key ? null : h))
+              }}
+              onPointerDown={(e) => {
+                touch.current = e.pointerType !== 'mouse'
+              }}
+              // Kosketusnäytöllä ei ole osoitinta: napautus avaa ja sulkee lisätiedot.
+              onPointerUp={(e) => {
+                if (e.pointerType !== 'mouse') setHover((h) => (h === d.key ? null : d.key))
+              }}
             >
               <span
                 className="text-xs text-slate-600 truncate shrink-0"
@@ -102,7 +117,7 @@ function HoverCard({ item, format }) {
         {item.label}
         <span className="tabular-nums text-slate-600">{format(item.value)}</span>
       </div>
-      <dl className="mt-1 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-0.5">
+      <dl className="mt-1 grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-0.5">
         {details.map((d) => (
           <div key={d.label} className="flex justify-between gap-2">
             <dt className="text-slate-500">{d.label}</dt>
