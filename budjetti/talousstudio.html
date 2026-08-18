@@ -96,7 +96,9 @@
   td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   td input[type=number], td input[type=text], td select { padding: .22rem .4rem; font-size: .8rem; }
   td input.num { text-align: right; min-width: 90px; }
-  td input.namein { min-width: 150px; }
+  td input.money { width: 112px; min-width: 0; text-align: right; }
+  td input.hlo { width: 56px; min-width: 0; text-align: right; }
+  td input.namein { min-width: 230px; width: 100%; }
   tr.subtotal td { background: var(--card2); font-weight: 700; }
   tr.total td { background: var(--atl-soft); font-weight: 800; }
   .badge { display: inline-block; font-size: .66rem; font-weight: 700; border-radius: 5px; padding: .06rem .35rem; white-space: nowrap; }
@@ -423,6 +425,9 @@ function fmtEurFull(v) {
   return Math.round(v).toLocaleString('fi-FI') + ' €';
 }
 const pct = v => (v * 100).toLocaleString('fi-FI', { maximumFractionDigits: 1 }) + ' %';
+/* Rahakenttien näyttömuoto: tuhaterottimet (esim. 120 000), desimaalit säilyvät */
+const fmtGroup = v => (v === null || v === undefined || Number.isNaN(v)) ? ''
+  : Number(v).toLocaleString('fi-FI', { maximumFractionDigits: 2 });
 
 function rowCost(r) {
   if (r.type === 'lump') return r.amount !== undefined ? r.amount * (r.count || 1) : r.monthly * (r.count || 1);
@@ -542,7 +547,7 @@ function renderInvest() {
       <h2>Sijoitus ja omistus</h2>
       <p class="lead">Kauppahinta ja omistusosuus SAD:sta — implisiittinen 100 %:n arvostus lasketaan alle. Osto ajoittuu kesään 2027 ja ensimmäinen suunniteltu kausi on 2027/28. Liga 3 -vertailukaupat: enemmistö 1,5–3 M€ + sitoumukset.</p>
       <div class="fields">
-        <div class="field"><label>Sijoitus / kauppahinta (€)</label><input type="number" min="0" step="50000" value="${inv.price}" data-bind="invest.price"></div>
+        <div class="field"><label>Sijoitus / kauppahinta (€)</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.price)}" data-bind="invest.price"></div>
         <div class="field"><label>Omistusosuus (%)</label><input type="number" min="1" max="100" step="1" value="${inv.stake}" data-bind="invest.stake"></div>
         <div class="field"><label>Sijoittajan osuus rahoitustarpeesta (%)</label><input type="number" min="0" max="100" step="5" value="${inv.share}" data-bind="invest.share"></div>
         <div class="field"><label>Exit-kausi</label><select data-bind="invest.exitSeason">${SEASONS.map(s => `<option ${s === inv.exitSeason ? 'selected' : ''}>${s}</option>`).join('')}</select></div>
@@ -610,10 +615,10 @@ function renderInvest() {
       <h2>Vuosirahoitustarve sarjatasoittain (€)</h2>
       <p class="lead">Poluissa käytettävät kausikohtaiset rahoitustarpeet. Päivitä budjettimoduulista tai muokkaa käsin.</p>
       <div class="fields">
-        <div class="field"><label>Liga 3</label><input type="number" step="50000" value="${inv.gaps.g3}" data-bind="gap.g3"></div>
-        <div class="field"><label>Liga 2 · 1. kausi</label><input type="number" step="50000" value="${inv.gaps.g2first}" data-bind="gap.g2first"></div>
-        <div class="field"><label>Liga 2 · jatko</label><input type="number" step="50000" value="${inv.gaps.g2later}" data-bind="gap.g2later"></div>
-        <div class="field"><label>Liga 1</label><input type="number" step="50000" value="${inv.gaps.g1}" data-bind="gap.g1"></div>
+        <div class="field"><label>Liga 3</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.gaps.g3)}" data-bind="gap.g3"></div>
+        <div class="field"><label>Liga 2 · 1. kausi</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.gaps.g2first)}" data-bind="gap.g2first"></div>
+        <div class="field"><label>Liga 2 · jatko</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.gaps.g2later)}" data-bind="gap.g2later"></div>
+        <div class="field"><label>Liga 1</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.gaps.g1)}" data-bind="gap.g1"></div>
       </div>
       <button class="btn" data-action="sync-gaps">Päivitä vuosibudjeteista</button>
       <p class="note" style="margin-top:.5rem">”Päivitä” lukee kausien lasketut rahoitustarpeet: Liga 3 ← 2027/28, Liga 2 1. kausi ← 2028/29 (sisältää TV-keskittämisen tulot, jotka alkavat juuri tuolla kaudella), Liga 2 jatko ← 2029/30.</p>
@@ -644,8 +649,8 @@ function renderStaff() {
           <option value="staff" ${r.type === 'staff' ? 'selected' : ''}>Henkilöstö</option>
           <option value="lump" ${r.type === 'lump' ? 'selected' : ''}>Vuosisumma</option>
         </select></td>
-        <td class="n"><input class="num" type="number" min="0" step="${r.type === 'lump' ? 1000 : 50}" value="${r.type === 'lump' ? (r.amount ?? r.monthly) : r.monthly}" data-bind="pers.${r.id}.${r.type === 'lump' ? 'amount' : 'monthly'}"></td>
-        <td class="n"><input class="num" style="min-width:55px" type="number" min="1" step="1" value="${r.count || 1}" data-bind="pers.${r.id}.count"></td>
+        <td class="n"><input class="num money" type="text" inputmode="decimal" value="${fmtGroup(r.type === 'lump' ? (r.amount ?? r.monthly) : r.monthly)}" data-bind="pers.${r.id}.${r.type === 'lump' ? 'amount' : 'monthly'}"></td>
+        <td class="n"><input class="num hlo" type="number" min="1" step="1" value="${r.count || 1}" data-bind="pers.${r.id}.count"></td>
         <td class="n">${fmtEurFull(rowCost(r))}</td>
         <td>${below ? `<span class="badge warn">alle TES-minimin ${fmtEurFull(floor)}/kk</span>` : (r.type === 'player' ? '<span class="badge ok">TES ok</span>' : '')} ${r.note ? `<span class="badge dim">${esc(r.note)}</span>` : ''}</td>
         <td><button class="btn mini danger" data-action="del-pers" data-id="${r.id}">✕</button></td>
@@ -691,7 +696,7 @@ function lineTable(kind, season, title, sub) {
       <tbody>
         ${rows.map(r => `<tr>
           <td><input class="namein" type="text" value="${esc(r.name)}" data-bind="${kind}.${r.id}.name"></td>
-          <td class="n"><input class="num" type="number" step="5000" value="${r.amount}" data-bind="${kind}.${r.id}.amount"></td>
+          <td class="n"><input class="num money" type="text" inputmode="decimal" value="${fmtGroup(r.amount)}" data-bind="${kind}.${r.id}.amount"></td>
           <td><input type="text" value="${esc(r.note || '')}" data-bind="${kind}.${r.id}.note" style="min-width:120px"></td>
           <td><button class="btn mini danger" data-action="del-line" data-kind="${kind}" data-id="${r.id}">✕</button></td>
         </tr>`).join('')}
@@ -803,9 +808,13 @@ let undoStash = null; // { kind, season, row, index }
 
 function setBind(path, raw) {
   const parts = path.split('.');
-  // Hyväksyy myös pilkkudesimaalit; tyhjä tai kelvoton syöte EI muuta arvoa
-  // (re-render palauttaa entisen arvon kenttään).
-  const num = v => { const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : null; };
+  // Hyväksyy pilkkudesimaalit ja tuhaterottimina välilyönnit (myös sitovat
+  // välilyönnit, joita fi-FI-muotoilu käyttää); tyhjä tai kelvoton syöte EI
+  // muuta arvoa (re-render palauttaa entisen).
+  const num = v => {
+    const n = parseFloat(String(v).replace(/[\s\u00A0\u202F]/g, '').replace(',', '.'));
+    return Number.isFinite(n) ? n : null;
+  };
   const clamp = (n, min, max) => Math.min(max ?? Infinity, Math.max(min ?? -Infinity, n));
   const se = state.seasons[state.activeSeason];
   if (parts[0] === 'invest') {
