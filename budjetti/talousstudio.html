@@ -1,0 +1,1008 @@
+<title>Varzimin talousstudio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+  :root {
+    --paper: #F6F7F5; --card: #FCFCFB; --card2: #F1F3F1;
+    --ink: #101617; --mist: #4E5C60; --faint: #8A9598;
+    --hair: #DCE1DF; --hair2: #E8ECEA;
+    --atlantic: #0E5E76; --atl-soft: #E3EEF1;
+    --stripe-a: #141A1B; --stripe-b: #FBFCFB;
+    --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4;
+    --s1-soft: #86b6ef;
+    --good: #0ca30c; --good-text: #006300; --warn: #b25000; --crit: #d03b3b;
+    --grid: #E4E8E6; --baseline: #C4CCCA;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      --paper: #0E1415; --card: #141B1D; --card2: #192224;
+      --ink: #ECF0EF; --mist: #A2AEB0; --faint: #6E7C7F;
+      --hair: #263133; --hair2: #1D2729;
+      --atlantic: #5FB4CC; --atl-soft: #16272C;
+      --stripe-a: #ECF0EF; --stripe-b: #141B1D;
+      --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+      --s1-soft: #1c5cab;
+      --good: #0ca30c; --good-text: #35c05a; --warn: #e8a13c; --crit: #e66767;
+      --grid: #223032; --baseline: #35494C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1415; --card: #141B1D; --card2: #192224;
+    --ink: #ECF0EF; --mist: #A2AEB0; --faint: #6E7C7F;
+    --hair: #263133; --hair2: #1D2729;
+    --atlantic: #5FB4CC; --atl-soft: #16272C;
+    --stripe-a: #ECF0EF; --stripe-b: #141B1D;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+    --s1-soft: #1c5cab;
+    --good: #0ca30c; --good-text: #35c05a; --warn: #e8a13c; --crit: #e66767;
+    --grid: #223032; --baseline: #35494C;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+    font-family: Archivo, system-ui, sans-serif; font-size: .92rem; line-height: 1.5; }
+  .serif { font-family: "Source Serif 4", Georgia, serif; }
+  .wrap { max-width: 74rem; margin: 0 auto; padding: 0 1.1rem 4rem; }
+
+  header.mast { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem; padding: 1.4rem 0 1rem; }
+  .crest { width: 40px; height: 40px; border-radius: 6px; flex: 0 0 auto;
+    background: repeating-linear-gradient(90deg, var(--stripe-a) 0 5px, var(--stripe-b) 5px 10px);
+    border: 1px solid var(--hair); }
+  .mast h1 { font-weight: 900; font-size: 1.45rem; letter-spacing: -.01em; margin: 0; }
+  .mast .sub { color: var(--mist); font-size: .8rem; margin-top: .1rem; }
+  .mast .actions { margin-left: auto; display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  nav.tabs { display: flex; gap: .2rem; border-bottom: 1px solid var(--hair); flex-wrap: wrap; }
+  nav.tabs button { appearance: none; background: none; border: none; border-bottom: 2px solid transparent;
+    font: inherit; font-weight: 600; color: var(--mist); padding: .55rem .85rem; cursor: pointer; margin-bottom: -1px; }
+  nav.tabs button:hover { color: var(--ink); }
+  nav.tabs button.on { color: var(--atlantic); border-bottom-color: var(--atlantic); }
+  nav.tabs button:focus-visible, .btn:focus-visible, input:focus-visible, select:focus-visible {
+    outline: 2px solid var(--atlantic); outline-offset: 1px; }
+
+  .strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .55rem; margin: 1rem 0 1.2rem; }
+  .kpi { background: var(--card); border: 1px solid var(--hair); border-radius: 8px; padding: .6rem .75rem .55rem; }
+  .kpi .v { font-weight: 800; font-size: 1.18rem; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+  .kpi .l { font-size: .68rem; color: var(--mist); margin-top: .15rem; line-height: 1.3; }
+  .kpi.neg .v { color: var(--crit); } .kpi.pos .v { color: var(--good-text); }
+
+  .card { background: var(--card); border: 1px solid var(--hair); border-radius: 10px; padding: 1rem 1.1rem; margin: 0 0 1rem; }
+  .card h2 { font-size: 1.02rem; font-weight: 800; margin: 0 0 .2rem; }
+  .card .lead { color: var(--mist); font-size: .8rem; margin: 0 0 .8rem; max-width: 72ch; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 1rem; align-items: start; }
+
+  .field { display: flex; flex-direction: column; gap: .2rem; }
+  .field label { font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--mist); }
+  input[type=number], input[type=text], select {
+    font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--hair);
+    border-radius: 6px; padding: .38rem .5rem; width: 100%; font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--atlantic); }
+  .fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .7rem .8rem; margin-bottom: .6rem; }
+
+  .btn { appearance: none; font: inherit; font-weight: 700; font-size: .78rem; cursor: pointer;
+    border: 1px solid var(--hair); background: var(--card); color: var(--ink);
+    border-radius: 7px; padding: .42rem .7rem; }
+  .btn:hover { border-color: var(--atlantic); color: var(--atlantic); }
+  .btn.primary { background: var(--atlantic); border-color: var(--atlantic); color: var(--paper); }
+  .btn.primary:hover { opacity: .9; color: var(--paper); }
+  .btn.ghost { background: none; }
+  .btn.danger:hover { border-color: var(--crit); color: var(--crit); }
+  .btn.mini { padding: .15rem .45rem; font-size: .72rem; }
+
+  .tscroll { overflow-x: auto; border: 1px solid var(--hair); border-radius: 8px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; min-width: 700px; font-size: .82rem; }
+  th, td { padding: .4rem .6rem; text-align: left; border-top: 1px solid var(--hair2); vertical-align: middle; }
+  thead th { font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--mist); border-top: none; white-space: nowrap; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td input[type=number], td input[type=text], td select { padding: .22rem .4rem; font-size: .8rem; }
+  td input.num { text-align: right; min-width: 90px; }
+  td input.namein { min-width: 150px; }
+  tr.subtotal td { background: var(--card2); font-weight: 700; }
+  tr.total td { background: var(--atl-soft); font-weight: 800; }
+  .badge { display: inline-block; font-size: .66rem; font-weight: 700; border-radius: 5px; padding: .06rem .35rem; white-space: nowrap; }
+  .badge.warn { background: var(--card2); background: color-mix(in oklab, var(--warn) 16%, transparent); color: var(--warn); }
+  .badge.ok { background: var(--card2); background: color-mix(in oklab, var(--good) 14%, transparent); color: var(--good-text); }
+  .badge.dim { background: var(--card2); color: var(--mist); }
+
+  .note { color: var(--mist); font-size: .76rem; max-width: 76ch; }
+  .callout { border-left: 3px solid var(--atlantic); background: var(--atl-soft); border-radius: 6px;
+    padding: .6rem .8rem; font-size: .8rem; margin: .8rem 0; max-width: 76ch; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: .3rem .9rem; margin-top: .5rem; font-size: .72rem; color: var(--mist); }
+  .legend span { display: inline-flex; align-items: center; gap: .32rem; }
+  .sw { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  svg text { font-family: Archivo, system-ui, sans-serif; fill: var(--mist); font-size: 11px; }
+  svg text.val { fill: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+  svg text.cat { fill: var(--ink); font-weight: 600; font-size: 11.5px; }
+  svg .grid { stroke: var(--grid); } svg .base { stroke: var(--baseline); }
+  .figwrap { overflow-x: auto; }
+
+  dialog { border: 1px solid var(--hair); border-radius: 10px; background: var(--card); color: var(--ink);
+    max-width: 40rem; width: 92vw; padding: 1rem 1.1rem; }
+  dialog::backdrop { background: rgba(0,0,0,.45); }
+  dialog textarea { width: 100%; min-height: 12rem; font: .75rem/1.4 ui-monospace, monospace;
+    background: var(--paper); color: var(--ink); border: 1px solid var(--hair); border-radius: 6px; padding: .5rem; }
+
+  footer { border-top: 1px solid var(--hair); margin-top: 2.5rem; padding-top: .9rem; font-size: .72rem; color: var(--faint); }
+  #tip { position: fixed; z-index: 50; pointer-events: none; display: none; max-width: 280px;
+    background: var(--ink); color: var(--paper); font-size: .76rem; line-height: 1.4;
+    padding: .45rem .6rem; border-radius: 6px; }
+  #toast { position: fixed; left: 50%; bottom: 1.2rem; transform: translateX(-50%); z-index: 60; display: none;
+    background: var(--ink); color: var(--paper); font-size: .8rem; font-weight: 600;
+    padding: .5rem .9rem; border-radius: 8px; }
+</style>
+
+<div class="wrap" lang="fi">
+  <header class="mast">
+    <div class="crest" aria-hidden="true"></div>
+    <div>
+      <h1>Varzimin talousstudio</h1>
+      <div class="sub">Sijoituslaskuri · henkilöstöbudjetit · vuosibudjetit — Varzim SC 2026/27 → · tiedon kokoamis- ja suunnittelutyökalu, ei sijoitussuositus</div>
+    </div>
+    <div class="actions">
+      <button class="btn" data-action="export-json">Vie JSON</button>
+      <button class="btn" data-action="export-csv">Vie CSV</button>
+      <button class="btn" data-action="import">Tuo</button>
+      <button class="btn danger" data-action="reset">Palauta oletukset</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="invest">Sijoitus</button>
+    <button data-tab="staff">Henkilöstö</button>
+    <button data-tab="budget">Vuosibudjetti</button>
+  </nav>
+
+  <div class="strip" id="strip"></div>
+  <main id="view"></main>
+
+  <footer>
+    Laskentaoletukset: 14 palkkaerää/vuosi · pelaajien työnantajakulu +4,5 % (urheilijoiden erityis-TSU, maksupohja 1/5) · muun henkilöstön TSU +23,75 % · TES-minimit sidottu RMMG-polkuun 870→1 100 € (2025–29) · arvostushaarukat julkisista SAD-vertailukaupoista 2019–2026. Kaikki luvut suunnittelukäyttöön — ei sijoitussuositus.
+  </footer>
+</div>
+
+<div id="tip" role="tooltip"></div>
+<div id="toast" role="status"></div>
+
+<dialog id="dlg" lang="fi">
+  <h2 id="dlg-title" style="margin:0 0 .5rem; font-size:1rem;"></h2>
+  <p class="note" id="dlg-note" style="margin:.2rem 0 .6rem;"></p>
+  <textarea id="dlg-text" spellcheck="false"></textarea>
+  <div style="display:flex; gap:.5rem; justify-content:flex-end; margin-top:.7rem;">
+    <button class="btn" data-action="dlg-close">Sulje</button>
+    <button class="btn primary" id="dlg-apply" data-action="dlg-apply" hidden>Tuo tiedot</button>
+  </div>
+</dialog>
+
+<script>
+'use strict';
+/* ============================== VAKIOT ============================== */
+const RMMG = { 2025: 870, 2026: 920, 2027: 970, 2028: 1020, 2029: 1100, 2030: 1100 };
+const TIER_LABEL = { 1: 'Liga Portugal Betclic', 2: 'Liga Portugal 2', 3: 'Liga 3' };
+const PLAYER_MULT = 14 * 1.045;      // pelaajat: 14 erää + erityis-TSU
+const STAFF_MULT  = 14 * 1.2375;     // henkilöstö: 14 erää + TSU 23,75 %
+const SEASONS = ['2026/27', '2027/28', '2028/29', '2029/30'];
+const DEPTS = ['Pelaajat', 'Valmennus & tuki', 'Scouttaus', 'Akatemia', 'Hallinto'];
+
+const seasonStartYear = s => parseInt(s.slice(0, 4), 10);
+function playerFloor(season, tier) {
+  const r = RMMG[seasonStartYear(season)] || 920;
+  return tier === 3 ? 1.5 * r : tier === 2 ? 1.75 * r : 3 * r;
+}
+
+let uid = 1;
+const nid = () => 'r' + (uid++);
+function P(role, dept, type, monthly, count, note) {
+  return { id: nid(), role, dept, type, monthly, count, note: note || '' };
+}
+function L(name, amount, note) { return { id: nid(), name, amount, note: note || '' }; }
+
+/* Skenaario B -esiasetus (nousubudjettiraportista) */
+function presetPersonnelB() {
+  return [
+    P('Pelaajisto', 'Pelaajat', 'player', 2500, 26, 'keskipalkka; haarukka 1 305–5 000 €'),
+    P('Bonuspooli (voitot + nousubonus)', 'Pelaajat', 'lump', 120000, 1, 'maksetaan tuloksesta'),
+    P('Päävalmentaja', 'Valmennus & tuki', 'staff', 4500, 1, 'Liga 2 -tason palkka'),
+    P('Apuvalmentaja', 'Valmennus & tuki', 'staff', 2200, 2, ''),
+    P('Maalivahtivalmentaja', 'Valmennus & tuki', 'staff', 1800, 1, ''),
+    P('Fysiikkavalmentaja', 'Valmennus & tuki', 'staff', 2000, 1, ''),
+    P('Video-/pelianalyytikko', 'Valmennus & tuki', 'staff', 1800, 1, ''),
+    P('Fysioterapeutti', 'Valmennus & tuki', 'staff', 1600, 2, ''),
+    P('Lääkäri (osa-aik.)', 'Valmennus & tuki', 'staff', 1000, 1, 'lisenssivaatimus'),
+    P('Huoltaja', 'Valmennus & tuki', 'staff', 1100, 1, ''),
+    P('Joukkueenjohtaja', 'Valmennus & tuki', 'staff', 1500, 1, ''),
+    P('Päävastuullinen scoutti', 'Scouttaus', 'staff', 2500, 1, ''),
+    P('Rekrytointi-/data-analyytikko', 'Scouttaus', 'staff', 1900, 1, ''),
+    P('Aluescoutit (3 osa-aik.)', 'Scouttaus', 'lump', 18000, 1, 'Suur-Porto · Braga · etelä'),
+    P('Akatemiajohtaja', 'Akatemia', 'staff', 2800, 1, ''),
+    P('U19/U17-päävalmentajat', 'Akatemia', 'staff', 1600, 2, 'päätoimiset'),
+    P('Ikäluokkavalmentajat U15–U9', 'Akatemia', 'staff', 600, 6, 'osa-aikaiset'),
+    P('Akatemian MV- ja fysiikkavalmennus', 'Akatemia', 'lump', 25000, 1, ''),
+    P('Akatemian fysio + hyvinvointi', 'Akatemia', 'lump', 55000, 1, ''),
+    P('Urheilujohtaja', 'Hallinto', 'staff', 4000, 1, ''),
+    P('Toimitusjohtaja / GM', 'Hallinto', 'staff', 3000, 1, ''),
+    P('Talous & hallinto', 'Hallinto', 'staff', 1800, 1, ''),
+    P('Sihteeri / kilpailutoiminta', 'Hallinto', 'staff', 1500, 1, ''),
+    P('Viestintä & media', 'Hallinto', 'staff', 1700, 1, 'lisenssivaatimus'),
+    P('Kaupallinen päällikkö', 'Hallinto', 'staff', 2000, 1, '+ provisiot'),
+    P('Lipunmyynti & jäsenpalvelu', 'Hallinto', 'staff', 1300, 1, ''),
+    P('Kenttä- ja kiinteistöhenkilöstö', 'Hallinto', 'staff', 1200, 2, ''),
+    P('Turvallisuus + fanivastaava OLA', 'Hallinto', 'lump', 12000, 1, 'lisenssivaatimus'),
+  ];
+}
+function presetCostsB() {
+  return [
+    L('Agenttipalkkiot ja siirtokulut', 40000), L('Matkat ja leirit', 70000),
+    L('Ottelutapahtumat (JV, poliisi, ambulanssi)', 70000), L('Erotuomarit, liitto, lisenssit', 30000),
+    L('Varusteet ja lääkintätarvikkeet', 50000), L('Vakuutukset', 35000, '~3 % pelaajapalkoista'),
+    L('Scouttauksen työkalut ja matkat', 27000, 'Wyscout/InStat'),
+    L('Akatemia: kenttävuorot, varusteet, matkat', 150000), L('Akatemia: FPF-sertifiointi ja turnaukset', 40000),
+    L('Akatemia: stipendit ja majoitus', 50000), L('Akatemia: hallinto ja puskuri', 75000),
+    L('Kentänhoito, stadion, energia', 90000), L('Toimisto, IT, laki, tilintarkastus', 45000),
+    L('Markkinointi ja tapahtumat', 35000), L('Varaus', 70000, '~2,5 %'),
+  ];
+}
+function presetRevenuesB() {
+  return [
+    L('Kuntatuki: formação-sopimus', 450000, 'CM Póvoa de Varzim'),
+    L('Kuntatuki: edustusjalkapallo', 200000),
+    L('Jäsenmaksut', 170000, '~2 000 maksavaa'),
+    L('Ottelutulot ja kausipaikat', 140000, 'ka. 3 000 katsojaa'),
+    L('Sponsorit ja mainonta', 250000, 'oletus — ei julkista verrokkia'),
+    L('Taça de Portugal + FPF-tuki', 85000),
+    L('Baari, fanituotteet, tapahtumat', 60000),
+    L('Pelaajamyynnit ja korvaukset', 150000, 'varovainen taso'),
+  ];
+}
+/* Liga 2 -kaudet (nousun jälkeen) — monivuotistaulukosta */
+function presetSeasonL2(first) {
+  return {
+    tier: 2,
+    personnel: [
+      P('Pelaajisto', 'Pelaajat', 'player', 4300, 26, 'Liga 2 -taso'),
+      P('Bonuspooli', 'Pelaajat', 'lump', 150000, 1, ''),
+      P('Valmennus & urheilutoimen tuki', 'Valmennus & tuki', 'lump', first ? 480000 : 520000, 1, 'UEFA Pro -vaatimus'),
+      P('Scouttausverkosto', 'Scouttaus', 'lump', first ? 150000 : 170000, 1, ''),
+      P('Akatemian henkilöstö', 'Akatemia', 'lump', 300000, 1, ''),
+      P('Hallinnon henkilöstö', 'Hallinto', 'lump', 320000, 1, ''),
+    ],
+    costs: [
+      L('Akatemian toiminta (kentät, turnaukset, stipendit)', first ? 320000 : 380000),
+      L('Ottelutapahtumat ja matkat (ammattisarja)', 220000),
+      L('Erotuomarit ja liittomaksut', 60000, 'ammattisarjataso'),
+      L('Stadion, kentänhoito, energia', 120000),
+      L('Toimisto, laki, tarkastus, markkinointi', 110000),
+      ...(first ? [L('Lisensointi-capex (valot, TV-tilat, sektorit)', 550000, 'kertaluonteinen')] : []),
+      L('Varaus', 100000),
+    ],
+    revenues: [
+      L('Kuntatuki (formação + edustus)', 680000),
+      L('Jäsenmaksut', 220000), L('Ottelutulot ja kausipaikat', 260000, 'ka. ~3 500 katsojaa'),
+      L('Sponsorit ja mainonta', 420000, 'ammattisarjanäkyvyys'),
+      L('Liga Portugal -jaot + cup', 180000),
+      ...(first ? [] : [L('TV-keskittäminen (10 % potista)', 1250000, 'alkaa 2028/29')]),
+      L('UEFA-solidaarisuus (epävarma)', first ? 0 : 0, 'haarukka 0–380 t€'),
+      L('Pelaajamyynnit', first ? 400000 : 800000, 'selling club -tavoite'),
+    ],
+  };
+}
+
+function defaultState() {
+  uid = 1;
+  const s = {
+    v: 1, tab: 'invest', activeSeason: '2026/27',
+    seasons: {
+      '2026/27': { tier: 3, personnel: presetPersonnelB(), costs: presetCostsB(), revenues: presetRevenuesB() },
+      '2027/28': presetSeasonL2(true),
+      '2028/29': presetSeasonL2(false),
+      '2029/30': (() => { const x = presetSeasonL2(false);
+        x.revenues.find(r => r.name.startsWith('Pelaajamyynnit')).amount = 1200000; return x; })(),
+    },
+    invest: {
+      price: 2000000, stake: 60, share: 100, exitSeason: '2029/30',
+      bands: { 1: { low: 25, base: 35, high: 45 }, 2: { low: 6, base: 9, high: 12 }, 3: { low: 2, base: 2.5, high: 3 } },
+      gaps: { g3: 1400000, g2first: 1950000, g2later: 150000, g1: 0 },
+      paths: [
+        { id: 'p1', label: 'Perusura — nousu 2027, exit Liga 2', weight: 40, tiers: ['3', '2f', '2', '2'], exitTier: 2 },
+        { id: 'p2', label: 'Hidas — nousu 2028, exit Liga 2', weight: 25, tiers: ['3', '3', '2f', '2'], exitTier: 2 },
+        { id: 'p3', label: 'Ei nousua — exit Liga 3', weight: 30, tiers: ['3', '3', '3', '3'], exitTier: 3 },
+        { id: 'p4', label: 'Huippu — nousu 2027 + Liga 1 2029, exit Liga 1', weight: 5, tiers: ['3', '2f', '2', '1'], exitTier: 1 },
+      ],
+    },
+  };
+  // Rahoitustarpeet lasketaan suoraan oletusbudjeteista, jotta Sijoitus- ja
+  // Vuosibudjetti-moduulit ovat lähtötilanteessa yhdenmukaiset.
+  s.invest.gaps.g3 = Math.max(0, Math.round(seasonTotals('2026/27', s).gap));
+  s.invest.gaps.g2first = Math.max(0, Math.round(seasonTotals('2027/28', s).gap));
+  s.invest.gaps.g2later = Math.max(0, Math.round(seasonTotals('2028/29', s).gap));
+  return s;
+}
+
+/* Tuodun tai tallennetun tilan sanitointi: numerot pakotetaan numeroiksi ja
+   rajataan, valinnat sallittuihin arvoihin, rivi-id:t generoidaan uudelleen.
+   Palauttaa aina renderöintikelpoisen tilan. */
+function sanitizeState(p) {
+  const out = defaultState();
+  if (!p || typeof p !== 'object') return out;
+  const numv = (v, def, min, max) => {
+    const n = Number(v);
+    if (!Number.isFinite(n)) return def;
+    return Math.min(max ?? Infinity, Math.max(min ?? -Infinity, n));
+  };
+  out.tab = ['invest', 'staff', 'budget'].includes(p.tab) ? p.tab : 'invest';
+  out.activeSeason = SEASONS.includes(p.activeSeason) ? p.activeSeason : SEASONS[0];
+  if (p.invest && typeof p.invest === 'object') {
+    const i = p.invest, o = out.invest;
+    o.price = numv(i.price, o.price, 0);
+    o.stake = numv(i.stake, o.stake, 1, 100);
+    o.share = numv(i.share, o.share, 0, 100);
+    o.exitSeason = SEASONS.includes(i.exitSeason) ? i.exitSeason : o.exitSeason;
+    for (const t of [1, 2, 3]) for (const b of ['low', 'base', 'high'])
+      o.bands[t][b] = numv(i.bands && i.bands[t] && i.bands[t][b], o.bands[t][b], 0);
+    for (const k of ['g3', 'g2first', 'g2later', 'g1'])
+      o.gaps[k] = numv(i.gaps && i.gaps[k], o.gaps[k], 0);
+    if (Array.isArray(i.paths) && i.paths.length) {
+      const TT = ['3', '2f', '2', '1'];
+      o.paths = i.paths.slice(0, 8).map((q, ix) => {
+        const tiers = (Array.isArray(q && q.tiers) ? q.tiers : ['3', '3', '3', '3'])
+          .slice(0, SEASONS.length).map(t => TT.includes(t) ? t : '3');
+        while (tiers.length < SEASONS.length) tiers.push(tiers[tiers.length - 1] || '3');
+        return {
+          id: 'p' + (ix + 1),
+          label: String((q && q.label) || ('Polku ' + (ix + 1))).slice(0, 140),
+          weight: numv(q && q.weight, 0, 0, 100),
+          tiers,
+          exitTier: [1, 2, 3].includes(q && q.exitTier) ? q.exitTier : 2,
+        };
+      });
+    }
+  }
+  if (p.seasons && typeof p.seasons === 'object') {
+    for (const sKey of SEASONS) {
+      const ps = p.seasons[sKey];
+      if (!ps || typeof ps !== 'object') continue;
+      const os = out.seasons[sKey];
+      os.tier = [1, 2, 3].includes(ps.tier) ? ps.tier : os.tier;
+      if (Array.isArray(ps.personnel)) os.personnel = ps.personnel.slice(0, 200).map(r => {
+        const row = {
+          id: nid(),
+          role: String((r && r.role) || 'Rooli').slice(0, 140),
+          dept: DEPTS.includes(r && r.dept) ? r.dept : 'Hallinto',
+          type: ['player', 'staff', 'lump'].includes(r && r.type) ? r.type : 'staff',
+          monthly: numv(r && r.monthly, 0, 0),
+          count: Math.max(1, Math.round(numv(r && r.count, 1, 1))),
+          note: String((r && r.note) || '').slice(0, 200),
+        };
+        if (r && r.amount !== undefined) row.amount = numv(r.amount, 0, 0);
+        return row;
+      });
+      const lines = arr => arr.slice(0, 200).map(r => ({
+        id: nid(),
+        name: String((r && r.name) || 'Erä').slice(0, 140),
+        amount: numv(r && r.amount, 0, 0),
+        note: String((r && r.note) || '').slice(0, 200),
+      }));
+      if (Array.isArray(ps.costs)) os.costs = lines(ps.costs);
+      if (Array.isArray(ps.revenues)) os.revenues = lines(ps.revenues);
+    }
+  }
+  return out;
+}
+
+/* ============================== TILA ============================== */
+const SKEY = 'varzim-talousstudio-v1';
+let storageOk = true;
+let state;
+try {
+  const raw = localStorage.getItem(SKEY);
+  state = raw ? sanitizeState(JSON.parse(raw)) : defaultState();
+} catch (e) { storageOk = false; state = defaultState(); }
+
+function save() {
+  try { localStorage.setItem(SKEY, JSON.stringify(state)); }
+  catch (e) { storageOk = false; }
+}
+
+/* ============================== APURIT ============================== */
+const $ = sel => document.querySelector(sel);
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function fmtEur(v) {
+  if (v === null || v === undefined || Number.isNaN(v)) return '—';
+  const neg = v < 0; const a = Math.abs(v);
+  let out;
+  if (a >= 999500) out = (a / 1e6).toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + ' M€';
+  else if (a >= 1000) out = (a / 1000).toLocaleString('fi-FI', { maximumFractionDigits: a < 10000 ? 1 : 0 }) + ' t€';
+  else out = a.toLocaleString('fi-FI', { maximumFractionDigits: 0 }) + ' €';
+  return (neg ? '−' : '') + out;
+}
+function fmtEurFull(v) {
+  if (v === null || v === undefined || Number.isNaN(v)) return '—';
+  return Math.round(v).toLocaleString('fi-FI') + ' €';
+}
+const pct = v => (v * 100).toLocaleString('fi-FI', { maximumFractionDigits: 1 }) + ' %';
+
+function rowCost(r) {
+  if (r.type === 'lump') return r.amount !== undefined ? r.amount * (r.count || 1) : r.monthly * (r.count || 1);
+  const mult = r.type === 'player' ? PLAYER_MULT : STAFF_MULT;
+  return r.monthly * mult * (r.count || 1);
+}
+function personnelTotals(season, st = state) {
+  const se = st.seasons[season];
+  const byDept = {}; let total = 0, players = 0, head = 0;
+  for (const d of DEPTS) byDept[d] = 0;
+  for (const r of se.personnel) {
+    const c = rowCost(r);
+    byDept[r.dept] = (byDept[r.dept] || 0) + c;
+    total += c;
+    if (r.type === 'player') players += c;
+    head += r.type === 'lump' ? 0 : (r.count || 1);
+  }
+  return { byDept, total, players, head };
+}
+function seasonTotals(season, st = state) {
+  const se = st.seasons[season];
+  const pers = personnelTotals(season, st);
+  const costs = se.costs.reduce((a, r) => a + (+r.amount || 0), 0);
+  const revenues = se.revenues.reduce((a, r) => a + (+r.amount || 0), 0);
+  const out = pers.total + costs;
+  return { pers, costs, revenues, out, gap: out - revenues };
+}
+
+/* IRR: vuosittaiset kassavirrat, flows[0] = t0 */
+function irr(flows) {
+  if (flows.every(f => f === 0)) return null;
+  const npv = r => flows.reduce((a, f, i) => a + f / Math.pow(1 + r, i), 0);
+  let lo = -0.95, hi = 10;
+  if (npv(lo) === 0 && npv(hi) === 0) return null;
+  if (npv(lo) * npv(hi) > 0) return null;
+  for (let i = 0; i < 90; i++) {
+    const mid = (lo + hi) / 2;
+    if (npv(lo) * npv(mid) <= 0) hi = mid; else lo = mid;
+  }
+  return (lo + hi) / 2;
+}
+
+/* Polun kassavirrat: t0 = -kauppahinta; kaudet = -osuus×rahoitustarve; exit-vuosi += osuus×arvostus */
+function pathOutcome(p, band) {
+  const inv = state.invest;
+  const nSeasons = SEASONS.indexOf(inv.exitSeason) + 1;
+  const g = inv.gaps;
+  const gapOf = t => t === '3' ? g.g3 : t === '2f' ? g.g2first : t === '2' ? g.g2later : g.g1;
+  const flows = [-inv.price];
+  let injections = 0;
+  for (let i = 0; i < nSeasons; i++) {
+    const gap = Math.max(0, gapOf(p.tiers[i] || p.tiers[p.tiers.length - 1])) * (inv.share / 100);
+    injections += gap;
+    flows.push(-gap);
+  }
+  // Exit-arvostus määräytyy siitä sarjatasosta, jolla polku on exit-kaudella —
+  // ei polun lopullisesta tavoitetasosta.
+  const lastT = p.tiers[Math.min(nSeasons, p.tiers.length) - 1] || '3';
+  const exitTier = lastT === '3' ? 3 : lastT === '1' ? 1 : 2;
+  const val = inv.bands[exitTier][band] * 1e6 * (inv.stake / 100);
+  flows[flows.length - 1] += val;
+  const totalIn = inv.price + injections;
+  return { exitTier, injections, totalIn, exitValue: val, net: val - totalIn, multiple: totalIn > 0 ? val / totalIn : null, irr: irr(flows) };
+}
+
+/* ============================== NÄKYMÄT ============================== */
+function seasonPicker() {
+  return '<div class="field" style="max-width:180px"><label>Kausi</label><select data-action="set-season">' +
+    SEASONS.map(s => `<option value="${s}" ${s === state.activeSeason ? 'selected' : ''}>${s} · ${TIER_LABEL[state.seasons[s].tier].replace('Liga Portugal Betclic', 'Liga 1')}</option>`).join('') +
+    '</select></div>';
+}
+
+function renderStrip() {
+  const t = seasonTotals(state.activeSeason);
+  const wageShare = t.out > 0 ? t.pers.total / t.out : 0;
+  const inv = state.invest;
+  const base = state.invest.paths[0] ? pathOutcome(state.invest.paths[0], 'base') : null;
+  $('#strip').innerHTML = `
+    <div class="kpi"><div class="v">${fmtEur(t.out)}</div><div class="l">Menot · ${state.activeSeason}</div></div>
+    <div class="kpi"><div class="v">${fmtEur(t.revenues)}</div><div class="l">Tulot · ${state.activeSeason}</div></div>
+    <div class="kpi ${t.gap > 0 ? 'neg' : 'pos'}"><div class="v">${fmtEur(t.gap)}</div><div class="l">Rahoitustarve · ${state.activeSeason}</div></div>
+    <div class="kpi"><div class="v">${pct(wageShare)}</div><div class="l">Henkilöstökulut / menot ${wageShare > 0.65 ? '· <span style="color:var(--warn)">yli 65 % katon</span>' : '· katto 65 %'}</div></div>
+    <div class="kpi"><div class="v">${base ? fmtEur(base.totalIn) : '—'}</div><div class="l">Sijoittajan kokonaissitoumus (perusura, exit ${inv.exitSeason})</div></div>
+    ${storageOk ? '' : '<div class="kpi"><div class="v">⚠</div><div class="l">Automaattitallennus ei käytettävissä tässä ympäristössä tai tallennettu tila ei kelvannut — varmuuskopioi työsi Vie JSON -napilla</div></div>'}`;
+}
+
+/* ---------- SIJOITUS ---------- */
+function renderInvest() {
+  const inv = state.invest;
+  const wsum = inv.paths.reduce((a, p) => a + (+p.weight || 0), 0);
+  const rows = inv.paths.map(p => {
+    const lo = pathOutcome(p, 'low'), ba = pathOutcome(p, 'base'), hi = pathOutcome(p, 'high');
+    return { p, lo, ba, hi };
+  });
+  const wOK = wsum > 0;
+  const exp = key => rows.reduce((a, r) => a + (+r.p.weight || 0) / (wsum || 1) * r.ba[key], 0);
+  const expLow = rows.reduce((a, r) => a + (+r.p.weight || 0) / (wsum || 1) * r.lo.net, 0);
+  const expHigh = rows.reduce((a, r) => a + (+r.p.weight || 0) / (wsum || 1) * r.hi.net, 0);
+  const eIn = exp('totalIn'), eOut = exp('exitValue'), eNet = exp('net');
+  const eMult = eIn > 0 ? eOut / eIn : null;
+
+  const maxAbs = Math.max(...rows.map(r => Math.max(r.ba.totalIn, r.ba.exitValue)), 1);
+  const W = 640, X0 = 210, XW = 400;
+  const sx = v => X0 + (v / maxAbs) * XW;
+  const bars = rows.map((r, i) => {
+    const y = 34 + i * 52;
+    return `
+      <text class="cat" x="0" y="${y + 10}">${esc(r.p.label.split(' — ')[0])} <tspan fill="var(--faint)">${(+r.p.weight || 0)} %</tspan></text>
+      <rect data-tip="<b>${esc(esc(r.p.label))}</b><br>Sijoitettu yhteensä ${fmtEur(r.ba.totalIn)} (kauppahinta + pääomitukset)" x="${X0}" y="${y - 8}" width="${Math.max(2, sx(r.ba.totalIn) - X0)}" height="12" rx="4" fill="var(--s1-soft)"/>
+      <rect data-tip="<b>${esc(esc(r.p.label))}</b><br>Osuuden arvo exitissä ${fmtEur(r.ba.exitValue)} (haarukka ${fmtEur(r.lo.exitValue)}–${fmtEur(r.hi.exitValue)})<br>Kerroin ${r.ba.multiple ? r.ba.multiple.toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + '×' : '—'}" x="${X0}" y="${y + 7}" width="${Math.max(2, sx(r.ba.exitValue) - X0)}" height="12" rx="4" fill="var(--s1)"/>
+      <text class="val" x="${sx(Math.max(r.ba.totalIn, r.ba.exitValue)) + 8}" y="${y + 15}">${r.ba.multiple ? r.ba.multiple.toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + '×' : '—'}</text>`;
+  }).join('');
+
+  $('#view').innerHTML = `
+  <div class="grid2">
+    <div class="card">
+      <h2>Sijoitus ja omistus</h2>
+      <p class="lead">Kauppahinta ja omistusosuus SAD:sta — implisiittinen 100 %:n arvostus lasketaan alle. Liga 3 -vertailukaupat: enemmistö 1,5–3 M€ + sitoumukset.</p>
+      <div class="fields">
+        <div class="field"><label>Sijoitus / kauppahinta (€)</label><input type="number" min="0" step="50000" value="${inv.price}" data-bind="invest.price"></div>
+        <div class="field"><label>Omistusosuus (%)</label><input type="number" min="1" max="100" step="1" value="${inv.stake}" data-bind="invest.stake"></div>
+        <div class="field"><label>Sijoittajan osuus rahoitustarpeesta (%)</label><input type="number" min="0" max="100" step="5" value="${inv.share}" data-bind="invest.share"></div>
+        <div class="field"><label>Exit-kausi</label><select data-bind="invest.exitSeason">${SEASONS.map(s => `<option ${s === inv.exitSeason ? 'selected' : ''}>${s}</option>`).join('')}</select></div>
+      </div>
+      <p class="note">Implisiittinen 100 %:n arvostus kaupassa: <strong>${inv.stake > 0 ? fmtEur(inv.price / (inv.stake / 100)) : '—'}</strong>. Oletus: pääomitukset eivät muuta omistusosuutta (merkitään omistuksen suhteessa tai lainana) — dilutoituva rakenne pienentäisi tuottoa.</p>
+    </div>
+
+    <div class="card">
+      <h2>Odotusarvo (polkupainotettu)</h2>
+      <p class="lead">Painotettu yhdistelmä alla olevista poluista, perusarvostuksilla.</p>
+      <div class="strip" style="margin:.2rem 0 .4rem">
+        <div class="kpi"><div class="v">${wOK ? fmtEur(eIn) : '—'}</div><div class="l">Sijoitettu yhteensä (odotusarvo)</div></div>
+        <div class="kpi"><div class="v">${wOK ? fmtEur(eOut) : '—'}</div><div class="l">Osuuden arvo exitissä</div></div>
+        <div class="kpi ${wOK ? (eNet >= 0 ? 'pos' : 'neg') : ''}"><div class="v">${wOK ? fmtEur(eNet) : '—'}</div><div class="l">Nettotulos${wOK ? ' · haarukka ' + fmtEur(expLow) + ' … ' + fmtEur(expHigh) : ''}</div></div>
+        <div class="kpi"><div class="v">${wOK && eMult ? eMult.toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + '×' : '—'}</div><div class="l">Kerroin (odotusarvo)</div></div>
+      </div>
+      ${!wOK ? `<p class="note" style="color:var(--warn)"><strong>Huom:</strong> kaikkien polkujen paino on 0 % — odotusarvoa ei voi laskea. Anna painot alla olevaan taulukkoon.</p>`
+        : Math.round(wsum) !== 100 ? `<p class="note" style="color:var(--warn)"><strong>Huom:</strong> polkujen painot summautuvat ${Math.round(wsum)} % — normalisoidaan laskennassa sataan.</p>` : ''}
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Polut ja tuotot</h2>
+    <p class="lead">Neljä skenaariopolkua exit-kauteen ${inv.exitSeason} asti. Vaalea palkki = sijoitettu pääoma (kauppahinta + kausien pääomitukset), tumma = osuuden arvo exitissä perusarvostuksella.</p>
+    <div class="figwrap">
+      <svg viewBox="0 0 ${W + 90} ${34 + rows.length * 52 + 10}" width="${W + 90}" style="height:auto" role="img" aria-label="Polkujen sijoitettu pääoma ja exit-arvo">
+        <line class="base" x1="${X0}" y1="16" x2="${X0}" y2="${20 + rows.length * 52}"/>
+        ${bars}
+      </svg>
+    </div>
+    <div class="legend"><span><i class="sw" style="background:var(--s1-soft)"></i>Sijoitettu yhteensä</span><span><i class="sw" style="background:var(--s1)"></i>Osuuden arvo exitissä (perus)</span></div>
+
+    <div class="tscroll" style="margin-top:.9rem"><table>
+      <thead><tr><th>Polku</th><th class="n">Paino %</th><th class="n">Pääomitukset</th><th class="n">Sijoitettu yht.</th><th class="n">Exit-arvo (perus)</th><th class="n">Netto</th><th class="n">Kerroin</th><th class="n">IRR/v</th></tr></thead>
+      <tbody>
+        ${rows.map(r => `<tr>
+          <td>${esc(r.p.label)}</td>
+          <td class="n"><input class="num" style="min-width:60px" type="number" min="0" max="100" value="${r.p.weight}" data-bind="path.${r.p.id}.weight"></td>
+          <td class="n">${fmtEur(r.ba.injections)}</td>
+          <td class="n">${fmtEur(r.ba.totalIn)}</td>
+          <td class="n"><span class="badge dim">Liga ${r.ba.exitTier}</span> ${fmtEur(r.ba.exitValue)} <span class="badge dim">${fmtEur(r.lo.exitValue)}–${fmtEur(r.hi.exitValue)}</span></td>
+          <td class="n" style="color:${r.ba.net >= 0 ? 'var(--good-text)' : 'var(--crit)'}">${fmtEur(r.ba.net)}</td>
+          <td class="n">${r.ba.multiple ? r.ba.multiple.toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + '×' : '—'}</td>
+          <td class="n">${r.ba.irr === null ? '—' : pct(r.ba.irr)}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table></div>
+    <p class="note">IRR lasketaan vuositasoisista kassavirroista (kauppahinta t0, pääomitukset kausittain, exit-arvo exit-kauden lopussa). ”2f” = ensimmäinen Liga 2 -kausi (lisensointi-capex mukana rahoitustarpeessa).</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>Arvostushaarukat (100 % SAD:sta, M€)</h2>
+      <p class="lead">Julkisista vertailukaupoista 2019–2026: Liga 3 — Trofense 80 % / 3,1 M€; Liga 2 — Tondela 80 % / 8 M€, Alverca 8–10 M€; Liga 1 — Estrela-neuvottelu 40–45 M€. Putoaminen leikkaa jyrkästi (Portimonense −62 %).</p>
+      <div class="tscroll"><table style="min-width:420px">
+        <thead><tr><th>Sarjataso exitissä</th><th class="n">Matala</th><th class="n">Perus</th><th class="n">Korkea</th></tr></thead>
+        <tbody>
+          ${[3, 2, 1].map(t => `<tr><td>${TIER_LABEL[t]}</td>
+            ${['low', 'base', 'high'].map(b => `<td class="n"><input class="num" style="min-width:70px" type="number" min="0" step="0.5" value="${inv.bands[t][b]}" data-bind="band.${t}.${b}"></td>`).join('')}
+          </tr>`).join('')}
+        </tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h2>Vuosirahoitustarve sarjatasoittain (€)</h2>
+      <p class="lead">Poluissa käytettävät kausikohtaiset rahoitustarpeet. Päivitä budjettimoduulista tai muokkaa käsin.</p>
+      <div class="fields">
+        <div class="field"><label>Liga 3</label><input type="number" step="50000" value="${inv.gaps.g3}" data-bind="gap.g3"></div>
+        <div class="field"><label>Liga 2 · 1. kausi</label><input type="number" step="50000" value="${inv.gaps.g2first}" data-bind="gap.g2first"></div>
+        <div class="field"><label>Liga 2 · jatko</label><input type="number" step="50000" value="${inv.gaps.g2later}" data-bind="gap.g2later"></div>
+        <div class="field"><label>Liga 1</label><input type="number" step="50000" value="${inv.gaps.g1}" data-bind="gap.g1"></div>
+      </div>
+      <button class="btn" data-action="sync-gaps">Päivitä vuosibudjeteista</button>
+      <p class="note" style="margin-top:.5rem">”Päivitä” lukee kausien 2026/27–2029/30 lasketut rahoitustarpeet: Liga 3 ← 2026/27, Liga 2 1. kausi ← 2027/28, Liga 2 jatko ← 2028/29.</p>
+    </div>
+  </div>
+
+  <div class="callout serif">Sama varovaisuusperiaate kuin sijoittajaportaalissa: arvostukset ovat julkisten vertailukauppojen tyyppihaarukoita, eivät seurakohtainen due diligence. Alasarjakaupoissa ”hinta” on usein pääomankorotus + velkojen otto, ei osakekauppahinta — ja peruuntumisriski on todellinen. Ei sijoitussuositus.</div>`;
+}
+
+/* ---------- HENKILÖSTÖ ---------- */
+function renderStaff() {
+  const season = state.activeSeason;
+  const se = state.seasons[season];
+  const floor = playerFloor(season, se.tier);
+  const tot = personnelTotals(season);
+  const st = seasonTotals(season);
+  const wageShare = st.out > 0 ? tot.total / st.out : 0;
+
+  const deptRows = DEPTS.map(dept => {
+    const rows = se.personnel.filter(r => r.dept === dept);
+    if (!rows.length) return '';
+    const body = rows.map(r => {
+      const below = r.type === 'player' && r.monthly < floor;
+      return `<tr>
+        <td><input class="namein" type="text" value="${esc(r.role)}" data-bind="pers.${r.id}.role"></td>
+        <td><select data-bind="pers.${r.id}.type">
+          <option value="player" ${r.type === 'player' ? 'selected' : ''}>Pelaaja</option>
+          <option value="staff" ${r.type === 'staff' ? 'selected' : ''}>Henkilöstö</option>
+          <option value="lump" ${r.type === 'lump' ? 'selected' : ''}>Vuosisumma</option>
+        </select></td>
+        <td class="n"><input class="num" type="number" min="0" step="${r.type === 'lump' ? 1000 : 50}" value="${r.type === 'lump' ? (r.amount ?? r.monthly) : r.monthly}" data-bind="pers.${r.id}.${r.type === 'lump' ? 'amount' : 'monthly'}"></td>
+        <td class="n"><input class="num" style="min-width:55px" type="number" min="1" step="1" value="${r.count || 1}" data-bind="pers.${r.id}.count"></td>
+        <td class="n">${fmtEurFull(rowCost(r))}</td>
+        <td>${below ? `<span class="badge warn">alle TES-minimin ${fmtEurFull(floor)}/kk</span>` : (r.type === 'player' ? '<span class="badge ok">TES ok</span>' : '')} ${r.note ? `<span class="badge dim">${esc(r.note)}</span>` : ''}</td>
+        <td><button class="btn mini danger" data-action="del-pers" data-id="${r.id}">✕</button></td>
+      </tr>`;
+    }).join('');
+    return body + `<tr class="subtotal"><td colspan="4">${dept} yhteensä</td><td class="n">${fmtEurFull(tot.byDept[dept])}</td><td colspan="2">${st.out > 0 ? pct(tot.byDept[dept] / st.out) + ' menoista' : ''}</td></tr>`;
+  }).join('');
+
+  $('#view').innerHTML = `
+  <div class="card">
+    <div style="display:flex; gap:1rem; align-items:end; flex-wrap:wrap; margin-bottom:.6rem">
+      ${seasonPicker()}
+      <div class="field" style="max-width:180px"><label>Sarjataso</label><select data-action="set-tier">
+        ${[3, 2, 1].map(t => `<option value="${t}" ${se.tier === t ? 'selected' : ''}>${TIER_LABEL[t]}</option>`).join('')}
+      </select></div>
+      <button class="btn" data-action="add-pers">+ Lisää rivi</button>
+      <button class="btn" data-action="copy-prev">Kopioi edelliseltä kaudelta</button>
+      <button class="btn ghost" data-action="load-preset">Palauta skenaario B -pohja (vain 2026/27)</button>
+    </div>
+    <h2>Henkilöstöbudjetti · ${season}</h2>
+    <p class="lead">Vuosikulu työnantajalle: pelaajat = kk-palkka × 14 × 1,045 (urheilijoiden erityis-TSU) · henkilöstö = kk-palkka × 14 × 1,2375 (TSU 23,75 %) · vuosisumma sellaisenaan. TES-minimi tällä kaudella ja sarjatasolla: <strong>${fmtEurFull(floor)}/kk</strong> (RMMG ${RMMG[seasonStartYear(season)]} €${se.tier === 3 ? '; 1,0 × RMMG sallittu, jos ≥ 50 % rungosta rekisteröidyillä sopimuksilla' : ''}).</p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Rooli</th><th>Tyyppi</th><th class="n">€/kk tai €/v</th><th class="n">Hlö</th><th class="n">Vuosikulu</th><th>Merkinnät</th><th></th></tr></thead>
+      <tbody>${deptRows}
+        <tr class="total"><td colspan="4">Henkilöstö yhteensä · ${tot.head} työntekijää + vuosisummaerät</td><td class="n">${fmtEurFull(tot.total)}</td><td colspan="2">${pct(wageShare)} menoista ${wageShare > 0.65 ? '<span class="badge warn">yli 65 % katon</span>' : '<span class="badge ok">katon alla (65 %)</span>'}</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note" style="margin-top:.6rem">Pelaajien keskikulu: ${(() => { const p = se.personnel.filter(r => r.type === 'player'); const n = p.reduce((a, r) => a + (r.count || 1), 0); return n ? fmtEurFull(tot.players / n) + '/v (' + n + ' pelaajaa)' : '—'; })()} · benchmark: Liga 3 -lattiarunko 0,35–0,55 M€/v, nousukandidaatti 0,6–1,0 M€/v, Liga 2 2,0–2,8 M€/v.</p>
+  </div>`;
+}
+
+/* ---------- VUOSIBUDJETTI ---------- */
+function lineTable(kind, season, title, sub) {
+  const se = state.seasons[season];
+  const rows = se[kind];
+  const sum = rows.reduce((a, r) => a + (+r.amount || 0), 0);
+  return `
+  <div class="card">
+    <h2>${title}</h2>
+    <p class="lead">${sub}</p>
+    <div class="tscroll"><table style="min-width:560px">
+      <thead><tr><th>Erä</th><th class="n">€ / kausi</th><th>Huomio</th><th></th></tr></thead>
+      <tbody>
+        ${rows.map(r => `<tr>
+          <td><input class="namein" type="text" value="${esc(r.name)}" data-bind="${kind}.${r.id}.name"></td>
+          <td class="n"><input class="num" type="number" step="5000" value="${r.amount}" data-bind="${kind}.${r.id}.amount"></td>
+          <td><input type="text" value="${esc(r.note || '')}" data-bind="${kind}.${r.id}.note" style="min-width:120px"></td>
+          <td><button class="btn mini danger" data-action="del-line" data-kind="${kind}" data-id="${r.id}">✕</button></td>
+        </tr>`).join('')}
+        <tr class="subtotal"><td>Yhteensä</td><td class="n">${fmtEurFull(sum)}</td><td colspan="2"><button class="btn mini" data-action="add-line" data-kind="${kind}">+ Lisää erä</button></td></tr>
+      </tbody>
+    </table></div>
+  </div>`;
+}
+
+function renderBudget() {
+  const season = state.activeSeason;
+  const t = seasonTotals(season);
+  const multi = SEASONS.map(s => ({ s, t: seasonTotals(s), tier: state.seasons[s].tier }));
+  const maxV = Math.max(...multi.map(m => Math.max(m.t.out, m.t.revenues)), 1);
+  const H = 190, Y0 = 220, X0 = 70, BW = 42, GAPX = 150;
+  const sy = v => Y0 - (v / maxV) * H;
+  const bars = multi.map((m, i) => {
+    const x = X0 + 40 + i * GAPX;
+    return `
+      <rect data-tip="<b>${m.s} · tulot</b><br>${fmtEur(m.t.revenues)}" x="${x}" y="${sy(m.t.revenues)}" width="${BW}" height="${Math.max(1, Y0 - sy(m.t.revenues))}" rx="4" fill="var(--s1)"/>
+      <rect data-tip="<b>${m.s} · menot</b><br>${fmtEur(m.t.out)} — rahoitustarve ${fmtEur(m.t.gap)}" x="${x + BW + 2}" y="${sy(m.t.out)}" width="${BW}" height="${Math.max(1, Y0 - sy(m.t.out))}" rx="4" fill="var(--s2)"/>
+      <text class="val" x="${x + BW + 1}" y="${sy(Math.max(m.t.out, m.t.revenues)) - 6}" text-anchor="middle">${m.t.gap > 0 ? '−' + fmtEur(m.t.gap) : '+' + fmtEur(-m.t.gap)}</text>
+      <text x="${x + BW + 1}" y="${Y0 + 18}" text-anchor="middle">${m.s}</text>
+      <text x="${x + BW + 1}" y="${Y0 + 32}" text-anchor="middle" style="font-size:10px">${TIER_LABEL[m.tier].replace('Liga Portugal Betclic', 'Liga 1')}</text>`;
+  }).join('');
+
+  $('#view').innerHTML = `
+  <div class="card">
+    <div style="display:flex; gap:1rem; align-items:end; flex-wrap:wrap; margin-bottom:.4rem">
+      ${seasonPicker()}
+      <div class="field" style="max-width:180px"><label>Sarjataso</label><select data-action="set-tier">
+        ${[3, 2, 1].map(x => `<option value="${x}" ${state.seasons[season].tier === x ? 'selected' : ''}>${TIER_LABEL[x]}</option>`).join('')}
+      </select></div>
+    </div>
+    <h2>Kauden ${season} tuloslaskelma</h2>
+    <div class="strip" style="margin:.5rem 0 0">
+      <div class="kpi"><div class="v">${fmtEur(t.revenues)}</div><div class="l">Tulot</div></div>
+      <div class="kpi"><div class="v">${fmtEur(t.pers.total)}</div><div class="l">Henkilöstökulut (moduulista Henkilöstö)</div></div>
+      <div class="kpi"><div class="v">${fmtEur(t.costs)}</div><div class="l">Muut kulut</div></div>
+      <div class="kpi ${t.gap > 0 ? 'neg' : 'pos'}"><div class="v">${fmtEur(t.gap)}</div><div class="l">${t.gap > 0 ? 'Rahoitustarve (SAD/omistaja)' : 'Ylijäämä'}</div></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    ${lineTable('revenues', season, 'Tulot', 'Kausikohtaiset tuloerät. Sarjataso­kohtaiset viitteet: Liga 3 — kuntatuki keskeinen, TV ~0; Liga 2 — +1,5 M€/v keskitettyä arvoa, TV-keskitys 2028/29 → ~1,25 M€.')}
+    ${lineTable('costs', season, 'Muut kulut (pl. henkilöstö)', 'Henkilöstökulut tulevat automaattisesti Henkilöstö-moduulista: ' + fmtEur(t.pers.total) + '. Tässä muut toimintakulut.')}
+  </div>
+
+  <div class="card">
+    <h2>Monivuotiskatsaus</h2>
+    <p class="lead">Kaikki kaudet rinnakkain — palkkilukema on kauden rahoitustarve (menot − tulot).</p>
+    <div class="figwrap">
+      <svg viewBox="0 0 ${X0 + 40 + SEASONS.length * GAPX + 20} 262" width="${X0 + 40 + SEASONS.length * GAPX + 20}" style="height:auto" role="img" aria-label="Tulot ja menot kausittain">
+        ${[0, .5, 1].map(f => `<line class="grid" x1="${X0}" y1="${sy(maxV * f)}" x2="${X0 + 40 + SEASONS.length * GAPX}" y2="${sy(maxV * f)}"/><text x="${X0 - 8}" y="${sy(maxV * f) + 4}" text-anchor="end">${fmtEur(maxV * f)}</text>`).join('')}
+        ${bars}
+        <line class="base" x1="${X0}" y1="${Y0}" x2="${X0 + 40 + SEASONS.length * GAPX}" y2="${Y0}"/>
+      </svg>
+    </div>
+    <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>Tulot</span><span><i class="sw" style="background:var(--s2)"></i>Menot</span></div>
+    <div class="tscroll" style="margin-top:.8rem"><table style="min-width:560px">
+      <thead><tr><th>Kausi</th><th>Sarjataso</th><th class="n">Tulot</th><th class="n">Henkilöstö</th><th class="n">Muut kulut</th><th class="n">Menot yht.</th><th class="n">Rahoitustarve</th><th class="n">Palkkaosuus</th></tr></thead>
+      <tbody>
+        ${multi.map(m => `<tr ${m.s === season ? 'class="subtotal"' : ''}>
+          <td>${m.s}</td><td>${TIER_LABEL[m.tier].replace('Liga Portugal Betclic', 'Liga 1')}</td>
+          <td class="n">${fmtEur(m.t.revenues)}</td><td class="n">${fmtEur(m.t.pers.total)}</td>
+          <td class="n">${fmtEur(m.t.costs)}</td><td class="n">${fmtEur(m.t.out)}</td>
+          <td class="n" style="color:${m.t.gap > 0 ? 'var(--crit)' : 'var(--good-text)'}">${fmtEur(m.t.gap)}</td>
+          <td class="n">${m.t.out > 0 ? pct(m.t.pers.total / m.t.out) : '—'}</td>
+        </tr>`).join('')}
+        <tr class="total"><td colspan="6">Rahoitustarve yhteensä ${SEASONS[0]}–${SEASONS[SEASONS.length - 1]}</td>
+          <td class="n">${fmtEur(multi.reduce((a, m) => a + Math.max(0, m.t.gap), 0))}</td><td></td></tr>
+      </tbody>
+    </table></div>
+    <p class="note" style="margin-top:.6rem">Benchmarkit raportista: Liga 3 -nousukandidaatti 1,2–2,0 M€ · Liga 2 keskikulut ~4 M€ (keskitulot 2,6–3 M€) · Liga 1 -nousija 8–10 M€. Vertaa oman suunnitelmasi rivejä näihin ennen lukitsemista.</p>
+  </div>`;
+}
+
+/* ============================== RENDER & TAPAHTUMAT ============================== */
+function render() {
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === state.tab));
+  renderStrip();
+  if (state.tab === 'invest') renderInvest();
+  else if (state.tab === 'staff') renderStaff();
+  else renderBudget();
+  bindTips();
+}
+
+function toast(msg) {
+  const t = $('#toast'); t.textContent = msg; t.style.display = 'block';
+  clearTimeout(toast._h); toast._h = setTimeout(() => { t.style.display = 'none'; }, 2600);
+}
+
+function setBind(path, raw) {
+  const parts = path.split('.');
+  // Hyväksyy myös pilkkudesimaalit; tyhjä tai kelvoton syöte EI muuta arvoa
+  // (re-render palauttaa entisen arvon kenttään).
+  const num = v => { const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : null; };
+  const clamp = (n, min, max) => Math.min(max ?? Infinity, Math.max(min ?? -Infinity, n));
+  const se = state.seasons[state.activeSeason];
+  if (parts[0] === 'invest') {
+    const k = parts[1];
+    if (k === 'exitSeason') { if (SEASONS.includes(raw)) state.invest.exitSeason = raw; return; }
+    const n = num(raw); if (n === null) return;
+    if (k === 'price') state.invest.price = clamp(n, 0);
+    else if (k === 'stake') state.invest.stake = clamp(n, 1, 100);
+    else if (k === 'share') state.invest.share = clamp(n, 0, 100);
+  } else if (parts[0] === 'band') {
+    const n = num(raw); if (n === null) return;
+    state.invest.bands[parts[1]][parts[2]] = clamp(n, 0);
+  } else if (parts[0] === 'gap') {
+    const n = num(raw); if (n === null) return;
+    state.invest.gaps[parts[1]] = clamp(n, 0);
+  } else if (parts[0] === 'path') {
+    const p = state.invest.paths.find(x => x.id === parts[1]);
+    const n = num(raw);
+    if (p && n !== null && parts[2] === 'weight') p.weight = clamp(n, 0, 100);
+  } else if (parts[0] === 'pers') {
+    const r = se.personnel.find(x => x.id === parts[1]);
+    if (!r) return;
+    const f = parts[2];
+    if (f === 'role') r.role = raw;
+    else if (f === 'type') {
+      const old = r.type;
+      if (!['player', 'staff', 'lump'].includes(raw) || raw === old) return;
+      if (raw === 'lump') {
+        // kk-rivistä vuosisummaksi: talteen työnantajan vuosikulu / hlö
+        r.amount = Math.round(rowCost(r) / (r.count || 1));
+      } else if (old === 'lump') {
+        // vuosisummasta kk-riviksi: jaetaan saman tyypin työnantajakertoimella,
+        // jolloin vuosikulu säilyy ennallaan (esiasetuksissa summa on monthly-kentässä)
+        const annual = (r.amount !== undefined ? r.amount : r.monthly) || 0;
+        r.monthly = Math.round(annual / (raw === 'player' ? PLAYER_MULT : STAFF_MULT));
+        delete r.amount;
+      }
+      r.type = raw;
+    }
+    else if (f === 'monthly') { const n = num(raw); if (n !== null) r.monthly = clamp(n, 0); }
+    else if (f === 'amount') { const n = num(raw); if (n !== null) r.amount = clamp(n, 0); }
+    else if (f === 'count') { const n = num(raw); if (n !== null) r.count = Math.max(1, Math.round(n)); }
+  } else if (parts[0] === 'revenues' || parts[0] === 'costs') {
+    const r = se[parts[0]].find(x => x.id === parts[1]);
+    if (!r) return;
+    if (parts[2] === 'name') r.name = raw;
+    else if (parts[2] === 'note') r.note = raw;
+    else { const n = num(raw); if (n !== null) r.amount = clamp(n, 0); }
+  }
+}
+
+document.addEventListener('change', e => {
+  const bind = e.target.getAttribute('data-bind');
+  const action = e.target.getAttribute('data-action');
+  if (bind) {
+    setBind(bind, e.target.value); save(); render();
+    const again = document.querySelector('[data-bind="' + bind + '"]');
+    if (again) again.focus();
+    return;
+  }
+  if (action === 'set-season') { state.activeSeason = e.target.value; save(); render(); }
+  else if (action === 'set-tier') { state.seasons[state.activeSeason].tier = parseInt(e.target.value, 10); save(); render(); }
+});
+
+document.addEventListener('click', async e => {
+  const btn = e.target.closest('[data-action]');
+  if (!btn) return;
+  const a = btn.dataset.action;
+  const se = state.seasons[state.activeSeason];
+
+  if (a === 'add-pers') { se.personnel.push(P('Uusi rooli', 'Hallinto', 'staff', 1500, 1)); }
+  else if (a === 'del-pers') { se.personnel = se.personnel.filter(r => r.id !== btn.dataset.id); }
+  else if (a === 'add-line') { se[btn.dataset.kind].push(L(btn.dataset.kind === 'revenues' ? 'Uusi tuloerä' : 'Uusi kuluerä', 0)); }
+  else if (a === 'del-line') { se[btn.dataset.kind] = se[btn.dataset.kind].filter(r => r.id !== btn.dataset.id); }
+  else if (a === 'copy-prev') {
+    const i = SEASONS.indexOf(state.activeSeason);
+    if (i > 0) {
+      const prev = state.seasons[SEASONS[i - 1]];
+      se.personnel = JSON.parse(JSON.stringify(prev.personnel)).map(r => ({ ...r, id: nid() }));
+      toast('Henkilöstö kopioitu kaudelta ' + SEASONS[i - 1]);
+    } else { toast('Ensimmäisellä kaudella ei edeltäjää'); }
+  }
+  else if (a === 'load-preset') {
+    if (state.activeSeason === '2026/27') { se.personnel = presetPersonnelB(); toast('Skenaario B -henkilöstö palautettu'); }
+    else { toast('Pohja on määritetty kaudelle 2026/27'); }
+  }
+  else if (a === 'sync-gaps') {
+    const g = state.invest.gaps;
+    g.g3 = Math.max(0, Math.round(seasonTotals('2026/27').gap));
+    g.g2first = Math.max(0, Math.round(seasonTotals('2027/28').gap));
+    g.g2later = Math.max(0, Math.round(seasonTotals('2028/29').gap));
+    toast('Rahoitustarpeet päivitetty vuosibudjeteista');
+  }
+  else if (a === 'reset') {
+    // confirm() ei toimi artifact-iframessa -> kaksivaiheinen vahvistus
+    if (btn.dataset.armed) {
+      delete btn.dataset.armed; btn.textContent = 'Palauta oletukset';
+      state = defaultState(); toast('Oletukset palautettu');
+    } else {
+      btn.dataset.armed = '1'; btn.textContent = 'Vahvista palautus — muutokset menetetään';
+      clearTimeout(resetArmTimer);
+      resetArmTimer = setTimeout(() => { delete btn.dataset.armed; btn.textContent = 'Palauta oletukset'; }, 5000);
+      return;
+    }
+  }
+  else if (a === 'export-json') { exportJSON(); return; }
+  else if (a === 'export-csv') { exportCSV(); return; }
+  else if (a === 'import') { openImport(); return; }
+  else if (a === 'dlg-close') { $('#dlg').close(); return; }
+  else if (a === 'dlg-apply') { applyImport(); return; }
+  else return;
+
+  save(); render();
+});
+
+document.addEventListener('click', e => {
+  const tab = e.target.closest('#tabs button');
+  if (tab) { state.tab = tab.dataset.tab; save(); render(); }
+});
+
+/* ---------- vienti & tuonti ---------- */
+let resetArmTimer = null;
+let downloadsP = null;
+function getDownloads() {
+  if (!downloadsP) {
+    downloadsP = (async () => {
+      try {
+        if (typeof claude !== 'undefined' && claude && typeof claude.use === 'function') {
+          return await Promise.race([
+            claude.use('downloads'),
+            new Promise(res => setTimeout(() => res(null), 4000)),
+          ]);
+        }
+      } catch (err) { /* ei käytettävissä */ }
+      return null;
+    })();
+  }
+  return downloadsP;
+}
+function showText(title, note, text, applyBtn) {
+  $('#dlg-title').textContent = title;
+  $('#dlg-note').textContent = note;
+  $('#dlg-text').value = text;
+  $('#dlg-apply').hidden = !applyBtn;
+  $('#dlg').showModal();
+}
+async function exportJSON() {
+  const data = JSON.stringify(state, null, 1);
+  const dl = await getDownloads();
+  if (dl) {
+    try { await dl.save({ filename: 'varzim-talousstudio.json', data }); toast('JSON tallennettu'); return; }
+    catch (err) { /* peruttu tai ei sallittu -> näytä teksti */ }
+  }
+  showText('Vie JSON', 'Tallennus ei ollut käytettävissä — kopioi tiedot talteen tästä.', data, false);
+}
+function csvEsc(s) { s = String(s); return /[";\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }
+async function exportCSV() {
+  const season = state.activeSeason;
+  const se = state.seasons[season];
+  const t = seasonTotals(season);
+  const rows = [['Varzim SC · talousstudio', season, TIER_LABEL[se.tier]], []];
+  rows.push(['HENKILÖSTÖ'], ['Rooli', 'Osasto', 'Tyyppi', '€/kk tai €/v', 'Hlö', 'Vuosikulu €']);
+  for (const r of se.personnel) rows.push([r.role, r.dept, r.type, r.type === 'lump' ? (r.amount ?? r.monthly ?? '') : r.monthly, r.count || 1, Math.round(rowCost(r))]);
+  rows.push(['Henkilöstö yhteensä', '', '', '', '', Math.round(t.pers.total)], []);
+  rows.push(['MUUT KULUT'], ['Erä', '€ / kausi', 'Huomio']);
+  for (const r of se.costs) rows.push([r.name, r.amount, r.note || '']);
+  rows.push(['Muut kulut yhteensä', Math.round(t.costs), ''], []);
+  rows.push(['TULOT'], ['Erä', '€ / kausi', 'Huomio']);
+  for (const r of se.revenues) rows.push([r.name, r.amount, r.note || '']);
+  rows.push(['Tulot yhteensä', Math.round(t.revenues), ''], []);
+  rows.push(['Menot yhteensä', Math.round(t.out)], ['Rahoitustarve', Math.round(t.gap)]);
+  const csv = rows.map(r => r.map(csvEsc).join(';')).join('\n');
+  const dl = await getDownloads();
+  if (dl) {
+    try { await dl.save({ filename: 'varzim-budjetti-' + season.replace('/', '-') + '.csv', data: '﻿' + csv }); toast('CSV tallennettu'); return; }
+    catch (err) { }
+  }
+  showText('Vie CSV', 'Tallennus ei ollut käytettävissä — kopioi tiedot tästä (puolipiste-eroteltu).', csv, false);
+}
+function openImport() {
+  showText('Tuo JSON', 'Liitä aiemmin viety varzim-talousstudio.json tähän ja paina Tuo tiedot.', '', true);
+}
+function applyImport() {
+  let parsed;
+  try { parsed = JSON.parse($('#dlg-text').value); }
+  catch (err) { toast('Tuonti epäonnistui — tarkista JSON'); return; }
+  const prev = state;
+  try {
+    state = sanitizeState(parsed);   // rakenne varmistetaan; rivi-id:t generoidaan uudelleen
+    render();                        // renderöinti ensin — tallennus vasta kun tila toimii
+    save();
+    $('#dlg').close(); toast('Tiedot tuotu');
+  } catch (err) {
+    state = prev;
+    try { render(); } catch (e2) { /* vanhakin tila rikki — ei kosketa tallennusta */ }
+    toast('Tuonti epäonnistui — tarkista JSON');
+  }
+}
+
+/* ---------- tooltipit ---------- */
+function bindTips() {
+  const tip = $('#tip');
+  const move = e => {
+    const x = Math.min(e.clientX + 14, window.innerWidth - tip.offsetWidth - 10);
+    const y = Math.min(e.clientY + 16, window.innerHeight - tip.offsetHeight - 10);
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  };
+  document.querySelectorAll('[data-tip]').forEach(el => {
+    el.addEventListener('mouseenter', e => { tip.innerHTML = el.getAttribute('data-tip'); tip.style.display = 'block'; move(e); });
+    el.addEventListener('mousemove', move);
+    el.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
+  });
+}
+
+try { render(); }
+catch (e) {
+  // Jos tallennettu tila on korruptoitunut, palataan oletuksiin sivun tyhjenemisen sijaan.
+  state = defaultState(); save(); render();
+}
+getDownloads();
+</script>
