@@ -87,6 +87,7 @@
   .btn.ghost { background: none; }
   .btn.danger:hover { border-color: var(--crit); color: var(--crit); }
   .btn.mini { padding: .15rem .45rem; font-size: .72rem; }
+  .btn.armed, .btn.armed:hover { background: var(--crit); border-color: var(--crit); color: #fff; }
 
   .tscroll { overflow-x: auto; border: 1px solid var(--hair); border-radius: 8px; background: var(--card); }
   table { border-collapse: collapse; width: 100%; min-width: 700px; font-size: .82rem; }
@@ -128,7 +129,8 @@
     padding: .45rem .6rem; border-radius: 6px; }
   #toast { position: fixed; left: 50%; bottom: 1.2rem; transform: translateX(-50%); z-index: 60; display: none;
     background: var(--ink); color: var(--paper); font-size: .8rem; font-weight: 600;
-    padding: .5rem .9rem; border-radius: 8px; }
+    padding: .5rem .9rem; border-radius: 8px; white-space: nowrap; }
+  #toast .btn.mini { background: var(--paper); color: var(--ink); border-color: var(--paper); margin-left: .6rem; }
 </style>
 
 <div class="wrap" lang="fi">
@@ -781,6 +783,23 @@ function toast(msg) {
   const t = $('#toast'); t.textContent = msg; t.style.display = 'block';
   clearTimeout(toast._h); toast._h = setTimeout(() => { t.style.display = 'none'; }, 2600);
 }
+/* Poiston jälkeinen ilmoitus, jossa Kumoa-nappi */
+function toastUndo(msg) {
+  const t = $('#toast');
+  t.innerHTML = esc(msg) + ' <button class="btn mini" data-action="undo-del">Kumoa</button>';
+  t.style.display = 'block';
+  clearTimeout(toast._h); toast._h = setTimeout(() => { t.style.display = 'none'; }, 8000);
+}
+/* Kaksivaiheinen poistovarmistus: 1. klikkaus virittää napin, 2. poistaa */
+function armDelete(btn) {
+  btn.dataset.armed = '1'; btn.textContent = 'Poista?'; btn.classList.add('armed');
+  setTimeout(() => {
+    if (document.contains(btn) && btn.dataset.armed) {
+      delete btn.dataset.armed; btn.textContent = '✕'; btn.classList.remove('armed');
+    }
+  }, 4000);
+}
+let undoStash = null; // { kind, season, row, index }
 
 function setBind(path, raw) {
   const parts = path.split('.');
@@ -858,9 +877,25 @@ document.addEventListener('click', async e => {
   const se = state.seasons[state.activeSeason];
 
   if (a === 'add-pers') { se.personnel.push(P('Uusi rooli', 'Hallinto', 'staff', 1500, 1)); }
-  else if (a === 'del-pers') { se.personnel = se.personnel.filter(r => r.id !== btn.dataset.id); }
+  else if (a === 'del-pers' || a === 'del-line') {
+    if (!btn.dataset.armed) { armDelete(btn); return; }   // 1. klikkaus: vain varmistus
+    const kind = a === 'del-pers' ? 'pers' : btn.dataset.kind;
+    const arr = kind === 'pers' ? se.personnel : se[kind];
+    const idx = arr.findIndex(r => r.id === btn.dataset.id);
+    if (idx === -1) return;
+    const removed = arr.splice(idx, 1)[0];
+    undoStash = { kind, season: state.activeSeason, row: removed, index: idx };
+    toastUndo('Poistettu: ' + (removed.role || removed.name || 'rivi'));
+  }
+  else if (a === 'undo-del') {
+    if (!undoStash) return;
+    const seU = state.seasons[undoStash.season];
+    const arr = undoStash.kind === 'pers' ? seU.personnel : seU[undoStash.kind];
+    arr.splice(Math.min(undoStash.index, arr.length), 0, undoStash.row);
+    undoStash = null;
+    toast('Rivi palautettu');
+  }
   else if (a === 'add-line') { se[btn.dataset.kind].push(L(btn.dataset.kind === 'revenues' ? 'Uusi tuloerä' : 'Uusi kuluerä', 0)); }
-  else if (a === 'del-line') { se[btn.dataset.kind] = se[btn.dataset.kind].filter(r => r.id !== btn.dataset.id); }
   else if (a === 'copy-prev') {
     const i = SEASONS.indexOf(state.activeSeason);
     if (i > 0) {
