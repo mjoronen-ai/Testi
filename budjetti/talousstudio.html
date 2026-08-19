@@ -714,11 +714,11 @@ function renderStaff() {
 
   const deptRows = DEPTS.map(dept => {
     const rows = se.personnel.filter(r => r.dept === dept);
-    if (!rows.length) return '';
     const body = rows.map(r => {
       const below = r.type === 'player' && r.monthly < floor;
       return `<tr>
         <td><input class="namein" type="text" value="${esc(r.role)}" data-bind="pers.${r.id}.role"></td>
+        <td><select data-bind="pers.${r.id}.dept">${DEPTS.map(d => `<option ${d === r.dept ? 'selected' : ''}>${d}</option>`).join('')}</select></td>
         <td><select data-bind="pers.${r.id}.type">
           <option value="player" ${r.type === 'player' ? 'selected' : ''}>Pelaaja</option>
           <option value="staff" ${r.type === 'staff' ? 'selected' : ''}>Henkilöstö</option>
@@ -731,7 +731,7 @@ function renderStaff() {
         <td><button class="btn mini danger" data-action="del-pers" data-id="${r.id}">✕</button></td>
       </tr>`;
     }).join('');
-    return body + `<tr class="subtotal"><td colspan="4">${dept} yhteensä</td><td class="n">${fmtEurFull(tot.byDept[dept])}</td><td colspan="2">${st.out > 0 ? pct(tot.byDept[dept] / st.out) + ' menoista' : ''}</td></tr>`;
+    return body + `<tr class="subtotal"><td colspan="5">${dept} yhteensä <button class="btn mini" data-action="add-pers" data-dept="${dept}" style="margin-left:.6rem">+ Lisää</button></td><td class="n">${fmtEurFull(tot.byDept[dept])}</td><td colspan="2">${st.out > 0 && tot.byDept[dept] ? pct(tot.byDept[dept] / st.out) + ' menoista' : ''}</td></tr>`;
   }).join('');
 
   $('#view').innerHTML = `
@@ -741,16 +741,15 @@ function renderStaff() {
       <div class="field" style="max-width:180px"><label>Sarjataso</label><select data-action="set-tier">
         ${[3, 2, 1].map(t => `<option value="${t}" ${se.tier === t ? 'selected' : ''}>${TIER_LABEL[t]}</option>`).join('')}
       </select></div>
-      <button class="btn" data-action="add-pers">+ Lisää rivi</button>
       <button class="btn" data-action="copy-prev">Kopioi edelliseltä kaudelta</button>
       <button class="btn ghost" data-action="load-preset">Palauta skenaario B -pohja (vain ${SEASONS[0]})</button>
     </div>
     <h2>Henkilöstöbudjetti · ${season}</h2>
     <p class="lead">Vuosikulu työnantajalle: pelaajat = kk-palkka × 14 × 1,045 (urheilijoiden erityis-TSU) · henkilöstö = kk-palkka × 14 × 1,2375 (TSU 23,75 %) · vuosisumma sellaisenaan. TES-minimi tällä kaudella ja sarjatasolla: <strong>${fmtEurFull(floor)}/kk</strong> (RMMG ${RMMG[seasonStartYear(season)]} €${se.tier === 3 ? '; 1,0 × RMMG sallittu, jos ≥ 50 % rungosta rekisteröidyillä sopimuksilla' : ''}).</p>
     <div class="tscroll"><table>
-      <thead><tr><th>Rooli</th><th>Tyyppi</th><th class="n">€/kk tai €/v</th><th class="n">Hlö</th><th class="n">Vuosikulu</th><th>Merkinnät</th><th></th></tr></thead>
+      <thead><tr><th>Rooli</th><th>Osasto</th><th>Tyyppi</th><th class="n">€/kk tai €/v</th><th class="n">Hlö</th><th class="n">Vuosikulu</th><th>Merkinnät</th><th></th></tr></thead>
       <tbody>${deptRows}
-        <tr class="total"><td colspan="4">Henkilöstö yhteensä · ${tot.head} työntekijää + vuosisummaerät</td><td class="n">${fmtEurFull(tot.total)}</td><td colspan="2">${pct(wageShare)} menoista ${wageShare > 0.65 ? '<span class="badge warn">yli 65 % katon</span>' : '<span class="badge ok">katon alla (65 %)</span>'}</td></tr>
+        <tr class="total"><td colspan="5">Henkilöstö yhteensä · ${tot.head} työntekijää + vuosisummaerät</td><td class="n">${fmtEurFull(tot.total)}</td><td colspan="2">${pct(wageShare)} menoista ${wageShare > 0.65 ? '<span class="badge warn">yli 65 % katon</span>' : '<span class="badge ok">katon alla (65 %)</span>'}</td></tr>
       </tbody>
     </table></div>
     <p class="note" style="margin-top:.6rem">Pelaajien keskikulu: ${(() => { const p = se.personnel.filter(r => r.type === 'player'); const n = p.reduce((a, r) => a + (r.count || 1), 0); return n ? fmtEurFull(tot.players / n) + '/v (' + n + ' pelaajaa)' : '—'; })()} · benchmark: Liga 3 -lattiarunko 0,35–0,55 M€/v, nousukandidaatti 0,6–1,0 M€/v, Liga 2 2,0–2,8 M€/v.</p>
@@ -968,6 +967,7 @@ function setBind(path, raw) {
     if (!r) return;
     const f = parts[2];
     if (f === 'role') r.role = raw;
+    else if (f === 'dept') { if (DEPTS.includes(raw)) r.dept = raw; }
     else if (f === 'type') {
       const old = r.type;
       if (!['player', 'staff', 'lump'].includes(raw) || raw === old) return;
@@ -1014,7 +1014,10 @@ document.addEventListener('click', async e => {
   const a = btn.dataset.action;
   const se = state.seasons[state.activeSeason];
 
-  if (a === 'add-pers') { se.personnel.push(P('Uusi rooli', 'Hallinto', 'staff', 1500, 1)); }
+  if (a === 'add-pers') {
+    const dept = DEPTS.includes(btn.dataset.dept) ? btn.dataset.dept : 'Hallinto';
+    se.personnel.push(P('Uusi rooli', dept, dept === 'Pelaajat' ? 'player' : 'staff', 1500, 1));
+  }
   else if (a === 'del-pers' || a === 'del-line' || a === 'del-capex') {
     if (!btn.dataset.armed) { armDelete(btn); return; }   // 1. klikkaus: vain varmistus
     const kind = a === 'del-pers' ? 'pers' : a === 'del-capex' ? 'capex' : btn.dataset.kind;
