@@ -151,8 +151,9 @@
   </header>
 
   <nav class="tabs" id="tabs">
-    <button data-tab="invest">Sijoitus</button>
+    <button data-tab="invest">Omistus &amp; tuotto</button>
     <button data-tab="staff">Henkilöstö</button>
+    <button data-tab="capex">Investoinnit</button>
     <button data-tab="budget">Vuosibudjetti</button>
   </nav>
 
@@ -201,6 +202,9 @@ function P(role, dept, type, monthly, count, note) {
   return { id: nid(), role, dept, type, monthly, count, note: note || '' };
 }
 function L(name, amount, note) { return { id: nid(), name, amount, note: note || '' }; }
+function C(name, total, mode, season, years, note) {
+  return { id: nid(), name, total, mode, season, years: years || 1, note: note || '' };
+}
 
 /* Skenaario B -esiasetus (nousubudjettiraportista) */
 function presetPersonnelB() {
@@ -277,7 +281,6 @@ function presetSeasonL2(first) {
       L('Erotuomarit ja liittomaksut', 60000, 'ammattisarjataso'),
       L('Stadion, kentänhoito, energia', 120000),
       L('Toimisto, laki, tarkastus, markkinointi', 110000),
-      ...(first ? [L('Lisensointi-capex (valot, TV-tilat, sektorit)', 550000, 'kertaluonteinen')] : []),
       L('Varaus', 100000),
     ],
     revenues: [
@@ -303,8 +306,14 @@ function defaultState() {
       '2030/31': (() => { const x = presetSeasonL2(false);
         x.revenues.find(r => r.name.startsWith('Pelaajamyynnit')).amount = 1200000; return x; })(),
     },
+    capex: [
+      C('Joukkueen bussi', 250000, 'once', '2027/28', 1, ''),
+      C('Liga 2 -lisensointi (valot, TV-tilat, sektorit)', 550000, 'once', '2028/29', 1, 'pakollinen nousun yhteydessä'),
+      C('Stadionin itäkatsomon korjaus', 3000000, 'spread', '2028/29', 3, 'raportin arvio ~3 M€'),
+    ],
     invest: {
-      price: 2000000, stake: 60, share: 100, exitSeason: '2030/31',
+      price: 2000000, stake: 60, share: 100, horizon: 10,
+      steady: { 1: 1500000, 2: 400000, 3: -400000 },
       bands: { 1: { low: 25, base: 35, high: 45 }, 2: { low: 6, base: 9, high: 12 }, 3: { low: 2, base: 2.5, high: 3 } },
       gaps: { g3: 1400000, g2first: 1100000, g2later: 280000, g1: 0 },
       paths: [
@@ -334,14 +343,26 @@ function sanitizeState(p) {
     if (!Number.isFinite(n)) return def;
     return Math.min(max ?? Infinity, Math.max(min ?? -Infinity, n));
   };
-  out.tab = ['invest', 'staff', 'budget'].includes(p.tab) ? p.tab : 'invest';
+  out.tab = ['invest', 'staff', 'capex', 'budget'].includes(p.tab) ? p.tab : 'invest';
   out.activeSeason = SEASONS.includes(p.activeSeason) ? p.activeSeason : SEASONS[0];
+  if (Array.isArray(p.capex)) {
+    out.capex = p.capex.slice(0, 100).map(r => ({
+      id: nid(),
+      name: String((r && r.name) || 'Investointi').slice(0, 140),
+      total: numv(r && r.total, 0, 0),
+      mode: (r && r.mode) === 'spread' ? 'spread' : 'once',
+      season: SEASONS.includes(r && r.season) ? r.season : SEASONS[0],
+      years: Math.min(10, Math.max(1, Math.round(numv(r && r.years, 1, 1)))),
+      note: String((r && r.note) || '').slice(0, 200),
+    }));
+  }
   if (p.invest && typeof p.invest === 'object') {
     const i = p.invest, o = out.invest;
     o.price = numv(i.price, o.price, 0);
     o.stake = numv(i.stake, o.stake, 1, 100);
     o.share = numv(i.share, o.share, 0, 100);
-    o.exitSeason = SEASONS.includes(i.exitSeason) ? i.exitSeason : o.exitSeason;
+    o.horizon = Math.round(numv(i.horizon, o.horizon, 4, 25));
+    for (const t of [1, 2, 3]) o.steady[t] = numv(i.steady && i.steady[t], o.steady[t], -20000000, 20000000);
     for (const t of [1, 2, 3]) for (const b of ['low', 'base', 'high'])
       o.bands[t][b] = numv(i.bands && i.bands[t] && i.bands[t][b], o.bands[t][b], 0);
     for (const k of ['g3', 'g2first', 'g2later', 'g1'])
@@ -434,6 +455,22 @@ function rowCost(r) {
   const mult = r.type === 'player' ? PLAYER_MULT : STAFF_MULT;
   return r.monthly * mult * (r.count || 1);
 }
+/* Kertaluonteisten investointien osuus kaudelle: kertarysäys osuu alkukauteen,
+   jaksotettu jaetaan tasaeriin alkukaudesta eteenpäin. */
+function capexFor(season, st = state) {
+  const idx = SEASONS.indexOf(season);
+  let sum = 0;
+  for (const c of (st.capex || [])) {
+    const start = SEASONS.indexOf(c.season);
+    if (start === -1 || idx === -1) continue;
+    if (c.mode === 'once') { if (idx === start) sum += (+c.total || 0); }
+    else {
+      const yrs = Math.max(1, Math.round(+c.years || 1));
+      if (idx >= start && idx < start + yrs) sum += (+c.total || 0) / yrs;
+    }
+  }
+  return sum;
+}
 function personnelTotals(season, st = state) {
   const se = st.seasons[season];
   const byDept = {}; let total = 0, players = 0, head = 0;
@@ -452,8 +489,9 @@ function seasonTotals(season, st = state) {
   const pers = personnelTotals(season, st);
   const costs = se.costs.reduce((a, r) => a + (+r.amount || 0), 0);
   const revenues = se.revenues.reduce((a, r) => a + (+r.amount || 0), 0);
-  const out = pers.total + costs;
-  return { pers, costs, revenues, out, gap: out - revenues };
+  const capex = capexFor(season, st);
+  const out = pers.total + costs + capex;
+  return { pers, costs, capex, revenues, out, gap: out - revenues };
 }
 
 /* IRR: vuosittaiset kassavirrat, flows[0] = t0 */
@@ -470,27 +508,41 @@ function irr(flows) {
   return (lo + hi) / 2;
 }
 
-/* Polun kassavirrat: t0 = -kauppahinta; kaudet = -osuus×rahoitustarve; exit-vuosi += osuus×arvostus */
-function pathOutcome(p, band) {
+/* Pitkajanteinen omistajamalli: suunnittelukaudet polun rahoitustarpeilla,
+   sen jalkeen vakiintunut vuositulos sarjatason mukaan (sis. pelaajamyynnit).
+   Laskennallinen omistusarvo on optio, ei paatavoite. */
+function pathLongTerm(p) {
   const inv = state.invest;
-  const nSeasons = SEASONS.indexOf(inv.exitSeason) + 1;
+  const N = Math.max(SEASONS.length, Math.round(inv.horizon || 10));
   const g = inv.gaps;
   const gapOf = t => t === '3' ? g.g3 : t === '2f' ? g.g2first : t === '2' ? g.g2later : g.g1;
-  const flows = [-inv.price];
-  let injections = 0;
-  for (let i = 0; i < nSeasons; i++) {
-    const gap = Math.max(0, gapOf(p.tiers[i] || p.tiers[p.tiers.length - 1])) * (inv.share / 100);
-    injections += gap;
-    flows.push(-gap);
+  const tierNum = t => t === '3' ? 3 : t === '1' ? 1 : 2;
+  const steadyTier = tierNum(p.tiers[p.tiers.length - 1] || '3');
+  const ownerFlows = [-inv.price];
+  for (let i = 0; i < N; i++) {
+    if (i < p.tiers.length) {
+      ownerFlows.push(-Math.max(0, gapOf(p.tiers[i])) * (inv.share / 100));
+    } else {
+      const res = (inv.steady && inv.steady[steadyTier]) || 0;
+      // tappiovuodet katetaan rahoitusosuuden mukaan, ylijaama luetaan omistusosuuden mukaan
+      ownerFlows.push(res < 0 ? res * (inv.share / 100) : res * (inv.stake / 100));
+    }
   }
-  // Exit-arvostus määräytyy siitä sarjatasosta, jolla polku on exit-kaudella —
-  // ei polun lopullisesta tavoitetasosta.
-  const lastT = p.tiers[Math.min(nSeasons, p.tiers.length) - 1] || '3';
-  const exitTier = lastT === '3' ? 3 : lastT === '1' ? 1 : 2;
-  const val = inv.bands[exitTier][band] * 1e6 * (inv.stake / 100);
-  flows[flows.length - 1] += val;
+  let cum = 0; const cumSeries = []; let breakEven = null;
+  ownerFlows.forEach((f, i) => {
+    cum += f; cumSeries.push(cum);
+    if (breakEven === null && i > 0 && cum >= 0) breakEven = i;
+  });
+  const injections = -ownerFlows.slice(1).filter(f => f < 0).reduce((a, b) => a + b, 0);
   const totalIn = inv.price + injections;
-  return { exitTier, injections, totalIn, exitValue: val, net: val - totalIn, multiple: totalIn > 0 ? val / totalIn : null, irr: irr(flows) };
+  const paper = b => inv.bands[steadyTier][b] * 1e6 * (inv.stake / 100);
+  const withPaper = ownerFlows.slice();
+  withPaper[withPaper.length - 1] += paper('base');
+  return {
+    N, cumSeries, cumEnd: cum, breakEven, injections, totalIn, steadyTier,
+    paperLow: paper('low'), paperBase: paper('base'), paperHigh: paper('high'),
+    irrPaper: irr(withPaper),
+  };
 }
 
 /* ============================== NÄKYMÄT ============================== */
@@ -504,65 +556,76 @@ function renderStrip() {
   const t = seasonTotals(state.activeSeason);
   const wageShare = t.out > 0 ? t.pers.total / t.out : 0;
   const inv = state.invest;
-  const base = state.invest.paths[0] ? pathOutcome(state.invest.paths[0], 'base') : null;
+  const base = state.invest.paths[0] ? pathLongTerm(state.invest.paths[0]) : null;
   $('#strip').innerHTML = `
     <div class="kpi"><div class="v">${fmtEur(t.out)}</div><div class="l">Menot · ${state.activeSeason}</div></div>
     <div class="kpi"><div class="v">${fmtEur(t.revenues)}</div><div class="l">Tulot · ${state.activeSeason}</div></div>
     <div class="kpi ${t.gap > 0 ? 'neg' : 'pos'}"><div class="v">${fmtEur(t.gap)}</div><div class="l">Rahoitustarve · ${state.activeSeason}</div></div>
     <div class="kpi"><div class="v">${pct(wageShare)}</div><div class="l">Henkilöstökulut / menot ${wageShare > 0.65 ? '· <span style="color:var(--warn)">yli 65 % katon</span>' : '· katto 65 %'}</div></div>
-    <div class="kpi"><div class="v">${base ? fmtEur(base.totalIn) : '—'}</div><div class="l">Sijoittajan kokonaissitoumus (perusura, exit ${inv.exitSeason})</div></div>
+    <div class="kpi"><div class="v">${base ? fmtEur(base.totalIn) : '—'}</div><div class="l">Sijoittajan kokonaissitoumus (perusura, ${Math.max(SEASONS.length, Math.round(inv.horizon || 10))} v)</div></div>
     ${storageOk ? '' : '<div class="kpi"><div class="v">⚠</div><div class="l">Automaattitallennus ei käytettävissä tässä ympäristössä tai tallennettu tila ei kelvannut — varmuuskopioi työsi Vie JSON -napilla</div></div>'}`;
 }
 
-/* ---------- SIJOITUS ---------- */
+/* ---------- OMISTUS & TUOTTO ---------- */
+const PATH_COLORS = ['var(--s1)', 'var(--s2)', 'var(--s3)', 'var(--s4)'];
 function renderInvest() {
   const inv = state.invest;
+  const N = Math.max(SEASONS.length, Math.round(inv.horizon || 10));
+  const startYear = seasonStartYear(SEASONS[0]);
   const wsum = inv.paths.reduce((a, p) => a + (+p.weight || 0), 0);
-  const rows = inv.paths.map(p => {
-    const lo = pathOutcome(p, 'low'), ba = pathOutcome(p, 'base'), hi = pathOutcome(p, 'high');
-    return { p, lo, ba, hi };
-  });
   const wOK = wsum > 0;
-  const exp = key => rows.reduce((a, r) => a + (+r.p.weight || 0) / (wsum || 1) * r.ba[key], 0);
-  const expLow = rows.reduce((a, r) => a + (+r.p.weight || 0) / (wsum || 1) * r.lo.net, 0);
-  const expHigh = rows.reduce((a, r) => a + (+r.p.weight || 0) / (wsum || 1) * r.hi.net, 0);
-  const eIn = exp('totalIn'), eOut = exp('exitValue'), eNet = exp('net');
-  const eMult = eIn > 0 ? eOut / eIn : null;
+  const rows = inv.paths.map(p => ({ p, lt: pathLongTerm(p) }));
+  const exp = fn => rows.reduce((a, r) => a + (+r.p.weight || 0) / (wsum || 1) * fn(r.lt), 0);
+  const eIn = exp(o => o.totalIn), eCum = exp(o => o.cumEnd), ePaper = exp(o => o.paperBase);
 
-  const maxAbs = Math.max(...rows.map(r => Math.max(r.ba.totalIn, r.ba.exitValue)), 1);
-  const W = 640, X0 = 210, XW = 400;
-  const sx = v => X0 + (v / maxAbs) * XW;
-  const bars = rows.map((r, i) => {
-    const y = 34 + i * 52;
-    return `
-      <text class="cat" x="0" y="${y + 10}">${esc(r.p.label.split(' — ')[0])} <tspan fill="var(--faint)">${(+r.p.weight || 0)} %</tspan></text>
-      <rect data-tip="<b>${esc(esc(r.p.label))}</b><br>Sijoitettu yhteensä ${fmtEur(r.ba.totalIn)} (kauppahinta + pääomitukset)" x="${X0}" y="${y - 8}" width="${Math.max(2, sx(r.ba.totalIn) - X0)}" height="12" rx="4" fill="var(--s1-soft)"/>
-      <rect data-tip="<b>${esc(esc(r.p.label))}</b><br>Osuuden arvo exitissä ${fmtEur(r.ba.exitValue)} (haarukka ${fmtEur(r.lo.exitValue)}–${fmtEur(r.hi.exitValue)})<br>Kerroin ${r.ba.multiple ? r.ba.multiple.toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + '×' : '—'}" x="${X0}" y="${y + 7}" width="${Math.max(2, sx(r.ba.exitValue) - X0)}" height="12" rx="4" fill="var(--s1)"/>
-      <text class="val" x="${sx(Math.max(r.ba.totalIn, r.ba.exitValue)) + 8}" y="${y + 15}">${r.ba.multiple ? r.ba.multiple.toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + '×' : '—'}</text>`;
+  /* kumulatiivinen omistajakassavirta -kayra, vuodet 0..N */
+  const chartRows = rows.slice(0, 4);
+  const vals = chartRows.flatMap(r => r.lt.cumSeries);
+  const yMax = Math.max(0, ...vals), yMin = Math.min(0, ...vals);
+  const W = 700, H = 240, X0 = 90, XW = W - X0 - 10, Y0 = 14, YH = H - 52;
+  const sx = i => X0 + (i / N) * XW;
+  const sy = v => Y0 + (yMax - v) / ((yMax - yMin) || 1) * YH;
+  const yTicks = Array.from(new Set([yMax, 0, yMin]));
+  const grid = yTicks.map(v =>
+    `<line class="${v === 0 ? 'base' : 'grid'}" x1="${X0}" y1="${sy(v).toFixed(1)}" x2="${X0 + XW}" y2="${sy(v).toFixed(1)}"/>` +
+    `<text x="${X0 - 8}" y="${(sy(v) + 4).toFixed(1)}" text-anchor="end">${fmtEur(v)}</text>`).join('');
+  const stepX = Math.max(1, Math.ceil(N / 8));
+  let xlab = '';
+  for (let i = 0; i <= N; i += stepX) xlab += `<text x="${sx(i).toFixed(1)}" y="${H - 8}" text-anchor="middle">${startYear + i}</text>`;
+  const lines = chartRows.map((r, ci) => {
+    const short = r.p.label.split(' — ')[0];
+    const pts = r.lt.cumSeries.map((v, i) => sx(i).toFixed(1) + ',' + sy(v).toFixed(1)).join(' ');
+    const dots = r.lt.cumSeries.map((v, i) =>
+      `<circle data-tip="<b>${esc(esc(short))}</b><br>${startYear + i}: ${fmtEur(v)}" cx="${sx(i).toFixed(1)}" cy="${sy(v).toFixed(1)}" r="4" fill="${PATH_COLORS[ci]}"/>`).join('');
+    const endV = r.lt.cumSeries[r.lt.cumSeries.length - 1];
+    return `<polyline points="${pts}" fill="none" stroke="${PATH_COLORS[ci]}" stroke-width="2"/>` + dots +
+      `<text class="val" x="${X0 + XW + 12}" y="${(sy(endV) + 4).toFixed(1)}" style="fill:${PATH_COLORS[ci]}">${esc(short)}</text>`;
   }).join('');
 
   $('#view').innerHTML = `
+  <div class="callout serif" style="margin-top:0"><strong>Ideologia:</strong> tämä ei ole exit-laskuri. Malli on pitkäjänteinen omistus portugalilaiseen tapaan: seura nostetaan Liga 2:een, akatemia ja scouttausverkosto tuottavat myytäviä pelaajia, ja pelaajakauppa kääntää kassavirran plussalle. Laskennallinen omistusarvo näytetään vain optiona — se realisoituu vain, jos omistus joskus myydään.</div>
+
   <div class="grid2">
     <div class="card">
       <h2>Sijoitus ja omistus</h2>
-      <p class="lead">Kauppahinta ja omistusosuus SAD:sta — implisiittinen 100 %:n arvostus lasketaan alle. Osto ajoittuu kesään 2027 ja ensimmäinen suunniteltu kausi on 2027/28. Liga 3 -vertailukaupat: enemmistö 1,5–3 M€ + sitoumukset.</p>
+      <p class="lead">Osto kesällä 2027, ensimmäinen kausi 2027/28. Liga 3 -vertailukaupat: enemmistö 1,5–3 M€ + sitoumukset.</p>
       <div class="fields">
         <div class="field"><label>Sijoitus / kauppahinta (€)</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.price)}" data-bind="invest.price"></div>
         <div class="field"><label>Omistusosuus (%)</label><input type="number" min="1" max="100" step="1" value="${inv.stake}" data-bind="invest.stake"></div>
         <div class="field"><label>Sijoittajan osuus rahoitustarpeesta (%)</label><input type="number" min="0" max="100" step="5" value="${inv.share}" data-bind="invest.share"></div>
-        <div class="field"><label>Exit-kausi</label><select data-bind="invest.exitSeason">${SEASONS.map(s => `<option ${s === inv.exitSeason ? 'selected' : ''}>${s}</option>`).join('')}</select></div>
+        <div class="field"><label>Tarkasteluhorisontti (vuotta)</label><input type="number" min="4" max="25" step="1" value="${N}" data-bind="invest.horizon"></div>
       </div>
-      <p class="note">Implisiittinen 100 %:n arvostus kaupassa: <strong>${inv.stake > 0 ? fmtEur(inv.price / (inv.stake / 100)) : '—'}</strong>. Oletus: pääomitukset eivät muuta omistusosuutta (merkitään omistuksen suhteessa tai lainana) — dilutoituva rakenne pienentäisi tuottoa.</p>
+      <p class="note">Implisiittinen 100 %:n arvostus kaupassa: <strong>${inv.stake > 0 ? fmtEur(inv.price / (inv.stake / 100)) : '—'}</strong>. Rahoitusvuodet katetaan rahoitusosuuden mukaan; ylijäämävuodet luetaan omistajalle omistusosuuden mukaan (osinko tai arvonkasvu).</p>
     </div>
 
     <div class="card">
-      <h2>Odotusarvo (polkupainotettu)</h2>
-      <p class="lead">Painotettu yhdistelmä alla olevista poluista, perusarvostuksilla.</p>
+      <h2>Pitkän aikavälin tuotto (odotusarvo, ${N} v)</h2>
+      <p class="lead">Polkupainotettu yhdistelmä — päämittari on kassavirta, ei exit.</p>
       <div class="strip" style="margin:.2rem 0 .4rem">
-        <div class="kpi"><div class="v">${wOK ? fmtEur(eIn) : '—'}</div><div class="l">Sijoitettu yhteensä (odotusarvo)</div></div>
-        <div class="kpi"><div class="v">${wOK ? fmtEur(eOut) : '—'}</div><div class="l">Osuuden arvo exitissä</div></div>
-        <div class="kpi ${wOK ? (eNet >= 0 ? 'pos' : 'neg') : ''}"><div class="v">${wOK ? fmtEur(eNet) : '—'}</div><div class="l">Nettotulos${wOK ? ' · haarukka ' + fmtEur(expLow) + ' … ' + fmtEur(expHigh) : ''}</div></div>
-        <div class="kpi"><div class="v">${wOK && eMult ? eMult.toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + '×' : '—'}</div><div class="l">Kerroin (odotusarvo)</div></div>
+        <div class="kpi"><div class="v">${wOK ? fmtEur(eIn) : '—'}</div><div class="l">Pääomitus yhteensä (hinta + rahoitus)</div></div>
+        <div class="kpi ${wOK ? (eCum >= 0 ? 'pos' : 'neg') : ''}"><div class="v">${wOK ? fmtEur(eCum) : '—'}</div><div class="l">Kumulatiivinen kassavirta ${N} vuodessa</div></div>
+        <div class="kpi"><div class="v">${wOK ? fmtEur(ePaper) : '—'}</div><div class="l">Laskennallinen omistusarvo (optio, ei tavoite)</div></div>
+        <div class="kpi ${wOK ? (eCum + ePaper >= 0 ? 'pos' : 'neg') : ''}"><div class="v">${wOK ? fmtEur(eCum + ePaper) : '—'}</div><div class="l">Kassavirta + laskennallinen arvo</div></div>
       </div>
       ${!wOK ? `<p class="note" style="color:var(--warn)"><strong>Huom:</strong> kaikkien polkujen paino on 0 % — odotusarvoa ei voi laskea. Anna painot alla olevaan taulukkoon.</p>`
         : Math.round(wsum) !== 100 ? `<p class="note" style="color:var(--warn)"><strong>Huom:</strong> polkujen painot summautuvat ${Math.round(wsum)} % — normalisoidaan laskennassa sataan.</p>` : ''}
@@ -570,50 +633,49 @@ function renderInvest() {
   </div>
 
   <div class="card">
-    <h2>Polut ja tuotot</h2>
-    <p class="lead">Neljä skenaariopolkua exit-kauteen ${inv.exitSeason} asti. Vaalea palkki = sijoitettu pääoma (kauppahinta + kausien pääomitukset), tumma = osuuden arvo exitissä perusarvostuksella.</p>
+    <h2>Omistajan kumulatiivinen kassavirta</h2>
+    <p class="lead">Kauppahinta + kausipääomitukset suunnittelukausina (${SEASONS[0]}–${SEASONS[SEASONS.length - 1]}, ml. investoinnit), sen jälkeen vakiintunut vuositulos sarjatason mukaan. Nollaviivan ylitys = sijoitus maksettu takaisin kassavirralla.</p>
     <div class="figwrap">
-      <svg viewBox="0 0 ${W + 90} ${34 + rows.length * 52 + 10}" width="${W + 90}" style="height:auto" role="img" aria-label="Polkujen sijoitettu pääoma ja exit-arvo">
-        <line class="base" x1="${X0}" y1="16" x2="${X0}" y2="${20 + rows.length * 52}"/>
-        ${bars}
+      <svg viewBox="0 0 ${W + 160} ${H}" width="${W + 160}" style="height:auto" role="img" aria-label="Omistajan kumulatiivinen kassavirta poluittain">
+        ${grid}${xlab}${lines}
       </svg>
     </div>
-    <div class="legend"><span><i class="sw" style="background:var(--s1-soft)"></i>Sijoitettu yhteensä</span><span><i class="sw" style="background:var(--s1)"></i>Osuuden arvo exitissä (perus)</span></div>
+    <div class="legend">${chartRows.map((r, ci) => `<span><i class="sw" style="background:${PATH_COLORS[ci]}"></i>${esc(r.p.label.split(' — ')[0])}</span>`).join('')}</div>
+  </div>
 
-    <div class="tscroll" style="margin-top:.9rem"><table>
-      <thead><tr><th>Polku</th><th class="n">Paino %</th><th class="n">Pääomitukset</th><th class="n">Sijoitettu yht.</th><th class="n">Exit-arvo (perus)</th><th class="n">Netto</th><th class="n">Kerroin</th><th class="n">IRR/v</th></tr></thead>
+  <div class="card">
+    <h2>Polut</h2>
+    <div class="tscroll"><table>
+      <thead><tr><th>Polku</th><th class="n">Paino %</th><th class="n">Pääomitukset</th><th class="n">Sijoitettu yht.</th><th class="n">Break-even</th><th class="n">Kassavirta ${N} v</th><th class="n">Laskennallinen arvo</th><th class="n">IRR/v sis. arvon</th></tr></thead>
       <tbody>
         ${rows.map(r => `<tr>
           <td>${esc(r.p.label)}</td>
-          <td class="n"><input class="num" style="min-width:60px" type="number" min="0" max="100" value="${r.p.weight}" data-bind="path.${r.p.id}.weight"></td>
-          <td class="n">${fmtEur(r.ba.injections)}</td>
-          <td class="n">${fmtEur(r.ba.totalIn)}</td>
-          <td class="n"><span class="badge dim">Liga ${r.ba.exitTier}</span> ${fmtEur(r.ba.exitValue)} <span class="badge dim">${fmtEur(r.lo.exitValue)}–${fmtEur(r.hi.exitValue)}</span></td>
-          <td class="n" style="color:${r.ba.net >= 0 ? 'var(--good-text)' : 'var(--crit)'}">${fmtEur(r.ba.net)}</td>
-          <td class="n">${r.ba.multiple ? r.ba.multiple.toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + '×' : '—'}</td>
-          <td class="n">${r.ba.irr === null ? '—' : pct(r.ba.irr)}</td>
+          <td class="n"><input class="num hlo" type="number" min="0" max="100" value="${r.p.weight}" data-bind="path.${r.p.id}.weight"></td>
+          <td class="n">${fmtEur(r.lt.injections)}</td>
+          <td class="n">${fmtEur(r.lt.totalIn)}</td>
+          <td class="n">${r.lt.breakEven === null ? '— (yli ' + N + ' v)' : (startYear + r.lt.breakEven)}</td>
+          <td class="n" style="color:${r.lt.cumEnd >= 0 ? 'var(--good-text)' : 'var(--crit)'}">${fmtEur(r.lt.cumEnd)}</td>
+          <td class="n"><span class="badge dim">Liga ${r.lt.steadyTier}</span> ${fmtEur(r.lt.paperBase)} <span class="badge dim">${fmtEur(r.lt.paperLow)}–${fmtEur(r.lt.paperHigh)}</span></td>
+          <td class="n">${r.lt.irrPaper === null ? '—' : pct(r.lt.irrPaper)}</td>
         </tr>`).join('')}
       </tbody>
     </table></div>
-    <p class="note">IRR lasketaan vuositasoisista kassavirroista (kauppahinta t0, pääomitukset kausittain, exit-arvo exit-kauden lopussa). ”2f” = ensimmäinen Liga 2 -kausi (lisensointi-capex mukana rahoitustarpeessa).</p>
+    <p class="note">Break-even = vuosi, jona kumulatiivinen kassavirta kääntyy plussalle ilman omistuksen myyntiä. IRR on toissijainen mittari ja sisältää laskennallisen arvon horisontin lopussa. ”2f” = ensimmäinen Liga 2 -kausi.</p>
   </div>
 
   <div class="grid2">
     <div class="card">
-      <h2>Arvostushaarukat (100 % SAD:sta, M€)</h2>
-      <p class="lead">Julkisista vertailukaupoista 2019–2026: Liga 3 — Trofense 80 % / 3,1 M€; Liga 2 — Tondela 80 % / 8 M€, Alverca 8–10 M€; Liga 1 — Estrela-neuvottelu 40–45 M€. Putoaminen leikkaa jyrkästi (Portimonense −62 %).</p>
-      <div class="tscroll"><table style="min-width:420px">
-        <thead><tr><th>Sarjataso exitissä</th><th class="n">Matala</th><th class="n">Perus</th><th class="n">Korkea</th></tr></thead>
-        <tbody>
-          ${[3, 2, 1].map(t => `<tr><td>${TIER_LABEL[t]}</td>
-            ${['low', 'base', 'high'].map(b => `<td class="n"><input class="num" style="min-width:70px" type="number" min="0" step="0.5" value="${inv.bands[t][b]}" data-bind="band.${t}.${b}"></td>`).join('')}
-          </tr>`).join('')}
-        </tbody>
-      </table></div>
+      <h2>Vakiintunut vuositulos sarjatasoittain (€/v)</h2>
+      <p class="lead">Suunnittelukausien jälkeisten vuosien tulos — sisältää pelaajamyynnit, TV-tulot ja toiminnan. Portugalilainen malli: Liga 2 -seura kääntyy plussalle pelaajakaupalla (Torreense &gt;6 M€ myynnit 2024–26); ilman nousua Liga 3 jää tappiolliseksi. Negatiivinen luku sallittu.</p>
+      <div class="fields">
+        <div class="field"><label>Liga 3</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.steady[3])}" data-bind="steady.3"></div>
+        <div class="field"><label>Liga 2</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.steady[2])}" data-bind="steady.2"></div>
+        <div class="field"><label>Liga 1</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.steady[1])}" data-bind="steady.1"></div>
+      </div>
     </div>
     <div class="card">
       <h2>Vuosirahoitustarve sarjatasoittain (€)</h2>
-      <p class="lead">Poluissa käytettävät kausikohtaiset rahoitustarpeet. Päivitä budjettimoduulista tai muokkaa käsin.</p>
+      <p class="lead">Suunnittelukausien rahoitustarpeet poluissa. Päivitä vuosibudjeteista (sisältää myös investoinnit) tai muokkaa käsin.</p>
       <div class="fields">
         <div class="field"><label>Liga 3</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.gaps.g3)}" data-bind="gap.g3"></div>
         <div class="field"><label>Liga 2 · 1. kausi</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.gaps.g2first)}" data-bind="gap.g2first"></div>
@@ -621,11 +683,24 @@ function renderInvest() {
         <div class="field"><label>Liga 1</label><input type="text" inputmode="decimal" value="${fmtGroup(inv.gaps.g1)}" data-bind="gap.g1"></div>
       </div>
       <button class="btn" data-action="sync-gaps">Päivitä vuosibudjeteista</button>
-      <p class="note" style="margin-top:.5rem">”Päivitä” lukee kausien lasketut rahoitustarpeet: Liga 3 ← 2027/28, Liga 2 1. kausi ← 2028/29 (sisältää TV-keskittämisen tulot, jotka alkavat juuri tuolla kaudella), Liga 2 jatko ← 2029/30.</p>
+      <p class="note" style="margin-top:.5rem">”Päivitä” lukee kausien lasketut rahoitustarpeet: Liga 3 ← 2027/28, Liga 2 1. kausi ← 2028/29 (sis. TV-keskittämisen tulot ja investoinnit), Liga 2 jatko ← 2029/30.</p>
     </div>
   </div>
 
-  <div class="callout serif">Sama varovaisuusperiaate kuin sijoittajaportaalissa: arvostukset ovat julkisten vertailukauppojen tyyppihaarukoita, eivät seurakohtainen due diligence. Alasarjakaupoissa ”hinta” on usein pääomankorotus + velkojen otto, ei osakekauppahinta — ja peruuntumisriski on todellinen. Ei sijoitussuositus.</div>`;
+  <div class="card">
+    <h2>Laskennallinen omistusarvo (100 % SAD:sta, M€)</h2>
+    <p class="lead">Julkisista vertailukaupoista 2019–2026: Liga 3 — Trofense 80 % / 3,1 M€; Liga 2 — Tondela 80 % / 8 M€, Alverca 8–10 M€; Liga 1 — Estrela-neuvottelu 40–45 M€. Arvo realisoituu vain myytäessä — mallissa optio, ei tavoite. Putoaminen leikkaa jyrkästi (Portimonense −62 %).</p>
+    <div class="tscroll"><table style="min-width:420px">
+      <thead><tr><th>Sarjataso</th><th class="n">Matala</th><th class="n">Perus</th><th class="n">Korkea</th></tr></thead>
+      <tbody>
+        ${[3, 2, 1].map(t => `<tr><td>${TIER_LABEL[t]}</td>
+          ${['low', 'base', 'high'].map(b => `<td class="n"><input class="num" style="min-width:70px" type="number" min="0" step="0.5" value="${inv.bands[t][b]}" data-bind="band.${t}.${b}"></td>`).join('')}
+        </tr>`).join('')}
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="callout serif">Sama varovaisuusperiaate kuin sijoittajaportaalissa: arvostukset ovat julkisten vertailukauppojen tyyppihaarukoita, eivät seurakohtainen due diligence. Alasarjakaupoissa ”hinta” on usein pääomankorotus + velkojen otto. Ei sijoitussuositus.</div>`;
 }
 
 /* ---------- HENKILÖSTÖ ---------- */
@@ -679,6 +754,45 @@ function renderStaff() {
       </tbody>
     </table></div>
     <p class="note" style="margin-top:.6rem">Pelaajien keskikulu: ${(() => { const p = se.personnel.filter(r => r.type === 'player'); const n = p.reduce((a, r) => a + (r.count || 1), 0); return n ? fmtEurFull(tot.players / n) + '/v (' + n + ' pelaajaa)' : '—'; })()} · benchmark: Liga 3 -lattiarunko 0,35–0,55 M€/v, nousukandidaatti 0,6–1,0 M€/v, Liga 2 2,0–2,8 M€/v.</p>
+  </div>`;
+}
+
+/* ---------- INVESTOINNIT (KERTALUONTEISET) ---------- */
+function renderCapex() {
+  const perSeason = SEASONS.map(s => ({ s, v: capexFor(s) }));
+  const rowsHtml = state.capex.map(r => {
+    const start = SEASONS.indexOf(r.season);
+    const yrs = Math.max(1, Math.round(r.years || 1));
+    const perYear = r.mode === 'once' ? (+r.total || 0) : (+r.total || 0) / yrs;
+    const over = r.mode === 'spread' && start + yrs > SEASONS.length;
+    return `<tr>
+      <td><input class="namein" type="text" value="${esc(r.name)}" data-bind="capex.${r.id}.name"></td>
+      <td class="n"><input class="num money" type="text" inputmode="decimal" value="${fmtGroup(r.total)}" data-bind="capex.${r.id}.total"></td>
+      <td><select data-bind="capex.${r.id}.mode">
+        <option value="once" ${r.mode === 'once' ? 'selected' : ''}>Kertarysäys</option>
+        <option value="spread" ${r.mode === 'spread' ? 'selected' : ''}>Jaksotettu</option>
+      </select></td>
+      <td><select data-bind="capex.${r.id}.season">${SEASONS.map(s => `<option ${s === r.season ? 'selected' : ''}>${s}</option>`).join('')}</select></td>
+      <td class="n"><input class="num hlo" type="number" min="1" max="10" step="1" value="${yrs}" data-bind="capex.${r.id}.years" ${r.mode === 'once' ? 'disabled' : ''}></td>
+      <td class="n">${fmtEurFull(perYear)}</td>
+      <td><input type="text" value="${esc(r.note || '')}" data-bind="capex.${r.id}.note" style="min-width:140px">${over ? ' <span class="badge warn">jatkuu suunnittelukausien yli — ylimenevä osa ei näy budjeteissa</span>' : ''}</td>
+      <td><button class="btn mini danger" data-action="del-capex" data-id="${r.id}">✕</button></td>
+    </tr>`;
+  }).join('');
+  $('#view').innerHTML = `
+  <div class="card">
+    <h2>Investoinnit — kertaluonteiset menot</h2>
+    <p class="lead">Stadionin korjaukset, kalusto (bussit), lisensointi ja muut kertaluonteiset erät. Jokainen erä joko <strong>kertarysäyksenä</strong> yhdelle tilikaudelle tai <strong>jaksotettuna</strong> tasaeriin alkukaudesta eteenpäin. Erät lasketaan automaattisesti kausien menoihin ja rahoitustarpeeseen (Vuosibudjetti-välilehti ja polkujen päivitys Omistus-välilehdellä).</p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Kohde</th><th class="n">Summa €</th><th>Toteutus</th><th>Alkukausi</th><th class="n">Vuosia</th><th class="n">€ / kausi</th><th>Huomio</th><th></th></tr></thead>
+      <tbody>${rowsHtml}
+        <tr class="subtotal"><td>Yhteensä</td><td class="n">${fmtEurFull(state.capex.reduce((a, r) => a + (+r.total || 0), 0))}</td><td colspan="6"><button class="btn mini" data-action="add-capex">+ Lisää investointi</button></td></tr>
+      </tbody>
+    </table></div>
+    <div class="strip" style="margin-top:.9rem">
+      ${perSeason.map(x => `<div class="kpi"><div class="v">${fmtEur(x.v)}</div><div class="l">Investoinnit · ${x.s}</div></div>`).join('')}
+    </div>
+    <p class="note">Stadionin itäkatsomon ~3 M€ korjaustarve ja Liga 2 -lisensoinnin &gt;0,5 M€ ovat raportin arvioita — tarkenna urakkatarjouksilla. Kuntakumppanuus (kunta osti jo maata 2,4 M€:lla) voi kattaa osan stadionkuluista.</p>
   </div>`;
 }
 
@@ -736,13 +850,14 @@ function renderBudget() {
       <div class="kpi"><div class="v">${fmtEur(t.revenues)}</div><div class="l">Tulot</div></div>
       <div class="kpi"><div class="v">${fmtEur(t.pers.total)}</div><div class="l">Henkilöstökulut (moduulista Henkilöstö)</div></div>
       <div class="kpi"><div class="v">${fmtEur(t.costs)}</div><div class="l">Muut kulut</div></div>
+      <div class="kpi"><div class="v">${fmtEur(t.capex)}</div><div class="l">Investoinnit (Investoinnit-välilehdeltä)</div></div>
       <div class="kpi ${t.gap > 0 ? 'neg' : 'pos'}"><div class="v">${fmtEur(t.gap)}</div><div class="l">${t.gap > 0 ? 'Rahoitustarve (SAD/omistaja)' : 'Ylijäämä'}</div></div>
     </div>
   </div>
 
   <div class="grid2">
     ${lineTable('revenues', season, 'Tulot', 'Kausikohtaiset tuloerät. Sarjataso­kohtaiset viitteet: Liga 3 — kuntatuki keskeinen, TV ~0; Liga 2 — +1,5 M€/v keskitettyä arvoa, TV-keskitys 2028/29 → ~1,25 M€.')}
-    ${lineTable('costs', season, 'Muut kulut (pl. henkilöstö)', 'Henkilöstökulut tulevat automaattisesti Henkilöstö-moduulista: ' + fmtEur(t.pers.total) + '. Tässä muut toimintakulut.')}
+    ${lineTable('costs', season, 'Muut kulut (pl. henkilöstö)', 'Henkilöstökulut tulevat automaattisesti Henkilöstö-moduulista (' + fmtEur(t.pers.total) + ') ja kertaluonteiset investoinnit Investoinnit-välilehdeltä (' + fmtEur(t.capex) + '). Tässä muut toimintakulut.')}
   </div>
 
   <div class="card">
@@ -757,16 +872,16 @@ function renderBudget() {
     </div>
     <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>Tulot</span><span><i class="sw" style="background:var(--s2)"></i>Menot</span></div>
     <div class="tscroll" style="margin-top:.8rem"><table style="min-width:560px">
-      <thead><tr><th>Kausi</th><th>Sarjataso</th><th class="n">Tulot</th><th class="n">Henkilöstö</th><th class="n">Muut kulut</th><th class="n">Menot yht.</th><th class="n">Rahoitustarve</th><th class="n">Palkkaosuus</th></tr></thead>
+      <thead><tr><th>Kausi</th><th>Sarjataso</th><th class="n">Tulot</th><th class="n">Henkilöstö</th><th class="n">Muut kulut</th><th class="n">Investoinnit</th><th class="n">Menot yht.</th><th class="n">Rahoitustarve</th><th class="n">Palkkaosuus</th></tr></thead>
       <tbody>
         ${multi.map(m => `<tr ${m.s === season ? 'class="subtotal"' : ''}>
           <td>${m.s}</td><td>${TIER_LABEL[m.tier].replace('Liga Portugal Betclic', 'Liga 1')}</td>
           <td class="n">${fmtEur(m.t.revenues)}</td><td class="n">${fmtEur(m.t.pers.total)}</td>
-          <td class="n">${fmtEur(m.t.costs)}</td><td class="n">${fmtEur(m.t.out)}</td>
+          <td class="n">${fmtEur(m.t.costs)}</td><td class="n">${fmtEur(m.t.capex)}</td><td class="n">${fmtEur(m.t.out)}</td>
           <td class="n" style="color:${m.t.gap > 0 ? 'var(--crit)' : 'var(--good-text)'}">${fmtEur(m.t.gap)}</td>
           <td class="n">${m.t.out > 0 ? pct(m.t.pers.total / m.t.out) : '—'}</td>
         </tr>`).join('')}
-        <tr class="total"><td colspan="6">Rahoitustarve yhteensä ${SEASONS[0]}–${SEASONS[SEASONS.length - 1]}</td>
+        <tr class="total"><td colspan="7">Rahoitustarve yhteensä ${SEASONS[0]}–${SEASONS[SEASONS.length - 1]}</td>
           <td class="n">${fmtEur(multi.reduce((a, m) => a + Math.max(0, m.t.gap), 0))}</td><td></td></tr>
       </tbody>
     </table></div>
@@ -780,6 +895,7 @@ function render() {
   renderStrip();
   if (state.tab === 'invest') renderInvest();
   else if (state.tab === 'staff') renderStaff();
+  else if (state.tab === 'capex') renderCapex();
   else renderBudget();
   bindTips();
 }
@@ -812,18 +928,31 @@ function setBind(path, raw) {
   // välilyönnit, joita fi-FI-muotoilu käyttää); tyhjä tai kelvoton syöte EI
   // muuta arvoa (re-render palauttaa entisen).
   const num = v => {
-    const n = parseFloat(String(v).replace(/[\s\u00A0\u202F]/g, '').replace(',', '.'));
+    const n = parseFloat(String(v).replace(/\u2212/g, '-').replace(/[\s\u00A0\u202F]/g, '').replace(',', '.'));
     return Number.isFinite(n) ? n : null;
   };
   const clamp = (n, min, max) => Math.min(max ?? Infinity, Math.max(min ?? -Infinity, n));
   const se = state.seasons[state.activeSeason];
   if (parts[0] === 'invest') {
     const k = parts[1];
-    if (k === 'exitSeason') { if (SEASONS.includes(raw)) state.invest.exitSeason = raw; return; }
     const n = num(raw); if (n === null) return;
     if (k === 'price') state.invest.price = clamp(n, 0);
     else if (k === 'stake') state.invest.stake = clamp(n, 1, 100);
     else if (k === 'share') state.invest.share = clamp(n, 0, 100);
+    else if (k === 'horizon') state.invest.horizon = Math.round(clamp(n, 4, 25));
+  } else if (parts[0] === 'steady') {
+    const n = num(raw); if (n === null) return;
+    if (['1', '2', '3'].includes(parts[1])) state.invest.steady[parts[1]] = clamp(n, -20000000, 20000000);
+  } else if (parts[0] === 'capex') {
+    const r = state.capex.find(x => x.id === parts[1]);
+    if (!r) return;
+    const f = parts[2];
+    if (f === 'name') r.name = raw;
+    else if (f === 'note') r.note = raw;
+    else if (f === 'mode') { if (raw === 'once' || raw === 'spread') r.mode = raw; }
+    else if (f === 'season') { if (SEASONS.includes(raw)) r.season = raw; }
+    else if (f === 'years') { const n2 = num(raw); if (n2 !== null) r.years = Math.min(10, Math.max(1, Math.round(n2))); }
+    else if (f === 'total') { const n2 = num(raw); if (n2 !== null) r.total = clamp(n2, 0); }
   } else if (parts[0] === 'band') {
     const n = num(raw); if (n === null) return;
     state.invest.bands[parts[1]][parts[2]] = clamp(n, 0);
@@ -886,10 +1015,10 @@ document.addEventListener('click', async e => {
   const se = state.seasons[state.activeSeason];
 
   if (a === 'add-pers') { se.personnel.push(P('Uusi rooli', 'Hallinto', 'staff', 1500, 1)); }
-  else if (a === 'del-pers' || a === 'del-line') {
+  else if (a === 'del-pers' || a === 'del-line' || a === 'del-capex') {
     if (!btn.dataset.armed) { armDelete(btn); return; }   // 1. klikkaus: vain varmistus
-    const kind = a === 'del-pers' ? 'pers' : btn.dataset.kind;
-    const arr = kind === 'pers' ? se.personnel : se[kind];
+    const kind = a === 'del-pers' ? 'pers' : a === 'del-capex' ? 'capex' : btn.dataset.kind;
+    const arr = kind === 'pers' ? se.personnel : kind === 'capex' ? state.capex : se[kind];
     const idx = arr.findIndex(r => r.id === btn.dataset.id);
     if (idx === -1) return;
     const removed = arr.splice(idx, 1)[0];
@@ -899,12 +1028,14 @@ document.addEventListener('click', async e => {
   else if (a === 'undo-del') {
     if (!undoStash) return;
     const seU = state.seasons[undoStash.season];
-    const arr = undoStash.kind === 'pers' ? seU.personnel : seU[undoStash.kind];
+    const arr = undoStash.kind === 'capex' ? state.capex
+      : undoStash.kind === 'pers' ? seU.personnel : seU[undoStash.kind];
     arr.splice(Math.min(undoStash.index, arr.length), 0, undoStash.row);
     undoStash = null;
     toast('Rivi palautettu');
   }
   else if (a === 'add-line') { se[btn.dataset.kind].push(L(btn.dataset.kind === 'revenues' ? 'Uusi tuloerä' : 'Uusi kuluerä', 0)); }
+  else if (a === 'add-capex') { state.capex.push(C('Uusi investointi', 100000, 'once', state.activeSeason, 1, '')); }
   else if (a === 'copy-prev') {
     const i = SEASONS.indexOf(state.activeSeason);
     if (i > 0) {
@@ -998,6 +1129,7 @@ async function exportCSV() {
   rows.push(['MUUT KULUT'], ['Erä', '€ / kausi', 'Huomio']);
   for (const r of se.costs) rows.push([r.name, r.amount, r.note || '']);
   rows.push(['Muut kulut yhteensä', Math.round(t.costs), ''], []);
+  rows.push(['INVESTOINNIT (osuus kaudelle)'], ['Investoinnit yhteensä', Math.round(t.capex), 'erittely Investoinnit-välilehdellä'], []);
   rows.push(['TULOT'], ['Erä', '€ / kausi', 'Huomio']);
   for (const r of se.revenues) rows.push([r.name, r.amount, r.note || '']);
   rows.push(['Tulot yhteensä', Math.round(t.revenues), ''], []);
