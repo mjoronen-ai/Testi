@@ -152,6 +152,7 @@
 
   <nav class="tabs" id="tabs">
     <button data-tab="invest">Omistus &amp; tuotto</button>
+    <button data-tab="calc">Laskuri</button>
     <button data-tab="staff">Henkilöstö</button>
     <button data-tab="capex">Investoinnit</button>
     <button data-tab="budget">Vuosibudjetti</button>
@@ -311,6 +312,10 @@ function defaultState() {
       C('Liga 2 -lisensointi (valot, TV-tilat, sektorit)', 550000, 'once', '2028/29', 1, 'pakollinen nousun yhteydessä'),
       C('Stadionin itäkatsomon korjaus', 3000000, 'spread', '2028/29', 3, 'raportin arvio ~3 M€'),
     ],
+    calc: {
+      capital: 5000000, yield: 5, tax: 30,
+      loan: { amount: 3800000, rate: 2.5, payment: 400000, years: 10 },
+    },
     invest: {
       price: 2000000, stake: 60, share: 100, horizon: 10,
       steady: { 1: 1500000, 2: 400000, 3: -400000 },
@@ -326,6 +331,7 @@ function defaultState() {
   };
   // Rahoitustarpeet lasketaan suoraan oletusbudjeteista, jotta Sijoitus- ja
   // Vuosibudjetti-moduulit ovat lähtötilanteessa yhdenmukaiset.
+  s.calc.loan.amount = s.capex.reduce((a, r) => a + (+r.total || 0), 0);
   s.invest.gaps.g3 = Math.max(0, Math.round(seasonTotals('2027/28', s).gap));
   s.invest.gaps.g2first = Math.max(0, Math.round(seasonTotals('2028/29', s).gap));
   s.invest.gaps.g2later = Math.max(0, Math.round(seasonTotals('2029/30', s).gap));
@@ -343,7 +349,19 @@ function sanitizeState(p) {
     if (!Number.isFinite(n)) return def;
     return Math.min(max ?? Infinity, Math.max(min ?? -Infinity, n));
   };
-  out.tab = ['invest', 'staff', 'capex', 'budget'].includes(p.tab) ? p.tab : 'invest';
+  out.tab = ['invest', 'calc', 'staff', 'capex', 'budget'].includes(p.tab) ? p.tab : 'invest';
+  if (p.calc && typeof p.calc === 'object') {
+    const pc = p.calc, oc = out.calc;
+    oc.capital = numv(pc.capital, oc.capital, 0);
+    oc.yield = numv(pc.yield, oc.yield, 0, 30);
+    oc.tax = numv(pc.tax, oc.tax, 0, 60);
+    if (pc.loan && typeof pc.loan === 'object') {
+      oc.loan.amount = numv(pc.loan.amount, oc.loan.amount, 0);
+      oc.loan.rate = numv(pc.loan.rate, oc.loan.rate, 0, 15);
+      oc.loan.payment = numv(pc.loan.payment, oc.loan.payment, 0);
+      oc.loan.years = Math.round(numv(pc.loan.years, oc.loan.years, 1, 30));
+    }
+  }
   out.activeSeason = SEASONS.includes(p.activeSeason) ? p.activeSeason : SEASONS[0];
   if (Array.isArray(p.capex)) {
     out.capex = p.capex.slice(0, 100).map(r => ({
@@ -756,6 +774,135 @@ function renderStaff() {
   </div>`;
 }
 
+/* ---------- LASKURI: PÄÄOMA, TUOTTO JA LOMBARD-LAINA ---------- */
+/* Lainan lyhennysaikataulu vuositasolla: vakiomaksu A, korko lisätään saldoon.
+   Palauttaa saldosarjan, takaisinmaksuvuodet (tai null jos ei ehdi maxY:ssä)
+   ja kokonaiskorot; never = maksu ei kata edes korkoa. */
+function loanSchedule(P, ratePct, A, maxY = 40) {
+  const r = ratePct / 100;
+  if (!(P > 0)) return { series: [0], years: 0, interest: 0, never: false };
+  if (r > 0 && A <= P * r) return { series: [P], years: null, interest: null, never: true };
+  if (!(A > 0)) return { series: [P], years: null, interest: null, never: true };
+  let bal = P, interest = 0, years = 0;
+  const series = [P];
+  while (bal > 0.5 && years < maxY) {
+    const i = bal * r;
+    interest += i;
+    bal = Math.max(0, bal + i - A);
+    series.push(bal); years++;
+  }
+  return { series, years: bal > 0.5 ? null : years, interest, never: false };
+}
+/* Annuiteetti: vakiovuosimaksu, jolla P maksetaan n vuodessa korolla ratePct */
+function annuity(P, ratePct, n) {
+  const r = ratePct / 100;
+  if (!(n > 0) || !(P > 0)) return null;
+  return r === 0 ? P / n : P * r / (1 - Math.pow(1 + r, -n));
+}
+
+function renderCalc() {
+  const c = state.calc;
+  const netRate = (c.yield / 100) * (1 - c.tax / 100);
+  const gross = c.capital * (c.yield / 100);
+  const net = c.capital * netRate;
+  const seasons = SEASONS.map(s => { const t = seasonTotals(s); return { s, gap: t.gap, capex: t.capex }; });
+  const act = seasons.find(x => x.s === state.activeSeason) || seasons[0];
+  const reqCapital = netRate > 0 && act.gap > 0 ? act.gap / netRate : null;
+
+  const L = c.loan;
+  const yrsTarget = Math.max(1, Math.round(L.years));
+  const sched = loanSchedule(L.amount, L.rate, L.payment);
+  const annA = annuity(L.amount, L.rate, yrsTarget);
+  const annInterest = annA !== null ? annA * yrsTarget - L.amount : null;
+  const netFactor = 1 - c.tax / 100;
+  const reqYieldForPayment = c.capital > 0 && netFactor > 0 ? (L.payment / (c.capital * netFactor)) * 100 : null;
+  const spread = c.yield - L.rate;
+
+  /* lainasaldo-käyrä valitulla vuosimaksulla */
+  let loanChart = '';
+  if (!sched.never && sched.series.length > 1) {
+    const n = sched.series.length - 1;
+    const W = 640, H = 190, X0 = 90, XW = W - X0 - 20, Y0 = 12, YH = H - 46;
+    const maxB = sched.series[0] || 1;
+    const sx = i => X0 + (i / n) * XW;
+    const sy = v => Y0 + (1 - v / maxB) * YH;
+    const pts = sched.series.map((v, i) => sx(i).toFixed(1) + ',' + sy(v).toFixed(1)).join(' ');
+    const dots = sched.series.map((v, i) =>
+      `<circle data-tip="<b>Vuosi ${i}</b><br>Lainasaldo ${fmtEur(v)}" cx="${sx(i).toFixed(1)}" cy="${sy(v).toFixed(1)}" r="4" fill="var(--s1)"/>`).join('');
+    const step = Math.max(1, Math.ceil(n / 10));
+    let xl = '';
+    for (let i = 0; i <= n; i += step) xl += `<text x="${sx(i).toFixed(1)}" y="${H - 8}" text-anchor="middle">${i}</text>`;
+    loanChart = `
+    <div class="figwrap">
+      <svg viewBox="0 0 ${W} ${H}" width="${W}" style="height:auto" role="img" aria-label="Lainasaldo vuosittain">
+        <line class="grid" x1="${X0}" y1="${Y0}" x2="${X0 + XW}" y2="${Y0}"/><text x="${X0 - 8}" y="${Y0 + 4}" text-anchor="end">${fmtEur(maxB)}</text>
+        <line class="base" x1="${X0}" y1="${Y0 + YH}" x2="${X0 + XW}" y2="${Y0 + YH}"/><text x="${X0 - 8}" y="${Y0 + YH + 4}" text-anchor="end">0 €</text>
+        <polyline points="${pts}" fill="none" stroke="var(--s1)" stroke-width="2"/>${dots}${xl}
+      </svg>
+    </div>
+    <p class="fig-note" style="font-family:Archivo,system-ui,sans-serif;font-size:.74rem;color:var(--faint);margin-top:.4rem">Lainasaldo vuosittain vuosimaksulla ${fmtEur(L.payment)} (x-akseli: vuosia lainan nostosta).</p>`;
+  }
+
+  $('#view').innerHTML = `
+  <div class="grid2">
+    <div class="card">
+      <h2>Pääoma ja tuotto</h2>
+      <p class="lead">Syötä sijoitusvarallisuus ja tuotto-odotus — laskuri näyttää netto-ansiot ja vertaa niitä seuran rahoitustarpeisiin. Vero-%: Suomi 30/34 % pääomatulovero; muissa rakenteissa oman verotuksen mukaan.</p>
+      <div class="fields">
+        <div class="field"><label>Pääoma (€)</label><input type="text" inputmode="decimal" value="${fmtGroup(c.capital)}" data-bind="calc.capital"></div>
+        <div class="field"><label>Vuosituotto-odotus (%)</label><input type="number" min="0" max="30" step="0.5" value="${c.yield}" data-bind="calc.yield"></div>
+        <div class="field"><label>Tuoton vero (%)</label><input type="number" min="0" max="60" step="1" value="${c.tax}" data-bind="calc.tax"></div>
+      </div>
+      <div class="strip" style="margin:.4rem 0 0">
+        <div class="kpi"><div class="v">${fmtEur(gross)}</div><div class="l">Bruttotuotto / vuosi</div></div>
+        <div class="kpi"><div class="v">${fmtEur(net)}</div><div class="l">Netto / vuosi</div></div>
+        <div class="kpi"><div class="v">${fmtEur(net / 12)}</div><div class="l">Netto / kuukausi</div></div>
+        <div class="kpi"><div class="v">${fmtEur(net / 365)}</div><div class="l">Netto / päivä</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Tuotto vs. seuran kulut</h2>
+      <p class="lead">Kattaako pääoman nettotuotto seuran kausirahoituksen? Sarake ”ilman investointeja” näyttää tarpeen, jos kertaluonteiset erät rahoitetaan lainalla (ks. viereinen laskuri).</p>
+      <div class="tscroll"><table style="min-width:520px">
+        <thead><tr><th>Kausi</th><th class="n">Rahoitustarve</th><th class="n">— ilman investointeja</th><th class="n">Nettotuotto</th><th class="n">Erotus</th></tr></thead>
+        <tbody>
+          ${seasons.map(x => { const diff = net - Math.max(0, x.gap); return `<tr ${x.s === state.activeSeason ? 'class="subtotal"' : ''}>
+            <td>${x.s}</td>
+            <td class="n">${fmtEur(Math.max(0, x.gap))}</td>
+            <td class="n">${fmtEur(Math.max(0, x.gap - x.capex))}</td>
+            <td class="n">${fmtEur(net)}</td>
+            <td class="n" style="color:${diff >= 0 ? 'var(--good-text)' : 'var(--crit)'}">${fmtEur(diff)}</td>
+          </tr>`; }).join('')}
+        </tbody>
+      </table></div>
+      <p class="note" style="margin-top:.5rem">Vaadittava pääoma, jonka nettotuotto kattaa kauden ${act.s} rahoitustarpeen: <strong>${reqCapital === null ? '—' : fmtEur(reqCapital)}</strong> (tuotolla ${c.yield.toLocaleString('fi-FI')} % ja verolla ${c.tax.toLocaleString('fi-FI')} %).</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Lombard-laina investointeihin</h2>
+    <p class="lead">Jos stadionremontti ja muut kertaluonteiset erät rahoitetaan arvopaperivakuudellisella matalakorkoisella lainalla, pääomaa ei tarvitse realisoida. Laskuri näyttää molemmat suunnat: valitulla vuosimaksulla takaisinmaksuaika, ja tavoiteajalla vaadittava vuosimaksu.</p>
+    <div class="fields">
+      <div class="field"><label>Lainasumma (€)</label><input type="text" inputmode="decimal" value="${fmtGroup(L.amount)}" data-bind="loan.amount"></div>
+      <div class="field"><label>Korko (%)</label><input type="number" min="0" max="15" step="0.1" value="${L.rate}" data-bind="loan.rate"></div>
+      <div class="field"><label>Vuosimaksu (€/v)</label><input type="text" inputmode="decimal" value="${fmtGroup(L.payment)}" data-bind="loan.payment"></div>
+      <div class="field"><label>Tavoiteaika (v)</label><input type="number" min="1" max="30" step="1" value="${yrsTarget}" data-bind="loan.years"></div>
+    </div>
+    <button class="btn" data-action="loan-from-capex">Hae lainasumma Investoinneista (${fmtEur(state.capex.reduce((a, r) => a + (+r.total || 0), 0))})</button>
+
+    <div class="strip" style="margin:.9rem 0 .3rem">
+      <div class="kpi"><div class="v">${sched.never ? 'ei lyhene' : sched.years === null ? 'yli 40 v' : sched.years + ' v'}</div><div class="l">Takaisinmaksuaika vuosimaksulla ${fmtEur(L.payment)}${sched.never ? ' — maksu ei kata korkoa (' + fmtEur(L.amount * L.rate / 100) + '/v)' : ''}</div></div>
+      <div class="kpi"><div class="v">${sched.never || sched.interest === null ? '—' : fmtEur(sched.interest)}</div><div class="l">Korot yhteensä tällä vuosimaksulla</div></div>
+      <div class="kpi"><div class="v">${annA === null ? '—' : fmtEur(annA)}</div><div class="l">Vaadittava vuosimaksu, jotta laina maksettu ${yrsTarget} vuodessa</div></div>
+      <div class="kpi"><div class="v">${annInterest === null ? '—' : fmtEur(annInterest)}</div><div class="l">Korot yhteensä ${yrsTarget} vuoden annuiteetilla</div></div>
+      <div class="kpi"><div class="v">${reqYieldForPayment === null ? '—' : reqYieldForPayment.toLocaleString('fi-FI', { maximumFractionDigits: 2 }) + ' %'}</div><div class="l">Vaadittava bruttotuotto pääomalle (${fmtEur(c.capital)}), jotta vuosimaksu hoituu nettotuotoilla</div></div>
+    </div>
+    ${loanChart}
+    <div class="callout serif">Korkoero: tuotto-odotus ${c.yield.toLocaleString('fi-FI')} % − lainakorko ${L.rate.toLocaleString('fi-FI')} % = <strong>${spread.toLocaleString('fi-FI', { maximumFractionDigits: 1 })} %-yks.</strong> ${spread > 0 ? 'Vipu on laskennallisesti kannattava: pääoma jatkaa tuottamista ja laina lyhennetään tuotoista.' : 'Vipu ei ole laskennallisesti kannattava näillä oletuksilla.'} Huomioi Lombard-lainan riskit: vakuusarvon lasku voi laukaista lisävakuusvaateen (margin call), ja korko on tyypillisesti sidottu markkinakorkoon. Ei sijoitus- tai veroneuvontaa.</div>
+  </div>`;
+}
+
 /* ---------- INVESTOINNIT (KERTALUONTEISET) ---------- */
 function renderCapex() {
   const perSeason = SEASONS.map(s => ({ s, v: capexFor(s) }));
@@ -893,6 +1040,7 @@ function render() {
   document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === state.tab));
   renderStrip();
   if (state.tab === 'invest') renderInvest();
+  else if (state.tab === 'calc') renderCalc();
   else if (state.tab === 'staff') renderStaff();
   else if (state.tab === 'capex') renderCapex();
   else renderBudget();
@@ -939,6 +1087,17 @@ function setBind(path, raw) {
     else if (k === 'stake') state.invest.stake = clamp(n, 1, 100);
     else if (k === 'share') state.invest.share = clamp(n, 0, 100);
     else if (k === 'horizon') state.invest.horizon = Math.round(clamp(n, 4, 25));
+  } else if (parts[0] === 'calc') {
+    const n = num(raw); if (n === null) return;
+    if (parts[1] === 'capital') state.calc.capital = clamp(n, 0);
+    else if (parts[1] === 'yield') state.calc.yield = clamp(n, 0, 30);
+    else if (parts[1] === 'tax') state.calc.tax = clamp(n, 0, 60);
+  } else if (parts[0] === 'loan') {
+    const n = num(raw); if (n === null) return;
+    if (parts[1] === 'amount') state.calc.loan.amount = clamp(n, 0);
+    else if (parts[1] === 'rate') state.calc.loan.rate = clamp(n, 0, 15);
+    else if (parts[1] === 'payment') state.calc.loan.payment = clamp(n, 0);
+    else if (parts[1] === 'years') state.calc.loan.years = Math.round(clamp(n, 1, 30));
   } else if (parts[0] === 'steady') {
     const n = num(raw); if (n === null) return;
     if (['1', '2', '3'].includes(parts[1])) state.invest.steady[parts[1]] = clamp(n, -20000000, 20000000);
@@ -1039,6 +1198,10 @@ document.addEventListener('click', async e => {
   }
   else if (a === 'add-line') { se[btn.dataset.kind].push(L(btn.dataset.kind === 'revenues' ? 'Uusi tuloerä' : 'Uusi kuluerä', 0)); }
   else if (a === 'add-capex') { state.capex.push(C('Uusi investointi', 100000, 'once', state.activeSeason, 1, '')); }
+  else if (a === 'loan-from-capex') {
+    state.calc.loan.amount = state.capex.reduce((s2, r) => s2 + (+r.total || 0), 0);
+    toast('Lainasumma haettu investoinneista: ' + fmtEur(state.calc.loan.amount));
+  }
   else if (a === 'copy-prev') {
     const i = SEASONS.indexOf(state.activeSeason);
     if (i > 0) {
