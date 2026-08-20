@@ -305,12 +305,28 @@ const EXTRA_COSTS = [
   { name: 'Varaus', t: { L3: 70000, L2: 100000, L1: 150000 } },
 ];
 
+/* Skaalaus sarjatasotavoitteisiin (kayttajan linjaus 18.8.):
+   L3 = sarjatason ylin jalkapallobudjetti (~2,0 M ilman akatemiaa; akatemia
+   raportin ~560 t tasoon, kunnan formacao-tuki kattaa valtaosan),
+   L2 = nousukandidaatti (~7,5 M ops), L1 = keskitaso (~13,5 M ops).
+   Kertoimet skaalaavat Excelin kk-palkkoja ja kulurivit; roolit ja
+   henkilomaarat sailyvat. */
+const SCALE = {
+  L3: { B: 0.55, C: 0.336, D: 0.28 },
+  L2: { B: 0.773, C: 0.773, D: 0.773 },
+  L1: { B: 0.845, C: 0.845, D: 0.845 },
+};
+const roleSection = r => r.dept === 'Akatemia' ? 'C' : r.dept === 'Scouttaus' ? 'D' : 'B';
+const costSection = name => name.startsWith('Akatemia:') ? 'C' : name.startsWith('Skouttaus:') ? 'D' : 'B';
+
 function excelPersonnel(tk) {
   const rows = [];
   for (const r of EXCEL_ROLES) {
     const v = r.t[tk];
     if (!v || !v[0]) continue;
-    rows.push(P(r.role, r.dept, r.type, v[1], v[0], r.note || ''));
+    const f = SCALE[tk][roleSection(r)];
+    const monthly = Math.round(v[1] * f / 10) * 10;
+    rows.push(P(r.role, r.dept, r.type, monthly, v[0], r.note || ''));
   }
   for (const a of ADMIN_EXT[tk]) {
     rows.push(a.lump !== undefined
@@ -324,7 +340,7 @@ function excelCosts(tk) {
   for (const c of EXCEL_COSTS) {
     const v = c.t[tk];
     if (!v) continue;
-    rows.push(L(c.name, v, c.note || ''));
+    rows.push(L(c.name, Math.round(v * SCALE[tk][costSection(c.name)] / 1000) * 1000, c.note || ''));
   }
   for (const c of EXTRA_COSTS) rows.push(L(c.name, c.t[tk], 'täydennys — ei Excel-välilehdellä'));
   return rows;
@@ -515,7 +531,7 @@ function sanitizeState(p) {
 }
 
 /* ============================== TILA ============================== */
-const SKEY = 'varzim-talousstudio-v3';
+const SKEY = 'varzim-talousstudio-v4';
 let storageOk = true;
 let state;
 try {
@@ -844,7 +860,7 @@ function renderStaff() {
       <button class="btn ghost" data-action="load-preset">Palauta Excel-pohja (sarjatason mukaan)</button>
     </div>
     <h2>Henkilöstöbudjetti · ${season}</h2>
-    <p class="lead">Vuosikulu työnantajalle: pelaajat = kk-palkka × 14 × 1,045 (urheilijoiden erityis-TSU) · henkilöstö = kk-palkka × 14 × 1,2375 (TSU 23,75 %) · vuosisumma sellaisenaan. TES-minimi tällä kaudella ja sarjatasolla: <strong>${fmtEurFull(floor)}/kk</strong> (RMMG ${RMMG[seasonStartYear(season)]} €${se.tier === 3 ? '; 1,0 × RMMG sallittu, jos ≥ 50 % rungosta rekisteröidyillä sopimuksilla' : ''}). Esiasetukset: <strong>Varzim_stadion_budjetti.xlsx · Henkilosto_roolitasolla</strong> — palkkataso sarjatason ylälaita, nousutavoite joka kausi (L3 → L2 → L1). Huom: pelaajarivit lasketaan urheilijoiden erityis-TSU:lla (~4,5 %), joten pelaajakulut ovat hieman Excel-taulukkoa (23,75 %) pienemmät — vaihda rivin tyypiksi Henkilöstö, jos haluat Excelin luvun.</p>
+    <p class="lead">Vuosikulu työnantajalle: pelaajat = kk-palkka × 14 × 1,045 (urheilijoiden erityis-TSU) · henkilöstö = kk-palkka × 14 × 1,2375 (TSU 23,75 %) · vuosisumma sellaisenaan. TES-minimi tällä kaudella ja sarjatasolla: <strong>${fmtEurFull(floor)}/kk</strong> (RMMG ${RMMG[seasonStartYear(season)]} €${se.tier === 3 ? '; 1,0 × RMMG sallittu, jos ≥ 50 % rungosta rekisteröidyillä sopimuksilla' : ''}). Esiasetukset: <strong>Varzim_stadion_budjetti.xlsx · Henkilosto_roolitasolla</strong>, skaalattuna sarjatasotavoitteisiin: L3 = sarjatason ylin jalkapallobudjetti (~2,0 M€ ilman akatemiaa; kertoimet 0,55 / 0,34 / 0,28), L2 = nousukandidaatti (~7,5 M€, kerroin 0,77), L1 = keskitaso (~13,5 M€, kerroin 0,85). Roolit ja henkilömäärät Excelistä; alasarjojen akatemia- ja scouttausroolit ovat käytännössä osa-aikaisia. Huom: pelaajarivit lasketaan urheilijoiden erityis-TSU:lla (~4,5 %), joten pelaajakulut ovat hieman Excel-taulukkoa (23,75 %) pienemmät — vaihda rivin tyypiksi Henkilöstö, jos haluat Excelin luvun.</p>
     <div class="tscroll"><table>
       <thead><tr><th>Rooli</th><th>Osasto</th><th>Tyyppi</th><th class="n">€/kk tai €/v</th><th class="n">Hlö</th><th class="n">Vuosikulu</th><th>Merkinnät</th><th></th></tr></thead>
       <tbody>${deptRows}
