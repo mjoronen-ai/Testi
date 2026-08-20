@@ -207,52 +207,130 @@ function C(name, total, mode, season, years, note) {
   return { id: nid(), name, total, mode, season, years: years || 1, note: note || '' };
 }
 
-/* Skenaario B -esiasetus (nousubudjettiraportista) */
-function presetPersonnelB() {
-  return [
-    P('Pelaajisto', 'Pelaajat', 'player', 2500, 26, 'keskipalkka; haarukka 1 305–5 000 €'),
-    P('Bonuspooli (voitot + nousubonus)', 'Pelaajat', 'lump', 120000, 1, 'maksetaan tuloksesta'),
-    P('Päävalmentaja', 'Valmennus & tuki', 'staff', 4500, 1, 'Liga 2 -tason palkka'),
-    P('Apuvalmentaja', 'Valmennus & tuki', 'staff', 2200, 2, ''),
-    P('Maalivahtivalmentaja', 'Valmennus & tuki', 'staff', 1800, 1, ''),
-    P('Fysiikkavalmentaja', 'Valmennus & tuki', 'staff', 2000, 1, ''),
-    P('Video-/pelianalyytikko', 'Valmennus & tuki', 'staff', 1800, 1, ''),
-    P('Fysioterapeutti', 'Valmennus & tuki', 'staff', 1600, 2, ''),
-    P('Lääkäri (osa-aik.)', 'Valmennus & tuki', 'staff', 1000, 1, 'lisenssivaatimus'),
-    P('Huoltaja', 'Valmennus & tuki', 'staff', 1100, 1, ''),
-    P('Joukkueenjohtaja', 'Valmennus & tuki', 'staff', 1500, 1, ''),
-    P('Päävastuullinen scoutti', 'Scouttaus', 'staff', 2500, 1, ''),
-    P('Rekrytointi-/data-analyytikko', 'Scouttaus', 'staff', 1900, 1, ''),
-    P('Aluescoutit (3 osa-aik.)', 'Scouttaus', 'lump', 18000, 1, 'Suur-Porto · Braga · etelä'),
-    P('Akatemiajohtaja', 'Akatemia', 'staff', 2800, 1, ''),
-    P('U19/U17-päävalmentajat', 'Akatemia', 'staff', 1600, 2, 'päätoimiset'),
-    P('Ikäluokkavalmentajat U15–U9', 'Akatemia', 'staff', 600, 6, 'osa-aikaiset'),
-    P('Akatemian MV- ja fysiikkavalmennus', 'Akatemia', 'lump', 25000, 1, ''),
-    P('Akatemian fysio + hyvinvointi', 'Akatemia', 'lump', 55000, 1, ''),
-    P('Urheilujohtaja', 'Hallinto', 'staff', 4000, 1, ''),
-    P('Toimitusjohtaja / GM', 'Hallinto', 'staff', 3000, 1, ''),
-    P('Talous & hallinto', 'Hallinto', 'staff', 1800, 1, ''),
-    P('Sihteeri / kilpailutoiminta', 'Hallinto', 'staff', 1500, 1, ''),
-    P('Viestintä & media', 'Hallinto', 'staff', 1700, 1, 'lisenssivaatimus'),
-    P('Kaupallinen päällikkö', 'Hallinto', 'staff', 2000, 1, '+ provisiot'),
-    P('Lipunmyynti & jäsenpalvelu', 'Hallinto', 'staff', 1300, 1, ''),
-    P('Kenttä- ja kiinteistöhenkilöstö', 'Hallinto', 'staff', 1200, 2, ''),
-    P('Turvallisuus + fanivastaava OLA', 'Hallinto', 'lump', 12000, 1, 'lisenssivaatimus'),
-  ];
+/* Esiasetukset: Varzim_stadion_budjetti.xlsx · Henkilosto_roolitasolla (18.8.2026).
+   Palkkataso sarjatason ylalaita. Excelissa vuosikulu = lkm x €/kk x 14 x 1,2375
+   kaikille; sovellus laskee PELAAJAT urheilijoiden erityis-TSU:lla (x 1,045),
+   joten pelaajarivien vuosikulu on hieman Excelia pienempi. */
+const EXCEL_ROLES = [
+  {"role": "Pelaajat", "dept": "Pelaajat", "type": "player", "t": {"L3": [25, 3500], "L2": [26, 7500], "L1": [27, 12000]}, "note": "Sarjatason ylälaidasta. L1 = juuri noussut seura, ei keskikastin vakiintunut palkkataso"},
+  {"role": "Päävalmentaja", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 6500], "L2": [1, 12000], "L1": [1, 25000]}, "note": ""},
+  {"role": "Apuvalmentaja", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [2, 2800], "L2": [2, 4500], "L1": [3, 7500]}, "note": ""},
+  {"role": "Maalivahtivalmentaja", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 2500], "L2": [1, 4000], "L1": [1, 6500]}, "note": ""},
+  {"role": "Fysiikkavalmentaja", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 2800], "L2": [2, 4200], "L1": [2, 7000]}, "note": ""},
+  {"role": "Palautus- ja rehab-valmentaja", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [0, 3500], "L2": [1, 3500], "L1": [1, 5500]}, "note": "L3:ssa tehtävä yhdistetään fysioterapiaan"},
+  {"role": "Ottelu- ja vastustaja-analyytikko", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 2200], "L2": [2, 3200], "L1": [3, 5000]}, "note": ""},
+  {"role": "Joukkueenjohtaja", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 2500], "L2": [1, 3800], "L1": [1, 6000]}, "note": ""},
+  {"role": "Lääkäri", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 1800], "L2": [1, 4000], "L1": [1, 8000]}, "note": "L3:ssa osa-aikainen"},
+  {"role": "Fysioterapeutti", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [2, 1900], "L2": [3, 2800], "L1": [4, 4200]}, "note": ""},
+  {"role": "Hieroja", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 1400], "L2": [1, 1900], "L1": [2, 2600]}, "note": ""},
+  {"role": "Ravitsemusterapeutti", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 1200], "L2": [1, 2200], "L1": [1, 3500]}, "note": "L3:ssa jaettu akatemian kanssa"},
+  {"role": "Urheilupsykologi", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 1200], "L2": [1, 2200], "L1": [1, 3500]}, "note": "L3:ssa jaettu akatemian kanssa"},
+  {"role": "Varustehuoltaja", "dept": "Valmennus & tuki", "type": "staff", "t": {"L3": [1, 1200], "L2": [2, 1500], "L1": [2, 2000]}, "note": ""},
+  {"role": "Urheilujohtaja", "dept": "Hallinto", "type": "staff", "t": {"L3": [1, 4500], "L2": [1, 8000], "L1": [1, 15000]}, "note": "Ainoa rooli, jonka väärä valinta tuhoaa nopeimmin"},
+  {"role": "Turva- ja logistiikkavastaava", "dept": "Hallinto", "type": "staff", "t": {"L3": [0, 2200], "L2": [1, 2200], "L1": [1, 3500]}, "note": ""},
+  {"role": "Akatemiajohtaja", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 4000], "L2": [1, 5500], "L1": [1, 8000]}, "note": ""},
+  {"role": "Metodologiapäällikkö", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 3000], "L2": [1, 4000], "L1": [1, 6000]}, "note": "Halvin yksittäinen tapa nostaa akatemian laatua"},
+  {"role": "Koordinaattori U15–U19", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 2400], "L2": [1, 3200], "L1": [1, 4500]}, "note": ""},
+  {"role": "Koordinaattori U9–U14", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 2200], "L2": [1, 2900], "L1": [1, 4000]}, "note": ""},
+  {"role": "Valmentajat U19–U17 (päätoimiset)", "dept": "Akatemia", "type": "staff", "t": {"L3": [4, 2200], "L2": [4, 3000], "L1": [5, 4200]}, "note": ""},
+  {"role": "Valmentajat U16–U14", "dept": "Akatemia", "type": "staff", "t": {"L3": [5, 1600], "L2": [5, 2100], "L1": [5, 2900]}, "note": ""},
+  {"role": "Valmentajat U13–U9", "dept": "Akatemia", "type": "staff", "t": {"L3": [6, 1200], "L2": [7, 1500], "L1": [7, 2000]}, "note": ""},
+  {"role": "Maalivahtivalmentajat", "dept": "Akatemia", "type": "staff", "t": {"L3": [2, 1500], "L2": [3, 1900], "L1": [3, 2600]}, "note": ""},
+  {"role": "Fysiikkavalmentajat", "dept": "Akatemia", "type": "staff", "t": {"L3": [2, 1800], "L2": [3, 2400], "L1": [3, 3200]}, "note": ""},
+  {"role": "Fysioterapeutit", "dept": "Akatemia", "type": "staff", "t": {"L3": [2, 1700], "L2": [3, 2200], "L1": [4, 2900]}, "note": ""},
+  {"role": "Lääkäri (osa-aikainen)", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 1500], "L2": [1, 2200], "L1": [1, 3000]}, "note": ""},
+  {"role": "Ravitsemusterapeutti", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 1400], "L2": [1, 1900], "L1": [1, 2600]}, "note": ""},
+  {"role": "Urheilupsykologi", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 1400], "L2": [1, 1900], "L1": [1, 2600]}, "note": ""},
+  {"role": "Opinto-ohjaaja / tutor escolar", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 1300], "L2": [2, 1600], "L1": [2, 2100]}, "note": "FPF-sertifioinnin kriteeri"},
+  {"role": "Analyytikot", "dept": "Akatemia", "type": "staff", "t": {"L3": [2, 1600], "L2": [3, 2100], "L1": [3, 2900]}, "note": ""},
+  {"role": "Asuntolan ohjaajat", "dept": "Akatemia", "type": "staff", "t": {"L3": [2, 1300], "L2": [2, 1600], "L1": [3, 2000]}, "note": ""},
+  {"role": "Keittiö ja ruokahuolto", "dept": "Akatemia", "type": "staff", "t": {"L3": [2, 1100], "L2": [3, 1300], "L1": [3, 1600]}, "note": ""},
+  {"role": "Kentänhoitajat", "dept": "Akatemia", "type": "staff", "t": {"L3": [2, 1300], "L2": [3, 1600], "L1": [3, 2100]}, "note": ""},
+  {"role": "Varustehuolto", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 1100], "L2": [1, 1400], "L1": [2, 1700]}, "note": ""},
+  {"role": "Hallinto ja sihteeri", "dept": "Akatemia", "type": "staff", "t": {"L3": [1, 1500], "L2": [2, 1800], "L1": [2, 2300]}, "note": ""},
+  {"role": "Skouttipäällikkö", "dept": "Scouttaus", "type": "staff", "t": {"L3": [1, 3500], "L2": [1, 5000], "L1": [1, 7500]}, "note": ""},
+  {"role": "Aluevastaava, Pohjois-Portugali", "dept": "Scouttaus", "type": "staff", "t": {"L3": [1, 2200], "L2": [1, 2900], "L1": [1, 3800]}, "note": ""},
+  {"role": "Aluevastaava, Etelä-Portugali ja saaret", "dept": "Scouttaus", "type": "staff", "t": {"L3": [1, 2200], "L2": [1, 2900], "L1": [1, 3800]}, "note": ""},
+  {"role": "Aluevastaava, Brasilia", "dept": "Scouttaus", "type": "staff", "t": {"L3": [0, 2600], "L2": [1, 2600], "L1": [1, 3800]}, "note": "Avautuu vasta L2:ssa – alemmalla tasolla pelaajat eivät tule"},
+  {"role": "Aluevastaava, Afrikka", "dept": "Scouttaus", "type": "staff", "t": {"L3": [0, 2600], "L2": [1, 2600], "L1": [1, 3800]}, "note": ""},
+  {"role": "Osa-aikaiset tarkkailijat", "dept": "Scouttaus", "type": "staff", "t": {"L3": [10, 450], "L2": [14, 550], "L1": [20, 700]}, "note": "Verkosto, palkkiopohjainen"},
+  {"role": "Videoanalyytikot", "dept": "Scouttaus", "type": "staff", "t": {"L3": [1, 1800], "L2": [2, 2300], "L1": [2, 3000]}, "note": ""},
+  {"role": "Data- ja rekrytointianalyytikko", "dept": "Scouttaus", "type": "staff", "t": {"L3": [1, 2000], "L2": [2, 2600], "L1": [2, 3400]}, "note": ""},
+  {"role": "Rekrytointikoordinaattori", "dept": "Scouttaus", "type": "staff", "t": {"L3": [0, 2000], "L2": [1, 2400], "L1": [1, 3200]}, "note": ""}
+];
+const EXCEL_COSTS = [
+  {"name": "Ottelu-, matka- ja majoituskulut", "t": {"L3": 180000, "L2": 320000, "L1": 620000}, "note": ""},
+  {"name": "Lääkintä, vakuutukset, testaus", "t": {"L3": 120000, "L2": 210000, "L1": 420000}, "note": ""},
+  {"name": "Varusteet ja materiaalit", "t": {"L3": 90000, "L2": 140000, "L1": 260000}, "note": ""},
+  {"name": "Pelaajahankinnat ja lainakorvaukset", "t": {"L3": 200000, "L2": 400000, "L1": 900000}, "note": "Ei sisällä siirtomaksuja"},
+  {"name": "Akatemia: asuntolan ylläpito ja täysihoito", "t": {"L3": 150000, "L2": 240000, "L1": 320000}, "note": "25–35 pelaajaa"},
+  {"name": "Akatemia: koulutus, kuljetus, sarjamaksut", "t": {"L3": 120000, "L2": 180000, "L1": 240000}, "note": ""},
+  {"name": "Akatemia: varusteet ja materiaalit", "t": {"L3": 80000, "L2": 120000, "L1": 170000}, "note": ""},
+  {"name": "Akatemia: harjoituskeskuksen energia ja huolto", "t": {"L3": 140000, "L2": 190000, "L1": 240000}, "note": ""},
+  {"name": "Akatemia: datajärjestelmät ja ohjelmistot", "t": {"L3": 60000, "L2": 95000, "L1": 140000}, "note": ""},
+  {"name": "Skouttaus: data- ja videopalvelut (Wyscout ym.)", "t": {"L3": 70000, "L2": 120000, "L1": 190000}, "note": ""},
+  {"name": "Skouttaus: matkat ja tarkkailu", "t": {"L3": 80000, "L2": 130000, "L1": 220000}, "note": ""},
+  {"name": "Skouttaus: agentti- ja välityspalkkiot", "t": {"L3": 0, "L2": 80000, "L1": 250000}, "note": "Ei sisällä siirtomaksuja"}
+];
+/* Hallinnon taydennysroolit — eivat sisally Excel-valilehteen */
+const ADMIN_EXT = {
+  L3: [
+    { role: 'Toimitusjohtaja / GM', monthly: 3000 }, { role: 'Talous & hallinto', monthly: 1800 },
+    { role: 'Sihteeri / kilpailutoiminta', monthly: 1500 }, { role: 'Viestinta & media', monthly: 1700 },
+    { role: 'Kaupallinen paallikko', monthly: 2000 }, { role: 'Lipunmyynti & jasenpalvelu', monthly: 1300 },
+    { role: 'Kentta- ja kiinteistohenkilosto', monthly: 1200, count: 2 },
+    { role: 'Turvallisuus + fanivastaava OLA', lump: 12000 },
+  ],
+  L2: [
+    { role: 'Toimitusjohtaja / GM', monthly: 3500 }, { role: 'Talous & hallinto', monthly: 2000 },
+    { role: 'Sihteeri / kilpailutoiminta', monthly: 1700 }, { role: 'Viestinta & media', monthly: 2000 },
+    { role: 'Kaupallinen paallikko', monthly: 2400 }, { role: 'Lipunmyynti & jasenpalvelu', monthly: 1500 },
+    { role: 'Kentta- ja kiinteistohenkilosto', monthly: 1400, count: 2 },
+    { role: 'Turvallisuus + fanivastaava OLA', lump: 15000 },
+  ],
+  L1: [
+    { role: 'Toimitusjohtaja / GM', monthly: 4500 }, { role: 'Talous & hallinto', monthly: 2400 },
+    { role: 'Sihteeri / kilpailutoiminta', monthly: 2000 }, { role: 'Viestinta & media', monthly: 2400 },
+    { role: 'Kaupallinen paallikko', monthly: 3000 }, { role: 'Lipunmyynti & jasenpalvelu', monthly: 1800 },
+    { role: 'Kentta- ja kiinteistohenkilosto', monthly: 1500, count: 3 },
+    { role: 'Turvallisuus + fanivastaava OLA', lump: 20000 },
+  ],
+};
+/* Sovelluksen tayd. kulurivit (eivat Excelissa): erotuomarit, stadion, toimisto, markkinointi, varaus */
+const EXTRA_COSTS = [
+  { name: 'Erotuomarit, liitto, lisenssit', t: { L3: 30000, L2: 60000, L1: 90000 } },
+  { name: 'Stadionin yllapito, kentanhoito, energia', t: { L3: 90000, L2: 120000, L1: 160000 } },
+  { name: 'Toimisto, IT, laki, tilintarkastus', t: { L3: 45000, L2: 60000, L1: 80000 } },
+  { name: 'Markkinointi ja tapahtumat', t: { L3: 35000, L2: 60000, L1: 100000 } },
+  { name: 'Varaus', t: { L3: 70000, L2: 100000, L1: 150000 } },
+];
+
+function excelPersonnel(tk) {
+  const rows = [];
+  for (const r of EXCEL_ROLES) {
+    const v = r.t[tk];
+    if (!v || !v[0]) continue;
+    rows.push(P(r.role, r.dept, r.type, v[1], v[0], r.note || ''));
+  }
+  for (const a of ADMIN_EXT[tk]) {
+    rows.push(a.lump !== undefined
+      ? P(a.role, 'Hallinto', 'lump', a.lump, 1, 'täydennys — ei Excel-välilehdellä')
+      : P(a.role, 'Hallinto', 'staff', a.monthly, a.count || 1, 'täydennys — ei Excel-välilehdellä'));
+  }
+  return rows;
 }
-function presetCostsB() {
-  return [
-    L('Agenttipalkkiot ja siirtokulut', 40000), L('Matkat ja leirit', 70000),
-    L('Ottelutapahtumat (JV, poliisi, ambulanssi)', 70000), L('Erotuomarit, liitto, lisenssit', 30000),
-    L('Varusteet ja lääkintätarvikkeet', 50000), L('Vakuutukset', 35000, '~3 % pelaajapalkoista'),
-    L('Scouttauksen työkalut ja matkat', 27000, 'Wyscout/InStat'),
-    L('Akatemia: kenttävuorot, varusteet, matkat', 150000), L('Akatemia: FPF-sertifiointi ja turnaukset', 40000),
-    L('Akatemia: stipendit ja majoitus', 50000), L('Akatemia: hallinto ja puskuri', 75000),
-    L('Kentänhoito, stadion, energia', 90000), L('Toimisto, IT, laki, tilintarkastus', 45000),
-    L('Markkinointi ja tapahtumat', 35000), L('Varaus', 70000, '~2,5 %'),
-  ];
+function excelCosts(tk) {
+  const rows = [];
+  for (const c of EXCEL_COSTS) {
+    const v = c.t[tk];
+    if (!v) continue;
+    rows.push(L(c.name, v, c.note || ''));
+  }
+  for (const c of EXTRA_COSTS) rows.push(L(c.name, c.t[tk], 'täydennys — ei Excel-välilehdellä'));
+  return rows;
 }
-function presetRevenuesB() {
+
+function presetRevenuesL3() {
   return [
     L('Kuntatuki: formação-sopimus', 450000, 'CM Póvoa de Varzim'),
     L('Kuntatuki: edustusjalkapallo', 200000),
@@ -264,36 +342,42 @@ function presetRevenuesB() {
     L('Pelaajamyynnit ja korvaukset', 150000, 'varovainen taso'),
   ];
 }
-/* Liga 2 -kaudet (nousun jälkeen) — monivuotistaulukosta */
-function presetSeasonL2(first) {
-  return {
-    tier: 2,
-    personnel: [
-      P('Pelaajisto', 'Pelaajat', 'player', 4300, 26, 'Liga 2 -taso'),
-      P('Bonuspooli', 'Pelaajat', 'lump', 150000, 1, ''),
-      P('Valmennus & urheilutoimen tuki', 'Valmennus & tuki', 'lump', first ? 480000 : 520000, 1, 'UEFA Pro -vaatimus'),
-      P('Scouttausverkosto', 'Scouttaus', 'lump', first ? 150000 : 170000, 1, ''),
-      P('Akatemian henkilöstö', 'Akatemia', 'lump', 300000, 1, ''),
-      P('Hallinnon henkilöstö', 'Hallinto', 'lump', 320000, 1, ''),
-    ],
-    costs: [
-      L('Akatemian toiminta (kentät, turnaukset, stipendit)', first ? 320000 : 380000),
-      L('Ottelutapahtumat ja matkat (ammattisarja)', 220000),
-      L('Erotuomarit ja liittomaksut', 60000, 'ammattisarjataso'),
-      L('Stadion, kentänhoito, energia', 120000),
-      L('Toimisto, laki, tarkastus, markkinointi', 110000),
-      L('Varaus', 100000),
-    ],
-    revenues: [
-      L('Kuntatuki (formação + edustus)', 680000),
-      L('Jäsenmaksut', 220000), L('Ottelutulot ja kausipaikat', 260000, 'ka. ~3 500 katsojaa'),
-      L('Sponsorit ja mainonta', 420000, 'ammattisarjanäkyvyys'),
-      L('Liga Portugal -jaot + cup', 180000),
-      L('TV-keskittäminen (10 % potista)', 1250000, 'voimassa 2028/29 alkaen'),
-      L('UEFA-solidaarisuus (epävarma)', first ? 0 : 0, 'haarukka 0–380 t€'),
-      L('Pelaajamyynnit', first ? 400000 : 800000, 'selling club -tavoite'),
-    ],
-  };
+function presetRevenuesL2() {
+  return [
+    L('Kuntatuki (formação + edustus)', 680000),
+    L('Jäsenmaksut', 220000),
+    L('Ottelutulot ja kausipaikat', 260000, 'ka. ~3 500 katsojaa'),
+    L('Sponsorit ja mainonta', 420000, 'ammattisarjanäkyvyys'),
+    L('Liga Portugal -jaot + cup', 180000),
+    L('TV-keskittäminen (10 % potista)', 1250000, 'voimassa 2028/29 alkaen'),
+    L('UEFA-solidaarisuus (epävarma)', 0, 'haarukka 0–380 t€'),
+    L('Pelaajamyynnit', 500000, 'selling club -tavoite'),
+  ];
+}
+function presetRevenuesL1(second) {
+  return [
+    L('Kuntatuki (formação + edustus)', 700000),
+    L('Jäsenmaksut', second ? 350000 : 320000),
+    L('Ottelutulot ja kausipaikat', second ? 1000000 : 900000, 'oletus — Liga 1 -yleisö'),
+    L('Sponsorit ja mainonta', second ? 1100000 : 900000, 'oletus'),
+    L('TV-keskittäminen (tasajako + menestysosat)', 4000000, 'keskitetty malli 2028/29 →'),
+    L('Liga Portugal -jaot ja cup', 250000),
+    L('Pelaajamyynnit', second ? 2500000 : 1500000, 'selling club -tavoite'),
+  ];
+}
+
+/* Tier-tietoinen rahoitustarpeiden poiminta polkujen parametreiksi */
+function syncGaps(st) {
+  const g = st.invest.gaps;
+  let l2Seen = 0, l3Done = false, l1Done = false;
+  for (const sKey of SEASONS) {
+    const tier = st.seasons[sKey].tier;
+    const gap = Math.max(0, Math.round(seasonTotals(sKey, st).gap));
+    if (tier === 3 && !l3Done) { g.g3 = gap; l3Done = true; }
+    else if (tier === 2) { l2Seen++; if (l2Seen === 1) g.g2first = gap; else if (l2Seen === 2) g.g2later = gap; }
+    else if (tier === 1 && !l1Done) { g.g1 = gap; l1Done = true; }
+  }
+  if (l2Seen === 1) g.g2later = Math.round(g.g2first * 0.85);
 }
 
 function defaultState() {
@@ -301,11 +385,10 @@ function defaultState() {
   const s = {
     v: 2, tab: 'invest', activeSeason: '2027/28',
     seasons: {
-      '2027/28': { tier: 3, personnel: presetPersonnelB(), costs: presetCostsB(), revenues: presetRevenuesB() },
-      '2028/29': presetSeasonL2(true),
-      '2029/30': presetSeasonL2(false),
-      '2030/31': (() => { const x = presetSeasonL2(false);
-        x.revenues.find(r => r.name.startsWith('Pelaajamyynnit')).amount = 1200000; return x; })(),
+      '2027/28': { tier: 3, personnel: excelPersonnel('L3'), costs: excelCosts('L3'), revenues: presetRevenuesL3() },
+      '2028/29': { tier: 2, personnel: excelPersonnel('L2'), costs: excelCosts('L2'), revenues: presetRevenuesL2() },
+      '2029/30': { tier: 1, personnel: excelPersonnel('L1'), costs: excelCosts('L1'), revenues: presetRevenuesL1(false) },
+      '2030/31': { tier: 1, personnel: excelPersonnel('L1'), costs: excelCosts('L1'), revenues: presetRevenuesL1(true) },
     },
     capex: [
       C('Joukkueen bussi', 250000, 'once', '2027/28', 1, ''),
@@ -322,19 +405,17 @@ function defaultState() {
       bands: { 1: { low: 25, base: 35, high: 45 }, 2: { low: 6, base: 9, high: 12 }, 3: { low: 2, base: 2.5, high: 3 } },
       gaps: { g3: 1400000, g2first: 1100000, g2later: 280000, g1: 0 },
       paths: [
-        { id: 'p1', label: 'Perusura — nousu 2028, exit Liga 2', weight: 40, tiers: ['3', '2f', '2', '2'], exitTier: 2 },
-        { id: 'p2', label: 'Hidas — nousu 2029, exit Liga 2', weight: 25, tiers: ['3', '3', '2f', '2'], exitTier: 2 },
-        { id: 'p3', label: 'Ei nousua — exit Liga 3', weight: 30, tiers: ['3', '3', '3', '3'], exitTier: 3 },
-        { id: 'p4', label: 'Huippu — nousu 2028 + Liga 1 2030, exit Liga 1', weight: 5, tiers: ['3', '2f', '2', '1'], exitTier: 1 },
+        { id: 'p1', label: 'Tavoite — nousut 2028 ja 2029, Liga 1', weight: 15, tiers: ['3', '2f', '1', '1'], exitTier: 1 },
+        { id: 'p2', label: 'Nousu 2028 — Liga 2 vakiintuu', weight: 35, tiers: ['3', '2f', '2', '2'], exitTier: 2 },
+        { id: 'p3', label: 'Hidas — nousu 2029', weight: 25, tiers: ['3', '3', '2f', '2'], exitTier: 2 },
+        { id: 'p4', label: 'Ei nousua', weight: 25, tiers: ['3', '3', '3', '3'], exitTier: 3 },
       ],
     },
   };
   // Rahoitustarpeet lasketaan suoraan oletusbudjeteista, jotta Sijoitus- ja
   // Vuosibudjetti-moduulit ovat lähtötilanteessa yhdenmukaiset.
   s.calc.loan.amount = s.capex.reduce((a, r) => a + (+r.total || 0), 0);
-  s.invest.gaps.g3 = Math.max(0, Math.round(seasonTotals('2027/28', s).gap));
-  s.invest.gaps.g2first = Math.max(0, Math.round(seasonTotals('2028/29', s).gap));
-  s.invest.gaps.g2later = Math.max(0, Math.round(seasonTotals('2029/30', s).gap));
+  syncGaps(s);
   return s;
 }
 
@@ -434,7 +515,7 @@ function sanitizeState(p) {
 }
 
 /* ============================== TILA ============================== */
-const SKEY = 'varzim-talousstudio-v2';
+const SKEY = 'varzim-talousstudio-v3';
 let storageOk = true;
 let state;
 try {
@@ -760,10 +841,10 @@ function renderStaff() {
         ${[3, 2, 1].map(t => `<option value="${t}" ${se.tier === t ? 'selected' : ''}>${TIER_LABEL[t]}</option>`).join('')}
       </select></div>
       <button class="btn" data-action="copy-prev">Kopioi edelliseltä kaudelta</button>
-      <button class="btn ghost" data-action="load-preset">Palauta skenaario B -pohja (vain ${SEASONS[0]})</button>
+      <button class="btn ghost" data-action="load-preset">Palauta Excel-pohja (sarjatason mukaan)</button>
     </div>
     <h2>Henkilöstöbudjetti · ${season}</h2>
-    <p class="lead">Vuosikulu työnantajalle: pelaajat = kk-palkka × 14 × 1,045 (urheilijoiden erityis-TSU) · henkilöstö = kk-palkka × 14 × 1,2375 (TSU 23,75 %) · vuosisumma sellaisenaan. TES-minimi tällä kaudella ja sarjatasolla: <strong>${fmtEurFull(floor)}/kk</strong> (RMMG ${RMMG[seasonStartYear(season)]} €${se.tier === 3 ? '; 1,0 × RMMG sallittu, jos ≥ 50 % rungosta rekisteröidyillä sopimuksilla' : ''}).</p>
+    <p class="lead">Vuosikulu työnantajalle: pelaajat = kk-palkka × 14 × 1,045 (urheilijoiden erityis-TSU) · henkilöstö = kk-palkka × 14 × 1,2375 (TSU 23,75 %) · vuosisumma sellaisenaan. TES-minimi tällä kaudella ja sarjatasolla: <strong>${fmtEurFull(floor)}/kk</strong> (RMMG ${RMMG[seasonStartYear(season)]} €${se.tier === 3 ? '; 1,0 × RMMG sallittu, jos ≥ 50 % rungosta rekisteröidyillä sopimuksilla' : ''}). Esiasetukset: <strong>Varzim_stadion_budjetti.xlsx · Henkilosto_roolitasolla</strong> — palkkataso sarjatason ylälaita, nousutavoite joka kausi (L3 → L2 → L1). Huom: pelaajarivit lasketaan urheilijoiden erityis-TSU:lla (~4,5 %), joten pelaajakulut ovat hieman Excel-taulukkoa (23,75 %) pienemmät — vaihda rivin tyypiksi Henkilöstö, jos haluat Excelin luvun.</p>
     <div class="tscroll"><table>
       <thead><tr><th>Rooli</th><th>Osasto</th><th>Tyyppi</th><th class="n">€/kk tai €/v</th><th class="n">Hlö</th><th class="n">Vuosikulu</th><th>Merkinnät</th><th></th></tr></thead>
       <tbody>${deptRows}
@@ -1211,15 +1292,13 @@ document.addEventListener('click', async e => {
     } else { toast('Ensimmäisellä kaudella ei edeltäjää'); }
   }
   else if (a === 'load-preset') {
-    if (state.activeSeason === SEASONS[0]) { se.personnel = presetPersonnelB(); toast('Skenaario B -henkilöstö palautettu'); }
-    else { toast('Pohja on määritetty kaudelle ' + SEASONS[0]); }
+    const tk = se.tier === 3 ? 'L3' : se.tier === 2 ? 'L2' : 'L1';
+    se.personnel = excelPersonnel(tk);
+    toast('Excel-pohja (' + TIER_LABEL[se.tier] + ') palautettu kaudelle ' + state.activeSeason);
   }
   else if (a === 'sync-gaps') {
-    const g = state.invest.gaps;
-    g.g3 = Math.max(0, Math.round(seasonTotals('2027/28').gap));
-    g.g2first = Math.max(0, Math.round(seasonTotals('2028/29').gap));
-    g.g2later = Math.max(0, Math.round(seasonTotals('2029/30').gap));
-    toast('Rahoitustarpeet päivitetty vuosibudjeteista');
+    syncGaps(state);
+    toast('Rahoitustarpeet päivitetty vuosibudjeteista (sarjatasojen mukaan)');
   }
   else if (a === 'reset') {
     // confirm() ei toimi artifact-iframessa -> kaksivaiheinen vahvistus
