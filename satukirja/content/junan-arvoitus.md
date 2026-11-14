@@ -157,4 +157,4 @@ Kun juna saapui perille aamulla, Sanni toi Hugolle pipon takaisin. Siinä oli mu
 
 Hugo päätti, ettei koskaan pesisi sitä.
 
-Hän kirjoitti vihkoonsa vielä viimeisen rivin: Arvoitus ratkaistu. Syyllinen: marsu. Rangaistus: ei mitään. Uusi ystävä: kaksi.
+Hän kirjoitti vihkoonsa vielä viimeisen rivin: Arvoitus ratkaistu. Syyllinen: marsu. Rangaistus: ei mitään. Uusia ystäviä: kaksi.
