@@ -11,7 +11,7 @@ color: "#B07E86"
 ---
 Yöjuna kulki pohjoiseen. Hugo istui ikkunapaikalla ja katsoi, miten metsät ja järvet vilisivät ohi iltahämärässä. Isä luki kirjaa hänen vieressään.
 
-Sitten vaunun ovi aukesi, ja sisään ryntäsi junan kapellimestari, herra Salo. Hän oli pitkä mies, jolla oli komeat viikset ja sininen univormu. Mutta hänen päänsä oli paljas.
+Sitten vaunun ovi aukesi, ja sisään ryntäsi junan kapellimestari, herra Salo. Hän oli pitkä mies, jolla oli komeat viikset ja sininen univormu. Häntä kutsuttiin kapellimestariksi, koska hän johti junaa yhtä tarkasti kuin orkesteria. Mutta nyt hänen päänsä oli paljas.
 
 – Hattuni! hän sanoi. – Kuka on nähnyt hattuani? Punainen, kultareunainen, sulka sivussa!
 
@@ -41,7 +41,7 @@ Rouvan hattu oli vihreä ja täynnä tekokukkia. – Miksi minä punaista hattua
 
 Hugo uskoi häntä.
 
-Nukkuva herra kuorsasi niin kovaa, että hänen viiksensä värisivät. Hugo huomasi, että hänen kenkänsä olivat sukkien päällä väärin päin. Hän ei ollut ilmeisesti noussut paikaltaan koko iltana.
+Nukkuva herra kuorsasi niin kovaa, että hänen viiksensä värisivät. Hänen sylissään oli sanomalehti, ja sen päällä koskematon keksi. Joku, joka nukkuu noin sikeästi, ei hiivi hattuvarkaisiin, Hugo päätteli.
 
 Sitten Hugo meni tytön ja hänen isoäitinsä luo. Tyttö, jonka nimi oli Sanni, istui ikkunan vieressä ja katsoi ulos. Isoäidin sylissä oli kori, jonka kansi oli kiinni.
 
