@@ -48,13 +48,17 @@ Martta laski pannan.
 
 Kylän kirkko oli valkoinen puukirkko mäen päällä. Sen vieressä seisoi kellotapuli, korkea ja kapea torni, jonka huipulla kiilsi pieni risti. Martta avasi oven suurella rautaisella avaimella.
 
-Sisällä oli hämärää ja viileää ja tuoksui vanhalta puulta. Ylös kiemurteli kapeat puuportaat. Martta nousi ensin, vähän hitaasti, ja piti välillä kaiteesta kiinni.
+Sisällä oli hämärää ja viileää ja tuoksui vanhalta puulta. Ylös kiemurtelivat kapeat puuportaat. Martta nousi ensin, vähän hitaasti, ja piti välillä kaiteesta kiinni.
 
 – Polvet eivät ole enää entisellään, hän tuhahti. – Ennen minä juoksin nämä portaat ylös kuin orava.
 
 Ylhäällä oli pieni lattia, jossa oli aukkoja lautojen välissä. Niistä näkyi alas portaikkoon. Ja keskellä, paksun hirsikehikon varassa, riippui kello. Se oli suuri ja tummanpronssinen, ja sen kyljessä oli vanhoja kirjaimia. Tapulin seinissä oli luukut, joista näkyi koko kylä: kirkko, pellot, järvi ja kaukana jossain Mäntylän punainen katto.
 
 – Tuolla on meidän talo! Eemil huudahti.
+
+– Ja tuolla on Martan lato, Iida sanoi. – Ja suo, ja Myllypuro, ja koko järvi.
+
+Kalliojärvi näytti ylhäältä katsottuna aivan erilaiselta kuin laiturilta. Se oli pitkä ja mutkainen, ja sen keskellä oli pieniä saaria kuin vihreitä nappeja sinisellä takilla. Yhdessä saaressa kasvoi kolme korkeaa mäntyä vierekkäin.
 
 Nuppu kiipesi Iidan olkapäälle ja kuunteli.
 

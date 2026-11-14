@@ -71,7 +71,13 @@ Myyrä halusi Peukalo-Liisan puolisokseen ja aikoi viedä hänet asumaan syväll
 
 Peukalo-Liisaa ei se ajatus ilahduttanut ollenkaan. Maan alla hän ei näkisi koskaan aurinkoa.
 
+Eräänä päivänä myyrä kaivoi pitkän käytävän omasta talostaan peltohiiren talolle, jotta naiset voisivat tulla kylään. Hän kulki edellä ja kantoi suussaan lahopuun palaa, joka hehkui pimeässä himmeästi kuin pieni lyhty.
+
+– Varokaa, myyrä sanoi keskellä käytävää. – Tässä makaa jokin lintu. Älkää välittäkö siitä.
+
 Myyrän käytävässä makasi pääsky, joka oli palellut eikä jaksanut lentää. Kaikki luulivat sitä menetetyksi, mutta Peukalo-Liisa kuuli, että sen sydän löi heikosti. Tuk… tuk… tuk.
+
+Peukalo-Liisa ei voinut olla välittämättä. Hän kumartui ja silitti pääskyn kylmiä sulkia.
 
 Joka yö hän hiipi pääskyn luo, peitteli sen heinillä ja toi sille vettä lehden kupissa. Hän lauloi sille hiljaa lauluja kesästä ja auringosta.
 
