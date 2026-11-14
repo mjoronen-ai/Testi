@@ -33,7 +33,7 @@ Isällä oli sienikori ja puukko, ja hän hyräili vanhaa laulua, jota hän hyr�
 
 He kävelivät polkua, ja isä etsi sieniä. Hän kumartui aina välillä ja nosti lehtiä varovasti sivuun.
 
-– Tässä on kehnäsieni, isä sanoi. – Tuota ei syödä. Mutta onpa kaunis.
+– Tässä on kärpässieni, isä sanoi. – Tuota ei syödä. Mutta onpa kaunis.
 
 Aada otti kompassin taskustaan. Neula pysähtyi. Se osoitti suoraan pois polulta, sammaleiseen kuusikkoon.
 
