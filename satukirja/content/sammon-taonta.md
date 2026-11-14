@@ -41,7 +41,7 @@ Ilmarisen paja oli kylän laidalla. Siellä kalkatti aina vasara, ja ahjosta nou
 
 Ilmarinen pyyhki nokea otsaltaan.
 
-– En lähde, hän sanoi. – Pohjola on kylmä ja kaukana. Siellä syödään miehiä ja upotetaan urhoja. Minä pysyn pajassani.
+– En lähde, hän sanoi. – Pohjola on kylmä ja kaukana. Siellä on pakkasta ja pimeää koko talven. Minä pysyn pajassani.
 
 Väinämöinen ei väitellyt. Mutta hän keksi juonen.
 

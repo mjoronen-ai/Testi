@@ -9,68 +9,152 @@ license: CC0 1.0
 emoji: 🕰️
 color: "#D8B98A"
 ---
-Mummolan vanhassa talossa oli tapahtunut jotain kummallista. Isoisän kultainen taskukello, joka oli aina maannut kirjoituspöydän sinisellä liinalla, oli kadonnut.
+Mummolan vanhassa talossa oli tapahtunut jotain kummallista.
 
-– Se oli siinä vielä eilen illalla, mummo sanoi huolestuneena. – Se on ollut isoisän isän kello. Se on meille tosi tärkeä.
+Talo oli keltainen, ja sen kuistilla oli keinutuoli, joka narisi jokaisesta tuulenpuuskasta. Sisällä tuoksui aina kahvilta ja pullalta, ja olohuoneen seinällä tikitti vanha kaappikello.
+
+Mutta nyt jotain puuttui. Isoisän kultainen taskukello, joka oli aina maannut kirjoituspöydän sinisellä liinalla, oli kadonnut.
+
+– Se oli siinä vielä eilen illalla, mummo sanoi huolestuneena. – Isoisä veti sen ennen nukkumaanmenoa niin kuin aina. Se on ollut isoisän isän kello. Se on meille tosi tärkeä.
+
+Isoisä istui keittiönpöydän ääressä hiljaisena. Hän ei sanonut mitään, mutta hän pyöritteli kahvikuppiaan eikä juonut siitä.
 
 Veera ja hänen pikkuveljensä Otto katsoivat toisiaan.
 
-– Me selvitämme tämän, Veera sanoi. Hän oli lukenut kaikki salapoliisikirjat, jotka mummolan hyllystä löytyivät.
+– Me selvitämme tämän, Veera sanoi. Hän oli lukenut kaikki salapoliisikirjat, jotka mummolan hyllystä löytyivät, ja joitakin kahteen kertaan.
 
-Otto haki eteisestä suurennuslasin, ja tutkimus alkoi.
+– Me olemme salapoliisit, Otto sanoi. – Veera on päällikkö, ja minä olen apulaispäällikkö.
 
-**Ensimmäinen vihje** löytyi heti kirjoituspöydältä. Liinalla oli jotain pientä ja mustaa.
+– Sinä olet apulainen, Veera sanoi.
 
-– Höyhen, Otto sanoi suurennuslasin takaa. – Musta, ja vähän sininen kiilto.
+– Apulaispäällikkö, Otto sanoi päättäväisesti.
+
+Otto haki eteisen laatikosta isoisän suurennuslasin, ja tutkimus alkoi.
+
+**Ensimmäinen vihje** löytyi heti kirjoituspöydältä.
+
+Veera kumartui liinan ylle. Otto piti suurennuslasia niin läheltä, että hänen silmänsä näytti lasin takana valtavalta.
+
+Liinalla oli jotain pientä ja mustaa.
+
+– Höyhen, Otto sanoi. – Musta, ja vähän sininen kiilto.
+
+Veera nosti höyhenen varovasti kahden sormen väliin ja käänsi sitä valoa vasten. Kun valo osui siihen, se kimalsi sinisenä ja vihreänä, kuin öljy vesilätäkössä.
 
 – Ikkuna oli yöllä auki, Veera huomasi. – Mummo tuulettaa aina ennen nukkumaanmenoa.
 
-**Toinen vihje** löytyi ikkunalaudalta: pienet, kolmihaaraiset jäljet pölyssä.
+**Toinen vihje** löytyi ikkunalaudalta.
+
+Ikkunalaudalla oli ohut kerros siitepölyä, sillä pihan koivut kukkivat. Ja pölyssä näkyi pieniä, kolmihaaraisia jälkiä.
 
 – Linnun jäljet, Veera sanoi. – Isot linnun jäljet.
+
+Otto mittasi jäljen peukalollaan. Se oli melkein yhtä pitkä kuin hänen peukalonsa.
+
+– Tosi iso lintu, hän sanoi. – Ehkä kotka.
+
+– Kotkat eivät tule mummolan ikkunasta sisään, Veera sanoi.
 
 Veera kaivoi taskustaan muistivihon ja kirjoitti: *Musta höyhen, sininen kiilto. Linnun jäljet. Ikkuna auki.*
 
 – Varis? Otto ehdotti.
 
-– Ehkä, Veera sanoi. – Mutta mitä varis tekisi kellolla?
+– Ehkä, Veera sanoi. – Variksen höyhen on musta. Mutta onko se sinisen kiiltävä? Ja mitä varis tekisi kellolla?
 
-He menivät kysymään mummolta.
+Heidän piti tehdä niin kuin oikeat salapoliisit. Kysyä todistajilta.
 
-– Hmm, mummo sanoi ja mietti. – Täällä pihalla asuu kyllä harakka. Harakat rakastavat kiiltäviä esineitä. Viime kesänä yksi vei pyykkinarulta hopeisen hiussoljen.
+He menivät kysymään mummolta. Mummo oli puutarhassa kitkemässä porkkanapenkkiä.
+
+– Hmm, mummo sanoi, nousi seisomaan ja pyyhki multaisia käsiään esiliinaansa. – Täällä pihalla asuu kyllä harakka. Harakat rakastavat kiiltäviä esineitä. Viime kesänä yksi vei pyykkinarulta hopeisen hiussoljen. Etsin sitä viikon.
 
 – Harakan höyhen on musta ja kiiltää sinisenä! Veera huudahti. – Ja harakka on iso lintu!
 
+– Melkein kotka, Otto sanoi tyytyväisenä.
+
 Nyt oli löydettävä harakan pesä.
 
-**Kolmas vihje** tuli Otolta. Hän seisoi pihalla ja osoitti puutarhaa.
+Mutta piha oli iso. Siellä oli omenapuita, koivuja, pihlaja, kaksi kuusta ja vanha vaahtera. Mistä aloittaa?
 
-– Kuunnelkaa!
+He kiersivät ensin koivut. Niissä oli yksi pieni pesä, mutta se oli västäräkin, ja västäräkki tuli hätäisesti pyrstöään heiluttaen kertomaan, että sinne ei kurkita.
 
-Hetken oli hiljaista. Sitten jostain kuului heikko ääni: tik, tik, tik, tik.
+– Anteeksi! Otto huusi ja perääntyi.
 
-– Kello käy vielä! Veera kuiskasi. – Isoisä veti sen eilen illalla.
+Sitten he katsoivat vaahteraa. Siinä ei ollut yhtään pesää, vain yksi vanha leija, joka oli jäänyt kiinni kahden kesän takaa.
 
-He kulkivat ääntä kohti. Tik, tik, tik. Ohi omenapuiden, ohi marjapensaiden, kohti vanhaa kuusta pihan perällä. Ääni voimistui. Ja kun he katsoivat ylös, he näkivät sen: korkealla oksien välissä oli iso, pyöreä risupesä, jossa oli katto.
+**Kolmas vihje** tuli Otolta.
 
-– Harakan pesä, Veera sanoi. – Harakat rakentavat pesäänsä katon.
+Hän seisoi keskellä pihaa silmät kiinni ja kädet korvien takana.
 
-Isoisä toi tikkaat. Hän piteli niitä tiukasti, ja Veera kiipesi varovasti ylös. Pesän kyljessä oli aukko. Veera kurkisti sisään, ja siellä, sammalten ja oksien seassa, kimalteli kaikenlaista: alumiinifoliota, lasinpala, sininen nappi, avain, hiussolki… ja kultainen taskukello. Tik, tik, tik.
+– Mitä sinä teet? Veera kysyi.
 
-Veera otti kellon varovasti. Sitten hän katsoi muita aarteita ja mietti hetken.
+– Kuuntelen, Otto sanoi. – Kuunnelkaa!
+
+Hetken oli hiljaista. Mehiläinen surisi omenapuun kukissa. Kaukana ajoi traktori.
+
+Sitten jostain kuului heikko ääni: tik, tik, tik, tik.
+
+– Kello käy vielä! Veera kuiskasi. – Isoisä veti sen eilen illalla. Se käy koko päivän.
+
+– Minä keksin sen, Otto sanoi. – Apulaispäällikkö keksi sen.
+
+– Hyvin keksitty, apulaispäällikkö, Veera sanoi. Otto kasvoi ainakin sentin.
+
+He kulkivat ääntä kohti. Tik, tik, tik. Ohi omenapuiden, ohi marjapensaiden, kohti vanhaa kuusta pihan perällä.
+
+Ääni voimistui. Tik, tik, tik.
+
+Ja kun he katsoivat ylös, he näkivät sen: korkealla oksien välissä oli iso, pyöreä risupesä, jossa oli katto.
+
+– Harakan pesä, Veera sanoi. – Harakat rakentavat pesäänsä katon. Luin sen lintukirjasta.
+
+Veera juoksi hakemaan isoisän. Isoisä tuli niin nopeasti, että hänen tohvelinsa melkein lensivät jaloista.
+
+Isoisä toi tikkaat. Hän piteli niitä tiukasti, ja Veera kiipesi varovasti ylös, askelma kerrallaan. Kuusen oksat raapivat käsivarsia ja tuoksuivat pihkalta.
+
+Pesän kyljessä oli aukko. Veera kurkisti sisään.
+
+Ja siellä, sammalten ja oksien seassa, kimalteli kaikenlaista: alumiinifoliota, lasinpala, sininen nappi, avain, hiussolki… ja kultainen taskukello. Tik, tik, tik.
+
+Veera otti kellon varovasti. Se oli lämmin auringosta ja painava kämmenellä. Sitten hän katsoi muita aarteita ja mietti hetken.
 
 – Isoisä, hän huusi alas. – Tässä on myös mummon hiussolki viime kesältä!
 
-Kun Veera kiipesi alas, harakka istui jo läheisellä oksalla ja nakutti närkästyneenä.
+– Ja avain! Veera lisäsi. – Pieni messinkiavain.
+
+– Sehän on vanhan aittamme avain, isoisä nauroi alhaalla. – Olen etsinyt sitä kolme vuotta!
+
+Kun Veera kiipesi alas, harakka istui jo läheisellä oksalla ja nakutti närkästyneenä. Tsäk tsäk tsäk!
 
 – Anteeksi, Veera sanoi linnulle. – Mutta nämä eivät olleet sinun.
 
-Illalla mummo leipoi juhlan kunniaksi mustikkapiirakkaa. Isoisä pani kellon taskuunsa ja lupasi, että ikkunalaudalle ei enää jätetä mitään kiiltävää.
+Isoisä otti kellon käteensä. Hän piti sitä pitkään kämmenellään ja kuunteli sen tikitystä. Sitten hän hymyili ensimmäistä kertaa koko aamuna.
+
+– Kiitos, salapoliisit, hän sanoi.
+
+– Ja apulaispäällikkö, Otto sanoi.
+
+– Ja erityisesti apulaispäällikkö, isoisä sanoi.
+
+Illalla mummo leipoi juhlan kunniaksi mustikkapiirakkaa. Koko keittiö tuoksui mustikalta ja voilta.
+
+Isoisä pani kellon taskuunsa ja lupasi, että ikkunalaudalle ei enää jätetä mitään kiiltävää. Mummo lupasi, että hiussoljet pysyvät jatkossa laatikossa.
 
 – Mutta yksi asia, Otto sanoi suu täynnä piirakkaa. – Harakka jäi nyt ilman aarteita.
 
-Veera mietti. Sitten hän haki laatikosta kourallisen kiiltäviä karkkipapereita ja vanhan rikkinäisen lusikan ja vei ne kuusen juurelle.
+Kaikki hiljenivät hetkeksi.
+
+Veera mietti. Hänestä tuntui, ettei tapaus ollut vielä aivan valmis.
+
+Sitten hän haki laatikosta kourallisen kiiltäviä karkkipapereita ja vanhan rikkinäisen lusikan. Otto lisäsi joukkoon yhden lasikuulan, joka oli hänen toiseksi paras.
+
+He veivät aarteet kuusen juurelle ja asettelivat ne siististi kannon päälle.
 
 Seuraavana aamuna ne olivat poissa. Ja kuusen oksalla harakka nakutti hyvin tyytyväisen kuuloisesti.
 
 Veera kirjoitti muistivihkoonsa viimeisen rivin: *Tapaus ratkaistu. Kaikki tyytyväisiä.*
+
+Otto kurkisti hänen olkansa yli.
+
+– Kirjoita myös, että apulaispäällikkö ratkaisi sen, hän sanoi.
+
+Veera hymyili ja lisäsi pienellä: *Apulaispäällikön ansiosta.*

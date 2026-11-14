@@ -107,7 +107,11 @@ Kotiin palattuaan hän vei kultaneidon pajaansa ja sulatti sen ahjossa. Hän tek
 
 Kullasta hän takoi lyhtyjä ja kauniita koruja kylän ihmisille, ja hopeasta pieniä kelloja lasten kelkkoihin. Jokaisen lahjan hän vei itse ja koputti oveen.
 
-Pian Ilmarisen pajassa kävi taas väkeä. Joku toi rikkinäisen kirveen, joku tuli vain juttelemaan, joku toi pullaa. Lapset kilistivät kellojaan pihalla ja laskivat mäkeä pajan vieressä.
+Pian Ilmarisen pajassa kävi taas väkeä. Joku toi rikkinäisen kirveen, joku tuli vain juttelemaan, joku toi pullaa. Lapset kilistivät kellojaan pihalla ja laskivat mäkeä pajan vieressä. Aino laski aina ensimmäisenä, ja hänen kelkkansa kello soi kirkkaimmin.
+
+– Seppä! Aino huusi mäen päältä. – Tule sinäkin!
+
+Ja Ilmarinen tuli. Hän istui lasten kanssa kelkkaan, ja kelkka kiisi alas niin, että lumi pöllysi ja kaikki nauroivat.
 
 Ja vasara alkoi taas laulaa. Kling, klang, kling, klang.
 
