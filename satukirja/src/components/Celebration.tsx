@@ -23,13 +23,15 @@ interface Props {
   stickerCount: number;
   totalStories: number;
   nextStory?: Story;
+  /** Onko seuraava satu saman jatkokertomuksen seuraava luku? */
+  isNextChapter?: boolean;
   onNext: () => void;
   onClose: () => void;
 }
 
 const CONFETTI = ['✨', '⭐', '🎉', '💫', '✨', '⭐'];
 
-export function Celebration({ visible, story, isNewSticker, stickerCount, totalStories, nextStory, onNext, onClose }: Props) {
+export function Celebration({ visible, story, isNewSticker, stickerCount, totalStories, nextStory, isNextChapter, onNext, onClose }: Props) {
   const { colors, profile } = useAppData();
   const pop = useRef(new Animated.Value(0)).current;
   const evening = new Date().getHours() >= 18 || new Date().getHours() < 5;
@@ -72,6 +74,11 @@ export function Celebration({ visible, story, isNewSticker, stickerCount, totalS
               ? `Sait uuden tarran: ${story.title}`
               : `Luit sadun ${story.title} taas loppuun.`}
           </AppText>
+          {isNextChapter ? (
+            <AppText variant="subtitle" color={colors.primary} style={styles.center}>
+              {evening ? '📖 Tarina jatkuu huomenna!' : '📖 Tarina jatkuu seuraavassa luvussa!'}
+            </AppText>
+          ) : null}
 
           {leveledUp ? (
             <View style={[styles.level, { backgroundColor: colors.primarySoft }]}>
@@ -89,11 +96,15 @@ export function Celebration({ visible, story, isNewSticker, stickerCount, totalS
             {evening ? (
               <>
                 <PrimaryButton label="Hyvää yötä 🌙" onPress={onClose} />
-                {nextStory ? <SecondaryButton label={`Vielä yksi: ${nextStory.title}`} onPress={onNext} /> : null}
+                {nextStory ? (
+                  <SecondaryButton label={isNextChapter ? 'Lue seuraava luku nyt' : `Vielä yksi: ${nextStory.title}`} onPress={onNext} />
+                ) : null}
               </>
             ) : (
               <>
-                {nextStory ? <PrimaryButton label={`Seuraava: ${nextStory.title}`} onPress={onNext} /> : null}
+                {nextStory ? (
+                  <PrimaryButton label={isNextChapter ? 'Seuraava luku' : `Seuraava: ${nextStory.title}`} onPress={onNext} />
+                ) : null}
                 <SecondaryButton label="Valmis" onPress={onClose} />
               </>
             )}

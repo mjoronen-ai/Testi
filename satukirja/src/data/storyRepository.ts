@@ -36,6 +36,7 @@ export const TOPIC_GROUPS: StoryGroup[] = [
   { id: 'seikkailusadut', title: 'Seikkailusadut', description: 'Jännitystä isommille', emoji: '🧭', color: categoryColors.seikkailusadut, matches: byCategory('seikkailusadut') },
   { id: 'joulusadut', title: 'Joulusadut', description: 'Tonttuja, poroja ja joulun taikaa', emoji: '🎄', color: categoryColors.joulusadut, matches: byCategory('joulusadut') },
   { id: 'vuodenajat', title: 'Vuodenajat ja juhlat', description: 'Kevättä, kesää, syksyä ja talvea', emoji: '🍂', color: categoryColors.vuodenajat, matches: byCategory('vuodenajat') },
+  { id: 'jatkokertomukset', title: 'Jatkokertomukset', description: 'Luku kerrallaan, ilta illalta', emoji: '📖', color: '#C9B3E6', matches: (s) => !!s.series },
   { id: 'lyhyet', title: 'Lyhyet', description: `Alle ${SHORT_STORY_MINUTES} minuuttia`, emoji: '⏱️', color: categoryColors.lyhyet, matches: (s) => s.readingMinutes < SHORT_STORY_MINUTES },
 ];
 
@@ -126,8 +127,9 @@ export function paragraphs(story: Story): string[] {
  * eikä liian vauvamainen). Lukemattomat ensin, jotta lapsi löytää aina uutta.
  */
 export function getRecommended(age: number, completedIds: string[] = []): Story[] {
-  const fits = ALL_STORIES.filter((s) => s.ageMin <= age && s.ageMin >= age - 3);
-  const pool = fits.length > 0 ? fits : ALL_STORIES.filter((s) => s.ageMin <= age);
+  const standalone = ALL_STORIES.filter((s) => !s.series || s.chapter === 1);
+  const fits = standalone.filter((s) => s.ageMin <= age && s.ageMin >= age - 3);
+  const pool = fits.length > 0 ? fits : standalone.filter((s) => s.ageMin <= age);
   const unread = pool.filter((s) => !completedIds.includes(s.id));
   const read = pool.filter((s) => completedIds.includes(s.id));
   return [...rotateDaily(unread), ...rotateDaily(read)];
@@ -153,6 +155,50 @@ export function rotateDaily<T>(list: T[], date = new Date()): T[] {
 /** Ikäryhmän tunniste lapsen iän mukaan (etusivun "Kaikki"-linkkiä varten). */
 export function ageGroupIdFor(age: number): string {
   return age <= 3 ? 'ika-pienet' : age <= 5 ? 'ika-leikki' : 'ika-isommat';
+}
+
+// ---------------------------------------------------------------------------
+// Jatkokertomukset
+// ---------------------------------------------------------------------------
+
+export interface Series {
+  id: string;
+  title: string;
+  chapters: Story[];
+}
+
+/** Kaikki jatkokertomukset lukuineen (luvut numerojärjestyksessä). */
+export const ALL_SERIES: Series[] = (() => {
+  const map = new Map<string, Series>();
+  for (const s of ALL_STORIES) {
+    if (!s.series) continue;
+    const entry = map.get(s.series) ?? { id: s.series, title: s.seriesTitle ?? s.series, chapters: [] };
+    entry.chapters.push(s);
+    map.set(s.series, entry);
+  }
+  for (const e of map.values()) e.chapters.sort((a, b) => (a.chapter ?? 0) - (b.chapter ?? 0));
+  return [...map.values()];
+})();
+
+export function getSeries(id?: string): Series | undefined {
+  return id ? ALL_SERIES.find((x) => x.id === id) : undefined;
+}
+
+/** Saman jatkokertomuksen seuraava luku, jos sellainen on. */
+export function getNextChapter(story: Story): Story | undefined {
+  const series = getSeries(story.series);
+  return series?.chapters.find((c) => (c.chapter ?? 0) === (story.chapter ?? 0) + 1);
+}
+
+/** Esim. "Luku 2/6" tai undefined, jos satu ei ole jatkokertomus. */
+export function chapterLabel(story: Story): string | undefined {
+  const series = getSeries(story.series);
+  return series ? `Luku ${story.chapter}/${series.chapters.length}` : undefined;
+}
+
+/** Jatkokertomuksesta se luku, josta lukemista kannattaa jatkaa (ensimmäinen lukematon). */
+export function nextUnreadChapter(series: Series, completedIds: string[]): Story {
+  return series.chapters.find((c) => !completedIds.includes(c.id)) ?? series.chapters[0];
 }
 
 /** Onko joulun aika? Joulusadut nostetaan etusivulle 1.11.–6.1. */

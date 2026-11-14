@@ -29,6 +29,8 @@ import {
   ALL_STORIES,
   categoryTitle,
   getNextStory,
+  getNextChapter,
+  chapterLabel,
   getStory,
   paragraphs as splitParagraphs,
 } from '@/data/storyRepository';
@@ -181,7 +183,9 @@ export default function StoryScreen() {
 
   const lineHeight = Math.round(fontSize * 1.6);
   const completedIds = Object.keys(app.completed);
-  const nextStory = getNextStory(story.id, app.profile.age, completedIds);
+  const nextChapter = getNextChapter(story);
+  const nextStory = nextChapter ?? getNextStory(story.id, app.profile.age, completedIds);
+  const chapter = chapterLabel(story);
 
   return (
     <SafeAreaView style={[styles.root, { backgroundColor: colors.background }]} edges={['top', 'left', 'right']}>
@@ -233,7 +237,12 @@ export default function StoryScreen() {
           done={!!app.completed[story.id]}
           style={softShadow(colors.shadow, 1)}
         />
-        <AppText variant="display" style={[styles.center, { marginTop: spacing.md }]} accessibilityRole="header">
+        {chapter ? (
+          <AppText variant="overline" color={colors.primary} style={[styles.center, { marginTop: spacing.md }]}>
+            Jatkokertomus · {chapter}
+          </AppText>
+        ) : null}
+        <AppText variant="display" style={[styles.center, { marginTop: chapter ? 0 : spacing.md }]} accessibilityRole="header">
           {story.title}
         </AppText>
         <View style={styles.metaRow}>
@@ -344,6 +353,7 @@ export default function StoryScreen() {
           stickerCount={celebration.count}
           totalStories={ALL_STORIES.length}
           nextStory={nextStory}
+          isNextChapter={!!nextChapter}
           onNext={() => {
             setCelebration(null);
             if (nextStory) router.replace(`/story/${nextStory.id}`);

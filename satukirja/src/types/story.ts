@@ -45,4 +45,12 @@ export interface Story {
   color?: string;
   /** Kortin kuvana näytettävä emoji (vapaaehtoinen), esim. "🦊". */
   emoji?: string;
+
+  // --- Jatkokertomukset (vapaaehtoiset kentät) ---
+  /** Jatkokertomuksen tunniste, sama kaikilla saman tarinan luvuilla, esim. "tahtilaiva-aalto". */
+  series?: string;
+  /** Jatkokertomuksen nimi, esim. "Tähtilaiva Aallon matka". */
+  seriesTitle?: string;
+  /** Luvun numero (1, 2, 3…). */
+  chapter?: number;
 }

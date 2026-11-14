@@ -8,6 +8,7 @@ import { StyleSheet, View } from 'react-native';
 import { router } from 'expo-router';
 import type { Story } from '@/types/story';
 import { useAppData } from '@/storage/AppDataContext';
+import { chapterLabel } from '@/data/storyRepository';
 import { radius, softShadow, spacing } from '@/theme/theme';
 import { AppText } from './AppText';
 import { FavoriteButton } from './FavoriteButton';
@@ -31,6 +32,7 @@ export function StoryTile({ story }: { story: Story }) {
         {story.title}
       </AppText>
       <AppText variant="caption" muted>
+        {chapterLabel(story) ? `${chapterLabel(story)} · ` : ''}
         {story.readingMinutes} min · {story.ageMin}+ v
       </AppText>
     </PressableScale>
@@ -54,6 +56,7 @@ export function StoryCard({ story }: { story: Story }) {
           {story.title}
         </AppText>
         <View style={styles.metaRow}>
+          {chapterLabel(story) ? <Pill text={`📖 ${chapterLabel(story)}`} strong /> : null}
           <Pill text={`⏱ ${story.readingMinutes} min`} />
           <Pill text={`${story.ageMin}+ v`} />
           {done ? <Pill text="✓ Luettu" strong /> : null}

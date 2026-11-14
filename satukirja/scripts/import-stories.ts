@@ -25,6 +25,11 @@
  *   color: "#F6C9A8"     (vapaaehtoinen)
  *   readingMinutes: 4    (vapaaehtoinen, muuten lasketaan automaattisesti)
  *   ---
+ *
+ * Jatkokertomuksen luvussa on lisäksi:
+ *   series: tahtilaiva-aalto              (sama kaikissa luvuissa)
+ *   seriesTitle: Tähtilaiva Aallon matka  (sama kaikissa luvuissa)
+ *   chapter: 1
  *   Olipa kerran...
  *
  *   Uusi kappale alkaa tyhjän rivin jälkeen.
@@ -131,6 +136,16 @@ function validate(raw: RawStory, fileName: string, fallbackId: string): Story | 
     author,
     license,
   };
+  if (raw.series !== undefined) {
+    const chapter = Number(raw.chapter);
+    if (typeof raw.series !== 'string' || typeof raw.seriesTitle !== 'string' || !Number.isInteger(chapter) || chapter < 1) {
+      errors.push(`${where}: jatkokertomuksessa pitää olla series (teksti), seriesTitle (teksti) ja chapter (1, 2, 3…)`);
+      return null;
+    }
+    story.series = slugify(raw.series);
+    story.seriesTitle = raw.seriesTitle.trim();
+    story.chapter = chapter;
+  }
   if (typeof raw.color === 'string') story.color = raw.color;
   if (typeof raw.emoji === 'string') story.emoji = raw.emoji;
   return story;
@@ -182,6 +197,14 @@ function main() {
     seen.add(s.id);
   }
 
+  // Jatkokertomusten luvut: numerot 1..n ilman aukkoja tai tuplia.
+  const seriesMap = new Map<string, number[]>();
+  for (const s of stories) if (s.series) seriesMap.set(s.series, [...(seriesMap.get(s.series) ?? []), s.chapter!]);
+  for (const [sid, chapters] of seriesMap) {
+    const sorted = [...chapters].sort((a, b) => a - b);
+    if (sorted.some((c, i) => c !== i + 1)) errors.push(`Jatkokertomuksen "${sid}" luvut eivät ole 1..${sorted.length}: ${sorted.join(', ')}`);
+  }
+
   warnings.forEach((w) => console.warn(`⚠️  ${w}`));
 
   if (errors.length > 0) {
@@ -190,7 +213,12 @@ function main() {
     process.exit(1);
   }
 
-  stories.sort((a, b) => a.title.localeCompare(b.title, 'fi'));
+  // Aakkosjärjestys; saman jatkokertomuksen luvut pysyvät numerojärjestyksessä.
+  stories.sort((a, b) =>
+    a.series && a.series === b.series
+      ? a.chapter! - b.chapter!
+      : (a.seriesTitle ?? a.title).localeCompare(b.seriesTitle ?? b.title, 'fi'),
+  );
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(stories, null, 2) + '\n', 'utf8');
 
   console.log(`\n✅ Tuotiin ${stories.length} satua → ${path.relative(ROOT, OUTPUT_FILE)}\n`);

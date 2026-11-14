@@ -20,6 +20,8 @@ import {
   getStoryOfTheDay,
   greeting,
   isChristmasSeason,
+  ALL_SERIES,
+  nextUnreadChapter,
   rotateDaily,
   ageGroupIdFor,
   storyColor,
@@ -65,7 +67,8 @@ export default function HomeScreen() {
     () => getRecommended(profile.age, completedIds).filter((s) => s.id !== featured?.id),
     [profile.age, featured?.id, completed],
   );
-  const pick = (pred: (s: (typeof ALL_STORIES)[number]) => boolean) => rotateDaily(ALL_STORIES.filter(pred));
+  const pick = (pred: (s: (typeof ALL_STORIES)[number]) => boolean) =>
+    rotateDaily(ALL_STORIES.filter((s) => (!s.series || s.chapter === 1) && pred(s)));
   const bedtime = pick((s) => s.categories.includes('iltasadut'));
   const short = pick((s) => s.readingMinutes < SHORT_STORY_MINUTES);
   const animals = pick((s) => s.categories.includes('elainsadut'));
@@ -75,6 +78,8 @@ export default function HomeScreen() {
   const seasons = pick((s) => s.categories.includes('vuodenajat'));
   const christmas = pick((s) => s.categories.includes('joulusadut'));
   const christmasSeason = isChristmasSeason();
+  // Jatkokertomuksista näytetään se luku, josta lukeminen jatkuu.
+  const serials = ALL_SERIES.map((s) => nextUnreadChapter(s, completedIds));
 
   const stickerCount = completedIds.filter((id) => getStory(id)).length;
 
@@ -217,6 +222,11 @@ export default function HomeScreen() {
       {christmasSeason && christmas.length > 0 ? (
         <Section title="🎄 Joulun odotukseen" subtitle="Tonttuja, poroja ja joulun taikaa" seeAllHref="/category/joulusadut">
           <Carousel stories={christmas} />
+        </Section>
+      ) : null}
+      {serials.length > 0 ? (
+        <Section title="Jatkokertomukset" subtitle="Yksi luku illassa – mitä seuraavaksi tapahtuu?" seeAllHref="/category/jatkokertomukset">
+          <Carousel stories={serials} />
         </Section>
       ) : null}
       <Section title="Iltasadut" subtitle="Rauhoittumiseen ennen unta" seeAllHref="/category/iltasadut">
