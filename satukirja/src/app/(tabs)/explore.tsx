@@ -6,6 +6,8 @@
 import React, { useMemo, useState } from 'react';
 import { Pressable, StyleSheet, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
+import { SecondaryButton } from '@/components/Buttons';
 import { AGE_GROUPS, ALL_STORIES, TOPIC_GROUPS, searchStories } from '@/data/storyRepository';
 import { useAppData } from '@/storage/AppDataContext';
 import { Screen } from '@/components/Screen';
@@ -104,7 +106,12 @@ export default function ExploreScreen() {
             <AppText variant="title" accessibilityRole="header">
               Kaikki sadut ({ALL_STORIES.length})
             </AppText>
-            <StoryCardList stories={ALL_STORIES} />
+            <StoryCardList stories={ALL_STORIES.slice(0, 8)} />
+            <SecondaryButton
+              label={`Näytä kaikki ${ALL_STORIES.length} satua`}
+              icon="library-outline"
+              onPress={() => router.push('/category/kaikki')}
+            />
           </View>
         </>
       )}

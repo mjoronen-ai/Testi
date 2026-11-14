@@ -20,6 +20,8 @@ import {
   getStoryOfTheDay,
   greeting,
   isChristmasSeason,
+  rotateDaily,
+  ageGroupIdFor,
   storyColor,
 } from '@/data/storyRepository';
 import { useAppData } from '@/storage/AppDataContext';
@@ -63,12 +65,15 @@ export default function HomeScreen() {
     () => getRecommended(profile.age, completedIds).filter((s) => s.id !== featured?.id),
     [profile.age, featured?.id, completed],
   );
-  const bedtime = ALL_STORIES.filter((s) => s.categories.includes('iltasadut'));
-  const short = ALL_STORIES.filter((s) => s.readingMinutes < SHORT_STORY_MINUTES);
-  const animals = ALL_STORIES.filter((s) => s.categories.includes('elainsadut'));
-  const adventures = ALL_STORIES.filter((s) => s.categories.includes('seikkailusadut'));
-  const finnish = ALL_STORIES.filter((s) => s.categories.includes('suomalaiset'));
-  const christmas = ALL_STORIES.filter((s) => s.categories.includes('joulusadut'));
+  const pick = (pred: (s: (typeof ALL_STORIES)[number]) => boolean) => rotateDaily(ALL_STORIES.filter(pred));
+  const bedtime = pick((s) => s.categories.includes('iltasadut'));
+  const short = pick((s) => s.readingMinutes < SHORT_STORY_MINUTES);
+  const animals = pick((s) => s.categories.includes('elainsadut'));
+  const adventures = pick((s) => s.categories.includes('seikkailusadut'));
+  const finnish = pick((s) => s.categories.includes('suomalaiset'));
+  const classics = pick((s) => s.categories.includes('kansansadut') && !s.categories.includes('suomalaiset'));
+  const seasons = pick((s) => s.categories.includes('vuodenajat'));
+  const christmas = pick((s) => s.categories.includes('joulusadut'));
   const christmasSeason = isChristmasSeason();
 
   const stickerCount = completedIds.filter((id) => getStory(id)).length;
@@ -202,7 +207,11 @@ export default function HomeScreen() {
       </PressableScale>
 
       {/* ---------- Karusellit ---------- */}
-      <Section title="Sinulle sopivat" subtitle={`Valittu ${profile.age}${profile.age >= 9 ? '+' : ''}-vuotiaalle`}>
+      <Section
+        title="Sinulle sopivat"
+        subtitle={`Valittu ${profile.age}${profile.age >= 9 ? '+' : ''}-vuotiaalle`}
+        seeAllHref={`/category/${ageGroupIdFor(profile.age)}`}
+      >
         <Carousel stories={recommended} />
       </Section>
       {christmasSeason && christmas.length > 0 ? (
@@ -218,6 +227,12 @@ export default function HomeScreen() {
       </Section>
       <Section title="Suomalaiset kansansadut" subtitle="Vanhoja tarinoita omasta maasta" seeAllHref="/category/suomalaiset">
         <Carousel stories={finnish} />
+      </Section>
+      <Section title="Maailman satuklassikot" subtitle="Grimm, Andersen, Aisopos ja muut" seeAllHref="/category/kansansadut">
+        <Carousel stories={classics} />
+      </Section>
+      <Section title="Vuodenajat ja juhlat" seeAllHref="/category/vuodenajat">
+        <Carousel stories={seasons} />
       </Section>
       <Section title="Eläinsadut" seeAllHref="/category/elainsadut">
         <Carousel stories={animals} />

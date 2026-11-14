@@ -31,7 +31,7 @@ if (fs.existsSync(file)) {
 
 const template = `---
 title: ${title}
-# Kategoriat: elainsadut, kansansadut, suomalaiset, iltasadut, seikkailusadut, joulusadut (yksi tai useampi)
+# Kategoriat: elainsadut, kansansadut, suomalaiset, iltasadut, seikkailusadut, joulusadut, vuodenajat (yksi tai useampi)
 categories: [iltasadut]
 # Pienin suositeltu ikä vuosina
 ageMin: 4

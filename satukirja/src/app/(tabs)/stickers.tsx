@@ -11,7 +11,8 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { router } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
-import { ALL_STORIES, storyColor } from '@/data/storyRepository';
+import { ALL_STORIES, getRecommended, storyColor } from '@/data/storyRepository';
+import { SecondaryButton } from '@/components/Buttons';
 import { useAppData } from '@/storage/AppDataContext';
 import { Screen } from '@/components/Screen';
 import { AppText } from '@/components/AppText';
@@ -20,16 +21,19 @@ import { radius, shade, softShadow, spacing } from '@/theme/theme';
 import { levelFor } from '@/data/levels';
 
 export default function StickersScreen() {
-  const { completed, colors } = useAppData();
+  const { completed, colors, profile } = useAppData();
   const earned = ALL_STORIES.filter((s) => completed[s.id]);
   const { current, next } = levelFor(earned.length);
-  const pct = ALL_STORIES.length > 0 ? earned.length / ALL_STORIES.length : 0;
+  // Palkki näyttää edistymisen seuraavaan tasoon (ei koko kirjastoon, joka on iso).
+  const pct = next ? (earned.length - current.min) / (next.min - current.min) : 1;
 
-  // Ansaitut ensin (ansaintajärjestyksessä), sitten puuttuvat.
-  const ordered = [
-    ...earned.sort((a, b) => completed[a.id].firstAt - completed[b.id].firstAt),
-    ...ALL_STORIES.filter((s) => !completed[s.id]),
-  ];
+  // Ansaitut ensin (ansaintajärjestyksessä), sitten muutama ikään sopiva puuttuva tarra.
+  const SUGGESTED = 9;
+  const missing = getRecommended(profile.age, Object.keys(completed))
+    .filter((s) => !completed[s.id])
+    .slice(0, SUGGESTED);
+  const ordered = [...earned.sort((a, b) => completed[a.id].firstAt - completed[b.id].firstAt), ...missing];
+  const remaining = ALL_STORIES.length - earned.length - missing.length;
 
   return (
     <Screen title="Tarrakirja" subtitle="Lue satu loppuun, niin saat tarran!">
@@ -88,6 +92,15 @@ export default function StickersScreen() {
           );
         })}
       </View>
+
+      {remaining > 0 ? (
+        <View style={{ gap: spacing.sm, alignItems: 'stretch' }}>
+          <AppText muted style={{ textAlign: 'center' }}>
+            …ja vielä {remaining} satua odottaa löytäjäänsä!
+          </AppText>
+          <SecondaryButton label="Etsi lisää satuja" icon="compass-outline" onPress={() => router.push('/explore')} />
+        </View>
+      ) : null}
     </Screen>
   );
 }

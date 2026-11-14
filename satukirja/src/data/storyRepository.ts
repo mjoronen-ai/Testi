@@ -35,6 +35,7 @@ export const TOPIC_GROUPS: StoryGroup[] = [
   { id: 'iltasadut', title: 'Iltasadut', description: 'Rauhallisia tarinoita ennen unta', emoji: '🌙', color: categoryColors.iltasadut, matches: byCategory('iltasadut') },
   { id: 'seikkailusadut', title: 'Seikkailusadut', description: 'Jännitystä isommille', emoji: '🧭', color: categoryColors.seikkailusadut, matches: byCategory('seikkailusadut') },
   { id: 'joulusadut', title: 'Joulusadut', description: 'Tonttuja, poroja ja joulun taikaa', emoji: '🎄', color: categoryColors.joulusadut, matches: byCategory('joulusadut') },
+  { id: 'vuodenajat', title: 'Vuodenajat ja juhlat', description: 'Kevättä, kesää, syksyä ja talvea', emoji: '🍂', color: categoryColors.vuodenajat, matches: byCategory('vuodenajat') },
   { id: 'lyhyet', title: 'Lyhyet', description: `Alle ${SHORT_STORY_MINUTES} minuuttia`, emoji: '⏱️', color: categoryColors.lyhyet, matches: (s) => s.readingMinutes < SHORT_STORY_MINUTES },
 ];
 
@@ -45,7 +46,12 @@ export const AGE_GROUPS: StoryGroup[] = [
   { id: 'ika-isommat', title: 'Isommille', description: '6 vuotta ja yli', emoji: '📚', color: '#CFD8EE', matches: (s) => s.ageMin >= 6 },
 ];
 
-const ALL_GROUPS = [...TOPIC_GROUPS, ...AGE_GROUPS];
+/** Kaikki sadut yhtenä ryhmänä (Selaa → "Näytä kaikki"). */
+const ALL_GROUP: StoryGroup = {
+  id: 'kaikki', title: 'Kaikki sadut', description: 'Koko satukirjasto aakkosjärjestyksessä', emoji: '📚', color: '#F3D27A', matches: () => true,
+};
+
+const ALL_GROUPS = [...TOPIC_GROUPS, ...AGE_GROUPS, ALL_GROUP];
 
 export function getGroup(id: string): StoryGroup | undefined {
   return ALL_GROUPS.find((g) => g.id === id);
@@ -122,17 +128,31 @@ export function paragraphs(story: Story): string[] {
 export function getRecommended(age: number, completedIds: string[] = []): Story[] {
   const fits = ALL_STORIES.filter((s) => s.ageMin <= age && s.ageMin >= age - 3);
   const pool = fits.length > 0 ? fits : ALL_STORIES.filter((s) => s.ageMin <= age);
-  return [...pool].sort((a, b) => {
-    const ar = completedIds.includes(a.id) ? 1 : 0;
-    const br = completedIds.includes(b.id) ? 1 : 0;
-    return ar - br || b.ageMin - a.ageMin;
-  });
+  const unread = pool.filter((s) => !completedIds.includes(s.id));
+  const read = pool.filter((s) => completedIds.includes(s.id));
+  return [...rotateDaily(unread), ...rotateDaily(read)];
 }
 
 /** Seuraava satu luettavaksi: ensimmäinen lukematon suositus (tai satunnainen muu). */
 export function getNextStory(currentId: string, age: number, completedIds: string[]): Story | undefined {
   const rec = getRecommended(age, completedIds).filter((s) => s.id !== currentId);
   return rec.find((s) => !completedIds.includes(s.id)) ?? rec[0];
+}
+
+/**
+ * Kiertää listaa päivän mukaan: karusellien alussa näkyy joka päivä eri satuja,
+ * joten etusivu tuntuu tuoreelta ilman satunnaisuutta (järjestys pysyy saman päivän ajan).
+ */
+export function rotateDaily<T>(list: T[], date = new Date()): T[] {
+  if (list.length < 2) return list;
+  const day = Math.floor(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86_400_000);
+  const k = (day * 5) % list.length;
+  return [...list.slice(k), ...list.slice(0, k)];
+}
+
+/** Ikäryhmän tunniste lapsen iän mukaan (etusivun "Kaikki"-linkkiä varten). */
+export function ageGroupIdFor(age: number): string {
+  return age <= 3 ? 'ika-pienet' : age <= 5 ? 'ika-leikki' : 'ika-isommat';
 }
 
 /** Onko joulun aika? Joulusadut nostetaan etusivulle 1.11.–6.1. */

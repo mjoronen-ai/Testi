@@ -43,8 +43,12 @@ export function Section({ title, subtitle, seeAllHref, children }: SectionProps)
   );
 }
 
+/** Karusellissa näytetään enintään näin monta satua; loput löytyvät "Kaikki"-linkistä. */
+const CAROUSEL_MAX = 15;
+
 /** Vaakasuuntainen satukaruselli. Ulottuu ruudun reunasta reunaan. */
-export function Carousel({ stories }: { stories: Story[] }) {
+export function Carousel({ stories: all }: { stories: Story[] }) {
+  const stories = all.slice(0, CAROUSEL_MAX);
   return (
     <ScrollView
       horizontal
