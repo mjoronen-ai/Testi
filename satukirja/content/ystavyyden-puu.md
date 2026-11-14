@@ -33,7 +33,7 @@ Seuraavaksi paikalle tuli orava.
 
 – Tarvitseeko puu vettä? orava kysyi. – Minä tiedän, missä on puro.
 
-Orava toi vettä tammenterholle joka aamu. Jänis kantoi lehtiä, ettei yöhalla palellut maata. Ja Matti kaivoi pienen ojan, jota pitkin sadevesi valui oikeaan paikkaan.
+Orava toi vettä tammenterholle joka aamu. Jänis kantoi lehtiä, ettei maa jäätyisi yöllä. Ja Matti kaivoi pienen ojan, jota pitkin sadevesi valui oikeaan paikkaan.
 
 Odottaminen oli pitkää. Mutta odottaessaan eläimet kertoivat toisilleen tarinoita. He leikkivät hippaa aukealla. Jänis opetti Matille, miten hypätään, ja Matti opetti jänikselle, miten kaivetaan. Se meni kummaltakin aika huonosti, ja he nauroivat paljon.
 
