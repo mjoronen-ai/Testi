@@ -43,6 +43,20 @@ Maalaishiiri oli utelias, joten se lähti mukaan.
 
 Matka kaupunkiin oli pitkä. Hiiret kulkivat peltoja ja ojanpientareita pitkin. Ne hyppäsivät heinäkuorman kyytiin ja matkasivat kärryjen mukana maantietä. Kärryt kolisivat ja heinä pisteli, mutta Kaupunkihiiri sanoi, että näin matkustivat kaikki fiksut hiiret.
 
+Puolimatkassa kärryt pysähtyivät joen rantaan, ja hevonen joi vettä. Hiiret kömpivät heinien seasta venyttelemään.
+
+Rannalla istui vanha rotta ja onki kaislanvarrella.
+
+– Minne matka, nuoret hiiret? rotta kysyi.
+
+– Kaupunkiin! Kaupunkihiiri vastasi. – Näytän serkulleni, miten oikeat hiiret elävät.
+
+Rotta katsoi heitä pitkään ja silmäili Kaupunkihiiren hienoa liiviä.
+
+– Minäkin asuin ennen kaupungissa, se sanoi. – Siellä on paljon kaikkea. Mutta muistakaa katsoa myös sitä, mitä siellä ei ole.
+
+Maalaishiiri ei ymmärtänyt, mitä rotta tarkoitti. Se aikoi kysyä, mutta silloin kärryt lähtivät taas liikkeelle, ja hiiret joutuivat hyppäämään kyytiin.
+
 Kun ilta hämärtyi, he saapuivat kaupunkiin. Maalaishiiri ei ollut koskaan nähnyt mitään vastaavaa.
 
 Talot olivat korkeita kuin kalliot. Kaduilla kolisivat vaunut ja hevosten kaviot. Ikkunoista loisti keltaista valoa, ja jostain kuului musiikkia. Ilmassa tuoksui savu, leipä ja jokin makea, mitä Maalaishiiri ei tunnistanut.
@@ -88,6 +102,8 @@ Maalaishiiri istui pimeässä vapisten. Sen vatsa oli edelleen tyhjä. Ja vaikka
 Kolon ulkopuolelta kuului kellon tikitys, ja kadulta vaunujen kolina. Kaukana haukkui koira. Kaupungissa ei ollut koskaan aivan hiljaista.
 
 Maalaishiiri ajatteli kotiaan. Heinäsirkkoja. Kuivattua mansikkaa. Pehmeää ohdakevuodetta.
+
+Nyt se ymmärsi, mitä vanha rotta oli tarkoittanut. Kaupungissa oli kakkua ja juustoa ja samettityynyjä. Mutta siellä ei ollut hiljaisuutta. Siellä ei ollut tähtiä, joita laskea. Eikä siellä ollut yhtään paikkaa, jossa olisi voinut syödä kiirehtimättä.
 
 – Serkku, se sanoi lopulta. – Kiitos kutsusta. Ruokasi on hienoa, mutta minä lähden kotiin.
 

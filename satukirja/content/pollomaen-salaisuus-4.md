@@ -94,7 +94,7 @@ Sivun reunaan oli kirjoitettu lyijykynällä niin pienellä, että teksti näkyi
 
 *Kun järvi jäätyy, vene nukkuu katon alla.*
 *Se nukkuu selällään ja näkee unta kesästä.*
-*Katso, mitä sen vatsaan on kirjoitettu.*
+*Kurkista sen sisään, keskimmäisen penkin alle.*
 *Siellä on viimeinen vihje.*
 
 – Viimeinen vihje! Aada sanoi. – Me olemme jo melkein perillä!

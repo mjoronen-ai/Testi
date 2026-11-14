@@ -11,50 +11,104 @@ color: "#C9D6E3"
 ---
 Suuren kaupungin korjaamossa asui pieni robotti nimeltä Piippu. Se oli tehty vanhoista radion osista, ja sen rinnassa oli kaiutin, josta kuului aina jotain: piippauksia, surinaa, musiikkia ja uutisia.
 
-Piippu rakasti ääniä. Se tunsi kaupungin jokaisen äänen: raitiovaunun kolinan, kahvinkeittimen porinan ja liikennevalojen tikityksen.
+Piippu oli suunnilleen kissan kokoinen. Sillä oli kaksi pyörää jalkojen tilalla, kaksi pihtikättä ja pää, jossa oli pyöreät lamppusilmät. Kun se oli iloinen, silmät hehkuivat vihreinä. Kun se mietti, ne vilkkuivat keltaisina.
 
-Eräänä päivänä korjaamon omistaja, Aino-mekaanikko, pakkasi auton.
+Piippu rakasti ääniä. Se tunsi kaupungin jokaisen äänen: raitiovaunun kolinan, kahvinkeittimen porinan ja liikennevalojen tikityksen. Se tunsi kerrostalon hissin huokauksen ja leipomon oven kilinän. Se osasi matkia niitä kaikkia.
+
+Korjaamossa oli aina ääntä. Porakone pärisi, vasara kolkkasi ja radio soi. Ja Piippu soitti päälle omia ääniään, koska sen mielestä mitä enemmän ääntä, sitä parempi.
+
+Eräänä päivänä korjaamon omistaja, Aino-mekaanikko, pakkasi auton. Hän pakkasi teltan, kalastusvavan, makuupussin ja ison laatikon voileipiä.
 
 – Lähdemme mökille, hän sanoi. – Sinäkin pääset mukaan, Piippu.
 
-Mökki oli syvällä metsässä järven rannalla. Kun auton moottori sammui, Piippu kuuli jotain, mitä se ei ollut koskaan kuullut.
+– Mökki, Piippu toisti. – Haetaan tietokannasta. Mökki: pieni talo, usein maalla. Äänet: tuntemattomia.
+
+– Tiedät pian, Aino sanoi ja hymyili.
+
+Matka kesti monta tuntia. Kaupungin talot jäivät taakse, ja tilalle tuli peltoja, sitten metsää ja sitten lisää metsää. Tie muuttui kapeammaksi ja mutkaisemmaksi, ja lopulta se oli vain kaksi hiekkaista uraa kuusten välissä.
+
+Mökki oli syvällä metsässä järven rannalla. Se oli punainen ja sillä oli valkoiset ikkunanpielet. Rannassa oli harmaa laituri ja vene.
+
+Kun auton moottori sammui, Piippu kuuli jotain, mitä se ei ollut koskaan kuullut.
 
 Se ei kuullut mitään.
 
-– Virhe, Piippu piippasi huolestuneena. – Äänianturi rikki. Ei signaalia.
+– Virhe, Piippu piippasi huolestuneena. Sen silmät vilkkuivat punaisina. – Äänianturi rikki. Ei signaalia.
 
 Aino nauroi.
 
 – Antureissasi ei ole vikaa. Tämä on hiljaisuutta.
 
-Piippu ei pitänyt hiljaisuudesta. Se tuntui tyhjältä, kuin unohtunut laatikko. Niinpä se laittoi kaiuttimensa soimaan kovalla: diskomusiikkia, uutisia ja piippauksia.
+Piippu ei pitänyt hiljaisuudesta. Se tuntui tyhjältä, kuin unohtunut laatikko. Se tuntui samalta kuin silloin, kun korjaamon sähköt katkesivat kerran ukkosella.
 
-Silloin rantakivellä istunut pieni lintu pyrähti pakoon. Järven pinnalla uiskennellut sorsaemo kiirehti poikasineen kaislikkoon. Metsä vetäytyi kauemmas.
+Niinpä se laittoi kaiuttimensa soimaan kovalla: diskomusiikkia, uutisia ja piippauksia. Bum-tsik, bum-tsik! Tänään sääennuste lupaa! Piip-piip-piip!
 
-Piippu sammutti musiikin. Se jäi seisomaan rannalle, ja sen pieni moottori surisi apeasti.
+Silloin rantakivellä istunut pieni lintu pyrähti pakoon. Järven pinnalla uiskennellut sorsaemo kiirehti poikasineen kaislikkoon. Orava kipitti kuusen runkoa ylös ja katosi oksien sekaan. Metsä vetäytyi kauemmas.
+
+Piippu sammutti musiikin. Se jäi seisomaan rannalle, ja sen pieni moottori surisi apeasti. Silmät himmenivät siniseksi.
 
 – Kaikki lähtivät, se sanoi.
 
-Aino istui laiturille Piipun viereen.
+Aino istui laiturille Piipun viereen. Hän riisui kengät ja pani jalat veteen.
 
-– Hiljaisuus ei ole tyhjää, hän sanoi. – Se on täynnä pieniä ääniä, jotka kuulee vain, jos itse on hiljaa. Kokeile.
+– Ne eivät ole tottuneet sellaisiin ääniin, hän sanoi. – Sinä olisit samalla tavalla hämmentynyt, jos lintu tulisi korjaamoon ja alkaisi laulaa porakoneen päällä.
 
-Piippu sammutti kaiuttimensa. Se sammutti jopa jäähdytystuulettimensa, vaikka se vähän jännitti.
+Piippu mietti sitä. Se oli totta.
 
-Aluksi se ei kuullut mitään. Sitten se kuuli laineen, joka liplatti laituria vasten: lip, lap, lip. Se kuuli tuulen, joka kulki koivujen latvoissa kuin joku olisi kääntänyt kirjan sivua. Kaukana tikka naputti puuta, ja kaislikosta kuului sorsanpoikasten pieni piipitys.
+– Hiljaisuus ei ole tyhjää, Aino sanoi. – Se on täynnä pieniä ääniä, jotka kuulee vain, jos itse on hiljaa. Kokeile.
+
+Piippu sammutti kaiuttimensa. Se sammutti jopa jäähdytystuulettimensa, vaikka se vähän jännitti. Nyt Piipusta ei kuulunut mitään. Se oli ensimmäinen kerta sen koko elämässä.
+
+Aluksi se ei kuullut mitään. Se odotti. Ja odotti.
+
+Sitten se kuuli laineen, joka liplatti laituria vasten: lip, lap, lip.
+
+Se kuuli tuulen, joka kulki koivujen latvoissa kuin joku olisi kääntänyt kirjan sivua.
+
+Kaukana tikka naputti puuta. Tok-tok-tok-tok. Piippu tunnisti rytmin heti: se oli melkein kuin korjaamon vasara, mutta paljon pehmeämpi.
+
+Ja kaislikosta kuului sorsanpoikasten pieni piipitys.
 
 – Ne piippaavat, Piippu kuiskasi. – Melkein kuin minä.
 
-Piippu kuunteli koko illan. Kun aurinko laski, se kuuli, kuinka metsän äänet vaihtuivat: päivän linnut hiljenivät, sammakot aloittivat konserttinsa ja jossain huhuili pöllö.
+Sen silmät syttyivät vihreiksi.
 
-Seuraavana aamuna pieni lintu palasi rantakivelle. Se katsoi Piippua kallistaen päätään. Piippu pysyi ihan hiljaa. Sitten lintu lauloi lyhyen, kirkkaan sävelen.
+Piippu kuunteli koko illan. Se rullasi laiturin päähän ja takaisin, pysähtyi aina välillä ja kallisti päätään. Se kuuli hyttysen ininän korvansa vieressä. Se kuuli, kuinka kala molskahti kaukana järvellä.
 
-Piippu mietti hetken ja vastasi hiljaisella, lempeällä piippauksella. Lintu lauloi uudestaan. Piippu vastasi.
+Kun aurinko laski, se kuuli, kuinka metsän äänet vaihtuivat: päivän linnut hiljenivät, sammakot aloittivat konserttinsa ja jossain huhuili pöllö.
 
-– Te puhutte keskenänne, Aino ihmetteli kahvikuppi kädessään.
+– Huu-huu, sanoi pöllö.
 
-Koko viikon Piippu ja lintu vaihtoivat säveliä joka aamu. Piippu tallensi muistiinsa kaikki metsän äänet: laineet, tuulen ja tikan.
+Piippu melkein vastasi, mutta muisti sitten olla hiljaa. Se vain kuunteli.
 
-Kun he palasivat kaupunkiin, Piippu soitti joskus iltaisin korjaamossa noita ääniä hyvin hiljaa. Ja silloin Aino-mekaanikkokin pysähtyi, sulki silmänsä ja kuunteli.
+Yöllä Aino nukkui mökissä, ja Piippu seisoi kuistilla latautumassa. Sen pieni akkuvalo hehkui pimeässä. Ulkona oli niin hiljaista, että se kuuli oman piirilevynsä hennon surinan. Ja se ei pelottanut sitä enää ollenkaan.
+
+Seuraavana aamuna pieni lintu palasi rantakivelle. Sillä oli ruskea selkä ja keltainen rinta. Se katsoi Piippua kallistaen päätään.
+
+Piippu pysyi ihan hiljaa. Se ei edes liikuttanut pyöriään.
+
+Sitten lintu lauloi lyhyen, kirkkaan sävelen. Tii-tilu-tii.
+
+Piippu mietti hetken. Sen silmät vilkkuivat keltaisina. Sitten se vastasi hiljaisella, lempeällä piippauksella. Tii-piip-tii.
+
+Lintu kallisti päätään toiselle puolelle. Sitten se lauloi uudestaan. Piippu vastasi.
+
+– Te puhutte keskenänne, Aino ihmetteli kahvikuppi kädessään. Hän oli tullut kuistille aamutakissa ja seisoi nyt ihan paikallaan, ettei häiritsisi.
+
+Koko viikon Piippu ja lintu vaihtoivat säveliä joka aamu. Joskus lintu lauloi uuden sävelen, ja Piippu yritti matkia sitä. Joskus Piippu keksi oman, ja lintu yritti matkia sitä. Ne eivät aina onnistuneet, mutta se ei haitannut.
+
+Piippu tallensi muistiinsa kaikki metsän äänet: laineet, tuulen, tikan, sammakot ja pöllön. Mutta linnun laulua se ei tallentanut.
+
+– Miksi et? Aino kysyi.
+
+– Koska se laulaa sen joka aamu vähän eri tavalla, Piippu sanoi. – Haluan muistaa sen sellaisena kuin se on.
+
+Viimeisenä aamuna lintu lauloi pitkään. Piippu kuunteli loppuun asti ja vastasi sitten yhdellä pitkällä, kiitollisella piippauksella.
+
+Kun he palasivat kaupunkiin, korjaamossa oli taas kova meteli. Porakone pärisi ja radio soi. Piippu ei pahastunut. Kaupungin äänet olivat yhä sen omia ääniä.
+
+Mutta joskus iltaisin, kun työt oli tehty, Piippu soitti korjaamossa metsän ääniä hyvin hiljaa. Lip, lap, lip. Tok-tok-tok. Huu-huu.
+
+Ja silloin Aino-mekaanikkokin pysähtyi, sulki silmänsä ja kuunteli.
 
 Sillä Piippu oli oppinut tärkeän asian: joskus kaunein ääni kuuluu vasta, kun itse on hetken hiljaa.
