@@ -77,6 +77,10 @@ Hanna hätkähti niin, että melkein putosi oksalta. Koko parvi kraakkui hämmä
 
 Sitten Hanna alkoi nauraa. Ja Veikko nauroi. Ja koko parvi nauroi niin, että koivun lehdet värisivät.
 
+– Nyt minä haluan olla etsijä, sanoi pieni Kalle-varis. – Minä tiedän, että Veikko on koivussa!
+
+Mutta seuraavalla kierroksella Veikko piiloutui kuusen oksalle sammalen sekaan, ja Kalle etsi häntä koko iltapäivän.
+
 Siitä lähtien kaikki halusivat olla Veikon kanssa samassa joukkueessa. Hän oli paras piiloutuja koko metsässä. Ja keväällä, kun tuli ensimmäinen vihreä päivä, varikset nimesivät sen Veikon päiväksi.
 
 – Tiedätkö, Hanna sanoi eräänä iltana, kun he istuivat langalla rivissä. Aurinko laski, ja taivas oli oranssi. – On hauskaa, että sinä olet vihreä.

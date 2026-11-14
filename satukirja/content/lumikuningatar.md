@@ -103,7 +103,7 @@ Poro odotti portilla toisen poron kanssa, ja niillä oli mukanaan lämmintä mai
 
 He kiittivät kaikkia auttajiaan. Lapin naista, Finnmarkin eukkoa ja poroa, joka sai jäädä kotitunturilleen. Metsän laidassa he tapasivat rosvotytön, joka ratsasti hevosella maailmaa katsomaan.
 
-– Hyvä, että löysit hänet, rosvotyttö sanoi Gerdalle. – Vaikka en vieläkään ymmärrä, miksi hän oli juoksemisen arvoinen.
+– Hyvä, että löysit hänet, rosvotyttö sanoi Gerdalle. – Vaikka en vieläkään ymmärrä, miksi kukaan jaksaa kulkea niin pitkän matkan yhden pojan takia.
 
 Ja Gerda nauroi.
 

@@ -101,7 +101,7 @@ Kuusikossa Sanni kuuli hiljaista vikinää. Juurakon kolossa istui pieni kettu, 
 
 – Minä en löydä kotiin, kettu sanoi. – Kaikki kuuset näyttävät samalta.
 
-Sanni nosti lyhdyn ylös. Kiiltomadon valossa hän huomasi lumessa vanhoja ketunjälkiä, jotka johtivat kumpareelle.
+Sanni nosti lyhdyn ylös. Kiiltomadon valossa hän huomasi pehmeässä mullassa pieniä ketunjälkiä, jotka johtivat kumpareelle.
 
 – Seurataan sinun omia jälkiäsi, Sanni sanoi.
 
