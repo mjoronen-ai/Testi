@@ -4,6 +4,8 @@ export interface StoredData {
   favorites: string[];
   /** Lukukohta sadun id:n mukaan. ratio: 0 = alku, 1 = loppu. */
   progress: Record<string, { ratio: number; updatedAt: number }>;
-  /** Asetukset tekstinä, esim. { fontSize: "22", nightMode: "1" }. */
+  /** Loppuun luetut sadut (= ansaitut tarrat): montako kertaa ja milloin ensimmäisen kerran. */
+  completed: Record<string, { count: number; firstAt: number }>;
+  /** Asetukset tekstinä, esim. { fontSize: "22", themeMode: "auto", childName: "Eetu" }. */
   settings: Record<string, string>;
 }

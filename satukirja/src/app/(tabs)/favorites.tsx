@@ -15,7 +15,7 @@ export default function FavoritesScreen() {
   const stories = favorites.map(getStory).filter((s): s is Story => Boolean(s));
 
   return (
-    <Screen title="Suosikit" subtitle={stories.length > 0 ? 'Omat lempisadut' : undefined}>
+    <Screen title="Suosikit" subtitle="Omat lempisadut yhdessä paikassa">
       {stories.length > 0 ? (
         <StoryCardList stories={stories} />
       ) : (

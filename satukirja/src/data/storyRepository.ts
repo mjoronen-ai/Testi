@@ -112,3 +112,35 @@ export function paragraphs(story: Story): string[] {
     .map((p) => p.trim())
     .filter(Boolean);
 }
+
+/**
+ * Suositukset lapsen iän mukaan: sadut, joiden ikäsuositus sopii (enintään lapsen ikä,
+ * eikä liian vauvamainen). Lukemattomat ensin, jotta lapsi löytää aina uutta.
+ */
+export function getRecommended(age: number, completedIds: string[] = []): Story[] {
+  const fits = ALL_STORIES.filter((s) => s.ageMin <= age && s.ageMin >= age - 3);
+  const pool = fits.length > 0 ? fits : ALL_STORIES.filter((s) => s.ageMin <= age);
+  return [...pool].sort((a, b) => {
+    const ar = completedIds.includes(a.id) ? 1 : 0;
+    const br = completedIds.includes(b.id) ? 1 : 0;
+    return ar - br || b.ageMin - a.ageMin;
+  });
+}
+
+/** Seuraava satu luettavaksi: ensimmäinen lukematon suositus (tai satunnainen muu). */
+export function getNextStory(currentId: string, age: number, completedIds: string[]): Story | undefined {
+  const rec = getRecommended(age, completedIds).filter((s) => s.id !== currentId);
+  return rec.find((s) => !completedIds.includes(s.id)) ?? rec[0];
+}
+
+/** Tervehdys kellonajan mukaan, esim. "Hyvää iltaa, Eetu". */
+export function greeting(name: string, date = new Date()): { text: string; emoji: string } {
+  const h = date.getHours();
+  const base =
+    h < 5 ? { text: 'Hyvää yötä', emoji: '🌙' }
+    : h < 10 ? { text: 'Hyvää huomenta', emoji: '🌤️' }
+    : h < 17 ? { text: 'Hyvää päivää', emoji: '☀️' }
+    : h < 21 ? { text: 'Hyvää iltaa', emoji: '🌆' }
+    : { text: 'Hyvää yötä', emoji: '🌙' };
+  return { text: name ? `${base.text}, ${name}` : base.text, emoji: base.emoji };
+}

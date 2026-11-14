@@ -1,25 +1,50 @@
 /**
  * ETUSIVU
- *  - Päivän satu (iso kortti)
- *  - Jatka lukemista (jos jokin satu on kesken)
- *  - Kaikki sadut listana
+ *
+ * Rakenne perustuu siihen, mikä tekee sovelluksesta helpon palata käyttämään:
+ *  1. Henkilökohtainen tervehdys kellonajan mukaan (tuttu rutiini, "iltasatuhetki").
+ *  2. Yksi selkeä pääpainike: tämän päivän tai illan satu, luettavaksi tai kuunneltavaksi.
+ *  3. "Jatka lukemista" heti näkyvissä (helpoin mahdollinen seuraava askel).
+ *  4. Iän mukaan suositellut sadut ja aiheittaiset karusellit (löytämisen ilo).
+ *  5. Tarrakirjan edistyminen (myönteinen palaute, ei painostavia "putkia").
  */
 import React, { useMemo } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { router } from 'expo-router';
-import { ALL_STORIES, getStory, getStoryOfTheDay, storyColor } from '@/data/storyRepository';
+import { LinearGradient } from 'expo-linear-gradient';
+import {
+  ALL_STORIES,
+  SHORT_STORY_MINUTES,
+  getRecommended,
+  getStory,
+  getStoryOfTheDay,
+  greeting,
+  storyColor,
+} from '@/data/storyRepository';
 import { useAppData } from '@/storage/AppDataContext';
 import { Screen } from '@/components/Screen';
 import { AppText } from '@/components/AppText';
-import { StoryCardList } from '@/components/StoryCard';
 import { IconButton } from '@/components/IconButton';
-import { radius, spacing } from '@/theme/theme';
+import { PressableScale } from '@/components/PressableScale';
+import { StoryCover } from '@/components/StoryCover';
+import { Carousel, Section } from '@/components/Section';
+import { radius, shade, softShadow, spacing } from '@/theme/theme';
 
-const DARK_TEXT = '#3B2F2A';
+const DARK_TEXT = '#2E2440';
 
 export default function HomeScreen() {
-  const { progress, colors, nightMode, toggleNightMode } = useAppData();
-  const storyOfTheDay = getStoryOfTheDay();
+  const { progress, colors, nightMode, profile, completed } = useAppData();
+  const completedIds = Object.keys(completed);
+  const hello = greeting(profile.name);
+  const isEvening = new Date().getHours() >= 17 || new Date().getHours() < 5;
+
+  // Illalla nostetaan esiin iltasatu, päivällä päivän satu.
+  const featured = useMemo(() => {
+    const day = getStoryOfTheDay();
+    if (!isEvening || !day) return day;
+    const bedtime = getRecommended(profile.age, completedIds).filter((s) => s.categories.includes('iltasadut'));
+    return bedtime.length > 0 ? bedtime[new Date().getDate() % bedtime.length] : day;
+  }, [isEvening, profile.age]);
 
   // Viimeksi luettu keskeneräinen satu (ei aivan alussa eikä lopussa).
   const continueStory = useMemo(() => {
@@ -33,108 +58,200 @@ export default function HomeScreen() {
     return null;
   }, [progress]);
 
+  const recommended = useMemo(
+    () => getRecommended(profile.age, completedIds).filter((s) => s.id !== featured?.id),
+    [profile.age, featured?.id, completed],
+  );
+  const bedtime = ALL_STORIES.filter((s) => s.categories.includes('iltasadut'));
+  const short = ALL_STORIES.filter((s) => s.readingMinutes < SHORT_STORY_MINUTES);
+  const animals = ALL_STORIES.filter((s) => s.categories.includes('elainsadut'));
+  const adventures = ALL_STORIES.filter((s) => s.categories.includes('seikkailusadut'));
+
+  const stickerCount = completedIds.filter((id) => getStory(id)).length;
+
   return (
     <Screen
-      title="Satukirja"
-      subtitle="Mikä satu luetaan tänään?"
+      overline={`${hello.emoji}  ${hello.text.split(',')[0]}`}
+      title={profile.name || 'Satukirja'}
       headerRight={
-        <IconButton
-          icon={nightMode ? 'sunny' : 'moon'}
-          onPress={toggleNightMode}
-          accessibilityLabel={nightMode ? 'Vaihda päivätilaan' : 'Vaihda yötilaan'}
-        />
+        <IconButton icon="settings-outline" onPress={() => router.push('/settings')} accessibilityLabel="Asetukset" />
       }
     >
-      {storyOfTheDay ? (
-        <Pressable
-          onPress={() => router.push(`/story/${storyOfTheDay.id}`)}
+      {/* ---------- Pääkortti: Päivän / Illan satu ---------- */}
+      {featured ? (
+        <PressableScale
+          onPress={() => router.push(`/story/${featured.id}`)}
           accessibilityRole="button"
-          accessibilityLabel={`Päivän satu: ${storyOfTheDay.title}`}
-          style={({ pressed }) => [
-            styles.featured,
-            { backgroundColor: storyColor(storyOfTheDay), opacity: pressed ? 0.9 : 1 },
-          ]}
+          accessibilityLabel={`${isEvening ? 'Illan satu' : 'Päivän satu'}: ${featured.title}`}
+          scaleTo={0.98}
+          style={[styles.hero, softShadow(storyColor(featured), 1.6)]}
         >
-          <AppText variant="caption" color={DARK_TEXT} style={styles.featuredLabel}>
-            ✨ PÄIVÄN SATU
-          </AppText>
-          <AppText style={styles.featuredEmoji}>{storyOfTheDay.emoji ?? '📖'}</AppText>
-          <AppText variant="hero" color={DARK_TEXT}>
-            {storyOfTheDay.title}
-          </AppText>
-          <AppText color={DARK_TEXT}>
-            ⏱ {storyOfTheDay.readingMinutes} min · {storyOfTheDay.ageMin}+ v
-          </AppText>
-          <View style={styles.readButton}>
-            <AppText variant="subtitle" color={DARK_TEXT}>
-              Lue satu ›
-            </AppText>
+          <LinearGradient
+            colors={[shade(storyColor(featured), 0.25), shade(storyColor(featured), -0.15)]}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={[StyleSheet.absoluteFill, { borderRadius: radius.xl }]}
+          />
+          <View style={styles.heroTop}>
+            <View style={styles.heroBadge}>
+              <AppText variant="overline" color={DARK_TEXT}>
+                {isEvening ? '🌙 Illan satu' : '✨ Päivän satu'}
+              </AppText>
+            </View>
+            {completed[featured.id] ? (
+              <View style={styles.heroBadge}>
+                <AppText variant="overline" color={DARK_TEXT}>
+                  ✓ Luettu
+                </AppText>
+              </View>
+            ) : null}
           </View>
-        </Pressable>
+          <View style={styles.heroRow}>
+            <View style={{ flex: 1, gap: spacing.xs }}>
+              <AppText variant="hero" color={DARK_TEXT}>
+                {featured.title}
+              </AppText>
+              <AppText color={DARK_TEXT} style={{ opacity: 0.75 }}>
+                {featured.readingMinutes} min · {featured.ageMin}+ v
+              </AppText>
+            </View>
+            <StoryCover story={featured} width={104} height={124} radius={radius.lg} style={styles.heroCover} />
+          </View>
+          <View style={styles.heroActions}>
+            <PressableScale
+              onPress={() => router.push(`/story/${featured.id}`)}
+              accessibilityRole="button"
+              style={styles.heroButton}
+            >
+              <AppText variant="subtitle" color={DARK_TEXT}>
+                📖  Lue
+              </AppText>
+            </PressableScale>
+            <PressableScale
+              onPress={() => router.push(`/story/${featured.id}?autoplay=1`)}
+              accessibilityRole="button"
+              accessibilityLabel="Kuuntele satu ääneen luettuna"
+              style={[styles.heroButton, styles.heroButtonGhost]}
+            >
+              <AppText variant="subtitle" color={DARK_TEXT}>
+                🎧  Kuuntele
+              </AppText>
+            </PressableScale>
+          </View>
+        </PressableScale>
       ) : null}
 
+      {/* ---------- Jatka lukemista ---------- */}
       {continueStory ? (
-        <Pressable
+        <PressableScale
           onPress={() => router.push(`/story/${continueStory.story.id}`)}
           accessibilityRole="button"
           accessibilityLabel={`Jatka lukemista: ${continueStory.story.title}`}
-          style={({ pressed }) => [
-            styles.continue,
-            { backgroundColor: colors.surface, borderColor: colors.primary, opacity: pressed ? 0.85 : 1 },
-          ]}
+          scaleTo={0.98}
+          style={[styles.continue, { backgroundColor: colors.surface }, softShadow(colors.shadow, 0.7)]}
         >
-          <AppText style={{ fontSize: 34, lineHeight: 42 }}>{continueStory.story.emoji ?? '📖'}</AppText>
+          <StoryCover story={continueStory.story} width={64} height={64} radius={radius.md} emojiSize={32} />
           <View style={{ flex: 1, gap: 6 }}>
-            <AppText variant="caption" color={colors.primary}>
-              JATKA LUKEMISTA
+            <AppText variant="overline" color={colors.primary}>
+              Jatka lukemista
             </AppText>
             <AppText variant="subtitle" numberOfLines={1}>
               {continueStory.story.title}
             </AppText>
-            {/* Edistymispalkki */}
             <View style={[styles.progressTrack, { backgroundColor: colors.surfaceAlt }]}>
-              <View
-                style={[styles.progressFill, { width: `${continueStory.percent}%`, backgroundColor: colors.primary }]}
-              />
+              <View style={[styles.progressFill, { width: `${continueStory.percent}%`, backgroundColor: colors.primary }]} />
             </View>
           </View>
-        </Pressable>
+          <View style={[styles.playCircle, { backgroundColor: colors.primary }]}>
+            <AppText variant="subtitle" color={colors.onPrimary}>
+              ›
+            </AppText>
+          </View>
+        </PressableScale>
       ) : null}
 
-      <AppText variant="title" style={{ marginTop: spacing.sm }} accessibilityRole="header">
-        Kaikki sadut
-      </AppText>
-      <StoryCardList stories={ALL_STORIES} />
+      {/* ---------- Tarrakirjan edistyminen ---------- */}
+      <PressableScale
+        onPress={() => router.push('/stickers')}
+        accessibilityRole="button"
+        accessibilityLabel={`Tarrakirja: ${stickerCount} / ${ALL_STORIES.length} tarraa`}
+        scaleTo={0.98}
+        style={[styles.stickerStrip, { backgroundColor: nightMode ? colors.surfaceAlt : '#FFF1D2' }]}
+      >
+        <AppText style={{ fontSize: 30, lineHeight: 36 }}>🏅</AppText>
+        <View style={{ flex: 1, gap: 4 }}>
+          <AppText variant="subtitle">
+            {stickerCount === 0 ? 'Kerää ensimmäinen tarrasi!' : `${stickerCount} / ${ALL_STORIES.length} tarraa kerätty`}
+          </AppText>
+          <View style={[styles.progressTrack, { backgroundColor: nightMode ? colors.surface : '#FCE3A8' }]}>
+            <View
+              style={[
+                styles.progressFill,
+                { width: `${Math.max(4, (stickerCount / ALL_STORIES.length) * 100)}%`, backgroundColor: colors.accent },
+              ]}
+            />
+          </View>
+        </View>
+        <AppText variant="caption" muted>
+          ›
+        </AppText>
+      </PressableScale>
+
+      {/* ---------- Karusellit ---------- */}
+      <Section title="Sinulle sopivat" subtitle={`Valittu ${profile.age}${profile.age >= 9 ? '+' : ''}-vuotiaalle`}>
+        <Carousel stories={recommended} />
+      </Section>
+      <Section title="Iltasadut" subtitle="Rauhoittumiseen ennen unta" seeAllHref="/category/iltasadut">
+        <Carousel stories={bedtime} />
+      </Section>
+      <Section title="Lyhyet satuhetket" subtitle={`Alle ${SHORT_STORY_MINUTES} minuuttia`} seeAllHref="/category/lyhyet">
+        <Carousel stories={short} />
+      </Section>
+      <Section title="Eläinsadut" seeAllHref="/category/elainsadut">
+        <Carousel stories={animals} />
+      </Section>
+      <Section title="Seikkailut isommille" seeAllHref="/category/seikkailusadut">
+        <Carousel stories={adventures} />
+      </Section>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  featured: {
-    borderRadius: radius.lg,
-    padding: spacing.lg,
-    gap: spacing.xs,
+  hero: { borderRadius: radius.xl, padding: spacing.lg, gap: spacing.md },
+  heroTop: { flexDirection: 'row', gap: spacing.sm },
+  heroBadge: {
+    backgroundColor: 'rgba(255,255,255,0.7)',
+    borderRadius: radius.pill,
+    paddingHorizontal: 12,
+    paddingVertical: 5,
   },
-  featuredLabel: { letterSpacing: 1 },
-  featuredEmoji: { fontSize: 64, lineHeight: 76, marginVertical: spacing.xs },
-  readButton: {
-    alignSelf: 'flex-start',
-    marginTop: spacing.sm,
-    backgroundColor: 'rgba(255,255,255,0.65)',
+  heroRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
+  heroCover: { transform: [{ rotate: '4deg' }], borderWidth: 3, borderColor: 'rgba(255,255,255,0.8)' },
+  heroActions: { flexDirection: 'row', gap: spacing.sm },
+  heroButton: {
+    backgroundColor: '#FFFFFF',
     borderRadius: radius.pill,
     paddingHorizontal: spacing.lg,
     minHeight: 52,
     justifyContent: 'center',
   },
+  heroButtonGhost: { backgroundColor: 'rgba(255,255,255,0.55)' },
   continue: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.md,
     borderRadius: radius.lg,
-    borderWidth: 2,
-    padding: spacing.md,
-    minHeight: 88,
+    padding: 12,
   },
+  playCircle: { width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center' },
   progressTrack: { height: 8, borderRadius: 4, overflow: 'hidden' },
   progressFill: { height: 8, borderRadius: 4 },
+  stickerStrip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.md,
+    borderRadius: radius.lg,
+    padding: spacing.md,
+  },
 });

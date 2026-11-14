@@ -3,7 +3,7 @@
  *
  *  1. Lataa fontit (Nunito).
  *  2. Antaa kaikille näkymille pääsyn tallennettuihin tietoihin (AppDataProvider).
- *  3. Määrittää navigoinnin: välilehdet (tabs), lukunäkymä ja kategorianäkymä.
+ *  3. Määrittää navigoinnin: välilehdet (tabs), lukunäkymä, kategoriat, aloitusopastus ja asetukset.
  */
 import React from 'react';
 import { ActivityIndicator, View } from 'react-native';
@@ -15,6 +15,7 @@ import {
   Nunito_400Regular,
   Nunito_600SemiBold,
   Nunito_800ExtraBold,
+  Nunito_900Black,
 } from '@expo-google-fonts/nunito';
 import { AppDataProvider, useAppData } from '@/storage/AppDataContext';
 import { fonts, lightPalette } from '@/theme/theme';
@@ -47,13 +48,15 @@ function RootNavigator() {
         {/* Lukunäkymällä on oma yläpalkki, jossa isot napit. */}
         <Stack.Screen name="story/[id]" options={{ headerShown: false }} />
         <Stack.Screen name="category/[id]" options={{ title: '' }} />
+        <Stack.Screen name="onboarding" options={{ headerShown: false, gestureEnabled: false }} />
+        <Stack.Screen name="settings" options={{ title: 'Asetukset', presentation: 'modal' }} />
       </Stack>
     </>
   );
 }
 
 export default function RootLayout() {
-  const [fontsLoaded] = useFonts({ Nunito_400Regular, Nunito_600SemiBold, Nunito_800ExtraBold });
+  const [fontsLoaded] = useFonts({ Nunito_400Regular, Nunito_600SemiBold, Nunito_800ExtraBold, Nunito_900Black });
 
   if (!fontsLoaded) {
     return <View style={{ flex: 1, backgroundColor: lightPalette.background }} />;

@@ -6,18 +6,23 @@ import { Pressable, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useAppData } from '@/storage/AppDataContext';
 import { TOUCH_MIN } from '@/theme/theme';
+import { successFeedback, tapFeedback } from '@/utils/haptics';
 
 export function FavoriteButton({ storyId, size = 30 }: { storyId: string; size?: number }) {
   const { isFavorite, toggleFavorite, colors } = useAppData();
   const fav = isFavorite(storyId);
   return (
     <Pressable
-      onPress={() => toggleFavorite(storyId)}
+      onPress={() => {
+        if (fav) tapFeedback();
+        else successFeedback();
+        toggleFavorite(storyId);
+      }}
       hitSlop={8}
       accessibilityRole="button"
       accessibilityLabel={fav ? 'Poista suosikeista' : 'Lisää suosikkeihin'}
       accessibilityState={{ selected: fav }}
-      style={({ pressed }) => [styles.button, { transform: [{ scale: pressed ? 0.9 : 1 }] }]}
+      style={({ pressed }) => [styles.button, { transform: [{ scale: pressed ? 0.85 : 1 }] }]}
     >
       <Ionicons name={fav ? 'heart' : 'heart-outline'} size={size} color={fav ? colors.heart : colors.textMuted} />
     </Pressable>

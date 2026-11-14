@@ -4,7 +4,8 @@
  * Tänne tallennetaan vain käyttäjän omat tiedot:
  *  - suosikit
  *  - lukukohta ("Jatka lukemista")
- *  - asetukset (fonttikoko, yötila)
+ *  - loppuun luetut sadut (tarrakirja)
+ *  - asetukset (lapsen nimi ja ikä, fonttikoko, yötila)
  *
  * Itse sadut ovat sovelluksen mukana JSON-tiedostossa, joten niitä ei tarvitse tallentaa tänne.
  * Kaikki toimii ilman verkkoyhteyttä.
@@ -32,6 +33,11 @@ function getDb(): Promise<SQLite.SQLiteDatabase> {
           ratio      REAL NOT NULL,      -- 0 = alku, 1 = loppu
           updated_at INTEGER NOT NULL
         );
+        CREATE TABLE IF NOT EXISTS completed (
+          story_id TEXT PRIMARY KEY NOT NULL,
+          count    INTEGER NOT NULL,     -- montako kertaa luettu loppuun
+          first_at INTEGER NOT NULL      -- milloin tarra ansaittiin
+        );
         CREATE TABLE IF NOT EXISTS settings (
           key   TEXT PRIMARY KEY NOT NULL,
           value TEXT NOT NULL
@@ -52,16 +58,23 @@ export async function loadAll(): Promise<StoredData> {
   const progressRows = await db.getAllAsync<{ story_id: string; ratio: number; updated_at: number }>(
     'SELECT story_id, ratio, updated_at FROM reading_progress',
   );
+  const completedRows = await db.getAllAsync<{ story_id: string; count: number; first_at: number }>(
+    'SELECT story_id, count, first_at FROM completed',
+  );
   const settingRows = await db.getAllAsync<{ key: string; value: string }>('SELECT key, value FROM settings');
 
   const progress: StoredData['progress'] = {};
   for (const row of progressRows) {
     progress[row.story_id] = { ratio: row.ratio, updatedAt: row.updated_at };
   }
+  const completed: StoredData['completed'] = {};
+  for (const row of completedRows) {
+    completed[row.story_id] = { count: row.count, firstAt: row.first_at };
+  }
   const settings: Record<string, string> = {};
   for (const row of settingRows) settings[row.key] = row.value;
 
-  return { favorites: favs.map((f) => f.story_id), progress, settings };
+  return { favorites: favs.map((f) => f.story_id), progress, completed, settings };
 }
 
 export async function setFavorite(storyId: string, isFavorite: boolean): Promise<void> {
@@ -86,6 +99,23 @@ export async function saveProgress(storyId: string, ratio: number): Promise<void
 export async function clearProgress(storyId: string): Promise<void> {
   const db = await getDb();
   await db.runAsync('DELETE FROM reading_progress WHERE story_id = ?', storyId);
+}
+
+/** Merkitsee sadun luetuksi loppuun (antaa tarran ensimmäisellä kerralla). */
+export async function markCompleted(storyId: string): Promise<void> {
+  const db = await getDb();
+  await db.runAsync(
+    `INSERT INTO completed (story_id, count, first_at) VALUES (?, 1, ?)
+     ON CONFLICT(story_id) DO UPDATE SET count = count + 1`,
+    storyId,
+    Date.now(),
+  );
+}
+
+/** Tyhjentää tarrakirjan (asetuksista). */
+export async function resetCompleted(): Promise<void> {
+  const db = await getDb();
+  await db.runAsync('DELETE FROM completed');
 }
 
 export async function saveSetting(key: string, value: string): Promise<void> {

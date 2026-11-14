@@ -7,7 +7,7 @@ source: Alkuperäinen satu, kirjoitettu tätä sovellusta varten
 author: Satukirjan tekijät (Claude-avusteinen teksti)
 license: CC0 1.0
 emoji: 🧸
-color: "#F2D4C2"
+color: "#EDB99A"
 ---
 Oli ilta. Pikku Nalle makasi sängyssä, mutta uni ei tullut.
 

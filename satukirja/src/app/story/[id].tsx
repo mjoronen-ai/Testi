@@ -1,12 +1,15 @@
 /**
  * LUKUNÄKYMÄ
- *  - Iso ja selkeä teksti, jonka kokoa voi säätää (A− / A+)
+ *  - Iso kansikuva ja selkeä, säädettävä teksti (A− / A+)
  *  - Yötila (kuu/aurinko-nappi)
  *  - Arvioitu lukuaika ja ikäsuositus
  *  - Sydän: lisää suosikkeihin
  *  - Ääneen luku (play/pause) ja luettavan kappaleen korostus
  *  - Muistaa lukukohdan ("Jatka lukemista")
+ *  - Sadun lopussa juhlistus ja tarra tarrakirjaan
  *  - Lopussa lähde, tekijä ja lisenssi
+ *
+ * Osoite: /story/<id>. Lisäämällä ?autoplay=1 ääneen luku alkaa heti ("Kuuntele"-nappi).
  */
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
@@ -21,14 +24,26 @@ import {
 } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { categoryTitle, getStory, paragraphs as splitParagraphs, storyColor } from '@/data/storyRepository';
+import { Ionicons } from '@expo/vector-icons';
+import {
+  ALL_STORIES,
+  categoryTitle,
+  getNextStory,
+  getStory,
+  paragraphs as splitParagraphs,
+} from '@/data/storyRepository';
 import { useAppData } from '@/storage/AppDataContext';
 import { useSpeech } from '@/hooks/useSpeech';
 import { AppText } from '@/components/AppText';
 import { IconButton } from '@/components/IconButton';
 import { FavoriteButton } from '@/components/FavoriteButton';
 import { EmptyState } from '@/components/EmptyState';
-import { FONT_SIZE, fonts, radius, spacing } from '@/theme/theme';
+import { StoryCover } from '@/components/StoryCover';
+import { Celebration } from '@/components/Celebration';
+import { PrimaryButton } from '@/components/Buttons';
+import { PressableScale } from '@/components/PressableScale';
+import { FONT_SIZE, fonts, radius, softShadow, spacing } from '@/theme/theme';
+import { successFeedback } from '@/utils/haptics';
 
 /** Takaisin edelliseen näkymään, tai etusivulle jos satu avattiin suoraan. */
 function goBack() {
@@ -40,13 +55,27 @@ function goBack() {
 const SAVE_INTERVAL_MS = 1000;
 
 export default function StoryScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id, autoplay } = useLocalSearchParams<{ id: string; autoplay?: string }>();
   const story = getStory(id);
   const app = useAppData();
   const { colors, fontSize, setFontSize, nightMode, toggleNightMode } = app;
 
+  // --- Juhlistus sadun lopussa ---------------------------------------------------
+  const [celebration, setCelebration] = useState<{ isNew: boolean; count: number } | null>(null);
+  const celebrated = useRef(false);
+
+  const finishStory = useCallback(() => {
+    if (!story || celebrated.current) return;
+    celebrated.current = true;
+    const isNew = app.markCompleted(story.id);
+    const before = Object.keys(app.completed).filter((cid) => getStory(cid)).length;
+    app.clearProgress(story.id);
+    successFeedback();
+    setCelebration({ isNew, count: before + (isNew ? 1 : 0) });
+  }, [story, app]);
+
   const paras = useMemo(() => (story ? splitParagraphs(story) : []), [story]);
-  const speech = useSpeech(paras);
+  const speech = useSpeech(paras, finishStory);
 
   // --- Vieritys ja lukukohta --------------------------------------------------
   const scrollRef = useRef<ScrollViewInstance>(null);
@@ -56,7 +85,7 @@ export default function StoryScreen() {
   const lastSaved = useRef(0);
   const latestRatio = useRef(0);
   const restored = useRef(false);
-  const [resumeInfo, setResumeInfo] = useState<number | null>(null);
+  const [resumeInfo, setResumeInfo] = useState(false);
 
   // Kappaleiden sijainnit (ääneen luvun automaattista vieritystä varten).
   const textBlockY = useRef(0);
@@ -66,11 +95,10 @@ export default function StoryScreen() {
 
   const persist = useCallback(
     (ratio: number) => {
-      if (!story) return;
-      if (ratio >= 0.97) app.clearProgress(story.id); // luettu loppuun → seuraavalla kerralla alusta
-      else if (ratio > 0.02) app.saveProgress(story.id, ratio);
+      if (!story || celebrated.current) return;
+      if (ratio > 0.02 && ratio < 0.97) app.saveProgress(story.id, ratio);
     },
-    [story?.id, app.clearProgress, app.saveProgress],
+    [story, app],
   );
 
   const onScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
@@ -79,8 +107,11 @@ export default function StoryScreen() {
     const max = contentSize.height - layoutMeasurement.height;
     if (max <= 0) return;
     latestRatio.current = contentOffset.y / max;
+    if (!restored.current) return;
+    // Vieritetty aivan loppuun → satu luettu!
+    if (latestRatio.current >= 0.985 && speech.status === 'idle') finishStory();
     const now = Date.now();
-    if (restored.current && now - lastSaved.current > SAVE_INTERVAL_MS) {
+    if (now - lastSaved.current > SAVE_INTERVAL_MS) {
       lastSaved.current = now;
       persist(latestRatio.current);
     }
@@ -89,22 +120,35 @@ export default function StoryScreen() {
   // Tallennetaan viimeisin kohta, kun näkymästä poistutaan.
   const persistRef = useRef(persist);
   persistRef.current = persist;
-  useEffect(() => () => {
-    if (restored.current) persistRef.current(latestRatio.current);
-  }, []);
+  useEffect(
+    () => () => {
+      if (restored.current) persistRef.current(latestRatio.current);
+    },
+    [],
+  );
 
   // Kun sisällön korkeus tiedetään ensimmäisen kerran, vieritetään tallennettuun kohtaan.
   const tryRestore = () => {
     if (restored.current || contentH.current === 0 || viewportH.current === 0) return;
     restored.current = true;
-    if (savedRatio && savedRatio > 0.02) {
+    if (savedRatio && savedRatio > 0.02 && autoplay !== '1') {
       const y = savedRatio * (contentH.current - viewportH.current);
       scrollRef.current?.scrollTo({ y, animated: false });
       latestRatio.current = savedRatio;
-      setResumeInfo(Math.round(savedRatio * 100));
-      setTimeout(() => setResumeInfo(null), 5000);
+      setResumeInfo(true);
+      setTimeout(() => setResumeInfo(false), 5000);
     }
   };
+
+  // "Kuuntele"-napista tultaessa ääneen luku alkaa heti.
+  const autoplayed = useRef(false);
+  useEffect(() => {
+    if (autoplay === '1' && story && !autoplayed.current) {
+      autoplayed.current = true;
+      const t = setTimeout(() => speech.play(0), 500);
+      return () => clearTimeout(t);
+    }
+  }, [autoplay, story]);
 
   // Ääneen luettaessa vieritetään luettava kappale näkyviin.
   useEffect(() => {
@@ -136,11 +180,13 @@ export default function StoryScreen() {
   }
 
   const lineHeight = Math.round(fontSize * 1.6);
+  const completedIds = Object.keys(app.completed);
+  const nextStory = getNextStory(story.id, app.profile.age, completedIds);
 
   return (
     <SafeAreaView style={[styles.root, { backgroundColor: colors.background }]} edges={['top', 'left', 'right']}>
       {/* ---------- Yläpalkki ---------- */}
-      <View style={[styles.toolbar, { borderBottomColor: colors.border }]}>
+      <View style={styles.toolbar}>
         <IconButton icon="arrow-back" onPress={goBack} accessibilityLabel="Takaisin" />
         <View style={{ flex: 1 }} />
         <IconButton
@@ -178,15 +224,25 @@ export default function StoryScreen() {
         }}
         contentContainerStyle={styles.scrollContent}
       >
-        <View style={[styles.cover, { backgroundColor: storyColor(story) }]}>
-          <AppText style={styles.coverEmoji}>{story.emoji ?? '📖'}</AppText>
-        </View>
-        <AppText variant="hero" style={styles.center} accessibilityRole="header">
+        <StoryCover
+          story={story}
+          width="100%"
+          height={210}
+          radius={radius.xl}
+          emojiSize={96}
+          done={!!app.completed[story.id]}
+          style={softShadow(colors.shadow, 1)}
+        />
+        <AppText variant="display" style={[styles.center, { marginTop: spacing.md }]} accessibilityRole="header">
           {story.title}
         </AppText>
-        <AppText variant="caption" muted style={styles.center}>
-          ⏱ noin {story.readingMinutes} min · {story.ageMin}+ v · {story.categories.map(categoryTitle).join(', ')}
-        </AppText>
+        <View style={styles.metaRow}>
+          <Meta text={`⏱ ${story.readingMinutes} min`} />
+          <Meta text={`${story.ageMin}+ vuotta`} />
+          {story.categories.map((c) => (
+            <Meta key={c} text={categoryTitle(c)} />
+          ))}
+        </View>
 
         <View
           style={styles.textBlock}
@@ -204,15 +260,28 @@ export default function StoryScreen() {
                 }}
                 style={[styles.paragraph, active && { backgroundColor: colors.highlight }]}
               >
-                <AppText style={{ fontFamily: fonts.regular, fontSize, lineHeight }}>{p}</AppText>
+                <AppText style={{ fontFamily: fonts.regular, fontSize, lineHeight }}>
+                  {/* Ensimmäisen kappaleen alkukirjain isona, kuten satukirjoissa */}
+                  {i === 0 ? (
+                    <AppText style={{ fontFamily: fonts.black, fontSize: fontSize * 1.5, color: colors.primary }}>
+                      {p.charAt(0)}
+                    </AppText>
+                  ) : null}
+                  {i === 0 ? p.slice(1) : p}
+                </AppText>
               </View>
             );
           })}
         </View>
 
-        <AppText variant="title" style={[styles.center, { marginTop: spacing.lg }]}>
-          ✨ Loppu ✨
-        </AppText>
+        <View style={styles.endMark}>
+          <AppText variant="hero" style={styles.center}>
+            ✨ Loppu ✨
+          </AppText>
+          {!app.completed[story.id] ? (
+            <PrimaryButton label="Luin sadun! Hae tarra 🏅" onPress={finishStory} />
+          ) : null}
+        </View>
 
         {/* ---------- Lähde, tekijä ja lisenssi (pelkkää tekstiä, ei linkkejä) ---------- */}
         <View style={[styles.sourceBox, { backgroundColor: colors.surfaceAlt }]}>
@@ -222,14 +291,14 @@ export default function StoryScreen() {
         </View>
       </ScrollView>
 
-      {/* ---------- "Jatkettiin..." -ilmoitus ---------- */}
-      {resumeInfo !== null ? (
-        <View style={[styles.toast, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-          <AppText variant="caption">Jatketaan siitä, mihin jäit</AppText>
+      {/* ---------- "Jatketaan..." -ilmoitus ---------- */}
+      {resumeInfo ? (
+        <View style={[styles.toast, { backgroundColor: colors.surface }, softShadow(colors.shadow, 1)]}>
+          <AppText variant="caption">📍 Jatketaan siitä, mihin jäit</AppText>
           <Pressable
             onPress={() => {
               scrollRef.current?.scrollTo({ y: 0, animated: true });
-              setResumeInfo(null);
+              setResumeInfo(false);
             }}
             accessibilityRole="button"
             style={[styles.toastButton, { backgroundColor: colors.surfaceAlt }]}
@@ -241,28 +310,70 @@ export default function StoryScreen() {
 
       {/* ---------- Ääneen luku ---------- */}
       <SafeAreaView edges={['bottom']} style={[styles.speechBar, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
-        <IconButton
-          icon={speech.status === 'playing' ? 'pause' : 'play'}
-          filled
+        <PressableScale
           onPress={onPlayPress}
+          accessibilityRole="button"
           accessibilityLabel={speech.status === 'playing' ? 'Tauko' : 'Lue ääneen'}
-        />
-        <AppText variant="subtitle" style={{ flex: 1 }}>
-          {speech.status === 'playing' ? 'Luetaan ääneen…' : speech.status === 'paused' ? 'Tauolla' : 'Lue ääneen'}
-        </AppText>
+          style={[styles.playButton, { backgroundColor: colors.primary }, softShadow(colors.primary, 1)]}
+        >
+          <Ionicons
+            name={speech.status === 'playing' ? 'pause' : 'play'}
+            size={30}
+            color={colors.onPrimary}
+            style={speech.status === 'playing' ? undefined : { marginLeft: 4 }}
+          />
+        </PressableScale>
+        <View style={{ flex: 1 }}>
+          <AppText variant="subtitle">
+            {speech.status === 'playing' ? 'Luetaan ääneen…' : speech.status === 'paused' ? 'Tauolla' : 'Kuuntele satu'}
+          </AppText>
+          <AppText variant="caption" muted>
+            {speech.status === 'idle' ? 'Satu luetaan ääneen suomeksi' : `Kappale ${speech.currentIndex + 1} / ${paras.length}`}
+          </AppText>
+        </View>
         {speech.status !== 'idle' ? (
           <IconButton icon="stop" onPress={speech.stop} accessibilityLabel="Lopeta ääneen luku" />
         ) : null}
       </SafeAreaView>
+
+      {celebration ? (
+        <Celebration
+          visible
+          story={story}
+          isNewSticker={celebration.isNew}
+          stickerCount={celebration.count}
+          totalStories={ALL_STORIES.length}
+          nextStory={nextStory}
+          onNext={() => {
+            setCelebration(null);
+            if (nextStory) router.replace(`/story/${nextStory.id}`);
+          }}
+          onClose={() => {
+            setCelebration(null);
+            goBack();
+          }}
+        />
+      ) : null}
     </SafeAreaView>
+  );
+}
+
+function Meta({ text }: { text: string }) {
+  const { colors } = useAppData();
+  return (
+    <View style={[styles.meta, { backgroundColor: colors.surfaceAlt }]}>
+      <AppText variant="caption" muted>
+        {text}
+      </AppText>
+    </View>
   );
 }
 
 function SourceRow({ label, value }: { label: string; value: string }) {
   return (
     <View style={{ gap: 2 }}>
-      <AppText variant="caption" muted>
-        {label.toUpperCase()}
+      <AppText variant="overline" muted>
+        {label}
       </AppText>
       <AppText>{value}</AppText>
     </View>
@@ -277,22 +388,14 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
-    borderBottomWidth: StyleSheet.hairlineWidth,
   },
-  scrollContent: { padding: spacing.lg, paddingBottom: 48, gap: spacing.sm, maxWidth: 720, width: '100%', alignSelf: 'center' },
-  cover: {
-    alignSelf: 'center',
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: spacing.sm,
-  },
-  coverEmoji: { fontSize: 64, lineHeight: 76 },
+  scrollContent: { padding: spacing.md, paddingBottom: 48, gap: spacing.sm, maxWidth: 720, width: '100%', alignSelf: 'center' },
   center: { textAlign: 'center' },
-  textBlock: { marginTop: spacing.md, gap: spacing.sm },
+  metaRow: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: 6 },
+  meta: { borderRadius: radius.pill, paddingHorizontal: 12, paddingVertical: 4 },
+  textBlock: { marginTop: spacing.lg, gap: spacing.sm, paddingHorizontal: spacing.sm },
   paragraph: { borderRadius: radius.md, paddingHorizontal: spacing.sm, paddingVertical: 4, marginHorizontal: -spacing.sm },
+  endMark: { gap: spacing.md, marginTop: spacing.xl, marginBottom: spacing.md },
   sourceBox: { borderRadius: radius.lg, padding: spacing.md, gap: spacing.sm, marginTop: spacing.md },
   toast: {
     position: 'absolute',
@@ -301,7 +404,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.md,
-    borderWidth: 1,
     borderRadius: radius.pill,
     paddingLeft: spacing.md,
     paddingRight: 4,
@@ -313,8 +415,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: spacing.md,
     paddingHorizontal: spacing.md,
-    paddingTop: spacing.sm,
-    paddingBottom: spacing.sm,
+    paddingTop: spacing.sm + 2,
+    paddingBottom: spacing.sm + 2,
     borderTopWidth: StyleSheet.hairlineWidth,
   },
+  playButton: { width: 60, height: 60, borderRadius: 30, alignItems: 'center', justifyContent: 'center' },
 });

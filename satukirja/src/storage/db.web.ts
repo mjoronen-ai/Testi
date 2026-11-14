@@ -10,11 +10,14 @@ const KEY = 'satukirja-data';
 function read(): StoredData {
   try {
     const raw = globalThis.localStorage?.getItem(KEY);
-    if (raw) return JSON.parse(raw) as StoredData;
+    if (raw) {
+      const parsed = JSON.parse(raw) as Partial<StoredData>;
+      return { favorites: [], progress: {}, settings: {}, ...parsed, completed: parsed.completed ?? {} };
+    }
   } catch {
     // Selaimen tallennus ei ole käytettävissä, joten aloitetaan tyhjästä.
   }
-  return { favorites: [], progress: {}, settings: {} };
+  return { favorites: [], progress: {}, completed: {}, settings: {} };
 }
 
 function write(data: StoredData) {
@@ -45,6 +48,19 @@ export async function saveProgress(storyId: string, ratio: number) {
 export async function clearProgress(storyId: string) {
   const d = read();
   delete d.progress[storyId];
+  write(d);
+}
+
+export async function markCompleted(storyId: string) {
+  const d = read();
+  const prev = d.completed[storyId];
+  d.completed[storyId] = { count: (prev?.count ?? 0) + 1, firstAt: prev?.firstAt ?? Date.now() };
+  write(d);
+}
+
+export async function resetCompleted() {
+  const d = read();
+  d.completed = {};
   write(d);
 }
 

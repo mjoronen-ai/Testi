@@ -7,7 +7,7 @@ source: Alkuperäinen satu, kirjoitettu tätä sovellusta varten
 author: Satukirjan tekijät (Claude-avusteinen teksti)
 license: CC0 1.0
 emoji: ☁️
-color: "#CFE3F2"
+color: "#9CC8EA"
 ---
 Taivaalla leijui Pikku Pilvi. Se oli pehmeä ja valkoinen kuin villasukka.
 

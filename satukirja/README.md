@@ -3,6 +3,8 @@
 Lasten satusovellus Androidille ja iPhonelle (React Native + Expo).
 Sovellus toimii ilman nettiä, eikä siinä ole mainoksia eikä ulkoisia linkkejä.
 
+Suunnitteluperiaatteet ja niiden perustelut löytyvät tiedostosta [DESIGN.md](DESIGN.md).
+
 ---
 
 ## 1. Kokeile puhelimellasi (Expo Go)
@@ -34,14 +36,17 @@ Kun muutat koodia ja tallennat, puhelin päivittyy automaattisesti.
 
 | Ominaisuus | Miten testaat |
 |---|---|
-| Päivän satu | Etusivun iso kortti. Vaihtuu keskiyöllä. |
-| Kategoriat | Kategoriat-välilehti: aiheet ja ikäryhmät. |
-| Haku | Haku-välilehti: kirjoita esim. "kettu" tai "meri". |
-| Fonttikoko | Avaa satu ja paina **A−** / **A+**. Koko säilyy, kun sovellus suljetaan. |
-| Yötila | Kuu-nappi (etusivulla tai lukunäkymässä). |
-| Suosikit | Paina sydäntä ja katso Suosikit-välilehti. |
-| Jatka lukemista | Vieritä satua puoleenväliin ja palaa takaisin. Etusivulle ilmestyy "Jatka lukemista". Kun avaat sadun uudelleen, se jatkuu samasta kohdasta. |
-| Ääneen luku | Paina ▶ lukunäkymän alalaidassa. Luettava kappale korostuu. ⏸ pitää tauon, ⏹ lopettaa. |
+| Aloitusopastus | Ensimmäisellä käynnistyskerralla: tervetuloa → nimi → ikä. Jos haluat nähdä sen uudelleen, poista sovellus Expo Gosta tai tyhjennä sen tiedot. |
+| Etusivu | Tervehdys nimellä. Päivällä "Päivän satu", klo 17 jälkeen "Illan satu". Alempana karusellit, joita voi vierittää sivuttain. |
+| Kuuntele | Pääkortin 🎧 Kuuntele avaa sadun, ja ääneen luku alkaa heti. |
+| Selaa | Haku, aiheet, ikäryhmät ja kaikki sadut. |
+| Fonttikoko | Avaa satu ja paina **A−** / **A+** (myös Asetuksissa). |
+| Yötila | Automaattisesti klo 19–07, tai kuu-napista. Asetuksissa: Automaattinen / Päivä / Yö. |
+| Suosikit | Paina sydäntä (puhelin värisee kevyesti) ja katso Suosikit-välilehti. |
+| Jatka lukemista | Vieritä satua puoliväliin ja palaa takaisin. Etusivulle tulee "Jatka lukemista". |
+| Tarrat | Lue satu loppuun (vieritä loppuun tai paina "Luin sadun!"). Esiin tulee juhlistus ja tarra, ja Tarrat-välilehdellä taso nousee. |
+| Ääneen luku | ▶ lukunäkymän alalaidassa. Luettava kappale korostuu. ⏸ pitää tauon, ⏹ lopettaa. Kun satu loppuu, saat tarran. |
+| Asetukset | Etusivun ratas: nimi, ikä, yötila, tekstin koko ja tarrakirjan tyhjennys. |
 
 **Ääneen luku:** jos ääni ei kuulosta suomelta, asenna puhelimeen suomenkielinen puheääni:
 - **iPhone:** Asetukset → Käyttöapu → Puhuttu sisältö → Äänet → Suomi
@@ -114,13 +119,15 @@ tekijä tai lisenssi.
 satukirja/
 ├── src/app/               Näkymät (Expo Router: jokainen tiedosto on yksi ruutu)
 │   ├── _layout.tsx        Fontit, tallennus ja navigointi
-│   ├── (tabs)/            Alapalkin välilehdet: Koti, Kategoriat, Haku, Suosikit
+│   ├── (tabs)/            Alapalkin välilehdet: Koti, Selaa, Suosikit, Tarrat
+│   ├── onboarding.tsx     Aloitusopastus (nimi ja ikä)
+│   ├── settings.tsx       Asetukset
 │   ├── category/[id].tsx  Kategorian tai ikäryhmän sadut
-│   └── story/[id].tsx     Lukunäkymä
-├── src/components/        Uudelleenkäytettävät palat (satukortti, sydännappi...)
-├── src/data/              Satuvarasto ja tuontityökalun tuottama JSON
+│   └── story/[id].tsx     Lukunäkymä ja juhlistus
+├── src/components/        Uudelleenkäytettävät palat (kansikuva, satukortit, karuselli, napit...)
+├── src/data/              Satuvarasto, suositukset, tarrakirjan tasot ja satujen JSON
 ├── src/hooks/useSpeech.ts Ääneen luku
-├── src/storage/           SQLite-tallennus: suosikit, lukukohta, asetukset
+├── src/storage/           SQLite-tallennus: profiili, suosikit, lukukohta, tarrat, asetukset
 ├── src/theme/theme.ts     Värit, fontit, koot: muuta ulkoasua täältä
 ├── src/types/story.ts     Sadun tietomalli
 ├── content/               Satujen lähdetiedostot

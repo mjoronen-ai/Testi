@@ -15,7 +15,11 @@ import * as Speech from 'expo-speech';
 
 export type SpeechStatus = 'idle' | 'playing' | 'paused';
 
-export function useSpeech(paragraphs: string[]) {
+export function useSpeech(paragraphs: string[], onFinished?: () => void) {
+  // Viimeisin onFinished-funktio talteen, jotta lukeminen ei katkea, jos se vaihtuu kesken.
+  const onFinishedRef = useRef(onFinished);
+  onFinishedRef.current = onFinished;
+
   const [status, setStatus] = useState<SpeechStatus>('idle');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,6 +38,7 @@ export function useSpeech(paragraphs: string[]) {
           indexRef.current = 0;
           setCurrentIndex(0);
           setStatus('idle');
+          onFinishedRef.current?.();
           return;
         }
         indexRef.current = i;
