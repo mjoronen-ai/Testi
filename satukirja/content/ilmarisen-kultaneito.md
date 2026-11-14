@@ -11,31 +11,63 @@ color: "#E3B95C"
 ---
 Seppä Ilmarinen oli menettänyt puolisonsa, ja hänen talonsa oli käynyt hiljaiseksi. Illat olivat pitkiä, eikä pajassakaan kuulunut iloista vasaran laulua.
 
-– Minä olen maailman taitavin seppä, Ilmarinen ajatteli eräänä iltana. – Minä taon itselleni uuden puolison. Kullasta ja hopeasta.
+Ennen pajasta oli kuulunut kalke aamusta iltaan. Kling, klang, kling, klang. Kyläläiset olivat sanoneet, että Ilmarisen vasara soi kuin kirkonkello. Nyt ahjo oli kylmä, ja hämähäkki oli kutonut verkon palkeiden väliin.
 
-Hän kantoi pajaan kultaa ja hopeaa ja sytytti ahjoon tulen. Palkeet puhkuivat, ja kipinät lensivät kattoon asti.
+Ilmarinen istui iltaisin pöydän ääressä yksin. Hän söi vähän ja puhui vielä vähemmän. Kun joku koputti oveen, hän ei jaksanut avata.
 
-Ensimmäisenä nousi ahjosta lammas, jolla oli kultainen, kuparinen ja hopeinen villa. Muut ihastelivat sitä, mutta Ilmarinen pudisti päätään.
+Talvi tuli, ja lumi peitti pajan katon. Tuuli vinkui seinähirsien raoissa. Ilmarinen kuunteli sitä ja ajatteli, että tuulikin kuulosti yksinäiseltä.
+
+– Minä olen maailman taitavin seppä, Ilmarinen ajatteli eräänä iltana. – Minä olen takonut taivaankannen. Minä olen takonut Sammon. Miksen minä voisi takoa itselleni uutta puolisoa? Kullasta ja hopeasta.
+
+Ajatus sai hänet nousemaan. Ensimmäistä kertaa moneen kuukauteen hänen silmissään oli intoa.
+
+Hän kantoi pajaan kultaa ja hopeaa. Hän pyyhki hämähäkinseitit pois ja sytytti ahjoon tulen. Palkeet puhkuivat, puh, puh, puh, ja kipinät lensivät kattoon asti.
+
+Hän pani palkeiden ääreen orjat lietsomaan. Mutta orjat lietsoivat laiskasti. Silloin Ilmarinen tarttui palkeisiin itse ja lietsoi niin, että liekit nousivat korkealle.
+
+Ensimmäisenä nousi ahjosta lammas, jolla oli kultainen, kuparinen ja hopeinen villa. Se määkäisi ja kimalteli tulen loisteessa. Pajan ovelle kerääntyneet kyläläiset ihastelivat sitä.
+
+– Mikä ihme! he huudahtivat. – Kultainen lammas!
+
+Mutta Ilmarinen pudisti päätään.
 
 – Ei, minä en tahtonut lammasta.
 
-Hän työnsi lampaan takaisin tuleen. Seuraavaksi nousi varsa, jonka harja kimalteli kuin aamukaste. Senkin hän palautti ahjoon.
+Hän työnsi lampaan takaisin tuleen ja lietsoi lisää.
 
-Kolmannella kerralla ahjosta nousi neito. Hänen hiuksensa olivat kultaa ja kasvonsa hopeaa. Ilmarinen takoi häntä päivät ja yöt. Hän muotoili neidolle sormet, korvat ja hymyn.
+Seuraavaksi nousi varsa, jonka harja kimalteli kuin aamukaste ja jonka kaviot olivat kuparia. Se hirnahti ja nousi takajaloilleen.
 
-Mutta neito ei puhunut. Hän ei nauranut eikä vastannut, kun Ilmarinen kysyi jotakin.
+– Ei, Ilmarinen sanoi taas. – Ei varsaa.
 
-– Ehkä hän on vain ujo, seppä sanoi itselleen.
+Senkin hän palautti ahjoon. Kyläläiset katsoivat toisiaan ja kuiskivat. Mitä seppä oikein tahtoi?
 
-Yöllä Ilmarinen asetti kultaneidon viereensä ja peitteli molemmat lämpimillä taljoilla. Mutta aamulla hän heräsi palellen. Se kylki, joka oli ollut neitoa vasten, oli kylmä kuin jää.
+Kolmannella kerralla ahjosta nousi neito. Hänen hiuksensa olivat kultaa ja kasvonsa hopeaa. Hän oli kauniimpi kuin kukaan, jonka kyläläiset olivat koskaan nähneet.
 
-Toinenkin yö oli samanlainen, ja kolmaskin. Kultaneito ei lämmennyt, vaikka Ilmarinen kääri hänet kaikkiin peittoihinsa.
+Ilmarinen takoi häntä päivät ja yöt. Hän ei syönyt eikä nukkunut. Hän muotoili neidolle sormet, jokaisen kynnen erikseen. Hän muotoili korvat, ripset ja kulmakarvat. Ja lopuksi hän muotoili hymyn, kaikkein huolellisimmin.
 
-Ilmarinen vei kultaneidon vanhan Väinämöisen luo.
+Kun työ oli valmis, Ilmarinen astui taaksepäin ja katsoi. Neito seisoi pajan keskellä ja kimalteli.
 
-– Katso, minkä kauniin neidon olen takonut, hän sanoi. – Haluatko sinä hänet? Hän on kaunein, mitä maailmassa on.
+– Hyvää päivää, Ilmarinen sanoi hänelle.
 
-Väinämöinen katsoi kimaltelevaa neitoa pitkään. Sitten hän katsoi ystäväänsä.
+Mutta neito ei puhunut. Hän ei nauranut eikä vastannut, kun Ilmarinen kysyi jotakin. Hän vain hymyili samaa hymyä, jonka seppä oli hänelle takonut. Se ei muuttunut koskaan.
+
+– Ehkä hän on vain ujo, seppä sanoi itselleen. – Kyllä hän tottuu.
+
+Yöllä Ilmarinen asetti kultaneidon viereensä ja peitteli molemmat lämpimillä taljoilla. Karhuntalja, sudentalja ja kolme villahuopaa.
+
+Mutta aamulla hän heräsi palellen. Se kylki, joka oli ollut neitoa vasten, oli kylmä kuin jää. Hänen partaansa oli noussut huurretta.
+
+Toinenkin yö oli samanlainen, ja kolmaskin. Kultaneito ei lämmennyt, vaikka Ilmarinen kääri hänet kaikkiin peittoihinsa ja lämmitti tupaa niin, että seinät hikoilivat.
+
+Ilmarinen istui sängyn reunalla ja katsoi neitoa. Neito hymyili samaa hymyä. Talo oli yhtä hiljainen kuin ennenkin. Ehkä vielä hiljaisempi.
+
+Ilmarinen vei kultaneidon vanhan Väinämöisen luo. Hän kantoi neitoa reessä, ja matka kesti kaksi päivää. Neito ei valittanut kylmää eikä pitkää matkaa. Hän ei sanonut mitään.
+
+Väinämöinen istui tuvassaan ja näppäili kanteletta. Kun ovi aukesi, hän nosti katseensa.
+
+– Katso, minkä kauniin neidon olen takonut, Ilmarinen sanoi. – Haluatko sinä hänet? Hän on kaunein, mitä maailmassa on.
+
+Väinämöinen laski kanteleen syrjään. Hän katsoi kimaltelevaa neitoa pitkään. Sitten hän katsoi ystäväänsä, tämän väsyneitä silmiä ja huurteista partaa.
 
 – Hän on kaunis, Väinämöinen sanoi hiljaa. – Mutta hän ei ole elävä. Hänellä ei ole lämpöä eikä sydäntä.
 
@@ -43,14 +75,30 @@ Väinämöinen katsoi kimaltelevaa neitoa pitkään. Sitten hän katsoi ystävä
 
 – Sydäntä ei taota vasaralla, Väinämöinen vastasi. – Se syntyy itsestään, ja lämpö kasvaa siitä, että ihmiset välittävät toisistaan. Kulta on kylmää, vaikka se kiiltää.
 
-Ilmarinen istui pitkään hiljaa. Hän muisti, miten hänen puolisonsa oli nauranut, kun leipä paloi uunissa, ja miten hän oli pitänyt sepän käsiä omissaan talvi-iltoina. Sitä lämpöä ei saanut mistään metallista.
+Hän otti kanteleen taas syliinsä ja soitti muutaman hiljaisen sävelen.
+
+– Kuuletko? hän kysyi. – Kantele ei soi itsestään. Sitä pitää koskettaa. Samoin on ihmisten kanssa.
+
+Ilmarinen istui pitkään hiljaa. Takassa ritisi tuli. Hän muisti, miten hänen puolisonsa oli nauranut, kun leipä paloi uunissa, ja miten hän oli pitänyt sepän käsiä omissaan talvi-iltoina. Hän muisti, miten puoliso oli laulanut kehrätessään ja miten hän oli tuonut pajaan kuumaa juotavaa pakkasaamuina.
+
+Sitä lämpöä ei saanut mistään metallista.
 
 – Sinä olet oikeassa, Ilmarinen sanoi lopulta. – Minä yritin takoa sitä, mikä täytyy saada lahjaksi.
 
-Hän vei kultaneidon takaisin pajaansa ja sulatti sen ahjossa. Kullasta hän takoi lyhtyjä ja kauniita koruja kylän ihmisille, ja hopeasta pieniä kelloja lasten kelkkoihin.
+Väinämöinen nyökkäsi ja laski kätensä ystävänsä olalle. Sen käden paino tuntui lämpimältä.
 
-Pian Ilmarisen pajassa kävi taas väkeä. Joku toi rikkinäisen kirveen, joku tuli vain juttelemaan, joku toi pullaa. Lapset kilistivät kellojaan pihalla.
+– Jää yöksi, Väinämöinen sanoi. – Minulla on kalakeittoa.
+
+Ilmarinen jäi. He söivät keittoa ja puhuivat myöhään yöhön. Ensimmäistä kertaa pitkään aikaan Ilmarinen nukkui hyvin.
+
+Kotiin palattuaan hän vei kultaneidon pajaansa ja sulatti sen ahjossa. Hän teki sen hitaasti ja kunnioittavasti, sillä neito oli hänen hienoin työnsä.
+
+Kullasta hän takoi lyhtyjä ja kauniita koruja kylän ihmisille, ja hopeasta pieniä kelloja lasten kelkkoihin. Jokaisen lahjan hän vei itse ja koputti oveen.
+
+Pian Ilmarisen pajassa kävi taas väkeä. Joku toi rikkinäisen kirveen, joku tuli vain juttelemaan, joku toi pullaa. Lapset kilistivät kellojaan pihalla ja laskivat mäkeä pajan vieressä.
+
+Ja vasara alkoi taas laulaa. Kling, klang, kling, klang.
 
 Ilmarinen huomasi, että hänen pajansa oli lämmin, vaikka tulikin olisi sammunut. Lämpö tuli ihmisistä.
 
-– Väinämöinen oli oikeassa, hän ajatteli ja hymyili ensimmäistä kertaa pitkään aikaan. – Kultaa voi takoa, mutta ystävyys täytyy antaa.
+– Väinämöinen oli oikeassa, hän ajatteli ja hymyili ensimmäistä kertaa pitkään aikaan. Oikeaa hymyä, joka muuttui ja eli. – Kultaa voi takoa, mutta ystävyys täytyy antaa.
