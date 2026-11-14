@@ -6,9 +6,9 @@
 export const LEVELS = [
   { min: 0, title: 'Satujen alkutaival', emoji: '🌱' },
   { min: 1, title: 'Satujen ystävä', emoji: '🌼' },
-  { min: 4, title: 'Tarinankuuntelija', emoji: '🦉' },
-  { min: 8, title: 'Satujen tutkija', emoji: '🧭' },
-  { min: 12, title: 'Satumestari', emoji: '👑' },
+  { min: 5, title: 'Tarinankuuntelija', emoji: '🦉' },
+  { min: 10, title: 'Satujen tutkija', emoji: '🧭' },
+  { min: 18, title: 'Satumestari', emoji: '👑' },
 ];
 
 export function levelFor(count: number) {
