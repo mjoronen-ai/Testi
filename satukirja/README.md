@@ -98,6 +98,22 @@ Uusi kappale alkaa tyhjän rivin jälkeen.
 | `keywords` | suositeltu | Hakusanat |
 | `emoji`, `color` | – | Kortin kuva ja väri |
 | `readingMinutes` | – | Lasketaan automaattisesti (n. 80 sanaa/min) |
+| `series`, `seriesTitle`, `chapter` | – | Vain jatkokertomuksille, katso alta |
+
+### Jatkokertomukset
+
+Jatkokertomuksen jokainen luku on oma tiedostonsa, esim. `content/oma-tarina-1.md`, `oma-tarina-2.md` jne.
+Lisää kaikkiin lukuihin samat kentät:
+
+```md
+series: oma-tarina
+seriesTitle: Oma tarina
+chapter: 1
+title: Oma tarina – 1. Luvun nimi
+```
+
+Sovellus näyttää luvut Jatkokertomukset-karusellissa. Luvun lopussa tulee "Tarina jatkuu huomenna" ja nappi seuraavaan lukuun.
+Tuontityökalu tarkistaa, että luvut on numeroitu 1, 2, 3… ilman aukkoja.
 
 Satu voi olla myös **JSON-tiedosto** (katso esimerkki `content/paperivene.json`).
 Yhdessä JSON-tiedostossa voi olla myös lista satuja.

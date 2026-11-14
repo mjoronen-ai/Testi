@@ -34,11 +34,12 @@ export default function CategoryScreen() {
       />
       <AppText style={styles.emoji}>{group.emoji}</AppText>
       <View style={{ flex: 1 }}>
-        <AppText variant="hero" color={DARK_TEXT}>
+        {/* Pitkät otsikot pienemmällä fontilla, jotta sana ei katkea kesken */}
+        <AppText variant={group.title.length > 14 ? 'title' : 'hero'} color={DARK_TEXT}>
           {group.title}
         </AppText>
         <AppText color={DARK_TEXT} style={{ opacity: 0.75 }}>
-          {group.description} · {stories.length} satua
+          {group.description} · {stories.length} {group.id === 'jatkokertomukset' ? 'lukua' : 'satua'}
         </AppText>
       </View>
     </View>
