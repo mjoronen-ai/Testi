@@ -39,6 +39,8 @@ Illalla Matti kömpi sänkyyn. Hän veti peiton leukaan asti. Ja mitä? Varpaat 
 
 Saks, saks, ja taas ompelemaan. Mutta peitto ei pidentynyt yhtään, vaikka hölmöläiset leikkasivat ja ompelivat koko viikon.
 
+Lopulta peitto oli täynnä saumoja ja paikkoja, mutta varpaat palelivat yhä.
+
 Sitten kylään tuli pieni tyttö, Liisa, joka oli kylässä mummonsa luona. Hän katsoi peittoa ja Mattia.
 
 – Miksi et vain koukista polviasi? Liisa kysyi. – Minä nukun aina kerällä kuin kissa. Silloin peitto riittää joka paikkaan.

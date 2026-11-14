@@ -43,7 +43,9 @@ Väinämöinen katsoi kimaltelevaa neitoa pitkään. Sitten hän katsoi ystävä
 
 – Sydäntä ei taota vasaralla, Väinämöinen vastasi. – Se syntyy itsestään, ja lämpö kasvaa siitä, että ihmiset välittävät toisistaan. Kulta on kylmää, vaikka se kiiltää.
 
-Ilmarinen istui pitkään hiljaa. Hän tiesi, että ystävä oli oikeassa.
+Ilmarinen istui pitkään hiljaa. Hän muisti, miten hänen puolisonsa oli nauranut, kun leipä paloi uunissa, ja miten hän oli pitänyt sepän käsiä omissaan talvi-iltoina. Sitä lämpöä ei saanut mistään metallista.
+
+– Sinä olet oikeassa, Ilmarinen sanoi lopulta. – Minä yritin takoa sitä, mikä täytyy saada lahjaksi.
 
 Hän vei kultaneidon takaisin pajaansa ja sulatti sen ahjossa. Kullasta hän takoi lyhtyjä ja kauniita koruja kylän ihmisille, ja hopeasta pieniä kelloja lasten kelkkoihin.
 

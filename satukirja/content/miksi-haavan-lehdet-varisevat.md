@@ -43,7 +43,15 @@ Hän puhalsi hiljaa haavan latvaan. Henkäys oli lempeä kuin kevättuuli.
 
 Ja niin kävi. Haavan lehdet alkoivat väristä ja lepattaa. Ne kahisivat, vaikka muut puut seisoivat aivan hiljaa.
 
-Aluksi haapa häpesi. Mutta sitten se huomasi jotain.
+Aluksi haapa häpesi. Se yritti pitää lehtensä paikallaan, mutta pieninkin henkäys sai ne lepattamaan.
+
+– Nyt kaikki näkevät, etten osaa seistä hiljaa, haapa huokaisi. – Muut puut nauravat minulle.
+
+Mutta kukaan ei nauranut. Vanha mänty sen vieressä kumarsi latvaansa ystävällisesti.
+
+– Älä sure, mänty sanoi. – Sinun lehtesi laulavat. Kukaan meistä ei osaa laulaa niin kuin sinä.
+
+Ja sitten haapa huomasi jotain.
 
 Kun jänis loikki ohi, haavan lehdet kahisivat sille hei. Kun lapsi kulki polkua marjakori kädessä, haapa lepatti iloisesti. Linnut istuivat sen oksille kuuntelemaan, ja oravat pysähtyivät juttelemaan.
 

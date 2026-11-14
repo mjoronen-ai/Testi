@@ -63,4 +63,4 @@ Daidalos halasi häntä märkänä.
 
 Kalastaja vei heidät saarelle, joka oli kaukana Minoksen vallasta. Siellä Daidalos ja Ikaros rakensivat uuden työpajan. Ikaros auttoi isäänsä, ja hänestäkin tuli taitava keksijä, aina vähän varovaisempi kuin ennen.
 
-Sitä merta, johon Ikaros putosi, kutsutaan vieläkin Ikarian mereksi. Ja aina kun Ikaros näki lokkien lentävän korkealla, hän hymyili ja muisti päivän, jolloin oli kosketellut melkein aurinkoa.
+Sitä merta, johon Ikaros putosi, kutsutaan vieläkin Ikarian mereksi. Ja aina kun Ikaros näki lokkien lentävän korkealla, hän hymyili ja muisti päivän, jolloin hän oli lentänyt melkein aurinkoon asti.
