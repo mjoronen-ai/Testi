@@ -55,7 +55,7 @@ Sheriffi ojensi kultaisen nuolen kerjäläiselle irvistäen.
 
 Hän ontui pois väkijoukkoon, ja munkit, paimenet ja kauppiaat lähtivät yksi kerrallaan hänen perässään.
 
-Sherwoodin metsässä kerjäläinen riisui laastarin, pesi ruskean värin hiuksistaan ja oikaisi selkänsä. Siinä seisoi Robin Hood nauraen.
+Sherwoodin metsässä kerjäläinen riisui laastarin, pesi punaisen värin hiuksistaan ja oikaisi selkänsä. Siinä seisoi Robin Hood nauraen.
 
 – Sheriffi ojensi palkinnon omin käsin! Pikku-John hohotti. – Mutta hän ei tiedä sitä.
 
