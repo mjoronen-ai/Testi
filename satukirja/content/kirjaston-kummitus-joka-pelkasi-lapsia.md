@@ -15,7 +15,7 @@ Kirjasto oli vanha punatiilinen talo, jossa oli narisevat lattiat ja korkeat ikk
 
 Hertta oli pieni ja pyöreä kummitus. Hän oli vaalean hopeinen, ja kun hän oli iloinen, hän hohti hiukan kirkkaammin. Kun hän oli hermostunut, hänen reunansa värisivät kuin hyytelö.
 
-Hertta rakasti kirjoja. Öisin, kun kirjasto oli tyhjä, hän leijui hyllyjen välissä ja luki. Hän kääntyi sivuja varovasti, ettei mikään repeytyisi.
+Hertta rakasti kirjoja. Öisin, kun kirjasto oli tyhjä, hän leijui hyllyjen välissä ja luki. Hän käänteli sivuja varovasti, ettei mikään repeytyisi.
 
 Hän oli lukenut jokaisen kirjan ainakin kolme kertaa, paitsi keittokirjoja, koska kummitukset eivät syö. Hän oli kerran yrittänyt lukea yhden, mutta ohjeet pullan leipomisesta olivat tehneet hänet vain surulliseksi.
 
@@ -127,6 +127,6 @@ Ja kun kirjastonhoitaja luki hauskimman kohdan, myös takariviltä kuului pieni,
 
 Siitä lähtien Iida kävi kirjastossa joka tiistai. Hän toi Hertalle uutuushyllyn kirjoja, ja Hertta näytti hänelle vanhojen hyllyjen aarteita.
 
-Ja iltaisin, kun kirjasto oli taas hiljainen ja kuu paistoi kattoikkunasta, Hertta leijui ylähyllyllään ja luki. Mutta nyt hän ei ollut enää yksinäinen. Hän tiesi, että huomenna joku tulisi taas, ja sille joulle hän voisi kertoa, mitä oli lukenut.
+Ja iltaisin, kun kirjasto oli taas hiljainen ja kuu paistoi kattoikkunasta, Hertta leijui ylähyllyllään ja luki. Mutta nyt hän ei ollut enää yksinäinen. Hän tiesi, että huomenna joku tulisi taas, ja hän voisi kertoa sille, mitä oli lukenut.
 
 Kirjan sivu kääntyi hiljaa. Kuu siirtyi taivaalla. Ja vanha kirjasto nukkui rauhassa, täynnä tarinoita.

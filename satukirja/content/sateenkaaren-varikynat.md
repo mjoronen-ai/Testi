@@ -87,6 +87,6 @@ Sateenkaari oli palannut.
 
 – Me teimme sen, Iida sanoi.
 
-Seuraavana aamuna maailma oli taas täynnä värejä. Iidan saapas oli punainen, appelsiini oranssi ja puuro sinisen violetti. Västäräkki istui aidalla ja lauloi.
+Seuraavana aamuna maailma oli taas täynnä värejä. Iidan saapas oli punainen, appelsiini oranssi ja mustikkapuuro taas sinisen violetti. Västäräkki istui aidalla ja lauloi.
 
 Ja Iidan rasiaan oli jäänyt muisto: seitsemän pientä värikynää, joilla voi piirtää mitä tahansa.
