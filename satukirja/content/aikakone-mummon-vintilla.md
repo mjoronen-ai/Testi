@@ -115,7 +115,7 @@ Ruvan äiti antoi Lumille ja mummolle paistettuja pähkinöitä, jotka hän otti
 
 – Eivät ihan voita pullia, mummo kuiskasi Lumille, – mutta melkein.
 
-He istuivat nuotion ääressä. Kukaan ei ymmärtänyt toisen kieltä, mutta se ei haitannut. Ruva piirsi kepillä maahan kuvia: hirven, kalan, auringon. Lumi piirsi kissan ja talon, jossa oli savupiippu. Ruva nauroi talolle ja piirsi sille vielä luolan viereen.
+He istuivat nuotion ääressä. Kukaan ei ymmärtänyt toisen kieltä, mutta se ei haitannut. Ruva piirsi kepillä maahan kuvia: hirven, kalan, auringon. Lumi piirsi kissan ja talon, jossa oli savupiippu. Ruva nauroi talolle ja piirsi sen viereen luolan.
 
 Kun aurinko alkoi laskea punaisena mäntyjen taakse, mummo katsoi kelloa tuolin selkänojassa.
 
