@@ -37,7 +37,7 @@ Aleksi rypisti nenäänsä. Hän ei halunnut nähdä unta mistään puolisosta.
 
 – Ehkä, täti nauroi. – Taika on omanlaisensa jokaiselle.
 
-Niin Saga ja Aleksi lähtivät niitylle. He keräsivät päivänkakkaran, kissankellon, apilan, puna-ailakin, niittyleinikin ja metsätähden. Kuudes kukka oli helppo, mutta seitsemättä he etsivät pitkään.
+Niin Saga ja Aleksi lähtivät niitylle. He keräsivät päivänkakkaran, kissankellon, apilan, puna-ailakin, niittyleinikin ja metsätähden. Kuusi kukkaa löytyi helposti, mutta seitsemättä he etsivät pitkään.
 
 Kello oli jo yli yksitoista. Taivas oli kuitenkin yhä vaalea, kuin joku olisi unohtanut sammuttaa sen valot. Lokit kirkuivat, ja järven yllä leijui ohut usva.
 

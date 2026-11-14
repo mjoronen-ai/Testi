@@ -1,7 +1,7 @@
 ---
 title: Pieni punainen kana
 categories: [kansansadut, elainsadut]
-ageMin: 3
+ageMin: 4
 keywords: [kana, vehnä, leipä, kissa, koira, ankka, yhteistyö]
 source: Englantilainen kansansatu (vapaa juoni), teksti kirjoitettu tätä sovellusta varten
 author: Satukirjan tekijät (Claude-avusteinen teksti)

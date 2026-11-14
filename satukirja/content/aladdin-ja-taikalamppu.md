@@ -37,7 +37,7 @@ Kotona ei ollut ruokaa. Äiti päätti kiillottaa lampun ja myydä sen. Mutta he
 
 – Mitä käsket? Olen lampun henki, ja palvelen sitä, jolla lamppu on!
 
-Äiti pyörtyi melkein, mutta Aladdin sanoi rohkeasti:
+Äiti oli vähällä pyörtyä, mutta Aladdin sanoi rohkeasti:
 
 – Tuo meille jotain syötävää.
 
@@ -53,7 +53,7 @@ Mutta kaukana taikuri kuuli palatsista ja arvasi heti, mistä oli kyse. Hän puk
 
 – Uusia lamppuja vanhojen tilalle!
 
-Prinsessa ei tiennyt lampun salaisuutta. Hän vaihtoi nurkassa lojuvan vanhan lampun kiiltävään uuteen. Taikuri hankasi lamppua, ja koko palatsi prinsessoineen lensi hänen kotimaahansa Afrikkaan.
+Prinsessa ei tiennyt lampun salaisuutta. Hän vaihtoi nurkassa lojuvan vanhan lampun kiiltävään uuteen. Taikuri hankasi lamppua, ja koko palatsi prinsessoineen lensi hänen kotimaahansa kauas meren taakse.
 
 Kun Aladdin palasi metsästysretkeltä, hän näki vain tyhjän paikan. Hän ei menettänyt toivoaan, vaan hieroi sormustaan.
 

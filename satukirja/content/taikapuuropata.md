@@ -1,7 +1,7 @@
 ---
 title: Taikapuuropata
 categories: [kansansadut]
-ageMin: 3
+ageMin: 4
 keywords: [puuro, pata, taika, kylä, äiti, tyttö, loru]
 source: Grimmin veljesten satu "Makea puuro" (vapaa juoni), teksti kirjoitettu tätä sovellusta varten
 author: Satukirjan tekijät (Claude-avusteinen teksti)

@@ -1,7 +1,7 @@
 ---
 title: Piparkakkupoika
 categories: [kansansadut]
-ageMin: 3
+ageMin: 4
 keywords: [piparkakku, poika, kettu, joki, juokseminen, leipominen, ystävyys]
 source: Eurooppalainen ja amerikkalainen kansansatu (vapaa juoni), teksti kirjoitettu tätä sovellusta varten
 author: Satukirjan tekijät (Claude-avusteinen teksti)

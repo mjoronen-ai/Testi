@@ -1,7 +1,7 @@
 ---
 title: Kilpikonna ja jänis
 categories: [kansansadut, elainsadut]
-ageMin: 3
+ageMin: 4
 keywords: [kilpikonna, jänis, kilpajuoksu, sinnikkyys, niitty, maali, ylpeys]
 source: Aisopoksen faabeli (vapaa juoni), teksti kirjoitettu tätä sovellusta varten
 author: Satukirjan tekijät (Claude-avusteinen teksti)

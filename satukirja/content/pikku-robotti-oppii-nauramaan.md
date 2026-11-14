@@ -31,7 +31,7 @@ Ensin Sanni kertoi vitsin.
 
 Ruuvin valot vilkkuivat.
 
-– Laskelmissani on virhe, hän sanoi. – Kana ei voi lainata kirjoja. Sillä ei ole kirjastokorttia.
+– Vitsissäsi on virhe, hän sanoi. – Kana ei voi lainata kirjoja. Sillä ei ole kirjastokorttia.
 
 Sanni nauroi silti. Ruuvi ei.
 
