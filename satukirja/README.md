@@ -90,7 +90,7 @@ Uusi kappale alkaa tyhjän rivin jälkeen.
 | Kenttä | Pakollinen | Selitys |
 |---|---|---|
 | `title` | ✅ | Sadun nimi |
-| `categories` | ✅ | `elainsadut`, `kansansadut`, `iltasadut`, `seikkailusadut` (yksi tai useampi) |
+| `categories` | ✅ | `elainsadut`, `kansansadut`, `suomalaiset`, `iltasadut`, `seikkailusadut`, `joulusadut` (yksi tai useampi) |
 | `ageMin` | ✅ | Pienin suositeltu ikä (vuotta) |
 | `source` | ✅ | Mistä teksti on peräisin |
 | `author` | ✅ | Kirjoittaja tai kääntäjä |

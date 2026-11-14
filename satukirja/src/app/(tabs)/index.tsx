@@ -19,6 +19,7 @@ import {
   getStory,
   getStoryOfTheDay,
   greeting,
+  isChristmasSeason,
   storyColor,
 } from '@/data/storyRepository';
 import { useAppData } from '@/storage/AppDataContext';
@@ -66,6 +67,9 @@ export default function HomeScreen() {
   const short = ALL_STORIES.filter((s) => s.readingMinutes < SHORT_STORY_MINUTES);
   const animals = ALL_STORIES.filter((s) => s.categories.includes('elainsadut'));
   const adventures = ALL_STORIES.filter((s) => s.categories.includes('seikkailusadut'));
+  const finnish = ALL_STORIES.filter((s) => s.categories.includes('suomalaiset'));
+  const christmas = ALL_STORIES.filter((s) => s.categories.includes('joulusadut'));
+  const christmasSeason = isChristmasSeason();
 
   const stickerCount = completedIds.filter((id) => getStory(id)).length;
 
@@ -201,11 +205,19 @@ export default function HomeScreen() {
       <Section title="Sinulle sopivat" subtitle={`Valittu ${profile.age}${profile.age >= 9 ? '+' : ''}-vuotiaalle`}>
         <Carousel stories={recommended} />
       </Section>
+      {christmasSeason && christmas.length > 0 ? (
+        <Section title="🎄 Joulun odotukseen" subtitle="Tonttuja, poroja ja joulun taikaa" seeAllHref="/category/joulusadut">
+          <Carousel stories={christmas} />
+        </Section>
+      ) : null}
       <Section title="Iltasadut" subtitle="Rauhoittumiseen ennen unta" seeAllHref="/category/iltasadut">
         <Carousel stories={bedtime} />
       </Section>
       <Section title="Lyhyet satuhetket" subtitle={`Alle ${SHORT_STORY_MINUTES} minuuttia`} seeAllHref="/category/lyhyet">
         <Carousel stories={short} />
+      </Section>
+      <Section title="Suomalaiset kansansadut" subtitle="Vanhoja tarinoita omasta maasta" seeAllHref="/category/suomalaiset">
+        <Carousel stories={finnish} />
       </Section>
       <Section title="Eläinsadut" seeAllHref="/category/elainsadut">
         <Carousel stories={animals} />

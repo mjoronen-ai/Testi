@@ -84,6 +84,8 @@ export const categoryColors: Record<string, string> = {
   kansansadut: '#A9D18E',
   iltasadut: '#AFA6E8',
   seikkailusadut: '#8EC9DB',
+  suomalaiset: '#9DBBE3',
+  joulusadut: '#E58C8C',
   lyhyet: '#F3D27A',
 };
 

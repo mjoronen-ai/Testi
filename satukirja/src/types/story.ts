@@ -6,7 +6,14 @@
  */
 
 /** Kategoriat, jotka kirjoitetaan satutiedostoon. */
-export const CATEGORY_IDS = ['elainsadut', 'kansansadut', 'iltasadut', 'seikkailusadut'] as const;
+export const CATEGORY_IDS = [
+  'elainsadut',
+  'kansansadut',
+  'suomalaiset',
+  'iltasadut',
+  'seikkailusadut',
+  'joulusadut',
+] as const;
 export type CategoryId = (typeof CATEGORY_IDS)[number];
 
 /** Lisenssit, jotka tuontityökalu hyväksyy. Kaikki sallivat käytön sovelluksessa. */

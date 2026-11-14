@@ -25,6 +25,32 @@
     "emoji": "🚀"
   },
   {
+    "id": "holmolaiset-kantavat-valoa",
+    "title": "Hölmöläiset kantavat valoa",
+    "text": "Hölmölän kylässä asui väkeä, joka oli kovin ahkeraa, mutta ei aina kovin viisasta. Eräänä kesänä hölmöläiset päättivät rakentaa yhteisen talon, kylän suurimman ja hienoimman.\n\nHe kaatoivat hirsiä, veistivät niitä ja kasasivat seinät korkeiksi. He tekivät katon ja oven, ja lopuksi he astuivat kaikki yhdessä sisään ihailemaan työtään.\n\nSisällä oli pilkkopimeää.\n\n– Kas, täällä ei näe mitään, sanoi vanhin hölmöläinen. – Ulkona on valoisaa, mutta täällä pimeää. Mitenkähän tämä korjataan?\n\nHölmöläiset miettivät pitkään. Lopulta kylän nokkelin, Hölmö-Heikki, keksi.\n\n– Valoahan on pihalla vaikka kuinka paljon! Kannetaan sitä sisään!\n\nKaikki olivat ihastuksissaan. He hakivat säkkejä, koreja, sankoja ja kauhoja. Yksi otti jopa lakkinsa. Sitten he asettuivat pihalle auringonpaisteeseen.\n\n– Nyt! Heikki komensi.\n\nHölmöläiset avasivat säkkinsä auringolle, odottivat, että ne täyttyivät valosta, ja solmivat ne nopeasti kiinni. Sitten he juoksivat sisälle ja avasivat säkit pimeässä tuvassa.\n\nPimeää oli yhä.\n\n– Liian vähän valoa, Heikki päätteli. – Kannetaan lisää!\n\nHe kantoivat koko päivän. Säkeittäin ja korillisin, sangoittain ja kauhoittain. Yksi juoksi lakki täynnä aurinkoa ja varoi visusti, ettei mitään läikkyisi. Illalla kaikki olivat hiestä märkiä ja väsyneitä, mutta tupa oli yhtä pimeä kuin aamulla.\n\nSilloin tien ohi kulki vieras kulkumies. Hän katseli hetken hölmöläisten touhuja ja kysyi:\n\n– Mitä te oikein teette?\n\n– Kannamme valoa uuteen taloomme, hölmöläiset selittivät. – Mutta se ei tunnu pysyvän säkissä.\n\nKulkumies kiersi talon ympäri ja raapi päätään.\n\n– Antakaapa minulle kirves, hän sanoi.\n\nHän kiipesi tuvan seinälle ja hakkasi siihen neliön muotoisen aukon. Heti auringonvalo tulvi sisään ja valaisi koko tuvan pöytineen ja penkkeineen.\n\nHölmöläiset seisoivat suu auki.\n\n– Ihme! Taikuri! Velho! he huusivat ja kantoivat kulkumiehen olkapäillään ympäri pihaa.\n\nSiitä lähtien Hölmölän taloissa on ollut ikkunat. Ja kun joku hölmöläinen sen jälkeen sai hyvän idean, muut kysyivät aina ensin varmuuden vuoksi:\n\n– Kokeiltiinko jo ikkunaa?",
+    "categories": [
+      "suomalaiset",
+      "kansansadut"
+    ],
+    "ageMin": 5,
+    "readingMinutes": 4,
+    "keywords": [
+      "hölmöläiset",
+      "talo",
+      "ikkuna",
+      "valo",
+      "aurinko",
+      "säkki",
+      "hassu",
+      "suomalainen kansansatu"
+    ],
+    "source": "Suomalainen kansansatu hölmöläisistä (vapaa juoni), teksti kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#F5D372",
+    "emoji": "☀️"
+  },
+  {
     "id": "iso-nauris",
     "title": "Iso nauris",
     "text": "Keväällä isoisä istutti pienen naurisiemenen.\n\n– Kasva makeaksi, nauris. Kasva isoksi, nauris, isoisä sanoi.\n\nJa nauris kasvoi. Se kasvoi koko kesän, ja syksyllä se oli niin iso, että sen lehdet heiluivat kuin sateenvarjot.\n\nIsoisä tarttui naatteihin ja veti. Hän veti ja veti, mutta nauris ei noussut.\n\nIsoisä huusi avuksi isoäidin. Isoäiti piti kiinni isoisästä, isoisä piti kiinni nauriista. He vetivät ja vetivät, mutta nauris ei noussut.\n\nIsoäiti huusi avuksi tyttärentyttären. Tyttö piti kiinni isoäidistä, isoäiti isoisästä, isoisä nauriista. He vetivät ja vetivät, mutta nauris ei noussut.\n\nTyttö huusi avuksi koiran. Koira piti kiinni tytöstä, tyttö isoäidistä, isoäiti isoisästä, isoisä nauriista. He vetivät ja vetivät, mutta nauris ei noussut.\n\nKoira haukkui avuksi kissan. Kissa piti kiinni koirasta, koira tytöstä, tyttö isoäidistä, isoäiti isoisästä, isoisä nauriista. He vetivät ja vetivät, mutta nauris ei vieläkään noussut.\n\nSilloin kissa naukui avuksi pienen hiiren.\n\n– Noin pieni, mitä sinä muka jaksat? koira tuhahti.\n\n– Kokeillaan, hiiri sanoi ja tarttui kissan häntään.\n\nHiiri piti kiinni kissasta, kissa koirasta, koira tytöstä, tyttö isoäidistä, isoäiti isoisästä, isoisä nauriista. He vetivät ja vetivät – ja PLOPS! Nauris nousi maasta, ja kaikki kierähtivät nurmikolle kasaan.\n\nKaikki nauroivat. Illalla isoäiti keitti suuren kattilallisen naurissoppaa, ja jokainen sai lautasellisen. Pienin hiiri sai ensimmäisen lusikallisen, sillä ilman sitä nauris olisi yhä maassa.",
@@ -48,6 +74,32 @@
     "license": "CC0 1.0",
     "color": "#D7E8B9",
     "emoji": "🌱"
+  },
+  {
+    "id": "joulupukin-kadonnut-lista",
+    "title": "Joulupukin kadonnut lista",
+    "text": "Kolme päivää ennen joulua Korvatunturin pajassa kuului kauhea huuto.\n\n– LISTA ON KADONNUT!\n\nTontut pudottivat vasaransa, siveltimensä ja paketointinauhansa. Joulupukki seisoi kirjoituspöytänsä vieressä ja katsoi tyhjää kohtaa, jossa suuri lahjalista oli aina ollut. Listaan oli kirjoitettu kaikkien lasten toiveet, jotka oli lähetetty kirjeinä Korvatunturille.\n\n– Ilman listaa emme tiedä, mitä kukakin toivoo, pukki sanoi ja istahti raskaasti tuoliin.\n\nPajassa oli töissä tonttutyttö nimeltä Saga. Hän oli nuorin tontuista, ja hän piti arvoituksista.\n\n– Minä etsin sen, Saga sanoi.\n\nSaga aloitti kirjoituspöydältä. Pöydällä oli mustetahra ja sen vieressä pieniä, kosteita jälkiä. Jäljet johtivat ikkunalle.\n\n– Ikkuna oli yöllä raollaan, Saga huomasi. – Ja ulkona tuuli kovaa.\n\nSaga juoksi ulos. Lumessa ei näkynyt jälkiä, mutta tunturikoivun oksaan oli takertunut pieni paperinpala. Siinä luki: *”…ja pikkusiskolle villasukat. T. Matias, 6 v.”*\n\n– Tuuli vei listan! Saga huudahti. – Ja se on revennyt!\n\nNyt alkoi kiire. Saga kokosi joukon tonttuja, ja he lähtivät kulkemaan tuulen suuntaan. Kuusen latvasta he löysivät palan, jossa toivottiin pulkkaa. Riekko oli vienyt yhden palan pesäänsä, mutta antoi sen takaisin, kun Saga lupasi sille kourallisen siemeniä. Ketunkolon suulta löytyi kaksi palaa. Kettu oli aikonut käyttää niitä pesänsä pehmikkeenä.\n\nIllalla tontut liimasivat paloja yhteen pajan pöydällä. Lista oli melkein kokonainen, mutta yksi kulma puuttui yhä.\n\n– Siinä oli kolme nimeä, joulupukki sanoi huolestuneena. – Kolme lasta jää ilman lahjaa.\n\nSaga ei antanut periksi. Hän mietti, mihin tuuli puhaltaisi kevyen paperinpalan kaikkein kauimmaksi. Sitten hän katsoi ylös. Tunturin huipulla, aivan korkeimmalla kohdalla, kimalteli jotain.\n\nSaga kiipesi koko yön. Huipulla tuuli oli niin kova, että hän joutui konttaamaan. Mutta siellä, jääkiteen alla, oli listan viimeinen kulma.\n\nAamulla Saga palasi pajaan väsyneenä, märkänä ja onnellisena. Pala sopi täydellisesti paikalleen. Kolme nimeä: Elsa, Aatu ja Noora.\n\nPukki luki ne ääneen ja nauroi helpottuneena. Sitten hän katsoi Sagaa.\n\n– Tiedätkö, miten estämme tämän ensi vuonna?\n\nSaga mietti.\n\n– Teemme listasta kopion?\n\n– Juuri niin, pukki sanoi. – Ja sinusta tulee listan vartija.\n\nJouluaattona joulupukin reki lähti matkaan, ja jokainen toive oli mukana. Ja jossain kaukana Matiaksen pikkusisko sai lahjapaketin, jossa oli lämpimät villasukat. Niiden varressa oli pieni kirjailtu nimi: Saga.",
+    "categories": [
+      "joulusadut",
+      "seikkailusadut"
+    ],
+    "ageMin": 7,
+    "readingMinutes": 4,
+    "keywords": [
+      "joulu",
+      "joulupukki",
+      "lista",
+      "tontut",
+      "arvoitus",
+      "seikkailu",
+      "Korvatunturi",
+      "kirjeet"
+    ],
+    "source": "Alkuperäinen satu, kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#D98E7A",
+    "emoji": "📜"
   },
   {
     "id": "kadonneen-kellon-arvoitus",
@@ -145,6 +197,32 @@
     "license": "CC0 1.0",
     "color": "#D9B8E8",
     "emoji": "👑"
+  },
+  {
+    "id": "kettu-ja-kukko",
+    "title": "Kettu ja kukko",
+    "text": "Talon pihalla asui komea kukko. Sillä oli punainen heltta ja kultaiset pyrstösulat, ja joka aamu se kiekui niin kovaa, että koko kylä heräsi.\n\nEräänä aamuna aidan taakse hiipi kettu. Kettu oli nälkäinen, ja kukko näytti sen mielestä oikein herkulliselta.\n\n– Hyvää huomenta, kukko kulta! kettu sanoi makealla äänellä. – Kuulin laulusi metsään asti. Sinun isäsi lauloi myös kauniisti, mutta hän osasi laulaa silmät kiinni. Osaatko sinä?\n\nKukko pöyhisti höyheniään.\n\n– Tietysti osaan!\n\nKukko sulki silmänsä ja kiekui: KUKKO-KIEKUU!\n\nSamassa kettu hyppäsi aidan yli, nappasi kukon suuhunsa ja juoksi kohti metsää.\n\nTalon väki näki sen ja huusi:\n\n– Kettu vie kukon! Kettu vie kukon!\n\nKukko ei hätääntynyt, vaikka sydän hakkasi. Se mietti nopeasti ja sanoi ketun suusta:\n\n– Kettu hyvä, kuuletko, miten he huutavat? Sano heille, että tämä on sinun kukkosi eikä heidän. Näytä heille!\n\nKettu oli ylpeä, eikä se halunnut kenenkään väittävän vastaan. Se kääntyi ja avasi suunsa huutaakseen:\n\n– Tämä on minun ku…\n\nMutta silloin kukko pyrähti ketun suusta ylös korkeaan koivuun.\n\nKettu tuijotti ylös.\n\n– Tule alas, kukko kulta! Minä vain leikin!\n\n– Ei kiitos, kukko sanoi oksalta. – Opin tänään jotain: kun joku kehuu minua liikaa, pidän silmäni auki.\n\n– Ja minä opin, kettu murahti, – että suuta ei kannata avata turhaan.\n\nKettu luikki metsään tyhjin vatsoin. Kukko lensi takaisin pihalle, ja seuraavana aamuna se kiekui taas, mutta silmät auki.",
+    "categories": [
+      "suomalaiset",
+      "kansansadut",
+      "elainsadut"
+    ],
+    "ageMin": 3,
+    "readingMinutes": 3,
+    "keywords": [
+      "kettu",
+      "kukko",
+      "laulu",
+      "viekkaus",
+      "suomalainen kansansatu",
+      "piha",
+      "aita"
+    ],
+    "source": "Suomalainen ja yleiseurooppalainen kansansatu (vapaa juoni), teksti kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#F0A868",
+    "emoji": "🐓"
   },
   {
     "id": "kettu-ja-kurki",
@@ -317,6 +395,58 @@
     "emoji": "🦁"
   },
   {
+    "id": "lintujen-joululyhde",
+    "title": "Lintujen joululyhde",
+    "text": "Oli jouluaaton aamu. Lunta oli satanut yöllä paksulti, ja kaikki oli valkoista.\n\nPieni talitintti istui pihakoivun oksalla ja palelsi.\n\n– Tsi-tsi-tää, se sanoi. – Onpa kylmä. Ja nälkä.\n\nTalon ovi aukesi. Pihalle tuli pieni poika ja hänen isänsä. Isä kantoi pitkää puuta, ja poika kantoi jotain kultaista.\n\n– Mitä tuo on? talitintti kuiskasi varpuselle, joka istui samalla oksalla.\n\n– Odota ja katso, varpunen sanoi.\n\nIsä pystytti puun pihalle. Poika kiipesi jakkaralle ja sitoi puun päähän kultaisen nipun. Siinä oli kauraa. Paljon kauraa. Tähkät heiluivat tuulessa kuin pienet kellot.\n\n– Tämä on lintujen joululyhde, poika sanoi. – Hyvää joulua, linnut!\n\nTalitintti lensi lyhteelle. Nokk, nokk. Kaura oli makeaa.\n\nSitten tuli varpunen. Sitten tuli punatulkku punaisessa takissaan. Sitten tuli pieni sinitiainen. Kaikki istuivat lyhteellä yhdessä ja söivät.\n\nPoika katsoi ikkunasta ja hymyili.\n\nIllalla talossa sytytettiin kynttilät. Pihalla lyhde kimmelsi lumen keskellä, ja sen ympärillä nukkuivat pienet, kylläiset linnut.\n\nHyvää joulua, pikku linnut. Hyvää joulua kaikille.",
+    "categories": [
+      "joulusadut",
+      "elainsadut"
+    ],
+    "ageMin": 2,
+    "readingMinutes": 2,
+    "keywords": [
+      "joulu",
+      "lyhde",
+      "linnut",
+      "talitintti",
+      "varpunen",
+      "talvi",
+      "jouluaatto",
+      "perinne"
+    ],
+    "source": "Alkuperäinen satu suomalaisesta jouluperinteestä, kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#E7C77A",
+    "emoji": "🌾"
+  },
+  {
+    "id": "lumiukon-joulutoive",
+    "title": "Lumiukon joulutoive",
+    "text": "Pihalle tehtiin lumiukko viikkoa ennen joulua. Sillä oli porkkananenä, hiilisilmät ja punainen kaulahuivi, jonka Aino oli antanut sille omasta kaapistaan.\n\n– Sinun nimesi on Lumi-Lauri, Aino sanoi ja taputti lumiukon pyöreää mahaa.\n\nJoka ilta Lumi-Lauri katseli talon ikkunaa. Sisällä oli lämmintä ja valoisaa. Siellä leivottiin pipareita, askarreltiin olkitähtiä ja laulettiin joululauluja. Lumi-Laurin hiilisydän tuntui vähän painavalta.\n\n– Kunpa minäkin pääsisin sisälle jouluun, se toivoi hiljaa.\n\nMutta lumiukko tiesi, ettei se voinut mennä sisälle. Lämmössä se sulaisi.\n\nPihan kuusessa asui vanha tikka. Se oli kuullut lumiukon toiveen.\n\n– Joulu ei asu vain sisällä, tikka sanoi. – Odotapa aattoon.\n\nJouluaattona Aino tuli ulos pipo päässä ja kädessään lyhty, jossa paloi kynttilä. Hän asetti lyhdyn lumiukon viereen.\n\n– Ettei sinun tarvitse olla pimeässä jouluna, Aino sanoi.\n\nSitten tuli Ainon pikkuveli Eino. Hän toi pienen kuusenoksan, johon oli ripustettu yksi olkitähti, ja pisti sen lumiukon käteen.\n\nSitten tuli isä, joka nosti kuusen juurelle linnuille talipallon. Ja sitten tuli äiti, joka toi kupillisen höyryävää glögiä ja asetti sen lumiukon eteen hangelle.\n\n– Tämä on Lumi-Laurin osuus, äiti sanoi. – Vaikka se ei voikaan juoda sitä.\n\nKoko perhe seisoi lumiukon ympärillä ja lauloi yhden joululaulun. Lyhdyn valo heijastui lumesta, ja taivaalta alkoi sataa hiljaisia, suuria hiutaleita.\n\nLumi-Laurin hiilisydän ei tuntunut enää painavalta. Se tuntui keveältä kuin hiutale.\n\n– Tikka, se kuiskasi, kun perhe oli mennyt sisälle. – Minun toiveeni toteutui. Joulu tuli minun luokseni.\n\n– Niin se usein tekee, tikka sanoi. – Joulu menee sinne, missä joku muistaa toista.\n\nYöllä Aino kurkisti ikkunasta. Pihalla lumiukko seisoi lyhdyn valossa olkitähti kädessään, ja Ainosta näytti siltä, että sen hiilisuu hymyili vähän leveämmin kuin ennen.",
+    "categories": [
+      "joulusadut",
+      "iltasadut"
+    ],
+    "ageMin": 5,
+    "readingMinutes": 3,
+    "keywords": [
+      "joulu",
+      "lumiukko",
+      "toive",
+      "ikkuna",
+      "kynttilä",
+      "lämpö",
+      "ystävyys",
+      "talvi"
+    ],
+    "source": "Alkuperäinen satu, kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#A9C9E3",
+    "emoji": "⛄"
+  },
+  {
     "id": "majakan-kissa",
     "title": "Majakan kissa",
     "text": "Kaukana meressä, pienellä kalliosaarella, seisoi valkoinen majakka. Siellä asui majakanvartija Hilma ja hänen raidallinen kissansa Kaneli.\n\nJoka ilta Hilma kiipesi kierreportaat ylös ja sytytti majakan suuren lampun. Valo kiersi meren yllä ja näytti laivoille, missä karit olivat. Kaneli istui ikkunalaudalla ja katsoi, kuinka valonsäde pyyhki aaltoja.\n\nEräänä syysiltana alkoi myrsky. Tuuli ulvoi, ja aallot löivät kallioon niin, että vaahto lensi ikkunoihin asti.\n\nHilma kiirehti portaisiin, mutta liukastui märällä askelmalla ja nyrjäytti nilkkansa.\n\n– Voi ei, Hilma voihkaisi. – En pääse ylös. Ja lamppu on vielä sammuksissa!\n\nKaneli katsoi Hilmaa ja sitten portaita. Ylhäällä oli vipu, joka käynnisti lampun. Hilma oli kääntänyt sitä joka ilta, ja Kaneli oli katsonut tarkasti.\n\nKaneli lähti juoksemaan. Ylös, ylös, ylös – sata kahdeksan askelmaa. Ylhäällä tuuli vinkui raoista, ja lasi värisi. Vipu oli korkealla.\n\nKaneli hyppäsi. Ei ylettynyt. Se hyppäsi uudestaan, ja tassu hipaisi vipua. Kolmannella kerralla Kaneli otti vauhtia hyllyltä, loikkasi ja roikkui hetken vivussa kaikin kynsin.\n\nKlonk! Vipu kääntyi. Lamppu surisi, välähti – ja syttyi.\n\nValo kiersi taas meren yllä. Kaukana aaltojen keskellä pieni kalastusvene kääntyi juuri ajoissa pois kareilta ja löysi turvallisesti satamaan.\n\nKun Kaneli palasi alas, Hilma silitti sitä pitkään.\n\n– Sinä olet maailman paras majakan kissa, hän sanoi.\n\nMuutaman päivän päästä saarelle souti kalastaja. Hän toi Hilmalle leipää ja Kanelille kokonaisen silakan.\n\n– Näin valon juuri, kun sitä eniten tarvitsin, kalastaja kertoi. – Kuka sen sytytti?\n\nHilma hymyili ja osoitti ikkunalaudalla kehräävää Kanelia.\n\nSiitä lähtien joka ilta, kun majakan valo syttyi, Kaneli istui vivun vieressä vahtimassa. Ja meri oli vähän turvallisempi paikka.",
@@ -365,6 +495,59 @@
     "license": "CC0 1.0",
     "color": "#CDBFE0",
     "emoji": "📚"
+  },
+  {
+    "id": "karhu-ja-kettu-kalassa",
+    "title": "Miksi karhulla on lyhyt häntä",
+    "text": "Kauan sitten, kun maailma oli vielä nuori, karhulla oli pitkä ja tuuhea häntä. Se oli niin komea, että karhu heilutteli sitä aina kävellessään.\n\nEräänä talvipäivänä karhu tapasi metsäpolulla ketun. Ketulla oli suussaan kokonainen kala, kiiltävä ja herkullinen.\n\n– Mistä sinä tuon sait? karhu kysyi, ja sen vatsa kurnahti.\n\nKettu oli itse asiassa napannut kalan kalastajan reestä, kun tämä ei katsonut. Mutta sitä se ei kertonut.\n\n– Pyysin sen järvestä, kettu valehteli. – Se on helppoa. Mene avannolle, pistä häntäsi veteen ja odota. Kalat tarttuvat häntään itsestään. Mitä kauemmin odotat, sitä enemmän kaloja saat.\n\nKarhu kiitti ja lönkytteli järvelle. Jään keskellä oli avanto, jossa kalastajat olivat käyneet. Karhu istahti sen reunalle ja laski pitkän häntänsä kylmään veteen.\n\n– Huuh, kylmää, karhu murisi. Mutta se ajatteli kaloja ja pysyi paikallaan.\n\nAurinko laski. Pakkanen kiristyi. Tähdet syttyivät taivaalle. Karhun häntää alkoi kiristää.\n\n– Kalat tarttuvat jo, karhu ajatteli tyytyväisenä. – Odotan vielä vähän, niin saan oikein paljon.\n\nSe odotti koko yön. Aamulla avanto oli jäätynyt umpeen, ja karhun häntä oli jäätynyt sen keskelle.\n\n– Nyt on varmasti tarpeeksi kaloja, karhu sanoi ja nousi ylös. Se veti. Mitään ei tapahtunut. Se veti kovemmin. Ja sitten se veti kaikin voimin…\n\nRITS!\n\nKarhu kierähti selälleen hankeen. Sen pitkä häntä oli jäänyt jäähän, ja jäljellä oli vain pieni, pyöreä tupsu.\n\nKarhu ärjyi niin, että lumi putosi kuusten oksilta. Kettu, joka oli katsellut kaikkea rannan pensaikosta, juoksi karkuun minkä jaloistaan pääsi.\n\nSiitä lähtien karhulla on ollut lyhyt häntä. Ja siitä lähtien karhu ei ole uskonut ketun puheita. Kun kettu yrittää kertoa sille jotain, karhu vain murahtaa ja kääntää sille selkänsä, eikä sillä ole enää häntää, jota heilutella.",
+    "categories": [
+      "suomalaiset",
+      "kansansadut",
+      "elainsadut"
+    ],
+    "ageMin": 4,
+    "readingMinutes": 3,
+    "keywords": [
+      "karhu",
+      "kontio",
+      "kettu",
+      "häntä",
+      "avanto",
+      "talvi",
+      "kalastus",
+      "suomalainen kansansatu"
+    ],
+    "source": "Suomalainen kansansatu (vapaa juoni), teksti kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#C9A27E",
+    "emoji": "🐻"
+  },
+  {
+    "id": "suolamylly",
+    "title": "Miksi meri on suolainen",
+    "text": "Olipa kerran kaksi veljestä. Vanhempi oli rikas ja asui suuressa talossa. Nuorempi oli köyhä, ja hänen mökissään oli usein pelkkää vettä padassa.\n\nEräänä jouluaattona köyhällä veljellä ei ollut mitään syötävää. Hän meni rikkaan veljen luo pyytämään apua. Veli antoi hänelle palan kuivaa leipää ja sanoi:\n\n– Ota tämä ja mene metsään. Älä tule enää kerjäämään.\n\nKöyhä veli lähti surullisena metsätielle. Siellä hän tapasi vanhan, pitkäpartaisen miehen, joka hakkasi puita.\n\n– Mistä noin apea mieli? vanhus kysyi.\n\nKöyhä veli kertoi. Vanhus mietti hetken ja kaivoi sitten repustaan pienen kivimyllyn, sellaisen, jolla jauhetaan jyviä käsin.\n\n– Tämä mylly jauhaa mitä ikinä pyydät, vanhus sanoi. – Sano vain, mitä haluat, ja pyöritä. Kun haluat sen lopettavan, sano: ”Seis, mylly, kiitos riittää.” Muista se sana tarkkaan.\n\nKöyhä veli kiitti ja kiiruhti kotiin. Hän pani myllyn pöydälle ja sanoi:\n\n– Mylly, jauha meille joulupuuroa!\n\nMylly alkoi pyöriä, ja siitä valui lämmintä, kanelintuoksuista puuroa. Sitten hän pyysi leipää, kalaa ja kynttilöitä. Sinä jouluna köyhän veljen mökissä oli juhla, ja hän kutsui kaikki kylän köyhät syömään.\n\nPian köyhästä veljestä tuli vauras mies. Rikas veli kuuli asiasta ja tuli katsomaan. Kun hän näki myllyn, hän halusi sen itselleen.\n\n– Myy se minulle, hän pyysi. Hän pyysi niin kauan ja tarjosi niin paljon kultaa, että nuorempi veli lopulta suostui. Hänellä oli jo kaikkea, mitä tarvitsi.\n\nRikas veli kiirehti kotiin niin innoissaan, ettei kuunnellut, kun veli huusi hänen peräänsä:\n\n– Muista, miten se pysäytetään!\n\nKotona rikas veli sanoi:\n\n– Mylly, jauha silakkaa ja puuroa!\n\nMylly jauhoi. Silakkaa ja puuroa tuli pöydälle, sitten lattialle, sitten tupa oli täynnä. Rikas veli huusi ”Lopeta! Seis! Riittää jo!”, mutta mylly jauhoi vain kovemmin, koska hän ei osannut oikeita sanoja. Lopulta hänen oli juostava hakemaan veljensä apuun. Nuorempi veli sanoi taikasanat, ja mylly pysähtyi. Rikas veli antoi myllyn takaisin ja oli iloinen päästessään siitä eroon.\n\nMutta tarina ei pääty vielä. Eräänä päivänä kylään saapui laivan kapteeni. Hän kuuli ihmemyllystä ja ajatteli: ”Suola on kallista. Jos minulla olisi mylly, joka jauhaa suolaa, en tarvitsisi enää koskaan purjehtia kauas ostamaan sitä.”\n\nYöllä kapteeni hiipi mökkiin, otti myllyn ja vei sen laivaansa. Heti merelle päästyään hän laski myllyn kannelle ja sanoi:\n\n– Mylly, jauha suolaa!\n\nMylly jauhoi. Suolaa kertyi kannelle kasoittain, sitten ruumaan, sitten mastojen juurelle. Laiva painui yhä syvemmälle.\n\n– Seis! Lopeta! kapteeni huusi. Mutta hänkään ei tiennyt oikeita sanoja.\n\nSuolaa tuli ja tuli, kunnes laiva painui pinnan alle ja mylly vajosi merenpohjaan.\n\nJa siellä, syvällä aaltojen alla, se jauhaa yhä. Kukaan ei ole koskaan käynyt sanomassa sille: ”Seis, mylly, kiitos riittää.” Siksi meri on suolainen.\n\nJos joskus maistat merivettä, muista vanhan miehen neuvo: on hyvä tietää, milloin on tarpeeksi.",
+    "categories": [
+      "suomalaiset",
+      "kansansadut"
+    ],
+    "ageMin": 6,
+    "readingMinutes": 5,
+    "keywords": [
+      "meri",
+      "suola",
+      "mylly",
+      "veljekset",
+      "ahneus",
+      "taika",
+      "laiva",
+      "suomalainen kansansatu"
+    ],
+    "source": "Pohjoismainen ja suomalainen kansansatu ihmemyllystä (vapaa juoni), teksti kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#A9C7DB",
+    "emoji": "🧂"
   },
   {
     "id": "nalle-ei-saa-unta",
@@ -482,6 +665,58 @@
     "license": "CC0 1.0",
     "color": "#9CC8EA",
     "emoji": "☁️"
+  },
+  {
+    "id": "pikkutonttu-pipan-ensimmainen-joulu",
+    "title": "Pikkutonttu Pipan ensimmäinen joulu",
+    "text": "Vanhan talon saunan lauteiden alla asui pikkutonttu Pippa. Pipalla oli punainen myssy, joka oli vähän liian iso, ja villasukat, jotka mummotonttu oli kutonut.\n\nTämä oli Pipan ensimmäinen joulu.\n\n– Mitä joulu on? Pippa kysyi isotonttu Ukolta.\n\n– Joulu on sitä, että pidetään huolta toisista, Ukko sanoi. – Ja tontut auttavat salaa. Saat nähdä.\n\nEnsin Pippa auttoi salaa leipomaan. Kun talon emäntä kääntyi pois, Pippa tasoitti piparitaikinan, ettei siinä ollut kuoppia. Emäntä ihmetteli:\n\n– Onpa taikina tänään mukavan tasaista!\n\nSitten Pippa auttoi salaa kuusen kanssa. Kun lapset ripustivat koristeita, yksi lasipallo oli putoamassa. Pippa hyppäsi ja työnsi sen takaisin oksalle. Kukaan ei huomannut, paitsi talon kissa, joka iski silmää.\n\nIllalla oli joulusaunan vuoro. Talon väki kylpi ensin, ja viimeisenä saunaan menivät tontut. Pippa istui lämpimillä lauteilla Ukon vieressä ja huokasi tyytyväisenä.\n\n– Onko joulu jo valmis? Pippa kysyi.\n\n– Melkein, Ukko sanoi. – Vielä yksi asia.\n\nKun talon väki oli syönyt, emäntä kantoi saunan ovelle pienen kupin. Siinä oli lämmintä riisipuuroa ja päällä voisilmä ja kanelia.\n\n– Tontuille, emäntä sanoi hiljaa. – Kiitos avusta.\n\nPippa ja Ukko söivät puuron yhdessä. Yhtäkkiä Pipan lusikka kopsahti johonkin kovaan.\n\n– Manteli! Ukko nauroi. – Joka löytää puurosta mantelin, sillä on onnea koko tulevan vuoden.\n\nPippa piti mantelia kädessään ja hymyili niin, että myssy keikkui.\n\nKun talo hiljeni ja kynttilät sammuivat, Pippa käpertyi pehmeään sammalpetiinsä lauteiden alle.\n\n– Ukko, Pippa kuiskasi. – Nyt minä tiedän, mitä joulu on.\n\n– No mitä?\n\n– Se on sitä, että kaikilla on lämmin ja hyvä mieli. Myös niillä, joita ei näe.\n\nJa niin pikkutonttu Pippa nukahti ensimmäisenä jouluyönään, manteli tassussaan.",
+    "categories": [
+      "joulusadut",
+      "iltasadut"
+    ],
+    "ageMin": 3,
+    "readingMinutes": 3,
+    "keywords": [
+      "joulu",
+      "tonttu",
+      "joulupuuro",
+      "manteli",
+      "sauna",
+      "kuusi",
+      "jouluaatto",
+      "lahjat"
+    ],
+    "source": "Alkuperäinen satu, kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#E58C8C",
+    "emoji": "🧝"
+  },
+  {
+    "id": "poro-pilkku-loytaa-tien",
+    "title": "Poro Pilkku löytää tien",
+    "text": "Korvatunturin juurella asui joulupukin porolauma. Laumassa oli nopeita poroja, vahvoja poroja ja sellaisia poroja, joilla oli komeat sarvet.\n\nJa sitten oli Pilkku. Pilkku oli pienin, ja sen otsassa oli valkoinen läikkä. Pilkku ei ollut nopea eikä vahva. Mutta Pilkulla oli hyvä nenä. Se haistoi jäkälän paksun lumen alta ja tunsi tuoksusta jokaisen polun.\n\n– Haistelijoita ei tarvita joulureen eteen, isot porot sanoivat. – Reen eteen tarvitaan vauhtia.\n\nJouluaattona joulupukki valjasti reen. Pilkku katsoi aidan takaa, kun reki nousi ilmaan tiukujen kilistessä.\n\nMutta matka ei sujunut hyvin. Tunturin yllä nousi lumimyrsky. Lunta tuli niin paljon, että porot eivät nähneet edes omia sorkkiaan. Reki kiersi kehää, ja kompassi pyöri kuin hyrrä.\n\n– Emme löydä tietä! joulupukki huusi tuulen läpi. – Lahjat eivät ehdi perille!\n\nReki laskeutui hätäisesti takaisin Korvatunturin juurelle. Porot seisoivat hengästyneinä ja surullisina.\n\nSilloin Pilkku astui esiin.\n\n– Minä en näe myrskyn läpi, Pilkku sanoi. – Mutta minä haistan. Jokaisessa talossa leivotaan joulupipareita ja keitetään joulupuuroa. Minä haistan tien taloihin.\n\nIsot porot vaikenivat. Joulupukki katsoi Pilkkua pitkään. Sitten hän hymyili partansa takaa.\n\n– Tule sitten etummaiseksi, pikkuinen.\n\nPilkku valjastettiin reen keulaan. Se nosti nenänsä tuuleen ja haisteli. Kaukaa, hyvin kaukaa, tuli kanelin ja piparin tuoksu.\n\n– Tuonne! Pilkku huusi.\n\nReki nousi myrskyyn. Pilkku johdatti sitä tuoksusta tuoksuun: ensin piparien, sitten joulukinkun, sitten rusinasopan. Talo talolta, kylä kylältä, koko pitkän yön.\n\nAamun sarastaessa reki oli tyhjä. Jokainen lahja oli perillä.\n\nKun he palasivat Korvatunturille, isot porot odottivat aidalla.\n\n– Hyvä, Pilkku, ne sanoivat. – Ilman sinua emme olisi onnistuneet.\n\nSiitä lähtien Pilkku on kulkenut joka joulu reen etummaisena. Ja jos jouluaattona leivot pipareita, voit olla varma, että Pilkku haistaa ne ja tietää, mihin taloon reki seuraavaksi suunnataan.",
+    "categories": [
+      "joulusadut",
+      "elainsadut"
+    ],
+    "ageMin": 4,
+    "readingMinutes": 3,
+    "keywords": [
+      "joulu",
+      "poro",
+      "joulupukki",
+      "Korvatunturi",
+      "lumimyrsky",
+      "reki",
+      "rohkeus",
+      "Lappi"
+    ],
+    "source": "Alkuperäinen satu, kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#B7A08A",
+    "emoji": "🦌"
   },
   {
     "id": "pupu-etsii-aitia",
@@ -629,5 +864,33 @@
     "license": "CC0 1.0",
     "color": "#9FA6D9",
     "emoji": "🦉"
+  },
+  {
+    "id": "vainamoinen-ja-kantele",
+    "title": "Väinämöinen ja ensimmäinen kantele",
+    "text": "Kauan, kauan sitten, kun maailma oli vielä uusi, eli vanha ja viisas laulaja nimeltä Väinämöinen. Hän tunsi kaikkien asioiden synnyn, ja hänen laulunsa olivat niin voimakkaita, että ne saivat metsät kasvamaan ja kivet liikkumaan.\n\nEräänä päivänä Väinämöinen lähti veneellä matkaan yhdessä seppä Ilmarisen ja iloisen Lemminkäisen kanssa. He soutivat suuren virran poikki, ja kaikki sujui hyvin, kunnes vene yhtäkkiä pysähtyi.\n\nSe ei liikkunut eteen eikä taakse. Se ei keinunut, vaikka he kuinka soutivat.\n\n– Mihin olemme juuttuneet? Ilmarinen ihmetteli.\n\nLemminkäinen kurkisti laidan yli ja kalpeni.\n\n– Emme kiveen, emmekä karikkoon, hän kuiskasi. – Vene on suuren hauen selässä!\n\nHauki oli valtava, suurempi kuin kukaan oli koskaan nähnyt. Väinämöinen otti miekkansa, ja yhdessä he saivat hauen saaliiksi. Rannalla he keittivät siitä aterian, joka riitti koko joukolle ja vielä naapurin väellekin.\n\nKun kaikki oli syöty, rannalle jäi hauen suuri leukaluu. Väinämöinen katseli sitä pitkään.\n\n– Mitähän tästä syntyisi, jos sen saisi seppä sepittämään? hän mietti. – Eipä muuta kuin soitin.\n\nJa Väinämöinen alkoi työhön. Leukaluusta hän teki kanteleen kopan, hauen hampaista virittimet ja hevosen jouhista kielet. Kun kantele oli valmis, se kiilsi kuin kuunvalo.\n\nKylän väki kokoontui katsomaan.\n\n– Kuka sitä osaa soittaa? Väinämöinen kysyi.\n\nNuoret yrittivät, mutta kantele vain rämisi. Vanhat yrittivät, mutta kantele kirskui. Lemminkäinen yritti, ja koirat alkoivat ulvoa. Kukaan ei saanut siitä kaunista säveltä.\n\nLopulta Väinämöinen otti kanteleen omaan syliinsä. Hän istuutui kiven päälle järven rannalle, pesi kätensä ja alkoi soittaa.\n\nJa silloin tapahtui ihme.\n\nEnsimmäisten sävelten kuuluessa metsän eläimet alkoivat tulla. Orava hyppäsi oksalta oksalle lähemmäs. Ilves tuli kiven taakse ja karhu kiipesi aidan päälle kuuntelemaan. Kotka laskeutui pesästään ja joutsenet uivat rantaan. Kalat nousivat veden pintaan, ja jopa kuu ja aurinko pysähtyivät taivaalla kuuntelemaan.\n\nKylän ihmiset itkivät liikutuksesta. Eikä kenenkään silmä jäänyt kuivaksi.\n\nLopulta Väinämöisenkin silmistä alkoi vieriä kyyneliä. Ne olivat suurempia kuin karpalot ja raskaampia kuin hernekset. Ne vierivät hänen poskiltaan polvilleen, polvilta kivelle, kiveltä rantaan ja rannalta veteen.\n\n– Kuka hakisi kyyneleeni järven pohjasta? Väinämöinen kysyi, kun soitto loppui.\n\nSotka, pieni sinisiipinen sukelluslintu, lensi paikalle. Se sukelsi syvälle ja toi kyyneleet yksi kerrallaan ylös. Mutta ne eivät olleet enää kyyneliä. Vesi oli muuttanut ne kauniiksi sinisiksi helmiksi.\n\nNiin syntyi ensimmäinen kantele, ja niin syntyi musiikki, joka saa sekä ihmiset että eläimet hiljentymään.\n\nJa vielä tänäkin päivänä, kun joku soittaa kanteletta hiljaisena kesäiltana järven rannalla, voi tuntua siltä, että koko metsä pysähtyy kuuntelemaan.",
+    "categories": [
+      "suomalaiset",
+      "kansansadut",
+      "seikkailusadut"
+    ],
+    "ageMin": 7,
+    "readingMinutes": 5,
+    "keywords": [
+      "Väinämöinen",
+      "kantele",
+      "Kalevala",
+      "hauki",
+      "musiikki",
+      "soitto",
+      "eläimet",
+      "helmet",
+      "suomalainen kansanruno"
+    ],
+    "source": "Kalevala, runot 40–41 (Elias Lönnrot 1849, vapaa juoni), teksti kirjoitettu tätä sovellusta varten",
+    "author": "Satukirjan tekijät (Claude-avusteinen teksti)",
+    "license": "CC0 1.0",
+    "color": "#9CC5A1",
+    "emoji": "🎶"
   }
 ]

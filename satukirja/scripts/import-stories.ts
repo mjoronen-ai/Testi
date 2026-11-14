@@ -15,7 +15,7 @@
  *
  *   ---
  *   title: Kettu ja kurki
- *   categories: [elainsadut, kansansadut]
+ *   categories: [elainsadut, kansansadut]   (myös: suomalaiset, iltasadut, seikkailusadut, joulusadut)
  *   ageMin: 4
  *   keywords: [kettu, kurki, ystävyys]
  *   source: Kansansatu, teksti kirjoitettu tätä sovellusta varten

@@ -31,8 +31,10 @@ const byCategory = (c: CategoryId) => (s: Story) => s.categories.includes(c);
 export const TOPIC_GROUPS: StoryGroup[] = [
   { id: 'elainsadut', title: 'Eläinsadut', description: 'Kettuja, karhuja ja siilejä', emoji: '🦊', color: categoryColors.elainsadut, matches: byCategory('elainsadut') },
   { id: 'kansansadut', title: 'Kansansadut', description: 'Vanhoja tarinoita uusin sanoin', emoji: '🏡', color: categoryColors.kansansadut, matches: byCategory('kansansadut') },
+  { id: 'suomalaiset', title: 'Suomalaiset kansansadut', description: 'Hölmöläisiä, kettuja ja Väinämöinen', emoji: '🇫🇮', color: categoryColors.suomalaiset, matches: byCategory('suomalaiset') },
   { id: 'iltasadut', title: 'Iltasadut', description: 'Rauhallisia tarinoita ennen unta', emoji: '🌙', color: categoryColors.iltasadut, matches: byCategory('iltasadut') },
   { id: 'seikkailusadut', title: 'Seikkailusadut', description: 'Jännitystä isommille', emoji: '🧭', color: categoryColors.seikkailusadut, matches: byCategory('seikkailusadut') },
+  { id: 'joulusadut', title: 'Joulusadut', description: 'Tonttuja, poroja ja joulun taikaa', emoji: '🎄', color: categoryColors.joulusadut, matches: byCategory('joulusadut') },
   { id: 'lyhyet', title: 'Lyhyet', description: `Alle ${SHORT_STORY_MINUTES} minuuttia`, emoji: '⏱️', color: categoryColors.lyhyet, matches: (s) => s.readingMinutes < SHORT_STORY_MINUTES },
 ];
 
@@ -131,6 +133,12 @@ export function getRecommended(age: number, completedIds: string[] = []): Story[
 export function getNextStory(currentId: string, age: number, completedIds: string[]): Story | undefined {
   const rec = getRecommended(age, completedIds).filter((s) => s.id !== currentId);
   return rec.find((s) => !completedIds.includes(s.id)) ?? rec[0];
+}
+
+/** Onko joulun aika? Joulusadut nostetaan etusivulle 1.11.–6.1. */
+export function isChristmasSeason(date = new Date()): boolean {
+  const m = date.getMonth(); // 0 = tammikuu
+  return m === 10 || m === 11 || (m === 0 && date.getDate() <= 6);
 }
 
 /** Tervehdys kellonajan mukaan, esim. "Hyvää iltaa, Eetu". */
