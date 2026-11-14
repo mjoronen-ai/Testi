@@ -17,7 +17,7 @@ Mutta oli yksi asia, jota Maija ei kertonut kenellekään. Hän pelkäsi vettä.
 
 Oikeaa vettä. Järveä, joka kimalteli mökin rannassa. Laiturin alla oli tummaa, ja aallot loiskivat, ja joskus vedessä liikkui jotakin limaista.
 
-– Tule uimaan! huusi Maijan serkku Ville laiturilta.
+– Tule uimaan! huusi Maijan serkku Oskari laiturilta. Isä istui rantakivellä ja katseli heitä.
 
 – Merirosvot eivät ui, Maija sanoi nopeasti. – Merirosvot purjehtivat.
 
@@ -29,7 +29,7 @@ Kapteeni Kraak kellui matalassa rantavedessä, ihan laiturin vieressä.
 
 Hän juoksi rantaan. Hän pysähtyi veden rajaan. Vesi oli viileää ja kirkasta. Hän näki pohjan hiekan ja pienen kiven ja yhden hämmästyneen kalanpoikasen.
 
-– Vesi on matalaa tuossa, Ville sanoi laiturilta. – Se ulottuu vain polviin asti.
+– Vesi on matalaa tuossa, Oskari sanoi laiturilta. – Se ulottuu vain polviin asti.
 
 Maija katsoi Kapteeni Kraakia. Kapteeni Kraak katsoi Maijaa napinsilmillään.
 
@@ -37,7 +37,7 @@ Maija katsoi Kapteeni Kraakia. Kapteeni Kraak katsoi Maijaa napinsilmillään.
 
 Hän otti yhden askeleen. Vesi kylmeni varpaissa. Hän otti toisen askeleen. Vesi ulottui nilkkoihin. Hiekka pohjassa oli pehmeää ja vähän kutittavaa.
 
-Kolmas askel. Neljäs. Vesi ulottui polviin asti, ihan niin kuin Ville oli sanonut.
+Kolmas askel. Neljäs. Vesi ulottui polviin asti, ihan niin kuin Oskari oli sanonut.
 
 Maija ojensi kätensä ja nappasi Kapteeni Kraakin.
 
@@ -47,7 +47,7 @@ Ja sitten hän huomasi jotakin. Hän seisoi vedessä. Eikä se ollut kamalaa. Au
 
 – Hei, kala, Maija sanoi. – Oletko sinä merirosvokala?
 
-Ville hyppäsi laiturilta matalaan veteen hänen viereensä, ja he roiskivat vettä niin, että Kapteeni Kraak kastui uudestaan.
+Oskari hyppäsi laiturilta matalaan veteen hänen viereensä, ja he roiskivat vettä niin, että Kapteeni Kraak kastui uudestaan.
 
 Illalla Maija istui saunan jälkeen laiturilla märin hiuksin. Kapteeni Kraak kuivui kaiteella.
 

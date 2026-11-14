@@ -49,7 +49,7 @@ Kun hän heräsi, hän näki niityllä komean tamman, joka söi ruohoa. Pian pai
 
 – Kuka sinä olet ja mistä tulet? mies kysyi.
 
-Sindbad kertoi valaasta ja saavista. Mies ihmetteli kovasti ja vei hänet kuninkaansa luo. Kuningas Mihrdžan kuunteli tarinan ja sanoi:
+Sindbad kertoi valaasta ja saavista. Mies ihmetteli kovasti ja vei hänet kuninkaansa luo. Kuningas Mihrajan kuunteli tarinan ja sanoi:
 
 – Sinä olet onnekas mies, ja rohkea myös. Jää tänne niin kauaksi kuin haluat.
 
