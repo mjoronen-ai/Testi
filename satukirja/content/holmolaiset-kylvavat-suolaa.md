@@ -9,54 +9,86 @@ license: CC0 1.0
 emoji: 🧂
 color: "#C9B78E"
 ---
-Hölmölän kylässä oli loppunut suola. Puuro maistui lällyltä, ja kalakeitto oli mautonta kuin vesi.
+Hölmölän kylässä oli loppunut suola. Puuro maistui lällyltä, perunat maistuivat lällyiltä, ja kalakeitto oli mautonta kuin järvivesi.
 
-– Suola on kallista, valitti Hölmölän isäntä. – Kaupungista sitä pitää ostaa pussi kerrallaan.
+Emäntä maistoi keittoa ja irvisti.
 
-Silloin kylän viisain hölmöläinen, Pekka, sai idean.
+– Tämä maistuu ihan siltä, että kala olisi vain käynyt kattilassa kylässä, hän sanoi.
 
-– Mitäs jos me kasvatamme suolan itse? Kun kylvää ohran, saa paljon ohraa. Kun kylvää suolan, saa varmasti paljon suolaa!
+– Suola on kallista, valitti Hölmölän isäntä ja raapi partaansa. – Kaupungista sitä pitää ostaa pussi kerrallaan. Ja kaupunkiin on pitkä matka. Kolme päivää mennen ja kolme tullen.
 
-– Nerokasta! kaikki huusivat.
+Koko kylä kokoontui talon pihalle miettimään. He miettivät niin, että otsat rypistyivät. Yksi mietti puun alla, toinen kaivon kannella ja kolmas pää saavissa, koska siellä oli hänen mielestään hiljaisempaa.
 
-Hölmöläiset kantoivat viimeisen suolapussinsa pellolle. He kynsivät maan, äestivät sen ja kylvivät suolan huolellisesti riviin. Sitten he istuivat pellon laidalle odottamaan.
+Silloin kylän viisain hölmöläinen, Pekka, sai idean. Hän hypähti pystyyn niin, että lakki lensi.
 
-Kesä tuli, ja pellolle alkoi nousta vihreää.
+– Mitäs jos me kasvatamme suolan itse? Kun kylvää ohran, saa paljon ohraa. Kun kylvää rukiin, saa paljon ruista. Kun kylvää suolan, saa varmasti paljon suolaa!
 
-– Katsokaa! Suola itää! hölmöläiset riemuitsivat.
+Kaikki olivat hetken hiljaa. Sitten he huusivat yhteen ääneen:
 
-Kasvit kasvoivat korkeiksi ja tuuheiksi. Ne olivat nokkosia, mutta sitä hölmöläiset eivät tienneet.
+– Nerokasta!
+
+– Miksei kukaan ole keksinyt tätä ennen? emäntä ihmetteli.
+
+– Koska kukaan muu ei ole yhtä viisas kuin me, isäntä sanoi ylpeänä.
+
+Hölmöläiset kantoivat viimeisen suolapussinsa pellolle juhlakulkueessa. Edellä kulki Pekka pussi sylissään, perässä koko kylä, ja viimeisenä kylän koira, joka ei ymmärtänyt mitään mutta oli silti innoissaan.
+
+He kynsivät maan. He äestivät sen. Ja sitten he kylvivät suolan huolellisesti riviin, hippunen kerrallaan.
+
+– Ei liian tiheään, Pekka neuvoi. – Suolanjyvät tarvitsevat tilaa kasvaa.
+
+Sitten he istuivat pellon laidalle odottamaan.
+
+He odottivat koko päivän. Mitään ei tapahtunut.
+
+– Ehkä suola ujostelee, joku arveli. – Ei se kasva, jos me tuijotamme.
+
+Niin he kääntyivät selin peltoon ja odottivat lisää. Vieläkään ei tapahtunut mitään. Lopulta he menivät kotiin nukkumaan.
+
+Kesä tuli. Aurinko lämmitti, sade kasteli, ja eräänä aamuna pellolle alkoi nousta vihreää.
+
+– Katsokaa! Suola itää! hölmöläiset riemuitsivat ja tanssivat pellon ympäri.
+
+Kasvit kasvoivat korkeiksi ja tuuheiksi. Niillä oli sahalaitaiset lehdet ja pienet karvat varsissa. Ne olivat nokkosia, mutta sitä hölmöläiset eivät tienneet.
 
 – Onkohan suola jo kypsää? emäntä mietti.
 
-Pekka kumartui ja maistoi lehteä. Hän hypähti ilmaan.
+Pekka kumartui ja maistoi lehteä. Hän hypähti ilmaan kuin sammakko.
 
 – Ai ai ai! Kirvelee! Tämä on hirmuisen suolaista!
 
-Toinenkin maistoi ja hyppi pellolla kieltään puhallellen.
+Isäntä maistoi myös. Hänkin hyppi pellolla kieltään puhallellen.
 
-– Liian väkevää! Tämä suola on vielä raakaa, pitää antaa kypsyä!
+– Hoo, hoo! Liian väkevää! Tämä suola on vielä raakaa. Pitää antaa kypsyä!
 
-Hölmöläiset odottivat ja odottivat. He kävivät maistamassa joka päivä, ja joka päivä nokkoset kirvelivät yhtä paljon.
+Hölmöläiset odottivat ja odottivat. He kävivät maistamassa joka päivä. Aamulla, päivällä ja illalla. Ja joka päivä nokkoset kirvelivät yhtä paljon.
 
-Eräänä päivänä tien yli kulki vanha matkamies reppu selässä. Hän näki hölmöläiset, jotka hyppivät pellolla kielet ulkona.
+Pian kaikilla kyläläisillä oli punaiset kielet ja punaiset sormet. Kylän koirakin kävi nuuhkaisemassa ja aivasti kolme kertaa.
 
-– Mitä te oikein teette? hän kysyi.
+– Tämä on kyllä tavattoman sitkeää suolaa, isäntä huokaisi.
 
-– Me kasvatamme suolaa, Pekka selitti ylpeänä. – Mutta se on vielä liian väkevää.
+Eräänä päivänä tien yli kulki vanha matkamies reppu selässä ja keppi kädessä. Hän näki hölmöläiset, jotka hyppivät pellolla kielet ulkona ja huiskuttivat käsiään.
 
-Matkamies nauroi niin, että hattu putosi päästä.
+– Hyvää päivää, matkamies sanoi. – Mitä te oikein teette?
+
+– Me kasvatamme suolaa, Pekka selitti ylpeänä. – Mutta se on vielä liian väkevää. Maistakaa itse!
+
+Matkamies katsoi peltoa. Sitten hän katsoi hölmöläisiä. Ja sitten hän nauroi niin, että hattu putosi päästä ja keppi kaatui.
 
 – Hyvät ihmiset! Suola ei kasva pellossa. Se tulee merestä. Ja nuo ovat nokkosia!
 
-Hölmöläiset katsoivat toisiaan.
+Hölmöläiset katsoivat toisiaan. Sitten he katsoivat peltoa. Sitten taas toisiaan.
 
-– Nokkosia? Mitä me niillä teemme?
+– Nokkosia? Pekka toisti. – Mitä me niillä teemme?
 
 – Keittoa, matkamies sanoi. – Nokkoskeitto on herkkua. Kunhan poimitte ne kintaat kädessä.
 
-Niin hölmöläiset keittivät suuren padan nokkoskeittoa. Matkamies antoi heille kourallisen omaa suolaansa, ja keitto maistui niin hyvältä, että koko kylä haki lisää.
+Niin hölmöläiset vetivät kintaat käsiinsä, vaikka oli keskikesä. He poimivat nokkosia koreittain ja kantoivat ne kylään.
 
-– Kyllä meidän suolapeltomme sittenkin kannatti, Pekka sanoi tyytyväisenä.
+He keittivät suuren padan nokkoskeittoa. Pata porisi, ja kylä tuoksui vihreältä ja hyvältä.
 
-Eikä kukaan jaksanut väittää vastaan.
+Matkamies kaivoi repustaan pussin ja antoi heille kourallisen omaa suolaansa. Keitto maistui niin hyvältä, että koko kylä haki lisää. Ja vielä kerran lisää. Koirakin sai oman kupin.
+
+– Kyllä meidän suolapeltomme sittenkin kannatti, Pekka sanoi tyytyväisenä ja taputti vatsaansa.
+
+Eikä kukaan jaksanut väittää vastaan. Kaikilla oli niin täysi vatsa.

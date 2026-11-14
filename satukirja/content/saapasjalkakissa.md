@@ -9,44 +9,76 @@ license: CC0 1.0
 emoji: 🐈
 color: "#E0A35E"
 ---
-Olipa kerran mylläri, jolla oli kolme poikaa. Vanhin poika sai myllyn, keskimmäinen aasin ja nuorin, Jussi, sai pelkän kissan.
+Olipa kerran mylläri, jolla oli kolme poikaa. Kun mylläri vanheni ja jakoi tavaransa, vanhin poika sai myllyn, keskimmäinen aasin ja nuorin, Jussi, sai pelkän kissan.
 
-– Mitä minä kissalla teen? Jussi huokasi.
+Kissa oli raidallinen ja laiha, ja sillä oli vihreät, viisaat silmät. Se istui myllyn portailla ja nuoli tassuaan.
 
-– Älä huoli, isäntä, kissa sanoi. Jussi hätkähti, sillä hän ei tiennyt, että kissa osasi puhua. – Hanki minulle vain saappaat ja säkki, niin näet.
+– Mitä minä kissalla teen? Jussi huokasi. – Veljeni voivat jauhaa jauhoja ja kuljettaa kuormia. Minulla on vain kissa, joka nukkuu päivät pitkät.
 
-Jussi antoi kissalle viimeiset kolikkonsa. Kissa veti jalkaansa komeat nahkasaappaat, heitti säkin olalleen ja marssi metsään.
+– Älä huoli, isäntä, kissa sanoi.
 
-Metsässä kissa sai säkkiin lihavan kaniinin. Se vei kaniinin suoraan kuninkaan linnaan.
+Jussi hätkähti niin, että hattu putosi päästä. Hän ei tiennyt, että kissa osasi puhua.
 
-– Tämä on lahja herralta Karabaksen markiisilta, kissa sanoi ja kumarsi syvään.
+– Hanki minulle vain saappaat ja säkki, kissa jatkoi. – Niin näet, ettei sinun osasi ole huonoin.
 
-Karabaksen markiisi oli tietenkin Jussi, mutta sitä kuningas ei tiennyt. Kissa vei lahjoja joka päivä, ja kuningas alkoi ihmetellä, kuka tuo antelias markiisi oikein oli.
+Jussi antoi kissalle viimeiset kolikkonsa. Kissa käveli kylän suutarille ja tuli takaisin komeat nahkasaappaat jalassa. Ne olivat ruskeat ja kiiltävät, ja niiden varressa oli punainen sulka.
 
-Eräänä päivänä kissa kuuli, että kuningas ja prinsessa lähtisivät ajelulle joen rantaan.
+Kissa veti saappaat jalkaansa, heitti säkin olalleen ja marssi metsään. Kops, kops, kops, saappaat sanoivat polulla.
+
+Metsässä kissa laittoi säkkiin vähän apilaa ja salaattia ja kävi makaamaan kuin nukkuva. Pian lihava kaniini tuli nuuhkimaan herkkuja ja hyppäsi säkkiin. Kissa veti narusta, ja säkin suu sulkeutui.
+
+Kissa vei kaniinin suoraan kuninkaan linnaan. Vartijat katsoivat ihmeissään, kun saapasjalkainen kissa marssi portista sisään.
+
+– Tämä on lahja herralta Karabaksen markiisilta, kissa sanoi kuninkaalle ja kumarsi niin syvään, että sulka hipaisi lattiaa.
+
+Karabaksen markiisi oli tietenkin Jussi, mutta sitä kuningas ei tiennyt. Kissa oli keksinyt nimen ihan itse, koska se kuulosti hienolta.
+
+– Kiitä markiisia, kuningas sanoi ja hymyili.
+
+Seuraavana päivänä kissa toi kaksi peltopyytä. Sitä seuraavana korillisen metsämansikoita. Kissa vei lahjoja joka päivä, ja kuningas alkoi ihmetellä, kuka tuo antelias markiisi oikein oli.
+
+Eräänä päivänä kissa kuuli linnan keittiössä, että kuningas ja prinsessa lähtisivät ajelulle joen rantaan.
 
 – Isäntä, mene uimaan jokeen, kissa sanoi Jussille. – Älä kysy miksi.
 
-Kun kuninkaan vaunut tulivat, kissa huusi:
+– Mutta vesi on kylmää, Jussi sanoi.
 
-– Apua! Karabaksen markiisin vaatteet on viety!
+– Isäntä, kissa sanoi ja katsoi häntä vihreillä silmillään.
 
-Kuningas antoi Jussille hienot vaatteet ja kutsui hänet vaunuihin. Prinsessa ja Jussi juttelivat koko matkan ja huomasivat pitävänsä toisistaan.
+Jussi meni uimaan. Brrr, vesi oli tosiaan kylmää. Sillä välin kissa piilotti Jussin vanhat, paikatut vaatteet ison kiven alle.
 
-Kissa juoksi vaunujen edellä. Tien varrella oli suuri linna, jossa asui ilkeä peikko. Peikko osasi muuttaa itsensä miksi tahansa.
+Kun kuninkaan vaunut tulivat, kissa juoksi tielle ja huusi:
+
+– Apua! Apua! Karabaksen markiisin vaatteet on viety!
+
+Kuningas pysäytti vaunut. Hän muisti kaikki herkulliset lahjat ja käski palvelijoiden tuoda Jussille hienot vaatteet. Jussi pukeutui samettitakkiin ja silkkipaitaan, ja hän näytti aivan oikealta markiisilta.
+
+Kuningas kutsui hänet vaunuihin. Prinsessa ja Jussi juttelivat koko matkan linnuista, kukista ja siitä, kumpi on parempi, mustikka vai puolukka. He huomasivat pitävänsä toisistaan.
+
+Kissa juoksi vaunujen edellä. Tien varrella oli suuri linna, jossa asui ilkeä peikko. Peikko omisti kaikki pellot ja metsät, ja se oli kovin ylpeä taikavoimistaan. Peikko osasi muuttaa itsensä miksi tahansa.
+
+Kissa koputti linnan oveen.
 
 – Kuulin, että osaat muuttua leijonaksi, kissa sanoi kohteliaasti. – Totta kai se on vain juttua.
 
-– Vai juttua! peikko murisi ja muuttui heti isoksi leijonaksi. Kissa kipitti kaapin päälle.
+– Vai juttua! peikko murisi ja muuttui heti isoksi leijonaksi.
+
+Kissa kipitti kaapin päälle niin nopeasti, että saappaat kopisivat. Siellä se istui hetken ja rauhoitteli viiksiään.
 
 – Hienoa, kissa sanoi. – Mutta pieneksi muuttuminen on varmasti paljon vaikeampaa. Et kai sinä osaa muuttua vaikkapa hiireksi?
 
 – Totta kai osaan! peikko sanoi. Ja sutjakkaasti se muuttui pieneksi harmaaksi hiireksi.
 
-Kissa hyppäsi kaapilta lattialle ja maukaisi kovaa. Hiiri säikähti niin, että se vilisti ovesta ulos, juoksi pellon yli ja katosi metsään. Se ei uskaltanut enää koskaan palata.
+Kissa hyppäsi kaapilta lattialle ja maukaisi kovaa. MAU!
 
-Kun vaunut kaartoivat pihaan, kissa seisoi portilla.
+Hiiri säikähti niin, että se vilisti ovesta ulos, juoksi pellon yli ja katosi metsään. Se ei uskaltanut enää koskaan palata, ja kaikki naapurit huokaisivat helpotuksesta.
+
+Kissa suoristi saappaansa ja juoksi portille. Kun vaunut kaartoivat pihaan, kissa seisoi siellä ja kumarsi.
 
 – Tervetuloa Karabaksen markiisin linnaan!
 
-Kuningas oli ihastunut. Pian Jussi ja prinsessa menivät naimisiin, ja linnaan tuli iloinen elämä. Entä kissa? Se sai olla linnan herra ja nukkua päiväunia aurinkoisella ikkunalaudalla. Saappaat se kyllä piti jalassa ihan aina.
+Jussi oli hämmästynyt, mutta hän ei sanonut mitään. Hän vain vilkaisi kissaa, ja kissa iski hänelle silmää.
+
+Kuningas oli ihastunut. Pian Jussi ja prinsessa menivät naimisiin, ja linnaan tuli iloinen elämä. Jussi oli hyvä ja reilu isäntä kaikille linnan väelle.
+
+Entä kissa? Se sai olla linnan herra ja nukkua päiväunia aurinkoisella ikkunalaudalla. Hiiriä se ei enää jahdannut, paitsi joskus huvikseen. Saappaat se kyllä piti jalassa ihan aina.

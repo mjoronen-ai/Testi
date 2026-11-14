@@ -41,6 +41,18 @@ Rannalla se tapasi lokin, joka istui kivellä.
 
 Pöllö lensi meren yli kohti paikkaa, josta Kuu yleensä nousi. Aallot liplattivat sen alla, ja suolainen tuuli pörrötti sen höyheniä.
 
+Matka oli pitkä. Pöllön siivet alkoivat väsyä. Mutta silloin vedestä nousi pyöreä, kiiltävä pää. Se oli hylje.
+
+– Huhuu, sinä olet kaukana kotoa, hylje sanoi ystävällisesti. – Minne olet menossa?
+
+– Etsin Kuuta, Pöllö vastasi. – Mutta siipiäni painaa.
+
+– Istu minun selkääni ja lepää hetki, hylje sanoi. – Minä uin samaan suuntaan.
+
+Niin Pöllö istui hylkeen märällä selällä, ja hylje ui tasaisesti aaltojen läpi. Lip, lap, lip, lap. Tähdet kuvastuivat tummaan veteen kuin pienet kalat.
+
+Kun Pöllön siivet olivat levänneet, se kiitti hyljettä ja nousi taas ilmaan.
+
 Lopulta, kaukana horisontin takana, Pöllö löysi sen. Siellä makasi Kuu pehmeän pilvipeiton alla ja kuorsasi hiljaa.
 
 Khrr... phyy... khrr... phyy...
@@ -87,6 +99,8 @@ Ikkunoissa pienet kasvot hymyilivät.
 
 Pöllö istui omalla oksallaan ja katseli hopeista metsää. Sen silmät olivat isot ja tyytyväiset.
 
-Lapset vetivät peiton leukaan asti. Ne sulkivat silmänsä. Kuun valo lepäsi pehmeänä peiton päällä.
+Meressä hylje kellui selällään ja katseli hopeista taivasta. Rannalla lokki painoi päänsä siiven alle.
+
+Lapset vetivät peiton leukaan asti. He sulkivat silmänsä. Kuun valo lepäsi pehmeänä peiton päällä, hiljaa, hiljaa.
 
 Ja niin he nukkuivat.

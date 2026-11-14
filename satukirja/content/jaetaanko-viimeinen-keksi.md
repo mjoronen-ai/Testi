@@ -11,7 +11,7 @@ color: "#E3B77D"
 ---
 Aino ja Samir istuivat keittiön pöydän ääressä. He olivat leikkineet koko aamupäivän rakettia, ja raketti-insinöörit tulevat nälkäisiksi.
 
-Raketti oli tehty olohuoneen sohvatyynyistä ja isästä pahvilaatikosta. Siinä oli ohjauspyöränä kattilankansi ja polttoaineena kolme villasukkaa. Se oli käynyt jo kuussa, Marsissa ja kerran vahingossa kylpyhuoneessa.
+Raketti oli tehty olohuoneen sohvatyynyistä ja isosta pahvilaatikosta. Siinä oli ohjauspyöränä kattilankansi ja polttoaineena kolme villasukkaa. Se oli käynyt jo kuussa, Marsissa ja kerran vahingossa kylpyhuoneessa.
 
 – Lentäjät tarvitsevat evästä, Samir oli sanonut. – Muuten raketti ei jaksa.
 

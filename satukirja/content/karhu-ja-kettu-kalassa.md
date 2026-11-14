@@ -35,7 +35,7 @@ Karhua kehu lämmitti. Sata kalaa! Se ajatteli jo, miten söisi niistä kymmenen
 
 – Eipä kestä, kettu sanoi ja hymyili vinosti. – Muista vain: älä nosta häntää liian aikaisin. Malttamaton kalastaja ei saa mitään.
 
-– Minä olen hyvin maltillinen, karhu lupasi.
+– Minä olen hyvin kärsivällinen, karhu lupasi.
 
 Sitten karhu lönkytteli järvelle. Järvi oli valkoinen ja hiljainen, ja tuuli lennätti lunta jään yli. Jään keskellä oli avanto, jossa kalastajat olivat käyneet.
 
@@ -82,6 +82,12 @@ Karhu ärjyi niin, että lumi putosi kuusten oksilta. Kettu, joka oli katsellut 
 Korppi istui männyn latvassa.
 
 – Kraak, se sanoi. – Minähän sanoin.
+
+Karhu nousi ylös ja ravisti lumet turkistaan. Se kurkisti olkansa yli kerran ja sitten toisen kerran. Tupsu heilahti. Heil. Se oli pieni, mutta se heilui yhä.
+
+– No, karhu mutisi lopulta. – Ainakaan tähän ei enää tartu takiaisia. Eikä se jäädy kiinni mihinkään.
+
+Sitten se lönkytteli takaisin pesäänsä, kaivautui lämpimiin havuihin ja nukkui talviunensa loppuun asti. Nälkäkin unohtui, kun uni tuli.
 
 Siitä lähtien karhulla on ollut lyhyt häntä. Ja siitä lähtien karhu ei ole uskonut ketun puheita.
 

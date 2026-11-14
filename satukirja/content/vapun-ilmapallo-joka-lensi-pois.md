@@ -9,13 +9,27 @@ license: CC0 1.0
 emoji: 🎈
 color: "#E58FA8"
 ---
-Vappuaamuna tori oli täynnä ihmisiä, serpentiiniä ja iloista hälinää. Ihmisillä oli päässään valkoisia ylioppilaslakkeja, ja torikojuista ostettiin munkkeja ja kuplivaa simaa.
+Vappuaamuna tori oli täynnä ihmisiä, serpentiiniä ja iloista hälinää. Aurinko paistoi, vaikka ilma oli vielä vähän viileä, ja kaikkien posket punoittivat.
 
-Elsa sai isältä punaisen ilmapallon. Se oli pyöreä ja kiiltävä, ja siinä oli hymynaama.
+Ihmisillä oli päässään valkoisia ylioppilaslakkeja. Torikojuista ostettiin munkkeja ja kuplivaa simaa. Soittokunta soitti marssia niin, että rummut jymisivät ja torvet törähtelivät.
+
+Elsa piti isää kädestä ja katseli kaikkea silmät suurina. Siellä oli kaikenlaisia ilmapalloja: keltaisia, sinisiä, vihreitä, apinan muotoisia ja yksi iso hopeinen tähti.
+
+– Saanko minä yhden? Elsa kysyi.
+
+– Saat, isä sanoi. – Valitse.
+
+Elsa valitsi punaisen ilmapallon. Se oli pyöreä ja kiiltävä, ja siinä oli hymynaama.
+
+– Tämä näyttää iloiselta, Elsa sanoi. – Niin kuin vappu.
 
 – Pidä narusta tiukasti, isä sanoi.
 
-Elsa piti. Hän piti tiukasti, kun he kävelivät soittokunnan ohi. Hän piti tiukasti, kun he ostivat munkit. Mutta kun hänen piti pyyhkiä sokeria suupielistä, hän unohti hetkeksi.
+Elsa piti. Hän piti tiukasti, kun he kävelivät soittokunnan ohi. Hän piti tiukasti, kun he katsoivat, kuinka joku puhalsi saippuakuplia. Hän piti tiukasti, kun he ostivat munkit.
+
+Munkki oli vielä lämmin, ja sen päällä oli rapeaa sokeria. Elsa haukkasi ison palan. Sokeria tarttui joka paikkaan: nenään, poskiin ja suupieliin.
+
+Kun hänen piti pyyhkiä sokeria suupielistä, hän unohti hetkeksi.
 
 Narun pää lipsahti sormista.
 
@@ -23,37 +37,63 @@ Ilmapallo nousi. Ensin hitaasti, sitten nopeammin. Se lensi lyhtypylvään ohi, 
 
 – Ei! Elsa huusi. – Tule takaisin!
 
+Isä hyppäsi ja yritti napata narusta. Mutta naru oli jo liian korkealla.
+
 Mutta pallo ei kuullut. Se oli lähtenyt omalle vappuretkelleen.
 
-Ylhäällä tuuli kuljetti palloa. Se lensi järven yli, jossa ensimmäiset joutsenet uiskentelivat. Se lensi pellon yli, jossa traktori kynti multaa. Se lensi koivikon yli, jossa puut olivat juuri saaneet hiirenkorvat.
+Ylhäällä tuuli kuljetti palloa. Torin hälinä hiljeni alhaalla. Täällä kuului vain tuulen suhina.
 
-Joutsen katsoi palloa ihmeissään.
+Pallo lensi järven yli, jossa ensimmäiset joutsenet uiskentelivat. Vesi välkkyi sinisenä ja hopeisena.
 
-– Mikä lintu sinä olet? se kysyi.
+Joutsen nosti pitkän kaulansa ja katsoi palloa ihmeissään.
+
+– Mikä lintu sinä olet? se kysyi. – Sinulla ei ole siipiä eikä nokkaa.
 
 Pallo ei vastannut. Se vain hymyili hymynaamallaan ja jatkoi matkaa.
 
-Lopulta tuuli tyyntyi. Pallo laskeutui hitaasti alas ja jäi kiinni vanhan omenapuun oksaan erään pienen talon pihalla.
+Se lensi pellon yli, jossa traktori kynti multaa. Ilma tuoksui maalta ja keväältä. Traktorin perässä tepasteli kymmenen lokkia.
 
-Pihalla istui vanha mies nimeltä Arvo. Hän oli ollut kipeänä eikä ollut päässyt vappujuhliin. Hän oli juuri ajatellut, että tämä oli hänen ensimmäinen vappunsa ilman ilmapalloa.
+Se lensi koivikon yli, jossa puut olivat juuri saaneet hiirenkorvat. Ne olivat niin vaaleanvihreitä, että ne melkein loistivat.
+
+Koivikossa pallo jäi hetkeksi kiinni korkean koivun latvaan. Harakka hyppäsi lähemmäs ja kallisti päätään.
+
+– Kiiltävä, harakka sanoi. – Minä haluan sen.
+
+Se nokkaisi palloa. Pallo pomppasi, ja harakka säikähti niin, että hypähti toiselle oksalle.
+
+– Hmph, harakka tuhahti. – Ei se ollutkaan kiiltävä. Se oli pomppiva.
+
+Juuri silloin tuli uusi tuulenpuuska, ja pallo irtosi oksasta ja jatkoi matkaa.
+
+Lopulta tuuli tyyntyi. Pallo laskeutui hitaasti alas, hitaasti, hitaasti. Se jäi kiinni vanhan omenapuun oksaan erään pienen talon pihalla.
+
+Pihalla istui vanha mies nimeltä Arvo. Hänellä oli harmaa villatakki ja tyyny selän takana. Hän oli ollut kipeänä eikä ollut päässyt vappujuhliin.
+
+Hän oli juuri ajatellut, että tämä oli hänen ensimmäinen vappunsa ilman ilmapalloa. Koko elämänsä hän oli käynyt torilla joka vappu.
 
 Hän katsoi omenapuuta ja purskahti nauruun.
 
 – No jopas! Vappu tuli minun luokseni.
 
-Arvo sitoi pallon kuistin kaiteeseen. Koko päivän se heilui siellä punaisena ja iloisena.
+Arvo nousi hitaasti, otti kepin ja käveli omenapuulle. Hän irrotti narun varovasti oksasta ja sitoi pallon kuistin kaiteeseen.
 
-Sillä välin torilla Elsa oli surullinen. Isä halasi häntä.
+Koko päivän pallo heilui siellä punaisena ja iloisena. Naapurin kissa kävi katsomassa sitä. Postinkantaja vilkutti sille. Ja Arvo hymyili joka kerta, kun katsoi sitä.
 
-– Ehkä pallo meni ilahduttamaan jotakuta toista, isä sanoi. – Joku, joka tarvitsi sitä enemmän.
+Sillä välin torilla Elsa oli surullinen. Munkkikaan ei maistunut enää. Isä halasi häntä.
 
-Elsa mietti sitä. Ajatus tuntui oikeastaan aika mukavalta.
+– Ehkä pallo meni ilahduttamaan jotakuta toista, isä sanoi. – Jotakuta, joka tarvitsi sitä enemmän.
 
-Illalla, kun he ajoivat mummolaan, Elsa näki ikkunasta pienen talon. Sen kuistilla heilui punainen ilmapallo, ja sen vieressä istui vanha mies hymyillen.
+Elsa mietti sitä. Hän katsoi taivaalle, jossa pilvet purjehtivat.
 
-– Isä, katso! Tuolla se on!
+– Ehkä, hän sanoi hiljaa. Ajatus tuntui oikeastaan aika mukavalta.
 
-Isä hidasti. Elsa vilkutti. Vanha mies vilkutti takaisin.
+Illalla he ajoivat autolla mummolaan. Elsa katseli ikkunasta peltoja, järveä ja koivikkoa.
+
+Sitten hän näki pienen talon. Sen kuistilla heilui punainen ilmapallo, ja sen vieressä istui vanha mies hymyillen.
+
+– Isä, katso! Tuolla se on! Minun palloni!
+
+Isä hidasti. Elsa vilkutti niin kovaa, että käsi melkein irtosi. Vanha mies vilkutti takaisin.
 
 – Hyvää vappua! Elsa huusi ikkunasta.
 

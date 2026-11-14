@@ -9,44 +9,102 @@ license: CC0 1.0
 emoji: 🦔
 color: "#E8D3B5"
 ---
-Oli kaunis sunnuntaiaamu. Siili käveli kaalimaan laitaa ja hyräili. Pellon reunalla seisoi Jänis.
+Oli kaunis sunnuntaiaamu loppukesällä. Aurinko oli juuri noussut, ja kaste kimalsi ruohikossa kuin pienet lasihelmet. Leivoset lauloivat korkealla pellon yllä, ja mehiläiset surisivat tattarin kukissa.
+
+Siili seisoi kotiovellaan kädet selän takana ja hyräili. Kotona Siilivaimo pesi lapsia, ja keittiöstä tuoksui kahvi.
+
+– Taidanpa käydä katsomassa, miten nauriit kasvavat, Siili sanoi itsekseen.
+
+Niin hän lähti kävelemään kaalimaan laitaa. Hän ei pitänyt kiirettä. Hän pysähtyi haistelemaan kukkia ja katselemaan, kuinka kuoriainen kiipesi heinänkortta ylös.
+
+Pellon reunalla seisoi Jänis. Sekin oli lähtenyt aamukävelylle katsomaan kaaleja.
 
 – Huomenta, Jänis, Siili tervehti ystävällisesti.
 
-Jänis nosti nenänsä pystyyn.
+Jänis nosti nenänsä pystyyn. Se ei vastannut tervehdykseen ollenkaan.
 
-– Mitä sinä täällä kävelet noilla lyhyillä, vääntyneillä jaloillasi? Jänis pilkkasi. – Minä olen metsän nopein.
+– Mitä sinä täällä näin aikaisin kävelet? Jänis kysyi nenäkkäästi. – Ja vielä noilla lyhyillä, vääntyneillä jaloillasi!
 
-Siiliä harmitti. Sen jalat olivat lyhyet, mutta niillä oli kulkenut monta hyvää matkaa.
+Jänis venytteli omia pitkiä takajalkojaan ja ihaili niitä.
+
+– Minä olen metsän nopein, se sanoi. – Sinä et pääsisi pellon päähän ennen joulua.
+
+Siiliä harmitti. Sen jalat olivat lyhyet, se oli totta. Mutta niillä oli kulkenut monta hyvää matkaa, ja ne olivat kantaneet sitä kotiin joka ilta.
+
+Siili mietti hetken. Sitten hänen silmänsä välähtivät.
 
 – Lyödäänkö vetoa, että minä voitan sinut juoksussa? Siili sanoi.
 
-Jänis nauroi niin, että korvat heiluivat.
+Jänis nauroi niin, että korvat heiluivat ja se melkein kaatui kumoon.
 
-– Sinäkö? No hyvä on. Juostaan pellon kahta vakoa pitkin, toinen kumpaakin, päästä päähän.
+– Sinäkö? Voitat minut? Hahhah! No hyvä on. Mistä lyödään vetoa?
 
-– Odota hetki, Siili sanoi. – Käyn ensin kotona.
+– Kultarahasta ja pullosta mehua, Siili sanoi.
 
-Kotona Siili kertoi suunnitelmansa Siilivaimolle. Siilivaimo näytti juuri samalta kuin Siili: sama nenä, samat piikit.
+– Sovittu! Juostaan pellon kahta vakoa pitkin, toinen kumpaakin, päästä päähän.
+
+– Odota hetki, Siili sanoi. – Käyn ensin kotona. Minulla ei ole vielä aamupalaa vatsassa. Puolen tunnin päästä olen täällä.
+
+Jänis tuhahti, mutta suostui.
+
+Siili tepasteli kotiin niin nopeasti kuin pystyi. Matkalla hän naureskeli itsekseen.
+
+– Vaimo! Vaimo! hän huusi ovella. – Pue päällesi. Sinä tulet nyt kanssani pellolle.
+
+– Mitä ihmettä? Siilivaimo kysyi ja kuivasi kätensä esiliinaan.
+
+Siili kertoi suunnitelmansa. Siilivaimo näytti juuri samalta kuin Siili: sama musta nenä, samat pienet silmät, samat ruskeat piikit. Kaukaa katsottuna heitä ei erottanut toisistaan.
 
 – Mene sinä pellon toiseen päähän ja piiloudu vaon päähän, Siili sanoi. – Kun Jänis tulee, nouse ja huuda: ”Täällä minä jo olen!”
 
-Siilivaimo meni. Siili palasi Jäniksen luo ja asettui omaan vakoonsa.
+Siilivaimo hymyili. Hän oli kuullut, miten Jänis pilkkasi kaikkia.
 
-– Yks, kaks, kolme! Jänis huusi ja säntäsi matkaan kuin tuulispää. Siili otti vain muutaman askeleen ja kyyristyi vaon pohjalle.
+– Siitä tulee hauskaa, hän sanoi ja lähti matkaan.
 
-Kun Jänis saapui pellon toiseen päähän, Siilivaimo nousi seisomaan.
+Siili palasi Jäniksen luo ja asettui omaan vakoonsa. Maa oli pehmeää ja tuoksui mullalta.
+
+– Oletko valmis? Jänis kysyi. Se hypähteli paikallaan ja potki takajaloillaan.
+
+– Valmis, Siili sanoi.
+
+– Yks, kaks, kolme!
+
+Jänis säntäsi matkaan kuin tuulispää. Multa pöllysi, ja korvat liehuivat. Siili otti vain muutaman askeleen ja kyyristyi vaon pohjalle odottamaan.
+
+Kun Jänis saapui pellon toiseen päähän hengästyneenä, Siilivaimo nousi seisomaan vakonsa päässä.
 
 – Täällä minä jo olen!
 
-Jänis tuijotti silmät pyöreinä.
+Jänis tuijotti silmät pyöreinä. Sen viikset värisivät.
 
-– Uudestaan! se huusi ja juoksi takaisin. Mutta lähtöpäässä odotti Siili.
+– Mitä? Miten? Uudestaan! se huusi. Ja se kääntyi ja juoksi takaisin niin kovaa, että tuuli vihelsi korvissa.
+
+Mutta lähtöpäässä Siili nousi vaostaan.
 
 – Täällä minä jo olen!
 
-Jänis juoksi edestakaisin, yhä uudestaan ja uudestaan, ja joka kerta siili oli jo perillä. Lopulta Jänis lysähti hengästyneenä nurmelle.
+– Uudestaan! Jänis kiljaisi.
 
-– Minä… luovutan, se puuskutti.
+Ja taas se juoksi. Ja taas pellon toisessa päässä odotti siili.
 
-Siili ja Siilivaimo kävelivät käsi kädessä kotiin hymyillen. Siitä päivästä alkaen Jänis ei enää koskaan pilkannut kenenkään jalkoja.
+– Täällä minä jo olen!
+
+– Uudestaan!
+
+– Täällä minä jo olen!
+
+Jänis juoksi edestakaisin, yhä uudestaan ja uudestaan. Aurinko nousi korkeammalle. Leivoset nauroivat ylhäällä. Ja joka kerta siili oli jo perillä.
+
+Lopulta Jänis lysähti hengästyneenä nurmelle. Sen kieli roikkui, ja kyljet kohoilivat.
+
+– Minä… luovutan, se puuskutti. – Sinä olet… nopeampi… kuin näytät.
+
+Siili kumarsi kohteliaasti.
+
+– Ei jalkojen pituus ratkaise kaikkea, hän sanoi. – Eikä ketään kannata pilkata.
+
+Jänis maksoi kultarahan ja mehupullon. Se oli niin väsynyt, ettei jaksanut edes väittää vastaan.
+
+Siili ja Siilivaimo kävelivät käsi kädessä kotiin hymyillen. Kotona he joivat mehun lasten kanssa, ja kaikki nauroivat niin, että piikit helisivät.
+
+Siitä päivästä alkaen Jänis ei enää koskaan pilkannut kenenkään jalkoja. Ja kun se tapasi Siilin pellon laidalla, se sanoi aina kohteliaasti: – Huomenta, Siili!

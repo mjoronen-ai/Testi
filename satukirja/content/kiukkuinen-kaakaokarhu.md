@@ -77,6 +77,18 @@ Kaapo maistoi. Mehu oli kylmää ja makeaa ja värjäsi kielen siniseksi. Hän n
 
 Sitten he pukivat sadetakit ja kumisaappaat ja lähtivät metsäpolkua pitkin kauppaan. Lätäköt loiskuivat. Kaapo hyppäsi jokaiseen. Plits, plats, plots!
 
+Matkalla he tapasivat Siilin, joka seisoi lätäkön reunalla allapäin.
+
+– Mikä hätänä? mummo kysyi.
+
+– Minulla on kiukku, Siili tuhisi. – Sade kasteli minun keräämäni sienet.
+
+Kaapo astui lähemmäs.
+
+– Minä tiedän, mitä tehdä, hän sanoi. – Puhalla se ulos. Fuuuuh. Ihan kuin kuuma kaakao.
+
+Siili puhalsi. Kerran ja toisen kerran. Ja vähitellen sen piikit laskeutuivat sileiksi.
+
 Kaupasta he ostivat ison purkin kaakaojauhetta. Kaapo sai kantaa sitä itse koko matkan kotiin.
 
 Illalla, kun sade oli lakannut ja metsä oli hiljainen, he joivat sitten kaakaota. Kaapo istui mummon sylissä viltin alla. Takassa rätisi tuli.

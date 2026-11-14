@@ -67,6 +67,12 @@ Ne lukivat lasten kirjeet ja tarkistivat listat. Ne käärivät paketit ja sitoi
 
 Välillä tuli pieniä kommelluksia. Kerran Vilppu käärsi vahingossa oman lakkinsa pakettiin. Kerran yksi nalle päätyi laatikkoon, jossa oli merkintä ”sukat”. Mutta tontut korjasivat virheet ja nauroivat niille yhdessä.
 
+Toisena iltana Joulumuori kävi katsomassa pukkia. Hän kosketti tämän otsaa ja hymyili.
+
+– Kuume on laskenut, hän sanoi tontuille. – Mutta antakaa hänen vielä nukkua.
+
+Tontut hiipivät sukkasillaan, etteivät herättäisi pukkia. Jopa vasarat käärittiin villaliinoihin, ja ne kopisivat pajassa vain pehmeästi. Tup, tup, tup.
+
 Jouluaaton aamuna pukki heräsi ja venytteli.
 
 – Tuntuu paremmalta, hän sanoi. Hän veti syvään henkeä nenän kautta. Ei aivastusta. Ei niiskutusta. Vain piparkakkujen ja kuusen tuoksu.

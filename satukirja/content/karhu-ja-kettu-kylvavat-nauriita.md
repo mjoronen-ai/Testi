@@ -39,6 +39,12 @@ Kettu vain hymyili viiksiinsä.
 
 Syksyllä kettu kaivoi nauriit itselleen ja antoi karhulle naatit. Niitä oli iso kasa, vihreä ja lerppuva.
 
+Karhu katsoi kasaa. Sitten se katsoi ketun kasaa. Ketun kasassa oli pyöreitä, valkoisia ja violetteja nauriita, ja ne kiilsivät auringossa.
+
+– Hmm, karhu sanoi. – Sinun kasasi näyttää herkullisemmalta.
+
+– Niin näyttää, kettu sanoi. – Mutta sinähän valitsit latvat.
+
 Karhu maistoi naattia. Se oli kitkerää.
 
 Kettu taas haukkasi naurista. Ruts! Se oli mehukas ja makea kuin omena.
@@ -48,6 +54,10 @@ Kettu taas haukkasi naurista. Ruts! Se oli mehukas ja makea kuin omena.
 – Sopii, kettu sanoi ja kylvi peltoon ohraa.
 
 Talvi meni, ja tuli taas kevät. Karhu heräsi pesästään nälkäisenä ja muisti heti sopimuksen. – Juuret ovat minun, se hyräili matkalla pellolle.
+
+Kettu kylvi pellon, ja karhu kävi taas joka päivä katsomassa. Maan päältä nousi ohuita vihreitä korsia, ihan kuin ruohoa.
+
+– Mitähän tuolta alta mahtaa tulla? karhu mietti ja painoi korvansa maahan. Mutta multa ei kertonut mitään.
 
 Kesä kului taas. Ohra kasvoi korkeaksi, ja sen tähkät painuivat kultaisina jyvistä raskaina. Tuuli kahisutti peltoa niin, että se aaltoili kuin järvi.
 

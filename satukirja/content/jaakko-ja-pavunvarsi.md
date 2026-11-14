@@ -21,6 +21,12 @@ Matkalla Jaakko tapasi vanhan miehen, jolla oli kourassa viisi kirjavaa papua. P
 
 – Nämä ovat taikapapuja, mies sanoi. – Vaihdetaanko lehmään?
 
+– Taikapapuja? Jaakko kysyi epäillen. – Mitä ne tekevät?
+
+– Istuta ne, niin näet, mies sanoi ja iski silmää. – Ja lupaan, että lehmäsi saa hyvän kodin. Minulla on vihreä niitty, jossa kasvaa makeinta apilaa koko maassa.
+
+Mansikki ammui, ihan kuin se olisi pitänyt ajatuksesta.
+
 Jaakko mietti. Taikapapuja ei saanut joka päivä. Hän vaihtoi.
 
 Kotona äiti puuskahti.
