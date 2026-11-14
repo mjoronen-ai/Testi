@@ -6,7 +6,7 @@ keywords: [varis, vihreä, erilaisuus, parvi, piilo, ystävyys, värit]
 source: Alkuperäinen satu, kirjoitettu tätä sovellusta varten
 author: Satukirjan tekijät (Claude-avusteinen teksti)
 license: CC0 1.0
-emoji: 🐦
+emoji: 🦜
 color: "#8EC07C"
 ---
 Kaikki variksen poikaset olivat mustia ja harmaita. Kaikki paitsi yksi.

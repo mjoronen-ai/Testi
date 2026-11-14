@@ -15,7 +15,7 @@ Joka ilta hän laskeutui linnan kellariin ja laski kultakolikoitaan.
 
 – Yksi, kaksi, kolme… Kunpa niitä olisi enemmän, hän huokasi.
 
-Eräänä päivänä Midaksen puutarhurit löysivät ruusutarhasta vanhan, eksyneen miehen. Hän oli Silenos, viinijumala Dionysoksen opettaja. Midas kohteli häntä ystävällisesti, antoi hänelle ruokaa ja lepoa ja saattoi hänet takaisin Dionysoksen luo.
+Eräänä päivänä Midaksen puutarhurit löysivät ruusutarhasta vanhan, eksyneen miehen. Hän oli Silenos, jumala Dionysoksen vanha opettaja. Midas kohteli häntä ystävällisesti, antoi hänelle ruokaa ja lepoa ja saattoi hänet takaisin Dionysoksen luo.
 
 – Kiitokseksi saat toivoa mitä tahansa, Dionysos sanoi.
 
