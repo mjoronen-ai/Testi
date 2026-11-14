@@ -9,42 +9,80 @@ license: CC0 1.0
 emoji: 🤧
 color: "#D96C6C"
 ---
-Kolme päivää ennen joulua Korvatunturilla kuului kova ääni.
+Kolme päivää ennen joulua Korvatunturilla oli kiireinen aamu. Pajan piipusta nousi savua, tontut juoksivat pakettien kanssa edestakaisin, ja porot rouskuttivat jäkälää aitauksessa.
+
+Lumi narskui, pakkanen paukkui, ja taivaalla loisti vielä muutama tähti.
+
+Sitten kuului kova ääni.
 
 – HAAAP-TSIIH!
 
-Lumi pöllysi katolta. Porot hätkähtivät. Tontut pudottivat paketteja käsistään.
+Lumi pöllysi katolta. Porot hätkähtivät. Tontut pudottivat paketteja käsistään, ja yksi kerä punaista lahjanarua vieri lattian poikki ovelle asti.
 
 – Voi ei, sanoi Joulumuori. – Pukki on saanut nuhan.
 
-Joulupukki istui keinutuolissa nenä punaisena kuin puolukka. Hänen äänensä oli käheä.
+Joulupukki istui keinutuolissa nenä punaisena kuin puolukka. Hänen silmänsä vuotivat, ja hänen äänensä oli käheä kuin vanhalla variksella.
 
 – Ei se mitään, hän niiskutti. – Kyllä minä jaksan. Hyvää joulua, ho ho... HAAP-TSIIH!
 
-Tontut katsoivat toisiaan. Näin ei voinut lähteä lahjoja jakamaan.
+Aivastus oli niin kova, että pukin tonttulakki lensi kattoparruun asti ja jäi sinne roikkumaan.
+
+Tontut katsoivat toisiaan. Näin ei voinut lähteä lahjoja jakamaan. Jos pukki aivastaisi reessä, porot säikähtäisivät ja paketit lentäisivät pitkin taivasta.
+
+– Mitä me nyt teemme? kysyi pienin tonttu, Tiitu. – Peruuntuuko joulu?
+
+– Joulu ei peruunnu, Joulumuori sanoi lempeästi. – Mutta pukin täytyy parantua.
 
 Joulumuori nosti sormensa.
 
 – Nyt pukki menee sänkyyn. Ja me kaikki autamme.
 
-Tontut ryhtyivät toimeen. Tonttu Vilppu keitti kuumaa mustaherukkamehua. Tonttu Hilda kutoi pukille paksut villasukat. Kaksi pientä tonttua toi lisää halkoja takkaan, ja yksi luki pukille satua ääneen, ettei hänellä olisi tylsää.
+– Mutta lahjat, pukki yritti. – Ja kirjeet. Ja kartat. Ja...
 
-Porotkin halusivat auttaa. Ne seisoivat ikkunan takana ja lauloivat hiljaa. Laulu kuulosti vähän möreältä, mutta pukki hymyili.
+– Sänkyyn, Joulumuori sanoi. Ja kun Joulumuori sanoi jotain sillä äänellä, sitä totteli jopa joulupukki.
+
+Tontut ryhtyivät toimeen.
+
+Tonttu Vilppu keitti kuumaa mustaherukkamehua isossa kattilassa. Koko tupa alkoi tuoksua kesältä ja marjoilta.
+
+Tonttu Hilda kutoi pukille paksut villasukat. Puikot kalisivat niin nopeasti, että niistä melkein lensi kipinöitä. Sukista tuli punaiset, ja niihin tuli valkoisia lumihiutaleita.
+
+Kaksi pientä tonttua toi lisää halkoja takkaan. Tuli rätisi ja paukahteli, ja huoneessa oli lämmintä kuin saunan lauteilla.
+
+Ja pikku Tiitu istui sängyn vieressä ja luki pukille satua ääneen, ettei hänellä olisi tylsää. Tiitu ei vielä osannut kaikkia kirjaimia, joten hän keksi osan sanoista itse. Satu muuttui vähän oudoksi, mutta pukki nauroi niin, että vatsa hytkyi.
+
+Porotkin halusivat auttaa. Ne seisoivat ikkunan takana lumessa ja lauloivat hiljaa vanhaa joululaulua.
+
+Laulu kuulosti vähän möreältä. Petteri lauloi liian matalalta, ja Salama unohti sanat. Mutta pukki hymyili.
 
 – Te olette parhaita, hän kuiskasi ja nukahti.
 
-Pukki nukkui päivän. Ja toisen. Joulumuori toi hänelle hunajateetä ja kaurapuuroa. Tontut pakkasivat lahjat valmiiksi niin, ettei pukin tarvinnut tehdä mitään.
+Pukki nukkui päivän. Ja toisen. Hän kuorsasi niin, että ikkunaverhot heilahtelivat.
+
+Joulumuori toi hänelle hunajateetä ja kaurapuuroa, jossa oli voisilmä keskellä. Pukki söi lautasen tyhjäksi ja nukahti uudestaan.
+
+Sillä välin pajassa tontut tekivät kaikki pukin työt.
+
+Ne lukivat lasten kirjeet ja tarkistivat listat. Ne käärivät paketit ja sitoivat rusetit. Ne kiillottivat reen jalakset ja ruokkivat porot. Pienimmät tontut tarkistivat kartat, ettei yksikään talo jäisi väliin.
+
+Välillä tuli pieniä kommelluksia. Kerran Vilppu käärsi vahingossa oman lakkinsa pakettiin. Kerran yksi nalle päätyi laatikkoon, jossa oli merkintä ”sukat”. Mutta tontut korjasivat virheet ja nauroivat niille yhdessä.
 
 Jouluaaton aamuna pukki heräsi ja venytteli.
 
-– Tuntuu paremmalta, hän sanoi. Hän veti syvään henkeä. Ei aivastusta. Ei niiskutusta.
+– Tuntuu paremmalta, hän sanoi. Hän veti syvään henkeä nenän kautta. Ei aivastusta. Ei niiskutusta. Vain piparkakkujen ja kuusen tuoksu.
 
 – HO HO HOO! hän nauroi niin, että ikkunat helisivät. – Nyt lähdetään!
 
-Reki oli valmiina, porot valjaissa ja säkki täynnä. Pukki puki ylleen Hildan kutomat villasukat ja kiersi kaulaan pitkän kaulahuivin.
+Hän käveli pajaan ja jäi suu auki seisomaan. Kaikki oli valmista. Reki kiilsi, porot olivat valjaissa ja säkki oli täynnä.
 
-– Kiitos, kaikki, hän sanoi. – Ilman teitä tästä joulusta ei olisi tullut mitään.
+– Te teitte kaiken tämän? pukki kysyi.
 
-Ja reki nousi taivaalle, tähtien sekaan. Sinä yönä lahjat tulivat ajallaan joka kotiin.
+– Yhdessä, tontut vastasivat.
+
+Pukki puki ylleen Hildan kutomat villasukat ja kiersi kaulaan pitkän kaulahuivin. Joulumuori pujotti hänen taskuunsa vielä puhtaan nenäliinan, varmuuden vuoksi.
+
+– Kiitos, kaikki, pukki sanoi. – Ilman teitä tästä joulusta ei olisi tullut mitään.
+
+Ja reki nousi taivaalle, tähtien sekaan. Kulkuset kilisivät, ja revontulet loistivat vihreinä tunturin yllä. Sinä yönä lahjat tulivat ajallaan joka kotiin.
 
 Kukaan lapsista ei tiennyt, että joulupukki oli ollut kipeänä. Mutta jos joku sinä yönä kuuli katolta pienen niiskaisun, se oli vain viimeinen nuhan rippeistä.

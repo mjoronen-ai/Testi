@@ -9,19 +9,39 @@ license: CC0 1.0
 emoji: 🐷
 color: "#F5B8B8"
 ---
-Olipa kerran kolme pientä porsasta, jotka lähtivät maailmalle rakentamaan omia talojaan.
+Olipa kerran kolme pientä porsasta, jotka asuivat äitinsä kanssa pienessä mökissä mäen alla.
 
-Ensimmäinen porsas halusi päästä nopeasti leikkimään. Hän rakensi talon oljista. Kahinaa ja kahinaa, ja talo oli valmis jo ennen lounasta.
+Eräänä keväänä äiti sanoi:
 
-Toinen porsas oli vähän ahkerampi. Hän rakensi talon risuista ja oksista. Nakutusta ja nakutusta, ja talo oli valmis iltapäivällä.
+– Te olette jo isoja. On aika lähteä maailmalle ja rakentaa omat talot. Rakentakaa ne hyvin, ja käykää katsomassa minua sunnuntaisin.
 
-Kolmas porsas mietti pitkään. Hän kantoi tiiliä yksi kerrallaan, sekoitti laastia ja muurasi seinät huolellisesti. Hän teki talon kolme päivää. Veljet nauroivat hänelle.
+Porsaat halasivat äitiä, heilauttivat kippurahäntiään ja lähtivät tietä pitkin. Aurinko paistoi, ja leskenlehdet kukkivat ojan reunalla.
+
+Ensimmäinen porsas halusi päästä nopeasti leikkimään. Tien vieressä oli pelto, ja pellon reunalla oli olkikasa.
+
+– Tästä saa talon hetkessä, hän sanoi.
+
+Hän rakensi talon oljista. Kahinaa ja kahinaa, ja talo oli valmis jo ennen lounasta. Se oli keltainen ja kevyt, ja se tuoksui kesältä.
+
+Toinen porsas oli vähän ahkerampi. Hän löysi metsän reunasta risuja ja oksia.
+
+– Oksat ovat vahvempia kuin olki, hän sanoi. – Mutta ei tässä koko päivää tarvitse uhrata.
+
+Hän rakensi talon risuista ja oksista. Nakutusta ja nakutusta, ja talo oli valmis iltapäivällä. Sen katolla kasvoi vielä muutama vihreä lehti.
+
+Kolmas porsas mietti pitkään. Hän katseli taivasta, tunnusteli tuulta ja käveli kylään asti. Siellä tiilimestari myi hänelle punaisia tiiliä.
+
+Hän kantoi tiiliä yksi kerrallaan, sekoitti laastia ja muurasi seinät huolellisesti. Kopsis, kopsis, tiili tiilen päälle. Hän teki taloon tukevan oven ja ison takan, jossa oli korkea savupiippu.
+
+Hän teki taloa kolme päivää. Veljet tulivat katsomaan ja nauroivat hänelle.
 
 – Tule leikkimään! Sinun talosi ei valmistu ikinä!
 
-– Valmistuu se, kolmas porsas sanoi. – Ja sitten se kestää.
+– Me olemme jo pelanneet hippaa kuusi kertaa!
 
-Eräänä päivänä metsästä tuli Susi. Susi oli nälkäinen ja kovin huonotuulinen. Hän koputti olkitaloon.
+– Valmistuu se, kolmas porsas sanoi ja pyyhki laastia kärsästään. – Ja sitten se kestää.
+
+Eräänä päivänä metsästä tuli Susi. Susi oli nälkäinen ja kovin huonotuulinen. Hänen vatsansa kurni niin kovaa, että linnut lehahtivat puista. Hän koputti olkitaloon.
 
 – Pikku porsas, päästä minut sisään!
 
@@ -29,26 +49,52 @@ Eräänä päivänä metsästä tuli Susi. Susi oli nälkäinen ja kovin huonotu
 
 – Sitten minä puhallan ja puuskutan, ja talosi kaatuu!
 
-Susi puhalsi ja puuskutti, ja olkitalo lensi tuulen mukana kuin heinäkasa. Ensimmäinen porsas juoksi minkä jaloistaan pääsi toisen porsaan risutaloon.
+Susi veti henkeä. Hänen poskensa pullistuivat kuin kaksi ilmapalloa.
 
-Susi tuli perässä.
+Susi puhalsi ja puuskutti, ja olkitalo lensi tuulen mukana kuin heinäkasa. Olkia leijui joka puolella, ja yksi korsi jäi suden nenään kutittamaan.
+
+– Aatsii! Susi aivasti.
+
+Sillä aikaa ensimmäinen porsas juoksi minkä jaloistaan pääsi toisen porsaan risutaloon.
+
+Susi tuli perässä, nenä yhä kutiten.
 
 – Pikku porsaat, päästäkää minut sisään!
 
 – Emme päästä, emme kärsiemme karvojen kautta!
 
-Susi puhalsi ja puuskutti, ja puuskutti ja puhalsi, ja risutalo romahti. Kaksi porsasta juoksi kolmannen veljen tiilitaloon ja paukautti oven kiinni.
+– Sitten minä puhallan ja puuskutan, ja talonne kaatuu!
+
+Susi puhalsi ja puuskutti, ja puuskutti ja puhalsi. Risut ritisivät ja oksat natisivat. Ja sitten risutalo romahti kuin pino tikkuja.
+
+Kaksi porsasta juoksi kolmannen veljen tiilitaloon ja paukautti oven kiinni. Kolmas porsas työnsi vielä salvan paikalleen. Klonk.
+
+Susi tuli perässä, nyt jo vähän hengästyneenä.
+
+– Pikku porsaat, päästäkää minut sisään!
+
+– Emme päästä, emme kärsiemme karvojen kautta!
+
+– Sitten minä puhallan ja puuskutan, ja talonne kaatuu!
 
 Susi puhalsi. Ei mitään. Susi puuskutti. Ei mitään. Susi puhalsi ja puuskutti niin, että naama muuttui punaiseksi kuin tomaatti. Tiilitalo ei liikahtanutkaan.
 
-Silloin Susi kiipesi katolle ja aikoi laskeutua savupiipusta. Mutta kolmas porsas oli keittänyt takassa ison padallisen vettä. Kun Susi liukui piippua alas, hänen häntänsä osui kuumaan höyryyn.
+Sisällä porsaat kurkistivat ikkunasta. Kaksi nuorempaa veljeä tärisi vähän. Mutta kolmas porsas taputti heitä olalle.
+
+– Tämä talo kestää, hän sanoi. – Niin kuin lupasin.
+
+Silloin Susi kiipesi katolle ja aikoi laskeutua savupiipusta. Mutta kolmas porsas oli arvannut sen. Hän oli keittänyt takassa ison padallisen vettä.
+
+Kun Susi liukui piippua alas, hänen häntänsä osui kuumaan höyryyn.
 
 – AU-UUUU! Susi ulvoi, pomppasi takaisin katolle ja juoksi metsään niin kovaa, ettei häntä enää koskaan nähty niillä main.
 
-Porsaat halasivat toisiaan.
+Porsaat halasivat toisiaan. Ensin vähän varovasti, sitten oikein kunnolla.
 
 – Anteeksi, että nauroimme sinulle, veljet sanoivat.
 
 – Ei se mitään, kolmas porsas sanoi. – Huomenna rakennetaan teillekin kunnon talot. Yhdessä se käy nopeammin.
 
-Ja niin he tekivät.
+Ja niin he tekivät. Ensimmäinen porsas kantoi tiiliä, toinen sekoitti laastia, ja kolmas näytti, miten seinät muurataan suoriksi.
+
+Kun talot olivat valmiit, he pelasivat hippaa koko illan. Ja sunnuntaina he kävivät kaikki kolme yhdessä äidin luona kertomassa, mitä olivat oppineet.

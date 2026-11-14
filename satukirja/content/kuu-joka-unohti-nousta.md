@@ -9,38 +9,84 @@ license: CC0 1.0
 emoji: 🌙
 color: "#C8C3E8"
 ---
-Eräänä iltana aurinko laski meren taakse, ja taivas muuttui sinisestä tummansiniseksi. Tähdet syttyivät yksi kerrallaan. Mutta jokin puuttui.
+Eräänä iltana aurinko laski meren taakse. Taivas muuttui ensin oranssiksi, sitten vaaleanpunaiseksi, sitten sinisestä tummansiniseksi.
+
+Tähdet syttyivät yksi kerrallaan, kuin joku olisi sytyttänyt pieniä kynttilöitä. Ensin yksi, sitten kaksi, sitten kymmenen ja lopulta niin monta, ettei kukaan olisi jaksanut laskea.
+
+Mutta jokin puuttui.
 
 – Missä Kuu on? kysyi pienin tähti.
 
-Kuu ei ollut noussut. Taivas oli tumma ja hiljainen, ja metsässä Pöllö räpytteli silmiään.
+– Kyllä se kohta tulee, sanoi vanha tähti. – Se tulee aina.
 
-– Ilman Kuuta en näe hiiriä enkä polkuja, Pöllö sanoi. – Lähden etsimään sitä.
+Tähdet odottivat. Ne tuikkivat ja odottivat. Mutta Kuu ei tullut.
 
-Pöllö lensi meren yli kohti paikkaa, josta Kuu yleensä nousi. Siellä, kaukana horisontin takana, makasi Kuu pilvipeiton alla ja kuorsasi hiljaa.
+Kuu ei ollut noussut. Taivas oli tumma ja hiljainen, ja metsässä Pöllö räpytteli isoja keltaisia silmiään.
+
+– Onpa pimeää, Pöllö sanoi. – Ilman Kuuta en näe hiiriä enkä polkuja. En näe edes omaa oksaani.
+
+Pöllö kuunteli. Metsä oli hiljainen. Jänis ei uskaltanut lähteä kolostaan, eikä siili löytänyt tietään sammalmättäälle.
+
+– Lähden etsimään Kuuta, Pöllö päätti.
+
+Pöllö levitti pehmeät siipensä ja lensi. Se lensi metsän yli, ja kuuset huojuivat sen alla. Se lensi pellon yli, jossa heinäpaalit nukkuivat rivissä.
+
+Rannalla se tapasi lokin, joka istui kivellä.
+
+– Oletko nähnyt Kuuta? Pöllö kysyi.
+
+– En tänä iltana, lokki vastasi. – Mutta yleensä se nousee tuolta, meren takaa.
+
+– Kiitos, Pöllö sanoi ja lensi eteenpäin.
+
+Pöllö lensi meren yli kohti paikkaa, josta Kuu yleensä nousi. Aallot liplattivat sen alla, ja suolainen tuuli pörrötti sen höyheniä.
+
+Lopulta, kaukana horisontin takana, Pöllö löysi sen. Siellä makasi Kuu pehmeän pilvipeiton alla ja kuorsasi hiljaa.
+
+Khrr... phyy... khrr... phyy...
 
 – Kuu! Herää! Pöllö huhuili.
 
+Kuu ei liikahtanutkaan.
+
+– Huhuu! Kuu! Pöllö huhuili kovempaa ja nykäisi pilvipeiton reunaa.
+
 Kuu raotti toista silmäänsä.
 
-– Hmm… Onko jo ilta? Minä olin niin väsynyt. Paistoin eilen koko yön, kun kaikki lapset halusivat katsoa minua ikkunasta.
+– Hmm… Onko jo ilta? Minä olin niin väsynyt. Paistoin eilen koko yön, kun kaikki lapset halusivat katsoa minua ikkunasta. Minä en raaskinut mennä nukkumaan ennen kuin viimeinenkin lapsi oli unessa.
 
-– Lapset odottavat sinua nytkin, Pöllö sanoi. – Ja tähdet. Ja minä.
+– Lapset odottavat sinua nytkin, Pöllö sanoi. – Ja tähdet. Ja minä. Ja jänis ja siili ja koko metsä.
 
-Kuu haukotteli suuren, hopeisen haukotuksen.
+Kuu haukotteli suuren, hopeisen haukotuksen. Haukotus oli niin iso, että siitä irtosi pieni pilvenhattara.
 
 – Mutta minä olen vielä niin unelias.
 
-Pöllö mietti. Sitten se lauloi Kuulle hiljaisen laulun: laulun meren aalloista, kuusten huminasta ja lapsista, jotka nukkuvat lämpimissä sängyissä ja näkevät hopeisia unia.
+Pöllö mietti. Se kallisti päätään ensin oikealle, sitten vasemmalle. Niin pöllöt tekevät, kun ne miettivät.
 
-Laulun aikana Kuu alkoi hehkua. Ensin vähän, sitten enemmän. Lopulta se oli niin kirkas, että meren pinta kimalteli.
+Sitten se istahti pilven reunalle ja lauloi Kuulle hiljaisen laulun.
 
-– Kiitos, Pöllö, Kuu sanoi. – Nyt minä jaksan.
+Se lauloi meren aalloista, jotka keinuvat edestakaisin. Se lauloi kuusten huminasta ja tuulesta, joka kulkee hiljaa puiden latvoissa.
 
-Kuu nousi hitaasti taivaalle ja levitti hopeisen valonsa metsän, peltojen ja talojen ylle. Ikkunoissa pienet kasvot hymyilivät.
+Ja se lauloi lapsista, jotka nukkuvat lämpimissä sängyissä peitot leukaan asti ja näkevät hopeisia unia.
+
+Laulun aikana Kuu alkoi hehkua. Ensin vähän, kuin kynttilä. Sitten enemmän, kuin lyhty. Lopulta se oli niin kirkas, että meren pinta kimalteli.
+
+– Kiitos, Pöllö, Kuu sanoi. – Sinun laulusi muistutti minua siitä, miksi minä paistan. Nyt minä jaksan.
+
+Kuu nousi hitaasti taivaalle. Pöllö lensi sen vierellä kotimetsään asti.
+
+Kuu levitti hopeisen valonsa metsän, peltojen ja talojen ylle. Jänis loikkasi kolostaan. Siili löysi sammalmättäänsä. Tähdet tuikkivat iloisesti.
+
+– Kuu tuli! kuiskasi pienin tähti.
+
+Ikkunoissa pienet kasvot hymyilivät.
 
 – Hyvää yötä, Kuu, lapset kuiskasivat.
 
 – Hyvää yötä, Kuu kuiskasi takaisin. – Minä valvon nyt teidän puolestanne. Te saatte nukkua.
+
+Pöllö istui omalla oksallaan ja katseli hopeista metsää. Sen silmät olivat isot ja tyytyväiset.
+
+Lapset vetivät peiton leukaan asti. Ne sulkivat silmänsä. Kuun valo lepäsi pehmeänä peiton päällä.
 
 Ja niin he nukkuivat.

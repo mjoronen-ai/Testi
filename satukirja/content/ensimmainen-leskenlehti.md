@@ -11,7 +11,9 @@ color: "#E6CF63"
 ---
 Koko talven Milo oli odottanut kevättä.
 
-– Milloin kevät tulee? hän kysyi joka aamu.
+Talvi oli ollut pitkä ja valkoinen. Lunta oli ollut niin paljon, että pihan aita oli melkein kadonnut sen alle.
+
+– Milloin kevät tulee? Milo kysyi joka aamu, kun hän veti villasukat jalkaan.
 
 – Kun löydät ensimmäisen leskenlehden, mummo sanoi. – Silloin kevät on varmasti täällä.
 
@@ -19,19 +21,39 @@ Milo ei tiennyt, mikä leskenlehti oli.
 
 – Se on pieni, keltainen kukka, mummo kertoi. – Se on kuin pikku aurinko. Se kasvaa ennen kuin muut kukat edes heräävät.
 
-Nyt lumi oli sulanut. Ojanpientareet olivat ruskeat ja märät. Puroissa solisi vesi.
+Milo piirsi paperille pienen keltaisen auringon. Hän laittoi sen jääkaapin oveen, jotta muistaisi, mitä etsiä.
 
-Milo ja mummo lähtivät kävelylle. Milo tutki tienvartta tarkasti.
+Sitten tuli päivä, jona lumi alkoi sulaa. Räystäistä tippui vettä. Tip, tip, tip.
 
-Hän löysi kiven. Ruskean lehden. Kastemadon, joka kiemurteli hitaasti.
+Nyt lumi oli sulanut. Ojanpientareet olivat ruskeat ja märät. Puroissa solisi vesi. Ilmassa tuoksui multa ja märkä puu.
+
+Milo ja mummo vetivät kumisaappaat jalkaan ja lähtivät kävelylle. Milo tutki tienvartta tarkasti.
+
+Hän löysi kiven. Se oli sileä ja harmaa.
+
+Hän löysi ruskean lehden. Se oli talven jäljiltä rapea.
+
+Hän löysi kastemadon, joka kiemurteli hitaasti.
+
+– Hei, mato, Milo sanoi. – Oletko nähnyt leskenlehteä?
+
+Mato ei vastannut. Se kiemurteli vain multaan.
 
 – Ei leskenlehteä, Milo huokaisi.
 
-He kävelivät sillalle. He kävelivät koulun ohi. He kävelivät vanhan navetan luo.
+– Katsotaan vähän matkan päästä, mummo sanoi.
 
-Milo oli jo väsynyt. Hän istahti kivelle navetan seinän viereen. Seinä oli lämmin, koska aurinko oli paistanut siihen koko päivän.
+He kävelivät sillalle. Sillan alla puro kohisi ja kuohui. Milo heitti kepin veteen ja katsoi, kun se lähti uimaan.
 
-Ja silloin hän näki sen.
+He kävelivät koulun ohi. Koulun pihalla oli vielä pieni lumikasa varjossa, harmaa ja sohjoinen.
+
+He kävelivät vanhan navetan luo. Navetan katolla istui kaksi västäräkkiä ja heilutti pyrstöään.
+
+Milo oli jo väsynyt. Saappaat tuntuivat painavilta. Hän istahti kivelle navetan seinän viereen.
+
+Seinä oli lämmin, koska aurinko oli paistanut siihen koko päivän. Milo nojasi siihen ja sulki hetkeksi silmänsä. Aurinko lämmitti poskia.
+
+Kun hän avasi silmänsä, hän näki sen.
 
 Aivan hänen saappaansa vieressä, ruskean mullan keskellä, kurkotti pieni keltainen kukka. Sen terälehdet olivat ohuet kuin auringonsäteet.
 
@@ -49,4 +71,10 @@ Milo nyökkäsi. Hän kumartui kukan puoleen ja kuiskasi:
 
 – Tervetuloa, kevät.
 
-Kotimatkalla Milo löysi vielä kolme leskenlehteä ojan reunalta. Ja kun hän meni illalla nukkumaan, hän näki silmät kiinni keltaisia kukkia joka puolella.
+Kotimatkalla Milo löysi vielä kolme leskenlehteä ojan reunalta. Yksi, kaksi, kolme pientä aurinkoa.
+
+Illalla Milo kylpi lämpimässä vedessä ja söi iltapalaksi leipää ja maitoa. Mummo peitteli hänet sänkyyn.
+
+– Huomenna niitä on vielä enemmän, mummo kuiskasi.
+
+Milo hymyili. Kun hän sulki silmänsä, hän näki keltaisia kukkia joka puolella. Ne nyökyttelivät hiljaa tuulessa, kunnes Milo nukahti.

@@ -9,44 +9,84 @@ license: CC0 1.0
 emoji: 🐷
 color: "#F4A6A0"
 ---
-Possu Pullukka rakasti kahta asiaa. Hän rakasti mutaa. Ja hän rakasti kakkuja.
+Pienellä maatilalla asui possu nimeltä Pullukka. Hän oli vaaleanpunainen, ja hänellä oli kihara häntä ja iloinen röhkivä nauru. Röh, röh, röh!
 
-Eräänä aamuna Pullukka keksi jotain.
+Pullukka rakasti kahta asiaa. Hän rakasti mutaa. Ja hän rakasti kakkuja.
+
+Eräänä aamuna oli satanut. Pihalla oli suuri, ruskea, pehmeä mutalammikko. Pullukka katsoi sitä, ja hänen silmänsä alkoivat loistaa.
 
 – Minä leivon mutakakkuja! hän sanoi.
 
 Pullukka otti mutaa. Hän taputti sitä kärsällään. Läts, läts, läts. Siitä tuli pyöreä mutakakku.
 
+– Kaunis! Pullukka sanoi. – Mutta siitä puuttuu jotain.
+
 Hän laittoi päälle pienen kiven. Siitä tuli mutakakku, jossa oli kivi.
 
-Hän laittoi päälle voikukan. Siitä tuli mutakakku, jossa oli kukka.
+Hän teki toisen kakun. Läts, läts, läts. Hän laittoi päälle voikukan. Siitä tuli mutakakku, jossa oli kukka.
 
-Hän laittoi päälle tikun. Siitä tuli syntymäpäiväkakku, jossa oli kynttilä.
+Hän teki kolmannen kakun. Läts, läts, läts. Hän laittoi päälle tikun. Siitä tuli syntymäpäiväkakku, jossa oli kynttilä.
 
-– Tervetuloa kakkukutsuille! Pullukka huusi.
+Pullukka laittoi kakut riviin vanhalle laudalle. Hän katsoi niitä ylpeänä. Röh, röh!
 
-Ensin tuli Ankka.
+– Tervetuloa kakkukutsuille! Pullukka huusi niin kovaa, että koko piha kuuli.
 
-– Kvaak! Saanko maistaa? Ankka kysyi. Ankka nokkaisi. – Ptui! Tämähän on mutaa!
+Ensin tuli Ankka. Hän vaappui lätäköiden yli. Lip, lap, lip, lap.
 
-Sitten tuli Vuohi.
+– Kvaak! Kakkukutsut? Saanko maistaa? Ankka kysyi.
 
-– Mää! Saanko maistaa? Vuohi kysyi ja haukkasi. – Ptui! Tämähän on mutaa!
+– Ole hyvä, Pullukka sanoi. – Tämä kivikakku on tosi hieno.
 
-Pullukka katsoi kakkujaan. Hänen korvansa painuivat alas.
+Ankka nokkaisi. – Ptui! Tämähän on mutaa!
+
+Sitten tuli Vuohi. Hänen kellonsa kilkatti. Kilin, kilin.
+
+– Mää! Kakkukutsut? Saanko maistaa? Vuohi kysyi.
+
+– Ole hyvä, Pullukka sanoi. – Tämä kukkakakku on tosi hieno.
+
+Vuohi haukkasi. Ensin hän söi voikukan. Se oli hyvää. Sitten hän söi vähän kakkua.
+
+– Ptui! Tämähän on mutaa!
+
+Viimeiseksi tuli Kana. Hän kuopi maata ja nokki ruohoa.
+
+– Kot kot! Saanko minäkin maistaa?
+
+– Ö… Pullukka sanoi hiljaa. – Ehkä et.
+
+Pullukka katsoi kakkujaan. Hänen korvansa painuivat alas. Hänen kihara häntänsä suoristui melkein suoraksi.
+
+– Minun kakkuni eivät ole hyviä, hän sanoi. – Kukaan ei halua niitä.
+
+Ankka ja Vuohi katsoivat toisiaan. Sitten Ankka tuli lähemmäs.
 
 – Mutakakkuja ei voi syödä, Ankka sanoi lempeästi. – Mutta ne ovat tosi kauniita.
 
-– Niillä voi leikkiä, Vuohi sanoi.
+– Niin ovat, Vuohi sanoi. – Niillä voi leikkiä.
 
-Niin he leikkivät leipomoa. Ankka koristeli kakut sulilla. Vuohi toi apilankukkia. Pullukka taputti ja taputti. Läts, läts, läts.
+– Kot kot, voi leikkiä leipomoa! Kana sanoi.
 
-Lopulta mutakakkuja oli kymmenen. Ne olivat rivissä aidan vieressä, ja aurinko paistoi niihin.
+Pullukan korvat nousivat ylös. Hänen häntänsä kiertyi taas kiharalle.
 
-Silloin emäntä tuli pihalle korin kanssa.
+– Leikitään! hän huusi. Röh, röh, röh!
+
+Niin he leikkivät leipomoa. Ankka koristeli kakut valkoisilla sulilla. Vuohi toi apilankukkia, vaaleanpunaisia ja valkoisia. Kana toi pieniä kiiltäviä kiviä. Ja Pullukka taputti ja taputti. Läts, läts, läts.
+
+– Yksi täytekakku, kiitos! Ankka sanoi.
+
+– Kaksi kukkakakkua, kiitos! Vuohi sanoi.
+
+– Kolme kivikakkua, kot kot! Kana sanoi.
+
+Lopulta mutakakkuja oli kymmenen. Ne olivat rivissä aidan vieressä, ja aurinko paistoi niihin. Ne olivat koko maatilan kauneimmat kakut.
+
+Silloin emäntä tuli pihalle korin kanssa. Korista tuoksui kaneli ja omena.
 
 – Kuka haluaa oikeaa omenakakkua? emäntä kysyi.
 
-– MINÄ! huusivat Pullukka, Ankka ja Vuohi.
+– MINÄ! huusivat Pullukka, Ankka, Vuohi ja Kana.
 
-Ja oikea kakku oli melkein yhtä hyvää kuin mutakakku. Tai oikeastaan vähän parempaa.
+He istuivat aidan viereen syömään. Mums, mums. Kakku oli lämmin ja makea.
+
+Ja oikea kakku oli melkein yhtä hyvää kuin mutakakku. Tai oikeastaan vähän parempaa. Röh, röh, röh!

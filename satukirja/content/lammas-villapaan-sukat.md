@@ -11,11 +11,13 @@ color: "#C7B8E0"
 ---
 Mummon pihalla asui lammas nimeltä Villapää. Villapään villa oli paksua, valkoista ja kiharaa. Niin paksua, että hän näytti pilveltä, jolla on jalat.
 
-Kesällä Villapäällä oli kuuma.
+Kesällä aurinko paistoi kuumasti. Kukat tuoksuivat, ja mehiläiset surisivat. Villapäällä oli kuuma.
 
 – Puh, Villapää puuskutti. – Tämä villa on niin lämmin.
 
-Mummo tuli pihalle saksien kanssa.
+Hän meni puun varjoon. Kuuma. Hän joi vettä ämpäristä. Yhä kuuma.
+
+Mummo tuli pihalle saksien kanssa. Hänellä oli olkihattu ja esiliina.
 
 – Annatko minulle villaa? mummo kysyi. – Sinulle tulee viileämpi, ja minä teen villasta jotain hyvää.
 
@@ -25,7 +27,15 @@ Mummo leikkasi varovasti. Kris, kris, kris. Villaa tuli iso pehmeä kasa. Villap
 
 – Ihanan viileää! hän sanoi ja hyppi ympäri pihaa. Hyp, hyp, hyp!
 
-Mummo pesi villan. Plits, plats. Hän kuivasi sen auringossa. Hän kehräsi sen langaksi. Hurr, hurr, rukki pyöri.
+Kissa katsoi aidalta ja kallisti päätään.
+
+– Missä se pilvi on? kissa kysyi. – Täällä on vain laiha lammas.
+
+– Minä olen sama Villapää, Villapää nauroi. – Vain vähän kevyempi.
+
+Mummo pesi villan. Plits, plats. Hän kuivasi sen auringossa. Villa heilui narulla kuin pieni valkoinen pilvi.
+
+Sitten mummo kehräsi villan langaksi. Hurr, hurr, rukki pyöri. Lankaa tuli kerälle, pyöreälle ja pehmeälle.
 
 Sitten mummo otti puikot. Ja puikot alkoivat kilkattaa. Kilk, kilk, kilk.
 
@@ -33,18 +43,34 @@ Sitten mummo otti puikot. Ja puikot alkoivat kilkattaa. Kilk, kilk, kilk.
 
 – Yllätys, mummo sanoi. Kilk, kilk, kilk.
 
-Kesä meni. Tuli syksy. Villapään villa kasvoi taas paksuksi.
+Villapää mietti. Ehkä se on pipo? Ehkä se on lapanen? Ehkä se on pieni villapaita kissalle?
 
-Sitten tuli talvi. Lunta satoi. Pihalla oli pakkasta.
+Kissa kurkisti mummon koriin.
 
-Mummo tuli navettaan. Hänen jaloissaan oli uudet, valkoiset, pehmeät villasukat.
+– Minä tiedän, kissa sanoi viisaana. – Se on minulle peitto.
 
-– Katso, mummo sanoi. – Nämä tehtiin sinun villastasi. Nyt minun varpaillani on lämmin.
+– Yllätys on yllätys, mummo sanoi ja hymyili. Kissa tuhahti ja meni nukkumaan aurinkoon.
+
+– Mitä sinä teet? Villapää kysyi taas seuraavana päivänä.
+
+– Yllätys, mummo sanoi. Kilk, kilk, kilk.
+
+Kesä meni. Lehdet muuttuivat keltaisiksi ja punaisiksi. Tuli syksy. Villapään villa kasvoi taas paksuksi ja kiharaksi.
+
+Sitten tuli talvi. Lunta satoi hiljaa, hiutale kerrallaan. Pihalla oli pakkasta, ja ikkunoissa oli jääkukkia.
+
+Eräänä iltana mummo tuli navettaan lyhty kädessä. Hänen jaloissaan oli uudet, valkoiset, pehmeät villasukat.
+
+– Katso, mummo sanoi. – Tämä oli se yllätys. Nämä tehtiin sinun villastasi. Nyt minun varpaillani on lämmin.
 
 Villapää katsoi sukkia. Sitten hän katsoi omaa paksua villaansa.
 
 – Mää, hän sanoi tyytyväisenä. – Nyt meillä molemmilla on lämmin.
 
-Mummo istui heinille Villapään viereen. Ulkona lumi tuli hiljaa alas.
+Mummo istui heinille Villapään viereen. Heinä tuoksui kesältä. Lyhty paloi hiljaa.
+
+Ulkona lumi tuli hiljaa alas. Hiljaa, hiljaa, hiljaa.
+
+Mummo heilutti varpaitaan sukissa. Villapää painoi päänsä mummon syliin.
 
 Ja navetassa, lampaan ja mummon välissä, oli niin lämmin, että kumpikin nukahti.

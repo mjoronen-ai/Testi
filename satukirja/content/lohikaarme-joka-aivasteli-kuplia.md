@@ -9,13 +9,21 @@ license: CC0 1.0
 emoji: 🐉
 color: "#9BCBC4"
 ---
-Vuorten keskellä asui lohikäärmeperhe. Isä-lohikäärme osasi puhaltaa tulta. Äiti-lohikäärme osasi puhaltaa tulta. Isosisko osasi puhaltaa jo pieniä tulirenkaita.
+Korkeiden vuorten keskellä, luolassa jonka seinät kimalsivat kuin kivisokeri, asui lohikäärmeperhe.
+
+Isä-lohikäärme osasi puhaltaa tulta. Hänen liekkinsä oli iso ja oranssi, ja sillä hän lämmitti luolan talvella.
+
+Äiti-lohikäärme osasi puhaltaa tulta. Hänen liekkinsä oli siisti ja sininen, ja sillä hän paahtoi aamiaisleivät.
+
+Isosisko osasi puhaltaa jo pieniä tulirenkaita. Ne leijuivat ilmassa kuin savuiset donitsit.
 
 Mutta kun pikku Pyry yritti puhaltaa tulta, tapahtui jotakin aivan muuta.
 
+Hän veti henkeä. Hän pullisti poskiaan. Hänen nenäänsä kutitti.
+
 – Haa... haa... HAATSIUU!
 
-Hänen nenästään pöllähti kuplia. Isoja ja pieniä, pyöreitä ja kimaltelevia. Ne leijailivat ilmassa ja poksahtivat. Pok, pok, pok.
+Hänen nenästään pöllähti kuplia. Isoja ja pieniä, pyöreitä ja kimaltelevia. Niissä näkyi sateenkaaren värejä: punaista, keltaista, vihreää ja sinistä. Ne leijailivat ilmassa ja poksahtivat. Pok, pok, pok.
 
 – Kuplia, Pyry huokaisi. – Taas.
 
@@ -23,38 +31,72 @@ Isosisko nauroi niin, että hänen nenästään tuli savua.
 
 – Kuka on koskaan kuullut kuplalohikäärmeestä?
 
-Pyry painoi päänsä alas. Hän meni vuoren rinteelle istumaan yksin.
+– Älähän nyt, äiti sanoi isosiskolle. Mutta Pyry oli jo kääntänyt selkänsä.
 
-Rinteellä, kukkaniityn laidalla, asui pieni hiiri nimeltä Hippu. Hippu katseli kuplia, jotka vielä leijailivat Pyryn ympärillä.
+Pyry painoi päänsä alas. Hänen siipensä roikkuivat. Hän käveli ulos luolasta ja meni vuoren rinteelle istumaan yksin.
+
+Rinteellä tuuli humisi hiljaa. Alhaalla näkyi kukkaniitty, jossa kasvoi päivänkakkaroita ja kissankelloja.
+
+Niityn laidalla, pienessä kolossa kiven alla, asui hiiri nimeltä Hippu. Hipulla oli pyöreät korvat ja pitkät viikset, jotka värisivät aina, kun hän oli utelias. Ja nyt hän oli hyvin utelias.
+
+Hippu katseli kuplia, jotka vielä leijailivat Pyryn ympärillä.
 
 – Ovatpa ne kauniita, Hippu sanoi. – Teetkö lisää?
 
-– En minä tee niitä tahallani, Pyry mutisi. – Minun pitäisi osata tehdä tulta.
+Pyry hätkähti. Hän ei ollut huomannut pientä hiirtä.
 
-– Tuli on kuuma, Hippu sanoi ja nyrpisti nenäänsä. – Kerran yksi lohikäärme poltti meidän aitamme. Kuplat ovat paljon kivempia.
+– En minä tee niitä tahallani, Pyry mutisi. – Minun pitäisi osata tehdä tulta. Kaikki lohikäärmeet osaavat tehdä tulta.
 
-Pyry kohotti päätään. Kukaan ei ollut ennen sanonut, että kuplat olisivat kivoja.
+– Tuli on kuuma, Hippu sanoi ja nyrpisti nenäänsä. – Kerran yksi lohikäärme poltti vahingossa meidän aitamme. Kuplat ovat paljon kivempia.
 
-Samana iltana niityllä vietettiin hiirten kevätjuhlaa. Mutta juhlissa oli ongelma. Aurinko paistoi niin kuumasti, että hiiret läähättivät eivätkä jaksaneet tanssia.
+Hippu ojensi tassunsa ja kosketti yhtä kuplaa. Se poksahti, ja hänen viiksiinsä jäi pieni vesipisara.
 
-– Jos vain olisi jotakin viileää, hiirten pormestari puuskutti.
+– Hih, se kutittaa, Hippu kikatti.
 
-Hippu juoksi hakemaan Pyryn.
+Pyry kohotti päätään. Kukaan ei ollut ennen sanonut, että kuplat olisivat kivoja. Kukaan ei ollut ennen nauranut hänen kuplilleen iloisesti.
 
-– Voisitko aivastaa meille?
+Samana iltana niityllä vietettiin hiirten kevätjuhlaa. Hiiret olivat koristelleet niityn köynnöksillä ja pikkuruisilla lyhdyillä. Siellä oli siemenkakkuja ja mansikkamehua.
 
-Pyry ei tiennyt, miten aivastus tehtiin tahallaan. Hippu kutitti häntä heinänkorrella nenän alta.
+Mutta juhlissa oli ongelma. Aurinko paistoi vielä illallakin niin kuumasti, että hiiret läähättivät. Niiden korvat olivat punaiset ja tassut väsyneet. Kukaan ei jaksanut tanssia.
+
+– Jos vain olisi jotakin viileää, hiirten pormestari puuskutti ja leyhytteli itseään lehdellä.
+
+Hippu sai ajatuksen. Hän juoksi rinnettä ylös niin nopeasti kuin pikkuiset jalat kantoivat.
+
+– Pyry! Pyry! Voisitko aivastaa meille?
+
+Pyry räpäytti silmiään.
+
+– Mutta minä en osaa aivastaa tahallani, hän sanoi. – Se vain tulee.
+
+Hippu mietti hetken. Sitten hän poimi pitkän heinänkorren.
+
+– Pysy paikallasi, hän sanoi ja kutitti Pyryä heinällä nenän alta.
+
+Pyryn nenä nyrpistyi. Se värähti. Se kutisi kutisemistaan.
 
 – Haa... haa... HAATSIUUUU!
 
-Taivas täyttyi kuplista. Ne olivat viileitä kuin aamukaste. Ne leijuivat hiirten yllä ja poksahtivat pieniksi vesipisaroiksi, jotka vilvoittivat kuumia korvia.
+Taivas täyttyi kuplista. Tuhansia kuplia, isoja kuin kurpitsat ja pieniä kuin herneet. Ne olivat viileitä kuin aamukaste.
 
-– Hurraa! hiiret huusivat ja tanssivat kuplien alla koko illan.
+Ne leijuivat hiirten yllä ja poksahtivat pieniksi vesipisaroiksi, jotka vilvoittivat kuumia korvia. Pok, pok, pok, pok.
 
-Isä, äiti ja isosisko tulivat katsomaan, mikä meteli niityllä oli. He näkivät Pyryn, joka aivasteli kuplia ja nauroi.
+– Hurraa! hiiret huusivat ja alkoivat tanssia kuplien alla. Ne pyörivät ja hyppivät ja yrittivät napata kuplia tassuillaan.
 
-– Tuota en osaa minä, isosisko sanoi hiljaa. – Opetatko?
+Pyry nauroi niin, että aivasti uudestaan. Ja taas. Ja taas.
 
-Pyry yritti. Isosisko yritti. Mutta hänen nenästään tuli vain pieni savukiehkura.
+Isä, äiti ja isosisko kuulivat naurun ja hurraahuudot luolaan asti. He lensivät katsomaan, mikä meteli niityllä oli.
+
+He näkivät Pyryn, joka istui keskellä niittyä, aivasteli kuplia ja nauroi. Hänen ympärillään tanssi sata iloista hiirtä.
+
+– No katso nyt, isä sanoi hiljaa äidille. – Meidän pikku Pyry.
+
+Isosisko laskeutui Pyryn viereen. Hän katsoi kuplia pitkään.
+
+– Tuota en osaa minä, isosisko sanoi hiljaa. – Anteeksi, että nauroin. Opetatko?
+
+Pyry yritti näyttää. Isosisko yritti. Hän kutitti omaa nenäänsä heinällä ja aivasti. Mutta hänen nenästään tuli vain pieni savukiehkura.
 
 – Ei se mitään, Pyry sanoi ja hymyili. – Jokainen osaa jotakin omaa.
+
+Ja sinä iltana hiirten juhlissa oli sekä tulirenkaita että kuplia. Ne leijuivat taivaalla yhdessä, kunnes tähdet syttyivät.
