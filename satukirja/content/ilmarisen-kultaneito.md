@@ -23,7 +23,7 @@ Ajatus sai hänet nousemaan. Ensimmäistä kertaa moneen kuukauteen hänen silmi
 
 Hän kantoi pajaan kultaa ja hopeaa. Hän pyyhki hämähäkinseitit pois ja sytytti ahjoon tulen. Palkeet puhkuivat, puh, puh, puh, ja kipinät lensivät kattoon asti.
 
-Hän pani palkeiden ääreen orjat lietsomaan. Mutta orjat lietsoivat laiskasti. Silloin Ilmarinen tarttui palkeisiin itse ja lietsoi niin, että liekit nousivat korkealle.
+Hän pani palkeiden ääreen apupojat lietsomaan. Mutta apupojat lietsoivat laiskasti ja haukottelivat. Silloin Ilmarinen tarttui palkeisiin itse ja lietsoi niin, että liekit nousivat korkealle.
 
 Ensimmäisenä nousi ahjosta lammas, jolla oli kultainen, kuparinen ja hopeinen villa. Se määkäisi ja kimalteli tulen loisteessa. Pajan ovelle kerääntyneet kyläläiset ihastelivat sitä.
 
@@ -60,6 +60,18 @@ Mutta aamulla hän heräsi palellen. Se kylki, joka oli ollut neitoa vasten, oli
 Toinenkin yö oli samanlainen, ja kolmaskin. Kultaneito ei lämmennyt, vaikka Ilmarinen kääri hänet kaikkiin peittoihinsa ja lämmitti tupaa niin, että seinät hikoilivat.
 
 Ilmarinen istui sängyn reunalla ja katsoi neitoa. Neito hymyili samaa hymyä. Talo oli yhtä hiljainen kuin ennenkin. Ehkä vielä hiljaisempi.
+
+Samana päivänä naapurin pieni tyttö, Aino, tuli pajan ovelle. Hän oli kuullut kultaisesta neidosta ja halusi nähdä sen.
+
+Aino katsoi neitoa pitkään. Sitten hän otti tätä varovasti kädestä.
+
+– Hei, Aino sanoi. – Haluatko tulla laskemaan mäkeä?
+
+Neito ei vastannut. Aino päästi irti ja hieroi sormiaan.
+
+– Hänen kätensä on kylmä, hän sanoi Ilmariselle. – Eikä hän katso minua. Hän katsoo jonnekin kauas.
+
+Ilmarinen ei osannut vastata. Aino juoksi takaisin muiden lasten luo, ja pihalta kuului naurua. Ilmarinen jäi kuuntelemaan sitä pitkäksi aikaa.
 
 Ilmarinen vei kultaneidon vanhan Väinämöisen luo. Hän kantoi neitoa reessä, ja matka kesti kaksi päivää. Neito ei valittanut kylmää eikä pitkää matkaa. Hän ei sanonut mitään.
 
